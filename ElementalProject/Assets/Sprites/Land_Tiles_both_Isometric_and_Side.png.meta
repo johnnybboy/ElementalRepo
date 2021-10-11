@@ -1,0 +1,1953 @@
+fileFormatVersion: 2
+guid: edd2e573097e5d34999dc5b7b6c5e8f5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7463973199930937107
+    second: Land_Tiles_both_Isometric_and_Side_0
+  - first:
+      213: -5574376615928387745
+    second: Land_Tiles_both_Isometric_and_Side_1
+  - first:
+      213: -892508624103440738
+    second: Land_Tiles_both_Isometric_and_Side_2
+  - first:
+      213: -183749367707329091
+    second: Land_Tiles_both_Isometric_and_Side_3
+  - first:
+      213: 5625352778767005246
+    second: Land_Tiles_both_Isometric_and_Side_4
+  - first:
+      213: 4801209677003972295
+    second: Land_Tiles_both_Isometric_and_Side_5
+  - first:
+      213: -2971253276149790069
+    second: Land_Tiles_both_Isometric_and_Side_6
+  - first:
+      213: 259783300457808297
+    second: Land_Tiles_both_Isometric_and_Side_7
+  - first:
+      213: -1312478907626753988
+    second: Land_Tiles_both_Isometric_and_Side_8
+  - first:
+      213: -3330161852320333703
+    second: Land_Tiles_both_Isometric_and_Side_9
+  - first:
+      213: -5711535732439387913
+    second: Land_Tiles_both_Isometric_and_Side_10
+  - first:
+      213: 2259664442657804960
+    second: Land_Tiles_both_Isometric_and_Side_11
+  - first:
+      213: -830375832766316749
+    second: Land_Tiles_both_Isometric_and_Side_12
+  - first:
+      213: 7229545031985074829
+    second: Land_Tiles_both_Isometric_and_Side_13
+  - first:
+      213: 8005213063496612877
+    second: Land_Tiles_both_Isometric_and_Side_14
+  - first:
+      213: 2154203080325264585
+    second: Land_Tiles_both_Isometric_and_Side_15
+  - first:
+      213: 8217791876714799335
+    second: Land_Tiles_both_Isometric_and_Side_16
+  - first:
+      213: 4463382121851587312
+    second: Land_Tiles_both_Isometric_and_Side_17
+  - first:
+      213: 4573666290742521217
+    second: Land_Tiles_both_Isometric_and_Side_18
+  - first:
+      213: 8295513865098942977
+    second: Land_Tiles_both_Isometric_and_Side_19
+  - first:
+      213: -4191192819817992638
+    second: Land_Tiles_both_Isometric_and_Side_20
+  - first:
+      213: -4882539751062486669
+    second: Land_Tiles_both_Isometric_and_Side_21
+  - first:
+      213: -704586995865403393
+    second: Land_Tiles_both_Isometric_and_Side_22
+  - first:
+      213: -1828701200290484411
+    second: Land_Tiles_both_Isometric_and_Side_23
+  - first:
+      213: -8219002426666269087
+    second: Land_Tiles_both_Isometric_and_Side_24
+  - first:
+      213: 6534704059193401388
+    second: Land_Tiles_both_Isometric_and_Side_25
+  - first:
+      213: -1289341569662322209
+    second: Land_Tiles_both_Isometric_and_Side_26
+  - first:
+      213: -4434974969750777646
+    second: Land_Tiles_both_Isometric_and_Side_27
+  - first:
+      213: -3300277199508543380
+    second: Land_Tiles_both_Isometric_and_Side_28
+  - first:
+      213: 7021568769222687938
+    second: Land_Tiles_both_Isometric_and_Side_29
+  - first:
+      213: 947298626729401580
+    second: Land_Tiles_both_Isometric_and_Side_30
+  - first:
+      213: -1583670211707585633
+    second: Land_Tiles_both_Isometric_and_Side_31
+  - first:
+      213: -978407760904270053
+    second: Land_Tiles_both_Isometric_and_Side_32
+  - first:
+      213: 8392215993075456385
+    second: Land_Tiles_both_Isometric_and_Side_33
+  - first:
+      213: 6891978346726717124
+    second: Land_Tiles_both_Isometric_and_Side_34
+  - first:
+      213: 3587722788466744733
+    second: Land_Tiles_both_Isometric_and_Side_35
+  - first:
+      213: 3689195467421518918
+    second: Land_Tiles_both_Isometric_and_Side_36
+  - first:
+      213: 6767628681996002130
+    second: Land_Tiles_both_Isometric_and_Side_37
+  - first:
+      213: -7011712603574407288
+    second: Land_Tiles_both_Isometric_and_Side_38
+  - first:
+      213: 528261152370916572
+    second: Land_Tiles_both_Isometric_and_Side_39
+  - first:
+      213: -5812147633887515676
+    second: Land_Tiles_both_Isometric_and_Side_40
+  - first:
+      213: -8949050247268528183
+    second: Land_Tiles_both_Isometric_and_Side_41
+  - first:
+      213: -7088992872120585819
+    second: Land_Tiles_both_Isometric_and_Side_42
+  - first:
+      213: -2117401701675374522
+    second: Land_Tiles_both_Isometric_and_Side_43
+  - first:
+      213: 5998521905059166533
+    second: Land_Tiles_both_Isometric_and_Side_44
+  - first:
+      213: -882464104403740519
+    second: Land_Tiles_both_Isometric_and_Side_45
+  - first:
+      213: 2312580721605106585
+    second: Land_Tiles_both_Isometric_and_Side_46
+  - first:
+      213: 3478751535785526409
+    second: Land_Tiles_both_Isometric_and_Side_47
+  - first:
+      213: -4209977532253385423
+    second: Land_Tiles_both_Isometric_and_Side_48
+  - first:
+      213: -8600900229500416762
+    second: Land_Tiles_both_Isometric_and_Side_49
+  - first:
+      213: 1304551162748764991
+    second: Land_Tiles_both_Isometric_and_Side_50
+  - first:
+      213: 4113685714996506065
+    second: Land_Tiles_both_Isometric_and_Side_51
+  - first:
+      213: 6395646457117086443
+    second: Land_Tiles_both_Isometric_and_Side_52
+  - first:
+      213: -1297550914035279310
+    second: Land_Tiles_both_Isometric_and_Side_53
+  - first:
+      213: -3544483547540718010
+    second: Land_Tiles_both_Isometric_and_Side_54
+  - first:
+      213: 6606143554026443280
+    second: Land_Tiles_both_Isometric_and_Side_55
+  - first:
+      213: -4548275049663731260
+    second: Land_Tiles_both_Isometric_and_Side_56
+  - first:
+      213: -7716576908873083632
+    second: Land_Tiles_both_Isometric_and_Side_57
+  - first:
+      213: 8516784340452799022
+    second: Land_Tiles_both_Isometric_and_Side_58
+  - first:
+      213: -3002632833158344801
+    second: Land_Tiles_both_Isometric_and_Side_59
+  - first:
+      213: -1525551254363404835
+    second: Land_Tiles_both_Isometric_and_Side_60
+  - first:
+      213: -2535528514491732654
+    second: Land_Tiles_both_Isometric_and_Side_61
+  - first:
+      213: -1086948942043678380
+    second: Land_Tiles_both_Isometric_and_Side_62
+  - first:
+      213: -1793895788201594110
+    second: Land_Tiles_both_Isometric_and_Side_63
+  - first:
+      213: 1371249209250224884
+    second: Land_Tiles_both_Isometric_and_Side_64
+  - first:
+      213: 6365060819038291575
+    second: Land_Tiles_both_Isometric_and_Side_65
+  - first:
+      213: 4168798917864721715
+    second: Land_Tiles_both_Isometric_and_Side_66
+  - first:
+      213: -6452025392260414354
+    second: Land_Tiles_both_Isometric_and_Side_67
+  - first:
+      213: 5827193356328338702
+    second: Land_Tiles_both_Isometric_and_Side_68
+  - first:
+      213: -3680280872620669371
+    second: Land_Tiles_both_Isometric_and_Side_69
+  - first:
+      213: 7144416801952400065
+    second: Land_Tiles_both_Isometric_and_Side_70
+  - first:
+      213: 5270673570775952995
+    second: Land_Tiles_both_Isometric_and_Side_71
+  - first:
+      213: 2319413312135237658
+    second: Land_Tiles_both_Isometric_and_Side_72
+  - first:
+      213: 6566592446599841178
+    second: Land_Tiles_both_Isometric_and_Side_73
+  - first:
+      213: -5435621143343335909
+    second: Land_Tiles_both_Isometric_and_Side_74
+  - first:
+      213: 3375579555536899300
+    second: Land_Tiles_both_Isometric_and_Side_75
+  - first:
+      213: 6461681922053105701
+    second: Land_Tiles_both_Isometric_and_Side_76
+  - first:
+      213: -1330460157505529384
+    second: Land_Tiles_both_Isometric_and_Side_77
+  - first:
+      213: -7903870674867761693
+    second: Land_Tiles_both_Isometric_and_Side_78
+  - first:
+      213: 7292326223641290556
+    second: Land_Tiles_both_Isometric_and_Side_79
+  - first:
+      213: -3077767550108373910
+    second: Land_Tiles_both_Isometric_and_Side_80
+  - first:
+      213: -1130622201221007942
+    second: Land_Tiles_both_Isometric_and_Side_81
+  - first:
+      213: -1833572000493139816
+    second: Land_Tiles_both_Isometric_and_Side_82
+  - first:
+      213: -2938428052989368949
+    second: Land_Tiles_both_Isometric_and_Side_83
+  - first:
+      213: 3322279781348682470
+    second: Land_Tiles_both_Isometric_and_Side_84
+  - first:
+      213: 2284865484205888408
+    second: Land_Tiles_both_Isometric_and_Side_85
+  - first:
+      213: -4381755115965670584
+    second: Land_Tiles_both_Isometric_and_Side_86
+  - first:
+      213: 252534273598482032
+    second: Land_Tiles_both_Isometric_and_Side_87
+  - first:
+      213: -6497389958727678174
+    second: Land_Tiles_both_Isometric_and_Side_88
+  - first:
+      213: -1926811781210980268
+    second: Land_Tiles_both_Isometric_and_Side_89
+  - first:
+      213: -622623292686558400
+    second: Land_Tiles_both_Isometric_and_Side_90
+  - first:
+      213: 6143238296739705119
+    second: Land_Tiles_both_Isometric_and_Side_91
+  - first:
+      213: -5108137699590263425
+    second: Land_Tiles_both_Isometric_and_Side_92
+  - first:
+      213: 8744476115551163559
+    second: Land_Tiles_both_Isometric_and_Side_93
+  - first:
+      213: -7281825778043269598
+    second: Land_Tiles_both_Isometric_and_Side_94
+  - first:
+      213: 1482321380078260783
+    second: Land_Tiles_both_Isometric_and_Side_95
+  - first:
+      213: 6401639846664170394
+    second: Land_Tiles_both_Isometric_and_Side_96
+  - first:
+      213: -7884731995321671836
+    second: Land_Tiles_both_Isometric_and_Side_97
+  - first:
+      213: 4557140896889463767
+    second: Land_Tiles_both_Isometric_and_Side_98
+  - first:
+      213: -3984049157356361085
+    second: Land_Tiles_both_Isometric_and_Side_99
+  - first:
+      213: -3525466398317776423
+    second: Land_Tiles_both_Isometric_and_Side_100
+  - first:
+      213: -2038568101090207755
+    second: Land_Tiles_both_Isometric_and_Side_101
+  - first:
+      213: 822914467859985293
+    second: Land_Tiles_both_Isometric_and_Side_102
+  - first:
+      213: 4971877977307343785
+    second: Land_Tiles_both_Isometric_and_Side_103
+  - first:
+      213: -6816204108360773295
+    second: Land_Tiles_both_Isometric_and_Side_104
+  - first:
+      213: 4537124339790245827
+    second: Land_Tiles_both_Isometric_and_Side_105
+  - first:
+      213: 5610690462954770949
+    second: Land_Tiles_both_Isometric_and_Side_106
+  - first:
+      213: 5019370945519547181
+    second: Land_Tiles_both_Isometric_and_Side_107
+  - first:
+      213: 6762084744257476951
+    second: Land_Tiles_both_Isometric_and_Side_108
+  - first:
+      213: -3114184742755522437
+    second: Land_Tiles_both_Isometric_and_Side_109
+  - first:
+      213: 8741920362229140515
+    second: Land_Tiles_both_Isometric_and_Side_110
+  - first:
+      213: 2151900091168936428
+    second: Land_Tiles_both_Isometric_and_Side_111
+  - first:
+      213: 6220856816923369643
+    second: Land_Tiles_both_Isometric_and_Side_112
+  - first:
+      213: 6104979427402974991
+    second: Land_Tiles_both_Isometric_and_Side_113
+  - first:
+      213: -2873904545597220444
+    second: Land_Tiles_both_Isometric_and_Side_114
+  - first:
+      213: 2336932799749565355
+    second: Land_Tiles_both_Isometric_and_Side_115
+  - first:
+      213: -3467099010803633998
+    second: Land_Tiles_both_Isometric_and_Side_116
+  - first:
+      213: 5120575047483380830
+    second: Land_Tiles_both_Isometric_and_Side_117
+  - first:
+      213: 1815319200323358040
+    second: Land_Tiles_both_Isometric_and_Side_118
+  - first:
+      213: -2147420008282432885
+    second: Land_Tiles_both_Isometric_and_Side_119
+  - first:
+      213: 6764468289245921366
+    second: Land_Tiles_both_Isometric_and_Side_120
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e7755922c2d93f0800000000000000
+      internalID: -892508624103440738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd1a127ce0337df0800000000000000
+      internalID: -183749367707329091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36f9a24c84411e40800000000000000
+      internalID: 5625352778767005246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_5
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce5df963c251a240800000000000000
+      internalID: 4801209677003972295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a406143ecf3c6d0800000000000000
+      internalID: -2971253276149790069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1cd5e098fea9300800000000000000
+      internalID: 259783300457808297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_8
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30f6b7236329cde0800000000000000
+      internalID: -1312478907626753988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_9
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970c3e37073e8c1d0800000000000000
+      internalID: -3330161852320333703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0fff9238c8cb0b0800000000000000
+      internalID: -5711535732439387913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_12
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ff4e16499e974f0800000000000000
+      internalID: -830375832766316749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_13
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82192f17e0845460800000000000000
+      internalID: 7229545031985074829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c38092eda381f60800000000000000
+      internalID: 8005213063496612877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_15
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4f6d0c94445ed10800000000000000
+      internalID: 2154203080325264585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_16
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e02da11c267b0270800000000000000
+      internalID: 8217791876714799335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa0bcd446e11fd30800000000000000
+      internalID: 4463382121851587312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_18
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18de2e4524de87f30800000000000000
+      internalID: 4573666290742521217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10adc86a8e59f1370800000000000000
+      internalID: 8295513865098942977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ea4951654e5d5c0800000000000000
+      internalID: -4191192819817992638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_22
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff351e3cddc836f0800000000000000
+      internalID: -704586995865403393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54fea5c72f52f96e0800000000000000
+      internalID: -1828701200290484411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_24
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166cb7ec6dc30fd80800000000000000
+      internalID: -8219002426666269087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_25
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20a68038beefaa50800000000000000
+      internalID: 6534704059193401388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_26
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9f1227ca65b1ee0800000000000000
+      internalID: -1289341569662322209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0914433cdc372c0800000000000000
+      internalID: -4434974969750777646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_28
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68e8f66f5f0332d0800000000000000
+      internalID: -3300277199508543380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_29
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccbe7ff79f917160800000000000000
+      internalID: 7021568769222687938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_30
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecdb6ef41b752d00800000000000000
+      internalID: 947298626729401580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b3dc5455ca50ae0800000000000000
+      internalID: -1583670211707585633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_33
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1895d995bf3277470800000000000000
+      internalID: 8392215993075456385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c674548ac935af50800000000000000
+      internalID: 6891978346726717124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_35
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d52271ed62ac130800000000000000
+      internalID: 3587722788466744733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_36
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c04ae3bb7a23330800000000000000
+      internalID: 3689195467421518918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_37
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253ed1a0e627bed50800000000000000
+      internalID: 6767628681996002130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_38
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f61d4698461be90800000000000000
+      internalID: -7011712603574407288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_39
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdcf4bf18b2c45700800000000000000
+      internalID: 528261152370916572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_40
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ebe104658a175fa0800000000000000
+      internalID: -5812147633887515676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_43
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648e4dcee5a7d92e0800000000000000
+      internalID: -2117401701675374522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_44
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549737024e70f3350800000000000000
+      internalID: 5998521905059166533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_45
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9985bf1929bd0c3f0800000000000000
+      internalID: -882464104403740519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_46
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b50b9e9efe71020800000000000000
+      internalID: 2312580721605106585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_48
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d49a56db72395c0800000000000000
+      internalID: -4209977532253385423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_49
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d4d009fc673a880800000000000000
+      internalID: -8600900229500416762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f4bea541c559760800000000000000
+      internalID: 7463973199930937107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57285b8006d3a2b0800000000000000
+      internalID: -5574376615928387745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a21330a6d0fb5f10800000000000000
+      internalID: 2259664442657804960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371423817fbbd3cb0800000000000000
+      internalID: -4882539751062486669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_32
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1fc0d5435ffb62f0800000000000000
+      internalID: -978407760904270053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_41
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf0076d6369ec380800000000000000
+      internalID: -8949050247268528183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_42
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1f9f9ba86de9d90800000000000000
+      internalID: -7088992872120585819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_47
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98447503712074030800000000000000
+      internalID: 3478751535785526409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_50
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3386f6ee52ba1210800000000000000
+      internalID: 1304551162748764991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_51
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd27ffcc5fb61930800000000000000
+      internalID: 4113685714996506065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_52
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be213713196e1c850800000000000000
+      internalID: 6395646457117086443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_53
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a91f2815c2efde0800000000000000
+      internalID: -1297550914035279310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_54
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e7e943ef67fcec0800000000000000
+      internalID: -3544483547540718010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_55
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0129bf0cf8cbdab50800000000000000
+      internalID: 6606143554026443280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_56
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9650ca0f741e0c0800000000000000
+      internalID: -4548275049663731260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_57
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01553a08f2639e490800000000000000
+      internalID: -7716576908873083632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_58
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e227c49db32b13670800000000000000
+      internalID: 8516784340452799022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_59
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f0cacc8518456d0800000000000000
+      internalID: -3002632833158344801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_60
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd58405873724dae0800000000000000
+      internalID: -1525551254363404835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_61
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25da8d7ff3effccd0800000000000000
+      internalID: -2535528514491732654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_62
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459ff7432b16ae0f0800000000000000
+      internalID: -1086948942043678380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_63
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203bc2cf84dca17e0800000000000000
+      internalID: -1793895788201594110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_64
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa15eff3e7a70310800000000000000
+      internalID: 1371249209250224884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_65
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776c884671d355850800000000000000
+      internalID: 6365060819038291575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_66
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d0c5f478c8ad930800000000000000
+      internalID: 4168798917864721715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_67
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64848c071dc576a0800000000000000
+      internalID: -6452025392260414354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_68
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e058779db795ed050800000000000000
+      internalID: 5827193356328338702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_Tiles_both_Isometric_and_Side_69
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546c7c99b040decc0800000000000000
+      internalID: -3680280872620669371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
