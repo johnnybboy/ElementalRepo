@@ -11,11 +11,16 @@ public class UIManager : MonoBehaviour
     public Text healthText;
     public Text enemyCountText;
     public Text endText;
-    public Image heartImage;
+    public Image mainHeart;
+    public int numberOfHearts = 0;
+    private Image[] hearts;
+
+    public float xOffset = 32f;
 
     // Start is called before the first frame update
     void Start()
     {
+        PlaceHearts(5);
         player = GameObject.Find("Player").GetComponent<PlayerController>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
@@ -39,6 +44,20 @@ public class UIManager : MonoBehaviour
         else
         {
             endText.enabled = false;
+        }
+    }
+
+    void PlaceHearts(int num)
+    {
+        numberOfHearts = 0;
+        hearts = new Image[num];
+        float spacer = mainHeart.transform.position.x;
+        for (int i = 0; i < num; i++)
+        {
+            hearts[i] = Instantiate(mainHeart, mainHeart.transform.position, mainHeart.transform.rotation);
+            hearts[i].transform.position = new Vector2(spacer, mainHeart.transform.position.y);
+            spacer += xOffset;
+            numberOfHearts++;
         }
     }
 }
