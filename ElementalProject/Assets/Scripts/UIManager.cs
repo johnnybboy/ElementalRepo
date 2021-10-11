@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public Text healthText;
     public Text enemyCountText;
     public Text endText;
+    public Image heartImage;
 
     // Start is called before the first frame update
     void Start()
