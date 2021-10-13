@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
     void TakeDamage(int damage)
     {
         hearts -= damage;
+        animator.SetTrigger("Hurt");
     }
 
     void Attack()
