@@ -57,6 +57,17 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+        if (collision.gameObject.tag == "Item")
+        {
+            string name = collision.gameObject.name;
+            if (name == "Heart")
+                AddHearts(1);
+            if (name == "Potion")
+                AddMana(1);
+            if (name == "Coin")
+                coins += 1;
+        }
         
     }
 
@@ -85,6 +96,22 @@ public class PlayerController : MonoBehaviour
             Debug.Log("We hit " + enemy.name);
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+    }
+
+    void AddHearts(int num)
+    {
+        if (hearts + num > maxHearts)
+            hearts = maxHearts;
+        else
+            hearts += num;
+    }
+
+    void AddMana(int num)
+    {
+        if (mana + num > maxMana)
+            mana = maxMana;
+        else
+            mana += num;
     }
 
     private void OnDrawGizmosSelected()
