@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Heart
+  - Mana
+  - Coin
   - Item
   layers:
   - Default
@@ -15,7 +18,7 @@ TagManager:
   - UI
   - Enemies
   - Player
-  - 
+  - Items
   - 
   - 
   - 

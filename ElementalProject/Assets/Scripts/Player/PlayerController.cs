@@ -58,15 +58,18 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Item")
+        if (collision.gameObject.layer == 8)    //Layer 8 is Items
         {
-            string name = collision.gameObject.name;
-            if (name == "Heart")
+            string tag = collision.gameObject.tag;
+            if (tag == "Heart")
                 AddHearts(1);
-            if (name == "Potion")
+            if (tag == "Mana")
                 AddMana(1);
-            if (name == "Coin")
-                coins += 1;
+            if (tag == "Coin")
+                AddCoins(1);
+
+            //remove the item
+            Destroy(collision.gameObject);
         }
         
     }
@@ -112,6 +115,11 @@ public class PlayerController : MonoBehaviour
             mana = maxMana;
         else
             mana += num;
+    }
+
+    void AddCoins(int num)
+    {
+        coins += num;
     }
 
     private void OnDrawGizmosSelected()
