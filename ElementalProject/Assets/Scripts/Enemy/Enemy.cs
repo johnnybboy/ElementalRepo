@@ -99,26 +99,18 @@ public class Enemy : MonoBehaviour
 
     void SpawnLoot()
     {
-        GameObject item = new GameObject();
-        int loot = Random.Range(0, 3);
+        GameObject item = null;
+        int loot = Random.Range(1, 7) + Random.Range(1, 7); //rolling 2d6 to increase odds of coins and hearts
 
-        if (loot == 0)
-        {
+        if (loot >= 3 && loot <= 6)
             item = coin;
-        }
-        if (loot == 1)
-        {
+        if (loot >= 7 && loot <= 11)
             item = heart;
-        }
-        if (loot == 2)
-        {
+        if (loot == 2 || loot == 12)
             item = potion;
-        }
-        if (loot == 3)
-        {
-            Debug.Log("Case 3!!");
-        }
 
-        Instantiate(item, transform.position, transform.rotation);
+        //make sure item is not null, instantiate it at this enemy's position
+        if (item != null)
+            Instantiate(item, transform.position, transform.rotation);
     }
 }
