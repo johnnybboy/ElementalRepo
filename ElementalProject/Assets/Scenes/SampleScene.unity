@@ -3852,6 +3852,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 375510631}
     - target: {fileID: 8305315245061716823, guid: 5667e02988b27cc44942125aa190e307, type: 3}
+      propertyPath: attackRange
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8305315245061716823, guid: 5667e02988b27cc44942125aa190e307, type: 3}
       propertyPath: enemyLayers.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -3898,6 +3902,22 @@ PrefabInstance:
     - target: {fileID: 8584049686838370751, guid: 5667e02988b27cc44942125aa190e307, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584049686918917744, guid: 5667e02988b27cc44942125aa190e307, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584049686918917744, guid: 5667e02988b27cc44942125aa190e307, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584049686920173777, guid: 5667e02988b27cc44942125aa190e307, type: 3}
+      propertyPath: APYOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584049686920173777, guid: 5667e02988b27cc44942125aa190e307, type: 3}
+      propertyPath: moveSpeed
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8584049686920173778, guid: 5667e02988b27cc44942125aa190e307, type: 3}
       propertyPath: m_Name
