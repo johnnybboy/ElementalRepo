@@ -6,8 +6,11 @@ public class PlayerController : MonoBehaviour
 {
 
     // Player Stats
-    public float health = 10f;
-    public float mana = 5f;
+    public int hearts = 10;
+    public int maxHearts = 10;
+    public int mana = 3;
+    public int maxMana = 3;
+    public int coins = 00;
     
     public float invulRate = 2f;
     float invulTime = 0f;
@@ -19,8 +22,8 @@ public class PlayerController : MonoBehaviour
             if (collision.gameObject.tag == "Enemy")
             {
 
-                health = health - 1;
-                if (health <= 0)
+                TakeDamage(1);
+                if (hearts <= 0)
                 {
                     Die();
                 }
@@ -37,6 +40,11 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.SetActive(false);
         Debug.Log("You are dead!");
+    }
+
+    void TakeDamage(int damage)
+    {
+        hearts -= damage;
     }
    
 }
