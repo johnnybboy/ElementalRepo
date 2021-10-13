@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float APYOffset = -0.1f;
     public float moveSpeed = 3f;
 
+    public bool isAttacking = false;
 
     private bool facingRight = true;
     private float speed;
@@ -34,30 +35,36 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //input key commands and add force
-        if (Input.GetKey(KeyCode.W))
+        //update isAttacking to lock movement during the attack
+        isAttacking = animator.GetBool("isAttacking");
+
+        if (!isAttacking)
         {
-            playerPhysics.AddForce(moveUp);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            playerPhysics.AddForce(moveDown);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            if (!facingRight)   //flip if not facing the correct direction
+            //input key commands and add force
+            if (Input.GetKey(KeyCode.W))
             {
-                flipSprite();
+                playerPhysics.AddForce(moveUp);
             }
-            playerPhysics.AddForce(moveRight);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            if (facingRight)    //flip if not facing the correct direction
+            if (Input.GetKey(KeyCode.S))
             {
-                flipSprite();
+                playerPhysics.AddForce(moveDown);
             }
-            playerPhysics.AddForce(moveLeft);
+            if (Input.GetKey(KeyCode.D))
+            {
+                if (!facingRight)   //flip if not facing the correct direction
+                {
+                    flipSprite();
+                }
+                playerPhysics.AddForce(moveRight);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                if (facingRight)    //flip if not facing the correct direction
+                {
+                    flipSprite();
+                }
+                playerPhysics.AddForce(moveLeft);
+            }
         }
 
         //update speed for animator

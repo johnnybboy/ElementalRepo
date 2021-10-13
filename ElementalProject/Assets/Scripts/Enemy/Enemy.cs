@@ -54,6 +54,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            //Delay despawn after death, destroy this gameobject and spawn loot
             if (Time.time > timeOfDeath + despawnTime)
             {
                 SpawnLoot();
@@ -68,6 +69,7 @@ public class Enemy : MonoBehaviour
 
         // Play hurt animation
         animator.SetTrigger("hurt");
+        body.velocity = new Vector2(0, 0);
 
         if(currentHealth <= 0)
         {
@@ -79,7 +81,6 @@ public class Enemy : MonoBehaviour
     {
         //die animation
         animator.SetBool("isDead", true);
-        GetComponent<SpriteRenderer>().color = Color.red;
 
         //disable enemy
         GetComponent<Collider2D>().enabled = false;
