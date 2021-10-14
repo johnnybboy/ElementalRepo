@@ -1,34 +1,28 @@
 fileFormatVersion: 2
-guid: ca5668ff32d37af47b4fea079c2c6d25
+guid: 59892676a30161942aec37555c27c817
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5455911893360685152
-    second: Slime_Jumping_Sprite_Sheet_0
+      213: 4573041892520846883
+    second: Sword_Attack_Sprite_sheet_0
   - first:
-      213: 1568866084208287783
-    second: Slime_Jumping_Sprite_Sheet_1
+      213: 4171766148903094865
+    second: Sword_Attack_Sprite_sheet_1
   - first:
-      213: -3666467111650878128
-    second: Slime_Jumping_Sprite_Sheet_2
+      213: -8331298413832294514
+    second: Sword_Attack_Sprite_sheet_2
   - first:
-      213: 6903331281471669995
-    second: Slime_Jumping_Sprite_Sheet_3
+      213: 578517433418472572
+    second: Sword_Attack_Sprite_sheet_3
   - first:
-      213: 7607775244225680872
-    second: Slime_Jumping_Sprite_Sheet_4
+      213: -5212851220055263961
+    second: Sword_Attack_Sprite_sheet_5
   - first:
-      213: -1701810342887678875
-    second: Slime_Jumping_Sprite_Sheet_5
+      213: 1154167088575695129
+    second: Sword_Attack_Sprite_sheet_6
   - first:
-      213: 4744898059839417614
-    second: Slime_Jumping_Sprite_Sheet_6
-  - first:
-      213: -7919696114033408726
-    second: Slime_Jumping_Sprite_Sheet_7
-  - first:
-      213: -3293986721605879602
-    second: Slime_Jumping_Sprite_Sheet_8
+      213: 2881991759979301568
+    second: Sword_Attack_Sprite_sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,6 +109,30 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -138,194 +156,143 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slime_Jumping_Sprite_Sheet_0
+      name: Sword_Attack_Sprite_sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 52
+        height: 37
+      alignment: 9
+      pivot: {x: 0.32, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0af48662a05b844b0800000000000000
-      internalID: -5455911893360685152
+      spriteID: 3266faa4f55b67f30800000000000000
+      internalID: 4573041892520846883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Jumping_Sprite_Sheet_1
+      name: Sword_Attack_Sprite_sheet_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 52
         y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 52
+        height: 37
+      alignment: 9
+      pivot: {x: 0.32, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 720a461346bb5c510800000000000000
-      internalID: 1568866084208287783
+      spriteID: 15a4e5f953715e930800000000000000
+      internalID: 4171766148903094865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Jumping_Sprite_Sheet_2
+      name: Sword_Attack_Sprite_sheet_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 104
         y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 52
+        height: 37
+      alignment: 9
+      pivot: {x: 0.32, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05d956576971e1dc0800000000000000
-      internalID: -3666467111650878128
+      spriteID: e8f20c5db38416c80800000000000000
+      internalID: -8331298413832294514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Jumping_Sprite_Sheet_3
+      name: Sword_Attack_Sprite_sheet_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 156
         y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 54
+        height: 37
+      alignment: 9
+      pivot: {x: 0.32, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be606fe993f8dcf50800000000000000
-      internalID: 6903331281471669995
+      spriteID: c7c57436a8e470800800000000000000
+      internalID: 578517433418472572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Jumping_Sprite_Sheet_4
+      name: Sword_Attack_Sprite_sheet_5
       rect:
         serializedVersion: 2
-        x: 128
+        x: 261
         y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 51
+        height: 37
+      alignment: 9
+      pivot: {x: 0.32, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e51513e64f349960800000000000000
-      internalID: 7607775244225680872
+      spriteID: 725f4a92f6b38a7b0800000000000000
+      internalID: -5212851220055263961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Jumping_Sprite_Sheet_5
+      name: Sword_Attack_Sprite_sheet_4
       rect:
         serializedVersion: 2
-        x: 160
+        x: 211
         y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 37
+      alignment: 9
+      pivot: {x: 0.32, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56c181d7284f168e0800000000000000
-      internalID: -1701810342887678875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_Jumping_Sprite_Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0d2b2855a349d140800000000000000
-      internalID: 4744898059839417614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_Jumping_Sprite_Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a254ff93856971290800000000000000
-      internalID: -7919696114033408726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_Jumping_Sprite_Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec8f3db67886942d0800000000000000
-      internalID: -3293986721605879602
+      spriteID: 0ca4b2b7c34eef720800000000000000
+      internalID: 2881991759979301568
       vertices: []
       indices: 
       edges: []

@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: cab4703ba4279994da577c12f9439023
+guid: 733c26a2b0147424dbc8ad2008a0f65a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7410958543813000635
-    second: Slime_Attack_A_Sprite_Sheet_0
+      213: 4317395892319767215
+    second: Figure_Hurt-sheet_0
   - first:
-      213: 986279245520615606
-    second: Slime_Attack_A_Sprite_Sheet_1
+      213: 2477910446880164952
+    second: Figure_Hurt-sheet_1
   - first:
-      213: -104974076654801402
-    second: Slime_Attack_A_Sprite_Sheet_2
-  - first:
-      213: 6739410235086370522
-    second: Slime_Attack_A_Sprite_Sheet_3
-  - first:
-      213: -1563531788274573242
-    second: Slime_Attack_A_Sprite_Sheet_4
-  - first:
-      213: -3199058975902647714
-    second: Slime_Attack_A_Sprite_Sheet_5
+      213: -6730555765381199014
+    second: Figure_Hurt-sheet_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,23 +108,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slime_Attack_A_Sprite_Sheet_0
+      name: Figure_Hurt-sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -147,14 +126,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54241e6287cf62990800000000000000
-      internalID: -7410958543813000635
+      spriteID: faa437480b87aeb30800000000000000
+      internalID: 4317395892319767215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Attack_A_Sprite_Sheet_1
+      name: Figure_Hurt-sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -168,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b8b89e8fb7ffad00800000000000000
-      internalID: 986279245520615606
+      spriteID: 85c85834c6e436220800000000000000
+      internalID: 2477910446880164952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Attack_A_Sprite_Sheet_2
+      name: Figure_Hurt-sheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -189,71 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60ead5a22ae0b8ef0800000000000000
-      internalID: -104974076654801402
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_Attack_A_Sprite_Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad674f1e6e1378d50800000000000000
-      internalID: 6739410235086370522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_Attack_A_Sprite_Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 640ecdc5f183d4ae0800000000000000
-      internalID: -1563531788274573242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_Attack_A_Sprite_Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5a3ccd8fc8aa93d0800000000000000
-      internalID: -3199058975902647714
+      spriteID: a5b0f7ff0334892a0800000000000000
+      internalID: -6730555765381199014
       vertices: []
       indices: 
       edges: []
