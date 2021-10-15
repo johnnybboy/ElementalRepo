@@ -6,11 +6,15 @@ public class PlayerController : MonoBehaviour
 {
 
     // Player Stats
-    public int hearts = 10;
-    public int maxHearts = 10;
+    public float health = 5f;
+    public int maxHearts = 5;
     public int mana = 3;
     public int maxMana = 3;
     public int coins = 00;
+
+    public float weakDamage = .5f;
+    public float medDamage = 1f;
+    public float bigDamage = 1.5f;
 
     public Animator animator;
     public Transform attackPoint;
@@ -22,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
-    public float invulRate = 2f;
+    public float invulRate = 1f;
     float invulTime = 0f;
 
     void Update()
@@ -46,15 +50,8 @@ public class PlayerController : MonoBehaviour
             if (collision.gameObject.tag == "Enemy")
             {
 
-                TakeDamage(1);
-                if (hearts <= 0)
-                {
-                    Die();
-                }
-                else
-                {
-                    invulTime = Time.time + 1f / invulRate;
-                }
+                TakeDamage(weakDamage);
+                
             }
         }
 
@@ -62,7 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             string tag = collision.gameObject.tag;
             if (tag == "Heart")
-                AddHearts(1);
+                PickupHealth(1f);
             if (tag == "Mana")
                 AddMana(1);
             if (tag == "Coin")
@@ -77,13 +74,28 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         gameObject.SetActive(false);
-        Debug.Log("You are dead!");
     }
 
-    void TakeDamage(int damage)
+    void PickupHealth(float amount)
     {
-        hearts -= damage;
+        HealthBar.instance.AddHearts(amount);
+        health = HealthBar.instance.currentHearts;
+        //animator.SetTrigger("Heal");      //heal animation?
+
+        invulTime = Time.time + 1f / invulRate;     //temporary invul when pickup heart
+
+    }
+
+    void TakeDamage(float amount)
+    {
+        HealthBar.instance.RemoveHearts(amount);
+        health = HealthBar.instance.currentHearts;
         animator.SetTrigger("Hurt");
+
+        if (health <= 0)
+            Die();
+        else
+            invulTime = Time.time + 1f / invulRate;
     }
 
     void Attack()
@@ -97,17 +109,8 @@ public class PlayerController : MonoBehaviour
         // Damage them
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("We hit " + enemy.name);
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
-    }
-
-    void AddHearts(int num)
-    {
-        if (hearts + num > maxHearts)
-            hearts = maxHearts;
-        else
-            hearts += num;
     }
 
     void AddMana(int num)

@@ -31,7 +31,6 @@ public class GameManager : MonoBehaviour
         if (enemyCount <= 0 && gameState == 1)
         {
             //end game
-            Debug.Log("You defeated all of the enemies!");
             gameState = 0;
         }
 
@@ -47,9 +46,15 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < num; i++)
         {
-            float x = player.position.x + Random.Range(-spawnRange, spawnRange);
-            float y = player.position.y + Random.Range(-spawnRange, spawnRange);
-            Vector3 randomSpot = new Vector3(x, y, 0);
+            float x = 0;
+            float y = 0;
+
+            while (x < spawnRange/2 && x > -spawnRange / 2)
+                x = player.position.x + Random.Range(-spawnRange, spawnRange);
+            while (y < spawnRange / 2 && y > -spawnRange / 2)
+                y = player.position.x + Random.Range(-spawnRange, spawnRange);
+
+            Vector2 randomSpot = new Vector2(x, y);
 
             Instantiate(enemy, randomSpot, player.rotation);
         }

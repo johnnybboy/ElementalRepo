@@ -320,6 +320,9 @@ TextureImporter:
   - first:
       213: -6524062290969751019
     second: Forest_200
+  - first:
+      213: 9085546173938197295
+    second: Forest_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -350,7 +353,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -395,6 +398,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1286,6 +1301,27 @@ TextureImporter:
       bones: []
       spriteID: a8b1f8144a70c1cc0800000000000000
       internalID: -3739105188568425590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 576
+        width: 182
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23eeff9b18561e70800000000000000
+      internalID: 9085546173938197295
       vertices: []
       indices: 
       edges: []

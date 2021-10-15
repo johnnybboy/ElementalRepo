@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 8584049686920173790}
   - component: {fileID: 8584049686920173777}
   - component: {fileID: 8305315245061716823}
-  - component: {fileID: 25480440}
   - component: {fileID: 406264391}
   m_Layer: 7
   m_Name: Player
@@ -222,14 +221,6 @@ MonoBehaviour:
   attackDamage: 40
   attackRate: 2
   invulRate: 2
---- !u!81 &25480440
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8584049686920173778}
-  m_Enabled: 1
 --- !u!61 &406264391
 BoxCollider2D:
   m_ObjectHideFlags: 0

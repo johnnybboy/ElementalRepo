@@ -14,11 +14,14 @@ public class Enemy : MonoBehaviour
 
     public int maxHealth = 100;
     public float despawnTime = 2000f;
-    float timeOfDeath;
-    int currentHealth;
-    float speed;
-    bool isAlive = true;
-    
+
+    private Camera mainCamera;
+    private GameManager gm;
+    private int currentHealth;
+    private float timeOfDeath;
+    private float speed;
+    private Transform cameraTransform;
+    private bool isAlive = true;
     private bool facingRight;
 
     // Start is called before the first frame update
@@ -26,6 +29,8 @@ public class Enemy : MonoBehaviour
     {
         currentHealth = maxHealth;
         facingRight = false;
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     private void Update()
@@ -51,6 +56,10 @@ public class Enemy : MonoBehaviour
                     FlipFacing();
                 }
             }
+
+            //check if too far away from camera
+            if (Vector3.Distance(transform.position, mainCamera.transform.position) > gm.combatArea)
+                Destroy(gameObject);
         }
         else
         {
