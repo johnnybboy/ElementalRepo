@@ -3324,6 +3324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkullMage
       objectReference: {fileID: 0}
+    - target: {fileID: 6173231515391244703, guid: 7cc2243b01733214b9598035718a241c, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc2243b01733214b9598035718a241c, type: 3}
 --- !u!1 &939870747
