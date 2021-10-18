@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     public LayerMask layer;
 
     // Level 1 References
-    public BoxCollider2D BarrierL, BarrierR;
-    public Camera Cam1, Cam2;
+    public BoxCollider2D BarrierL, BarrierR, BarrierL2, BarrierR2;
+    public Camera Cam1, Cam2, Cam3;
 
     //for creating gameObjects
     public GameObject enemy;
@@ -30,15 +30,21 @@ public class GameManager : MonoBehaviour
         gameState = 1;
 
         Cam2.enabled = false;
+        Cam3.enabled = false;
         BarrierL = GameObject.Find("Left Barrier").GetComponent<BoxCollider2D>();
         BarrierR = GameObject.Find("Right Barrier").GetComponent<BoxCollider2D>();
+        BarrierL2 = GameObject.Find("Left Barrier (1)").GetComponent<BoxCollider2D>();
+        BarrierR2 = GameObject.Find("Right Barrier (1)").GetComponent<BoxCollider2D>();
         BarrierL.enabled = false;
         BarrierR.enabled = true;
+        BarrierL2.enabled = false;
+        BarrierR2.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // First encounter
         if (player.position.x >= -12 && enemyCount > 0)
         {
             Cam2.enabled = true;
@@ -51,6 +57,21 @@ public class GameManager : MonoBehaviour
             BarrierR.enabled = false;
             Cam2.enabled = false;
             Cam1.enabled = true;
+        }
+
+        // Second encounter
+        if (player.position.x >= 30 && enemyCount != 3)
+        {
+            Cam3.enabled = true;
+            Cam1.enabled = false;
+            BarrierL2.enabled = true;
+        }
+        else if (enemyCount <= 0)
+        {
+            Cam3.enabled = false;
+            Cam1.enabled = true;
+            BarrierL2.enabled = false;
+            BarrierR2.enabled = false;
         }
 
         if (enemyCount <= 0 && gameState == 1)

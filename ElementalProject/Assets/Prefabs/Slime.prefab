@@ -125,7 +125,7 @@ MonoBehaviour:
   PatrolSpeed_X: 3
   PatrolSpeed_Y: 3
   ChaseSpeed: 3
-  moveType: 0
+  moveType: 4
   patrolLBounds: 0
   partolRBounds: 0
   patrolUBounds: 0

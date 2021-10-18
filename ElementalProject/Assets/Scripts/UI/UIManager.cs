@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
         enemyCountText.text = "<color=white>Enemies Left : </color>" + gm.enemyCount;
         coinText.GetComponent<Text>().color = Color.white;
         coinText.text = "<color=white>x </color>" + player.coins;
-        if (playerPosition.position.x >= 41.4)
+        if (playerPosition.position.x >= 54.5)
         {
             //endText.enabled = true;
             //endText.text = "<color=white><b>You Win!</b></color>";
@@ -49,7 +49,7 @@ public class UIManager : MonoBehaviour
             endText.enabled = true;
             endText.text = "<color=red><b>You Died!</b></color>";
         }
-        else if (player.health > 0 && playerPosition.position.x <= 41.4)
+        else if (player.health > 0 && playerPosition.position.x <= 54.5)
         {
             endText.enabled = false;
         }
