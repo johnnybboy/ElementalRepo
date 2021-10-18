@@ -5,28 +5,30 @@ using UnityEngine;
 public class GM_Level1 : MonoBehaviour
 {
     public int enemyCount = 0;
-    public float combatArea = 100f;
-    public float spawnRange = 0f;
+    public float combatArea = 25f;
+    public float spawnRange = 1.5f;
 
-    public Transform player;
+    private Transform player;
     public LayerMask layer;
 
     // Level 1 References
     public BoxCollider2D BarrierL, BarrierR;
     public Camera Cam1, Cam2;
+    public Transform SpawnSpot1;
 
     //for creating gameObjects
-    public GameObject enemy;
+    public GameObject enemy_slime;
 
     private int gameState = 1;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player").transform;
         Application.targetFrameRate = 60;
-        //SpawnSlimes(3);
-        ControlledSpawn(3);
         CountEnemies();
+        //now spawns with spawn point
+        ControlledSpawn(enemy_slime, SpawnSpot1.position, 3, 0);
         gameState = 1;
 
         Cam2.enabled = false;
@@ -44,6 +46,7 @@ public class GM_Level1 : MonoBehaviour
             Cam2.enabled = true;
             Cam1.enabled = false;
             BarrierL.enabled = true;
+            
         }
         else if (enemyCount <= 0)
         {
@@ -62,40 +65,47 @@ public class GM_Level1 : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Return))
         {
-            SpawnSlimes(1);
+            SpawnNearPlayer(enemy_slime, 1, spawnRange);
         }
 
         CountEnemies();
     }
 
-    void ControlledSpawn(int num)
+    //This version has a default offset of 1.5f
+    void ControlledSpawn(GameObject enemy, Vector2 position, int amount)
     {
-        float x = -5f;
-        float y = -2f;
-        for (int i = 0; i < num; i++)
+        float offset = 1.5f;
+        float x = position.x;
+        float y = position.y;
+        for (int i = 0; i < amount; i++)
         {
-            x = Random.Range(-5f, -7f);
-            y = Random.Range(-1.2f, -2.2f);
-            Vector2 Location = new Vector2(x, y);
+            Vector2 Location = new Vector2(x + Random.Range(-offset, offset), y + Random.Range(-offset, offset));
             Instantiate(enemy, Location, player.rotation);
         }
     }
 
-    void SpawnSlimes(int num)
+    //This version takes a float offset to manually set the offset values
+    void ControlledSpawn(GameObject enemy, Vector2 position, int amount, float offsetVal)
     {
-        for (int i = 0; i < num; i++)
+        float offset = offsetVal;
+        float x = position.x;
+        float y = position.y;
+        for (int i = 0; i < amount; i++)
         {
-            float x = 0;
-            float y = 0;
+            Vector2 Location = new Vector2(x + Random.Range(-offset, offset), y + Random.Range(-offset, offset));
+            Instantiate(enemy, Location, player.rotation);
+        }
+    }
 
-            while (x < spawnRange / 2 && x > -spawnRange / 2)
-                x = player.position.x + Random.Range(-spawnRange, spawnRange);
-            while (y < spawnRange / 2 && y > -spawnRange / 2)
-                y = player.position.x + Random.Range(-spawnRange, spawnRange);
-
-            Vector2 randomSpot = new Vector2(x, y);
-
-            Instantiate(enemy, randomSpot, player.rotation);
+    void SpawnNearPlayer(GameObject enemy, int amount, float offsetVal)
+    {
+        float offset = offsetVal;
+        float x = player.position.x;
+        float y = player.position.y;
+        for (int i = 0; i < amount; i++)
+        {
+            Vector2 Location = new Vector2(x + Random.Range(-offset, offset), y + Random.Range(-offset, offset));
+            Instantiate(enemy, Location, player.rotation);
         }
     }
 
