@@ -57,9 +57,9 @@ public class Enemy : MonoBehaviour
                 }
             }
 
-            //check if too far away from camera
-            if (Vector3.Distance(transform.position, mainCamera.transform.position) > gm.combatArea)
-                Destroy(gameObject);
+            ////check if too far away from camera
+            //if (Vector3.Distance(transform.position, mainCamera.transform.position) > gm.combatArea)
+            //    Destroy(gameObject);
         }
         else
         {

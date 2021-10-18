@@ -1638,7 +1638,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286152253
 GameObject:
@@ -2052,7 +2052,7 @@ Transform:
   - {fileID: 1867423141}
   - {fileID: 141166272}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &503263884
 GameObject:
@@ -10006,7 +10006,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1401728664
 GameObject:
@@ -11949,7 +11949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2862578941666616283, guid: 19a665a75c334884ca3ba0a3802da5b6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2862578941666616283, guid: 19a665a75c334884ca3ba0a3802da5b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13737,7 +13737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCount: 0
-  combatArea: 100
+  combatArea: 25
   spawnRange: 3
   player: {fileID: 468949733}
   layer:
