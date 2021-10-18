@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
             animator.SetFloat("speed", speed);
 
             //check and flip facing
-            if (body.velocity.x >= 0)
+            if (body.velocity.x >= 0.1f)
             {
                 if (facingRight != true)
                 {

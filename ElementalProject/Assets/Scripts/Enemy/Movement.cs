@@ -187,7 +187,7 @@ public class Movement : MonoBehaviour
     private void detectPlayer()
     {
         float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
-        if (seperation <= 5)
+        if (seperation <= 3f)
         {
             moveType = Movement_Type.attack_cqb;
             //print("CAN ATTACK!");
