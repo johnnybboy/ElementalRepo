@@ -3,16 +3,7 @@ guid: 22316ba9b5334cc49a47cde6efd47805
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - player: {instanceID: 0}
-  - BarrierL: {instanceID: 0}
-  - BarrierR: {instanceID: 0}
-  - BarrierL2: {instanceID: 0}
-  - BarrierR2: {instanceID: 0}
-  - Cam1: {instanceID: 0}
-  - Cam2: {instanceID: 0}
-  - Cam3: {instanceID: 0}
-  - enemy: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
