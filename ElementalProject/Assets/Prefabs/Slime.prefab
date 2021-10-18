@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2862578941666616283}
   - component: {fileID: 2862578941666616273}
   - component: {fileID: 2862578941666616287}
+  - component: {fileID: 2862578941666616284}
   - component: {fileID: 2862578941666616285}
-  - component: {fileID: -7623987780074887773}
   - component: {fileID: 2862578941666616282}
   - component: {fileID: 5364263372119968431}
   m_Layer: 6
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 840645297
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -8824108606510461801, guid: 067eefe00091c8449b373447b95fdf83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -108,6 +108,19 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2862578941666616284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862578941666616280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 044c30ab11af362449c04007a76cbc1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 6
 --- !u!114 &2862578941666616285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,29 +136,12 @@ MonoBehaviour:
   animator: {fileID: 2862578941666616282}
   body: {fileID: 2862578941666616287}
   sprite: {fileID: 2862578941666616273}
+  camera: {fileID: 0}
   coin: {fileID: 6118982838337522031, guid: e18460f7d93841e4ebbf0b08baf17617, type: 3}
   heart: {fileID: 283299682443938280, guid: 9bd9e3e343810c34f89de7bc289eb263, type: 3}
   potion: {fileID: 1993606334950409096, guid: 6731517d2a970064a86c2fe306ef46ef, type: 3}
   maxHealth: 100
   despawnTime: 5
---- !u!114 &-7623987780074887773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2862578941666616280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e75cc14c3e119494a8e1c503bbe4ffae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WanderSpeed: 3
-  PatrolSpeed: 3
-  moveType: 0
-  patrolLBounds: 0
-  partolRBounds: 0
-  move_Right: 1
 --- !u!95 &2862578941666616282
 Animator:
   serializedVersion: 3
