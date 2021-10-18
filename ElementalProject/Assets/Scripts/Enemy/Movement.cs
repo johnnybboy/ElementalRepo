@@ -31,8 +31,8 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        player = GameObject.Find("Player");
+
         if (WanderSpeed <= 0)    //WanderSpeed can't be 0, use Movement_Type "idle" instead
         {
             WanderSpeed = 1;
