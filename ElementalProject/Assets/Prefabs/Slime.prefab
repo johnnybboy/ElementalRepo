@@ -140,12 +140,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75cc14c3e119494a8e1c503bbe4ffae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 8584049686920173778, guid: 5667e02988b27cc44942125aa190e307, type: 3}
   WanderSpeed: 3
-  PatrolSpeed: 3
+  PatrolSpeed_X: 3
+  PatrolSpeed_Y: 3
+  ChaseSpeed: 3
   moveType: 0
   patrolLBounds: 0
   partolRBounds: 0
+  patrolUBounds: 0
+  partolDBounds: 0
   move_Right: 1
+  move_Up: 1
 --- !u!95 &2862578941666616282
 Animator:
   serializedVersion: 3
