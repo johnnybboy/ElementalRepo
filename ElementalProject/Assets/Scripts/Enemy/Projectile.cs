@@ -36,7 +36,7 @@ public class Projectile : MonoBehaviour
             {
                 rb.AddForce(new Vector2(projSpeed, 0));
             }
-            rb.AddForce(new Vector2(1, 0));
+            
         }
     }
 
