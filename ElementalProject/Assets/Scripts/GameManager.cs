@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.position.x >= -12 && enemyCount > 0)
+        if (player.position.x >= -12 && player.position.x <= 5 && enemyCount > 0)
         {
             Cam2.enabled = true;
             Cam1.enabled = false;
