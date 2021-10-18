@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Movement : MonoBehaviour
 {
+<<<<<<< HEAD
     Rigidbody2D rb;
     public int WanderSpeed = 3;
     public int PatrolSpeed = 3;
@@ -29,25 +29,23 @@ public class Movement : MonoBehaviour
         startPos = new Vector2(rb.position.x,rb.position.y);
         DirectionChange();
         //print(startPos); //to see if startPos is working
-    }
-    void DirectionChange()
-    {
-        int x = 0;
-        int y = 0;
-        while (x > -(WanderSpeed) / 2 && x < (WanderSpeed) / 2)
-        {
-            x = Random.Range(-WanderSpeed, WanderSpeed);
-        }
-        while (y > -1 && y < 1)
-        {
-            y = Random.Range(-WanderSpeed, WanderSpeed);
-        }
+=======
+    Rigidbody2D rd;
+    public float moveSpeed = 6;
+    
+    Vector2 vel;
 
-        newPos = new Vector2(-x, y);
+    // Start is called before the first frame update
+    void Start()
+    {
+        rd = GetComponent<Rigidbody2D>();    
+>>>>>>> parent of c5de816 (Merge branch 'main' of https://github.com/johnnybboy/ElementalRepo)
     }
+
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         
         if(moveType == Movement_Type.patrol)
         {
@@ -76,10 +74,14 @@ public class Movement : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
         DirectionChange();
+=======
+        vel = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Virtical")).normalized * moveSpeed;
+>>>>>>> parent of c5de816 (Merge branch 'main' of https://github.com/johnnybboy/ElementalRepo)
     }
 
-    private void MarchRight()
+    private void FixedUpdate()
     {
+<<<<<<< HEAD
         rb.AddForce(new Vector2(PatrolSpeed, 0));
         if (rb.position.x >= startPos.x + partolRBounds)
         {
@@ -95,5 +97,8 @@ public class Movement : MonoBehaviour
             move_Right = true;
         }
 
+=======
+        rd.MovePosition(rd.position + vel * Time.fixedDeltaTime);
+>>>>>>> parent of c5de816 (Merge branch 'main' of https://github.com/johnnybboy/ElementalRepo)
     }
 }
