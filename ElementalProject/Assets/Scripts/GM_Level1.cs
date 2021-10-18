@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GM_Level1 : MonoBehaviour
 {
     public int enemyCount = 0;
     public float combatArea = 100f;

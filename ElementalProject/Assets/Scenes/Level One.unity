@@ -10901,6 +10901,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8696554190264301980, guid: d283fc31180c448429fd1d85df8ef267, type: 3}
+      propertyPath: layer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696554190264301980, guid: d283fc31180c448429fd1d85df8ef267, type: 3}
       propertyPath: playerPosition
       value: 
       objectReference: {fileID: 468949733}
@@ -13777,7 +13781,7 @@ GameObject:
   - component: {fileID: 1371517951137991137}
   - component: {fileID: 1371517951137991136}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameManager_Level1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
