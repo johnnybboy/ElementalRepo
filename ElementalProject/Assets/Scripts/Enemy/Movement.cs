@@ -24,7 +24,8 @@ public class Movement : MonoBehaviour
     public float partolRBounds; // how far right it can patrol
     public float patrolUBounds; // how far up it can patrol
     public float partolDBounds; // how far down it can patrol
-    
+
+    public bool DetectPlayer = true;// will detect player by default
     public bool move_Right = true; // starts patrol in the right direction
     public bool move_Up = true;    // starts patrol in the up direction
     
@@ -66,7 +67,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        detectPlayer();
+        if (DetectPlayer == true)
+        {
+            detectPlayer();
+        }
         if (moveType == Movement_Type.patrol)
         {
             if(move_Right == true) 
