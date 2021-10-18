@@ -70,10 +70,12 @@ public class GameManager : MonoBehaviour
 
     void ControlledSpawn(int num)
     {
+        float x = -5f;
+        float y = -2f;
         for (int i = 0; i < num; i++)
         {
-            float x = -5;
-            float y = -2;
+            x = Random.Range(-5f, -7f);
+            y = Random.Range(-1.2f, -2.2f);
             Vector2 Location = new Vector2(x, y);
             Instantiate(enemy, Location, player.rotation);
         }
