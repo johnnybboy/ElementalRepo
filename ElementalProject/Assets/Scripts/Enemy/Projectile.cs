@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
 
     Vector2 startPos; //starting position
 
+    public float projSpeed;
     public bool move_Right = true; // starts patrol in the right direction
     public bool move_Up = true;    // starts patrol in the up direction
     // Start is called before the first frame update
@@ -27,7 +28,14 @@ public class Projectile : MonoBehaviour
         bool direction = playerDirection();
         if (projectileType == Projectile_Type.straight)
         {
-
+            if(direction == false)
+            {
+                rb.AddForce(new Vector2(-projSpeed, 0));
+            }
+            if(direction == true)
+            {
+                rb.AddForce(new Vector2(projSpeed, 0));
+            }
             rb.AddForce(new Vector2(1, 0));
         }
     }
