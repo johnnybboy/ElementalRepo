@@ -55,6 +55,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (collision.gameObject.tag == "Trap")
+        {
+            TakeDamage(medDamage);
+        }
+
         if (collision.gameObject.layer == 8)    //Layer 8 is Items
         {
             string tag = collision.gameObject.tag;
@@ -86,7 +91,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void TakeDamage(float amount)
+    public void TakeDamage(float amount)
     {
         HealthBar.instance.RemoveHearts(amount);
         health = HealthBar.instance.currentHearts;

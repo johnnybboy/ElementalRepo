@@ -9,6 +9,7 @@ TagManager:
   - Mana
   - Coin
   - Item
+  - Trap
   layers:
   - Default
   - TransparentFX
