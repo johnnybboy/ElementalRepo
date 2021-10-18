@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    Rigidbody2D rb;
+    Rigidbody2D proj;
     public GameObject player;
 
     public enum Projectile_Type { curve, straight, bounce, boomerang}
@@ -12,41 +12,53 @@ public class Projectile : MonoBehaviour
 
     Vector2 startPos; //starting position
 
-    public float projSpeed;
+    private bool findDirection = true;
+    private bool direction = true;
+
+    public float projSpeed = 1;
     public bool move_Right = true; // starts patrol in the right direction
     public bool move_Up = true;    // starts patrol in the up direction
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
-        startPos = new Vector2(rb.position.x, rb.position.y);
+        
+        proj = GetComponent<Rigidbody2D>();
+        startPos = new Vector2(proj.position.x, proj.position.y);
     }
 
     // Update is called once per frame
     void Update()
     {
-        bool direction = playerDirection();
+        
         if (projectileType == Projectile_Type.straight)
         {
-            if(direction == false)
+            if (findDirection == true)
             {
-                rb.AddForce(new Vector2(-projSpeed, 0));
+                direction = PDirect();
+                findDirection = false;
             }
-            if(direction == true)
+            if (direction == false) //left
             {
-                rb.AddForce(new Vector2(projSpeed, 0));
+                proj.AddForce(new Vector2(-5, 0));
             }
-            
+            else if(direction == true) //right
+            {
+                proj.AddForce(new Vector2(5, 0));
+            }   
         }
+        
     }
 
-    private bool playerDirection()
+    private bool PDirect()
     {
-        if (player.transform.position.x < rb.position.x) // fires left
+       
+        
+        if (player.transform.position.x < proj.position.x) // fires left
         {
             return false;
         }
-        else if (player.transform.position.x > rb.position.x) //fires right
+        else if (player.transform.position.x > proj.position.x) //fires right
         {
             return true;
         }
