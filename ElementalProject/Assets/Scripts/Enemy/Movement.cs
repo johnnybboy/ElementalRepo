@@ -6,18 +6,6 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     Rigidbody2D rb;
-<<<<<<< Updated upstream
-    public int WanderSpeed = 3;
-    public int PatrolSpeed = 3;
-    public enum Movement_Type { idle, patrol, sleep, attack,wander }
-    public Movement_Type moveType;
-    Vector2 vel;
-    Vector2 startPos;
-    Vector2 newPos;
-    public float patrolLBounds;
-    public float partolRBounds;
-    public bool move_Right = true;
-=======
     public GameObject player;
     
     public int WanderSpeed = 3; // default speed it can wander
@@ -39,17 +27,10 @@ public class Movement : MonoBehaviour
     
     public bool move_Right = true; // starts patrol in the right direction
     public bool move_Up = true;    // starts patrol in the up direction
->>>>>>> Stashed changes
     
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< Updated upstream
-        if(WanderSpeed <= 0 || PatrolSpeed <= 0)
-        {
-            WanderSpeed = 1;
-            PatrolSpeed = 1;
-=======
         
         
         if (WanderSpeed <= 0)    //WanderSpeed can't be 0, use Movement_Type "idle" instead
@@ -59,7 +40,6 @@ public class Movement : MonoBehaviour
         if(PatrolSpeed_X <= 0 && PatrolSpeed_Y <= 0)   //PatrolSpeed can't be 0 for x and y, use Movement_Type "idle" instead
         {
             PatrolSpeed_X = 1;
->>>>>>> Stashed changes
         }
         rb = GetComponent<Rigidbody2D>();
         
@@ -86,13 +66,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
-        
-        if(moveType == Movement_Type.patrol)
-=======
         detectPlayer();
         if (moveType == Movement_Type.patrol)
->>>>>>> Stashed changes
         {
             if(move_Right == true) 
             {
@@ -104,9 +79,6 @@ public class Movement : MonoBehaviour
                 MarchLeft();
               
             }
-<<<<<<< Updated upstream
-            
-=======
             if (move_Up == true)
             {
                 MarchUp();
@@ -118,14 +90,11 @@ public class Movement : MonoBehaviour
                 
             }
 
->>>>>>> Stashed changes
         }
         else if(moveType == Movement_Type.wander)
         {
             rb.AddForce(newPos);
         }
-<<<<<<< Updated upstream
-=======
         else if(moveType == Movement_Type.attack_cqb)
         {
             //transform.position = Vector2.MoveTowards(rb.transform.position, player.transform.position, 3 * Time.deltaTime);
@@ -166,7 +135,6 @@ public class Movement : MonoBehaviour
                 rb.AddForce(new Vector2(0, -ChaseSpeed));
             }
         }
->>>>>>> Stashed changes
     }
 
     
@@ -182,7 +150,7 @@ public class Movement : MonoBehaviour
 
     private void MarchRight()
     {
-        rb.AddForce(new Vector2(PatrolSpeed, 0));
+        rb.AddForce(new Vector2(PatrolSpeed_X, 0));
         if (rb.position.x >= startPos.x + partolRBounds)
         {
             move_Right = false;
@@ -191,15 +159,13 @@ public class Movement : MonoBehaviour
     }
     private void MarchLeft()
     {
-        rb.AddForce(new Vector2(-PatrolSpeed, 0));
+        rb.AddForce(new Vector2(-PatrolSpeed_X, 0));
         if (rb.position.x <= startPos.x - patrolLBounds)
         {
             move_Right = true;
         }
 
     }
-<<<<<<< Updated upstream
-=======
     private void MarchUp()
     {
         rb.AddForce(new Vector2(0, PatrolSpeed_Y));
@@ -231,5 +197,4 @@ public class Movement : MonoBehaviour
             moveType = previousType;
         }
     }
->>>>>>> Stashed changes
 }
