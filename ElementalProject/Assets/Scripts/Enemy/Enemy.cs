@@ -93,7 +93,11 @@ public class Enemy : MonoBehaviour
 
         //disable enemy
         GetComponent<Collider2D>().enabled = false;
+<<<<<<< Updated upstream
         GetComponent<Movement>().enabled = false;
+=======
+        //GetComponent<wanderAI>().enabled = false;
+>>>>>>> Stashed changes
         
         //delete after some delay
         isAlive = false;
