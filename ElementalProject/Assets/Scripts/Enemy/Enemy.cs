@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    //Components
     public Animator animator;
     public Rigidbody2D body;
     public SpriteRenderer sprite;
 
-    public GameObject coin;
-    public GameObject heart;
-    public GameObject potion;
+    //loot drops
+    public GameObject coin, heart, potion;
 
+    //stats
     public int maxHealth = 100;
     public float despawnTime = 2f;
 
     private int currentHealth;
+
+    //animation fields
     private float timeOfDeath;
     private float speed;
     private bool isAlive = true;
     private bool facingRight;
+
+    //combat conditions
+
 
     // Start is called before the first frame update
     void Start()

@@ -45,21 +45,23 @@ public class PlayerController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        //damage collisions, check if invulnerable
         if (Time.time > invulTime)
         {
-            if (collision.gameObject.tag == "Enemy")
+            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
             {
 
                 TakeDamage(weakDamage);
                 
             }
+
+            if (collision.gameObject.tag == "Trap")
+            {
+                TakeDamage(medDamage);
+            }
         }
 
-        if (collision.gameObject.tag == "Trap")
-        {
-            TakeDamage(medDamage);
-        }
-
+        //item collisions
         if (collision.gameObject.layer == 8)    //Layer 8 is Items
         {
             string tag = collision.gameObject.tag;
