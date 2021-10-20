@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
         {
             if (findDirection == true)
             {
-                direction = PDirect();
+                direction = PDirectX();
                 findDirection = false;
             }
             if (direction == false) //left
@@ -53,7 +53,7 @@ public class Projectile : MonoBehaviour
         
     }
 
-    private bool PDirect()
+    private bool PDirectX()
     {
        
         
