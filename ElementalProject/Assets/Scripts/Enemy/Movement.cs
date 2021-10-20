@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     public float detectRange = 1.5f; //default distance it will detectPlayer()
     public float keepDistance = .1f; //distance the movement will stop to avoid pushing the player
 
-    public enum Movement_Type { idle, patrol, sleep, attack_cqb ,wander } //movement types 
+    public enum Movement_Type { idle, patrol, sleep, attack_cqb ,wander,attack_ranged } //movement types 
     public Movement_Type moveType;
     private Movement_Type previousType;
 
@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
     public bool DetectPlayer = true;// will detect player by default
     public bool move_Right = true; // starts patrol in the right direction
     public bool move_Up = true;    // starts patrol in the up direction
-    
+    public bool rangedAttack = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -136,6 +136,32 @@ public class Movement : MonoBehaviour
                 }
             }
         }
+        else if(moveType == Movement_Type.attack_ranged)
+        {
+            float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
+            if (seperation >= detectRange) //added keepDistance, will do nothing on x-axis
+            {
+                if (player.transform.position.y > rb.position.y)
+                {
+                    rb.AddForce(new Vector2(0, ChaseSpeed));
+                }
+                else if (player.transform.position.y < rb.position.y)
+                {
+                    rb.AddForce(new Vector2(0, -ChaseSpeed));
+                }
+                /*if (player.transform.position.x < rb.position.x)
+                {
+                    rb.AddForce(new Vector2(ChaseSpeed,0));
+                }
+                else if (player.transform.position.x > rb.position.x)
+                {
+                    rb.AddForce(new Vector2(-ChaseSpeed,0));
+                }*/
+
+
+            }
+            
+        }
         else if(moveType == Movement_Type.idle)
         {
             //transform.position = Vector2.MoveTowards(rb.position, startPos, 1 * Time.deltaTime);
@@ -208,10 +234,15 @@ public class Movement : MonoBehaviour
     private void detectPlayer()
     {
         float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
-        if (seperation <= detectRange)
+        if (seperation > detectRange  && rangedAttack == true)
+        {
+            moveType = Movement_Type.attack_ranged;
+            print("CAN Range!");
+        }
+        else if (seperation <= detectRange)
         {
             moveType = Movement_Type.attack_cqb;
-            //print("CAN ATTACK!");
+            print("CAN CQB!");
         }
         else
         {
