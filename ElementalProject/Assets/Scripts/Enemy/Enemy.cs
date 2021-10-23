@@ -4,33 +4,34 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    //Components
     public Animator animator;
     public Rigidbody2D body;
     public SpriteRenderer sprite;
 
-    public GameObject coin;
-    public GameObject heart;
-    public GameObject potion;
+    //loot drops
+    public GameObject coin, heart, potion;
 
+    //stats
     public int maxHealth = 100;
-    public float despawnTime = 2000f;
+    public float despawnTime = 2f;
 
-    private Camera mainCamera;
-    private GameManager gm;
     private int currentHealth;
+
+    //animation fields
     private float timeOfDeath;
     private float speed;
-    private Transform cameraTransform;
     private bool isAlive = true;
     private bool facingRight;
+
+    //combat conditions
+
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         facingRight = false;
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-        mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     private void Update()
@@ -42,7 +43,7 @@ public class Enemy : MonoBehaviour
             animator.SetFloat("speed", speed);
 
             //check and flip facing
-            if (body.velocity.x >= 0)
+            if (body.velocity.x >= 0.1f)
             {
                 if (facingRight != true)
                 {
@@ -56,10 +57,6 @@ public class Enemy : MonoBehaviour
                     FlipFacing();
                 }
             }
-
-            ////check if too far away from camera
-            //if (Vector3.Distance(transform.position, mainCamera.transform.position) > gm.combatArea)
-            //    Destroy(gameObject);
         }
         else
         {
