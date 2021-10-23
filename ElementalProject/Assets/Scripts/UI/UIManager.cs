@@ -42,13 +42,8 @@ public class UIManager : MonoBehaviour
         enemyCountText.GetComponent<Text>().color = Color.white;
         enemyCountText.text = "<color=white>Enemies Left : </color>" + enemyCount;
         coinText.GetComponent<Text>().color = Color.white;
-<<<<<<< Updated upstream
         coinText.text = "<color=white>x </color>" + playerController.coins;
         if (player.transform.position.x >= 41.4)
-=======
-        coinText.text = "<color=white>x </color>" + player.coins;
-        if (playerPosition.position.x >= 124)
->>>>>>> Stashed changes
         {
             //endText.enabled = true;
             //endText.text = "<color=white><b>You Win!</b></color>";
@@ -59,11 +54,7 @@ public class UIManager : MonoBehaviour
             endText.enabled = true;
             endText.text = "<color=red><b>You Died!</b></color>";
         }
-<<<<<<< Updated upstream
         else if (playerController.health > 0 && player.transform.position.x <= 41.4)
-=======
-        else if (player.health > 0 && playerPosition.position.x <= 124)
->>>>>>> Stashed changes
         {
             endText.enabled = false;
         }
