@@ -12,10 +12,8 @@ public class Movement : MonoBehaviour
     public int PatrolSpeed_X = 3; //default speed it can patrol x-axis
     public int PatrolSpeed_Y = 3; //default speed it can patrol y-axis
     public int ChaseSpeed = 3; //default speed it chases the player
-    public float detectRange = 1.5f; //default distance it will detectPlayer()
-    public float keepDistance = .1f; //distance the movement will stop to avoid pushing the player
 
-    public enum Movement_Type { idle, patrol, sleep, attack_cqb ,wander,attack_ranged } //movement types 
+    public enum Movement_Type { idle, patrol, sleep, attack_cqb ,wander } //movement types 
     public Movement_Type moveType;
     private Movement_Type previousType;
 
@@ -26,11 +24,10 @@ public class Movement : MonoBehaviour
     public float partolRBounds; // how far right it can patrol
     public float patrolUBounds; // how far up it can patrol
     public float partolDBounds; // how far down it can patrol
-
-    public bool DetectPlayer = true;// will detect player by default
+    
     public bool move_Right = true; // starts patrol in the right direction
     public bool move_Up = true;    // starts patrol in the up direction
-    public bool rangedAttack = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +48,7 @@ public class Movement : MonoBehaviour
         DirectionChange();
         //print(startPos); //to see if startPos is working
     }
-    public void DirectionChange()
+    void DirectionChange()
     {
         int x = 0;
         int y = 0;
@@ -69,10 +66,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DetectPlayer == true)
-        {
-            detectPlayer();
-        }
+        detectPlayer();
         if (moveType == Movement_Type.patrol)
         {
             if(move_Right == true) 
@@ -103,64 +97,23 @@ public class Movement : MonoBehaviour
         }
         else if(moveType == Movement_Type.attack_cqb)
         {
-            float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
-            if (seperation <= keepDistance) //added keepDistance, will do nothing on x-axis
+            //transform.position = Vector2.MoveTowards(rb.transform.position, player.transform.position, 3 * Time.deltaTime);
+            if (player.transform.position.x > rb.position.x)
             {
-                if (player.transform.position.y > rb.position.y)
-                {
-                    rb.AddForce(new Vector2(0, ChaseSpeed));
-                }
-                else if (player.transform.position.y < rb.position.y)
-                {
-                    rb.AddForce(new Vector2(0, -ChaseSpeed));
-                }
+                rb.AddForce(new Vector2(ChaseSpeed, 0));
             }
-            else
+            else if (player.transform.position.x < rb.position.x) 
             {
-                //transform.position = Vector2.MoveTowards(rb.transform.position, player.transform.position, 3 * Time.deltaTime);
-                if (player.transform.position.x > rb.position.x)
-                {
-                    rb.AddForce(new Vector2(ChaseSpeed, 0));
-                }
-                else if (player.transform.position.x < rb.position.x)
-                {
-                    rb.AddForce(new Vector2(-ChaseSpeed, 0));
-                }
-                if (player.transform.position.y > rb.position.y)
-                {
-                    rb.AddForce(new Vector2(0, ChaseSpeed));
-                }
-                else if (player.transform.position.y < rb.position.y)
-                {
-                    rb.AddForce(new Vector2(0, -ChaseSpeed));
-                }
+                rb.AddForce(new Vector2(-ChaseSpeed, 0));
             }
-        }
-        else if(moveType == Movement_Type.attack_ranged)
-        {
-            float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
-            if (seperation >= detectRange) //added keepDistance, will do nothing on x-axis
+            if (player.transform.position.y > rb.position.y)
             {
-                if (player.transform.position.y > rb.position.y)
-                {
-                    rb.AddForce(new Vector2(0, ChaseSpeed));
-                }
-                else if (player.transform.position.y < rb.position.y)
-                {
-                    rb.AddForce(new Vector2(0, -ChaseSpeed));
-                }
-                /*if (player.transform.position.x < rb.position.x)
-                {
-                    rb.AddForce(new Vector2(ChaseSpeed,0));
-                }
-                else if (player.transform.position.x > rb.position.x)
-                {
-                    rb.AddForce(new Vector2(-ChaseSpeed,0));
-                }*/
-
-
+                rb.AddForce(new Vector2(0,ChaseSpeed));
             }
-            
+            else if (player.transform.position.y < rb.position.y)
+            {
+                rb.AddForce(new Vector2(0,-ChaseSpeed));
+            }
         }
         else if(moveType == Movement_Type.idle)
         {
@@ -234,15 +187,10 @@ public class Movement : MonoBehaviour
     private void detectPlayer()
     {
         float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
-        if (seperation > detectRange  && rangedAttack == true)
-        {
-            moveType = Movement_Type.attack_ranged;
-            print("CAN Range!");
-        }
-        else if (seperation <= detectRange)
+        if (seperation <= 5)
         {
             moveType = Movement_Type.attack_cqb;
-            print("CAN CQB!");
+            //print("CAN ATTACK!");
         }
         else
         {

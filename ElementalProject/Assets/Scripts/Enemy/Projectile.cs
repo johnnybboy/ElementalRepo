@@ -4,72 +4,44 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    Rigidbody2D proj;
-    private GameObject player;
+    Rigidbody2D rb;
+    public GameObject player;
 
     public enum Projectile_Type { curve, straight, bounce, boomerang}
     public Projectile_Type projectileType;
 
     Vector2 startPos; //starting position
 
-    private bool findDirection = true;
-    private bool direction = true;
-
-    public float projSpeed = 1f;
-    public bool patrol_Right = true; // starts patrol in the right direction
-    public bool patrol_Up = true;    // starts patrol in the up direction
+    public bool move_Right = true; // starts patrol in the right direction
+    public bool move_Up = true;    // starts patrol in the up direction
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
-        //player = GameObject.FindGameObjectWithTag("Player");
-        //we'll want to start implementing the Tag system so we could have multiple player objects potentially
-        //      For character switching, down the road
-        
-        proj = GetComponent<Rigidbody2D>();
-        startPos = new Vector2(proj.position.x, proj.position.y);
+        startPos = new Vector2(rb.position.x, rb.position.y);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        bool direction = playerDirection();
         if (projectileType == Projectile_Type.straight)
         {
-            if (findDirection == true)
-            {
-                direction = PDirectX();
-                findDirection = false;
-            }
-            if (direction == false) //left
-            {
-                proj.AddForce(new Vector2(-projSpeed, 0f));
-            }
-            else if(direction == true) //right
-            {
-                proj.AddForce(new Vector2(projSpeed, 0f));
-            }   
+
+            rb.AddForce(new Vector2(1, 0));
         }
-        
     }
 
-    private bool PDirectX()
+    private bool playerDirection()
     {
-       
-        
-        if (player.transform.position.x < proj.position.x) // fires left
+        if (player.transform.position.x < rb.position.x) // fires left
         {
             return false;
         }
-        else if (player.transform.position.x > proj.position.x) //fires right
+        else if (player.transform.position.x > rb.position.x) //fires right
         {
             return true;
         }
         else { return false; }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
     }
 }

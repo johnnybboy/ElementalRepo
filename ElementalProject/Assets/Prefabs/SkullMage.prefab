@@ -125,14 +125,11 @@ MonoBehaviour:
   PatrolSpeed_X: 3
   PatrolSpeed_Y: 3
   ChaseSpeed: 3
-  detectRange: 8
-  keepDistance: 6
   moveType: 4
   patrolLBounds: 0
   partolRBounds: 0
   patrolUBounds: 0
   partolDBounds: 0
-  DetectPlayer: 1
   move_Right: 1
   move_Up: 1
 --- !u!114 &6173231515391244703
