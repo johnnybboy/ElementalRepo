@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 1305159927}
   - component: {fileID: 1305159926}
   m_Layer: 0
-  m_Name: GameManager_SampleScene
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,16 +453,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1305159925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc8e041aeec075d4181bd16f533fe1e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 22316ba9b5334cc49a47cde6efd47805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCount: 0
-  combatArea: 25
-  spawnRange: 1.5
+  combatArea: 50
+  spawnRange: 2
+  player: {fileID: 410081801}
   layer:
     serializedVersion: 2
     m_Bits: 64
-  enemy_slime: {fileID: 2862578941666616280, guid: 19a665a75c334884ca3ba0a3802da5b6, type: 3}
+  enemy: {fileID: 2862578941666616280, guid: 19a665a75c334884ca3ba0a3802da5b6, type: 3}
 --- !u!4 &1305159927
 Transform:
   m_ObjectHideFlags: 0
@@ -2482,14 +2483,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8696554190264301980, guid: d283fc31180c448429fd1d85df8ef267, type: 3}
-      propertyPath: layer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 8696554190264301980, guid: d283fc31180c448429fd1d85df8ef267, type: 3}
-      propertyPath: playerPosition
-      value: 
-      objectReference: {fileID: 8584049686838370751, guid: 5667e02988b27cc44942125aa190e307, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d283fc31180c448429fd1d85df8ef267, type: 3}
 --- !u!1001 &8584049686434593718
