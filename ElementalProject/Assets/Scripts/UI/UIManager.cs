@@ -43,12 +43,7 @@ public class UIManager : MonoBehaviour
         enemyCountText.text = "<color=white>Enemies Left : </color>" + enemyCount;
         coinText.GetComponent<Text>().color = Color.white;
         coinText.text = "<color=white>x </color>" + playerController.coins;
-        if (player.transform.position.x >= 41.4)
-        {
-            //endText.enabled = true;
-            //endText.text = "<color=white><b>You Win!</b></color>";
-            SceneManager.LoadScene("WinningScene");
-        }
+        
         if (playerController.health <= 0)
         {
             endText.enabled = true;

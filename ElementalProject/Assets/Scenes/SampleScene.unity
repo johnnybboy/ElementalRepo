@@ -453,17 +453,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1305159925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22316ba9b5334cc49a47cde6efd47805, type: 3}
+  m_Script: {fileID: 11500000, guid: fc8e041aeec075d4181bd16f533fe1e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCount: 0
-  combatArea: 50
-  spawnRange: 2
-  player: {fileID: 410081801}
+  combatArea: 25
+  spawnRange: 1.5
   layer:
     serializedVersion: 2
-    m_Bits: 64
-  enemy: {fileID: 2862578941666616280, guid: 19a665a75c334884ca3ba0a3802da5b6, type: 3}
+    m_Bits: 0
+  enemy_slime: {fileID: 0}
 --- !u!4 &1305159927
 Transform:
   m_ObjectHideFlags: 0

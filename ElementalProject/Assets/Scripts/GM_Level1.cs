@@ -32,8 +32,12 @@ public class GM_Level1 : MonoBehaviour
         Application.targetFrameRate = 60;   //important for game speed to be same across all computers
         CountEnemies();
         
-        ControlledSpawn(enemy_slime, SpawnSpot1.position, 3, 0);    //now spawns with spawn point
-        gameState = 1;
+        if (SpawnSpot1 != null)
+        {
+            ControlledSpawn(enemy_slime, SpawnSpot1.position, 3, 0);    //now spawns with spawn point
+            gameState = 1;
+        }
+        
 
         Cam2.enabled = false;
         BarrierL = GameObject.Find("Left Barrier").GetComponent<BoxCollider2D>();
@@ -60,12 +64,19 @@ public class GM_Level1 : MonoBehaviour
             Cam1.enabled = true;
         }
 
-        if (enemyCount <= 0 && gameState == 1)
-        {
-            //end game
-            gameState = 0;
+        //if (enemyCount <= 0 && gameState == 1)
+        //{
+        //    //end game
+        //    gameState = 0;
 
-        }
+        //}
+
+        //if (player.transform.position.x >= 41.4)
+        //{
+        //    //endText.enabled = true;
+        //    //endText.text = "<color=white><b>You Win!</b></color>";
+        //    SceneManager.LoadScene("WinningScene");
+        //}
 
         if (Input.GetKey(KeyCode.Return))
         {
