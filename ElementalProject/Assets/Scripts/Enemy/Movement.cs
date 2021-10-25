@@ -237,12 +237,12 @@ public class Movement : MonoBehaviour
         if (seperation > detectRange  && rangedAttack == true)
         {
             moveType = Movement_Type.attack_ranged;
-            print("CAN Range!");
+            //print("CAN Range!");
         }
         else if (seperation <= detectRange)
         {
             moveType = Movement_Type.attack_cqb;
-            print("CAN CQB!");
+            //print("CAN CQB!");
         }
         else
         {
