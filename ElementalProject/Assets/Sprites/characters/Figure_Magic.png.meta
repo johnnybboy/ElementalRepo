@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: 59892676a30161942aec37555c27c817
+guid: b8c16b61ac963ce4ba80e093047a77d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4573041892520846883
-    second: Sword_Attack_Sprite_sheet_0
+      213: 5451140732645533802
+    second: Magic_attack_player_0
   - first:
-      213: 4171766148903094865
-    second: Sword_Attack_Sprite_sheet_1
+      213: -446110741345227316
+    second: Magic_attack_player_1
   - first:
-      213: -8331298413832294514
-    second: Sword_Attack_Sprite_sheet_2
+      213: -6178168355056672042
+    second: Magic_attack_player_2
   - first:
-      213: 578517433418472572
-    second: Sword_Attack_Sprite_sheet_3
-  - first:
-      213: -5212851220055263961
-    second: Sword_Attack_Sprite_sheet_5
-  - first:
-      213: 1154167088575695129
-    second: Sword_Attack_Sprite_sheet_6
-  - first:
-      213: 2881991759979301568
-    second: Sword_Attack_Sprite_sheet_4
+      213: -3397474125556852184
+    second: Magic_attack_player_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -67,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,6 +89,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -145,18 +148,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -172,127 +163,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sword_Attack_Sprite_sheet_0
+      name: Magic_attack_player_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 52
-        height: 37
+        width: 32
+        height: 29
       alignment: 9
-      pivot: {x: 0.32, y: 0.5}
+      pivot: {x: 0.4, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3266faa4f55b67f30800000000000000
-      internalID: 4573041892520846883
+      spriteID: a68effd6d9756ab40800000000000000
+      internalID: 5451140732645533802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_Attack_Sprite_sheet_1
+      name: Magic_attack_player_1
       rect:
         serializedVersion: 2
-        x: 52
+        x: 32
         y: 0
-        width: 52
-        height: 37
+        width: 32
+        height: 29
       alignment: 9
-      pivot: {x: 0.32, y: 0.5}
+      pivot: {x: 0.4, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15a4e5f953715e930800000000000000
-      internalID: 4171766148903094865
+      spriteID: ccda1a3f4a81fc9f0800000000000000
+      internalID: -446110741345227316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_Attack_Sprite_sheet_2
+      name: Magic_attack_player_2
       rect:
         serializedVersion: 2
-        x: 104
+        x: 64
         y: 0
-        width: 52
-        height: 37
+        width: 32
+        height: 29
       alignment: 9
-      pivot: {x: 0.32, y: 0.5}
+      pivot: {x: 0.4, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8f20c5db38416c80800000000000000
-      internalID: -8331298413832294514
+      spriteID: 6d2a94a4d9cb24aa0800000000000000
+      internalID: -6178168355056672042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_Attack_Sprite_sheet_3
+      name: Magic_attack_player_3
       rect:
         serializedVersion: 2
-        x: 156
+        x: 96
         y: 0
-        width: 54
-        height: 37
+        width: 32
+        height: 29
       alignment: 9
-      pivot: {x: 0.32, y: 0.5}
+      pivot: {x: 0.4, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7c57436a8e470800800000000000000
-      internalID: 578517433418472572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sword_Attack_Sprite_sheet_5
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 0
-        width: 51
-        height: 37
-      alignment: 9
-      pivot: {x: 0.32, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 725f4a92f6b38a7b0800000000000000
-      internalID: -5212851220055263961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sword_Attack_Sprite_sheet_4
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 0
-        width: 50
-        height: 37
-      alignment: 9
-      pivot: {x: 0.32, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ca4b2b7c34eef720800000000000000
-      internalID: 2881991759979301568
+      spriteID: 82a5a9c884fb9d0d0800000000000000
+      internalID: -3397474125556852184
       vertices: []
       indices: 
       edges: []
