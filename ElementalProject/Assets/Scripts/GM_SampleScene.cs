@@ -20,8 +20,6 @@ public class GM_SampleScene : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
-        //SpawnSlimes(3);
-        //ControlledSpawn(3);
         player = GameObject.Find("Player").transform;
         CountEnemies();
         gameState = 1;

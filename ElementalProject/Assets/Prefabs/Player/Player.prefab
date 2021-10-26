@@ -106,9 +106,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1161414555
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2470990668423374672, guid: ee91c04b675d69d4c9710b4718bf22d5, type: 3}
+  m_Sprite: {fileID: -3604254878601119295, guid: 9218737b40e03ed4c9e3502c04e9a5ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -207,11 +207,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d8836c80f5d1844aaaa4825e8a757b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearts: 10
+  health: 5
   maxHearts: 10
   mana: 5
   maxMana: 3
   coins: 0
+  weakDamage: 0.5
+  medDamage: 1
+  bigDamage: 1.5
   animator: {fileID: 8584049686920173791}
   attackPoint: {fileID: 8584049686918917744}
   enemyLayers:
@@ -234,16 +237,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.041172028, y: -0.04601583}
+  m_Offset: {x: 0.06091124, y: 0.003332138}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.625, y: 1.8125}
     newSize: {x: 1.625, y: 1.15625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37515354, y: 0.90796834}
+  m_Size: {x: 0.53306663, y: 1.7962315}
   m_EdgeRadius: 0
