@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -60,12 +59,6 @@ public class PlayerController : MonoBehaviour
             {
                 TakeDamage(medDamage);
             }
-
-            if (collision.gameObject.tag == "End")
-            {
-                SceneManager.LoadScene("WinningScene");
-            }
-
         }
 
         //item collisions
