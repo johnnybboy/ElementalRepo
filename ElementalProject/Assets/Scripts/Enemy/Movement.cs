@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
     public int PatrolSpeed_X = 3; //default speed it can patrol x-axis
     public int PatrolSpeed_Y = 3; //default speed it can patrol y-axis
     public int ChaseSpeed = 3; //default speed it chases the player
-    public float detectRange = 1.5f; //default distance it will detectPlayer()
+    public float detectRange = 4f; //default distance it will detectPlayer()
     public float keepDistance = .1f; //distance the movement will stop to avoid pushing the player
 
     public enum Movement_Type { idle, patrol, sleep, attack_cqb ,wander,attack_ranged } //movement types 
