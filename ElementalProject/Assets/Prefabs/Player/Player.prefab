@@ -400,7 +400,7 @@ MonoBehaviour:
     m_Bits: 64
   attackRange: 0.6
   attackDamage: 40
-  attackRate: 0.8
+  attackRate: 0.5
   isAttacking: 0
   invulRate: 2
 --- !u!61 &406264391
