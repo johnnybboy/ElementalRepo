@@ -117,7 +117,7 @@ public class GM_Level1 : MonoBehaviour
     //This version will place one object near the player (default offset of .5)
     void SpawnNearPlayer(GameObject enemy)
     {
-        float offset = .5f;
+        float offset = 2f;
         float x = player.transform.position.x;
         float y = player.transform.position.y;
         Vector2 Location = new Vector2(x + Random.Range(-offset, offset), y + Random.Range(-offset, offset));

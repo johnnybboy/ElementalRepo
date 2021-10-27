@@ -9,40 +9,41 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D body;
     public SpriteRenderer sprite;
 
-    //loot drops
+    //loot drops (MUST be assigned in Unity!)
     public GameObject coin, heart, potion;
 
     //stats
     public float maxHealth = 3f;
     public float despawnTime = 2f;
 
-    public float damage_1 = .5f;
-    public float damage_2 = 1f;
-    public float damage_3 = 1.5f;
+    public float damage_weak = .5f;
+    public float damage_medium = 1f;
+    public float damage_strong = 1.5f;
+
+    public bool facingRight = false;
+    public bool isAlive = true;
 
     private float currentHealth;
 
     //animation fields
-    private float timeOfDeath;
     private float speed;
-    private bool isAlive = true;
-    private bool facingRight;
 
     //combat conditions
+    //TODO
+    //stunned, on fire, frozen, poisoned, vulnerable
 
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
-        facingRight = false;
     }
 
     private void Update()
     {
         if (isAlive)
         {
-            // animation for moving
+            //animation for moving
             speed = Mathf.Abs(body.velocity.x) + Mathf.Abs(body.velocity.y);
             animator.SetFloat("speed", speed);
 
@@ -62,20 +63,12 @@ public class Enemy : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            //Delay despawn after death, destroy this gameobject and spawn loot
-            if (Time.time > timeOfDeath + despawnTime)
-            {
-                SpawnLoot();
-                Destroy(gameObject);
-            }
-        }
     }
 
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        Debug.Log(currentHealth);
 
         // Play hurt animation
         animator.SetTrigger("hurt");
@@ -86,11 +79,11 @@ public class Enemy : MonoBehaviour
 
         if(currentHealth <= 0)
         {
-            Die();
+            StartCoroutine(Die());
         }
     }
 
-    void Die()
+    IEnumerator Die()
     {
         //die animation
         animator.SetBool("isDead", true);
@@ -101,7 +94,11 @@ public class Enemy : MonoBehaviour
         
         //delete after some delay
         isAlive = false;
-        timeOfDeath = Time.time;
+        yield return new WaitForSeconds(despawnTime);
+
+        //destroy this gameobject and spawn loot
+        SpawnLoot();
+        Destroy(gameObject);
     }
 
     void FlipFacing()

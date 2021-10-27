@@ -74,13 +74,13 @@ public class SpikeTrapV : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            enemy.TakeDamage(enemy.damage_2);
+            enemy.TakeDamage(enemy.damage_medium);
         }
 
         if (collision.gameObject.tag == "Player")
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            player.TakeDamage(player.damage_2);
+            player.TakeDamage(player.damage_medium);
         }
     }
 

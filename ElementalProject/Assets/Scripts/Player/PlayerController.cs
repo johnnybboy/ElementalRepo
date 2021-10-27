@@ -13,9 +13,9 @@ public class PlayerController : MonoBehaviour
     public int maxMana = 3;
     public int coins = 00;
 
-    public float damage_1 = .5f;
-    public float damage_2 = 1f;
-    public float damage_3 = 1.5f;
+    public float damage_weak = .5f;
+    public float damage_medium = 1f;
+    public float damage_strong = 1.5f;
 
     public Animator animator;
     public Transform attackPoint;
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
             if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
             {
 
-                TakeDamage(damage_1);
+                TakeDamage(damage_weak);
                 
             }
 

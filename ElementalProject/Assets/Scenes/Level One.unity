@@ -266,6 +266,10 @@ PrefabInstance:
       propertyPath: BarrierR
       value: 
       objectReference: {fileID: 1401728667}
+    - target: {fileID: 1371517951137991136, guid: 1280825acb43ace46968a7a4b6580c63, type: 3}
+      propertyPath: enemy_slime
+      value: 
+      objectReference: {fileID: 2862578941666616280, guid: 19a665a75c334884ca3ba0a3802da5b6, type: 3}
     - target: {fileID: 5936302771571907747, guid: 1280825acb43ace46968a7a4b6580c63, type: 3}
       propertyPath: m_RootOrder
       value: 4

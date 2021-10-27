@@ -9,7 +9,7 @@ public class PlayerSwordCollision : MonoBehaviour
         if (other.tag == "Enemy")
         {
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
-            enemy.TakeDamage(enemy.damage_2);
+            enemy.TakeDamage(enemy.damage_medium);
         }
     }
 }
