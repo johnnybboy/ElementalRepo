@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: b8c16b61ac963ce4ba80e093047a77d9
+guid: 68dbcabf1abbd1842ae919ef0fd692de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5451140732645533802
-    second: Magic_attack_player_0
+      213: 750881770856827850
+    second: Sword_Attack_Sprite_sheet_x64_0
   - first:
-      213: -446110741345227316
-    second: Magic_attack_player_1
+      213: -1393081123860021074
+    second: Sword_Attack_Sprite_sheet_x64_1
   - first:
-      213: -6178168355056672042
-    second: Magic_attack_player_2
+      213: 1706380292710832429
+    second: Sword_Attack_Sprite_sheet_x64_2
   - first:
-      213: -3397474125556852184
-    second: Magic_attack_player_3
+      213: -4683959471704542902
+    second: Sword_Attack_Sprite_sheet_x64_3
+  - first:
+      213: -5554509572336022518
+    second: Sword_Attack_Sprite_sheet_x64_4
+  - first:
+      213: -2581132117462163003
+    second: Sword_Attack_Sprite_sheet_x64_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,7 +106,55 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -115,85 +169,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Magic_attack_player_0
+      name: Sword_Attack_Sprite_sheet_x64_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 29
+        width: 106
+        height: 74
       alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+      pivot: {x: 0.32, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a68effd6d9756ab40800000000000000
-      internalID: 5451140732645533802
+      spriteID: acbcc340efaab6a00800000000000000
+      internalID: 750881770856827850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magic_attack_player_1
+      name: Sword_Attack_Sprite_sheet_x64_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 106
         y: 0
-        width: 32
-        height: 29
+        width: 106
+        height: 74
       alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+      pivot: {x: 0.32, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccda1a3f4a81fc9f0800000000000000
-      internalID: -446110741345227316
+      spriteID: ea085054918caace0800000000000000
+      internalID: -1393081123860021074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magic_attack_player_2
+      name: Sword_Attack_Sprite_sheet_x64_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 212
         y: 0
-        width: 32
-        height: 29
+        width: 106
+        height: 74
       alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+      pivot: {x: 0.32, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d2a94a4d9cb24aa0800000000000000
-      internalID: -6178168355056672042
+      spriteID: d2991ced5d74ea710800000000000000
+      internalID: 1706380292710832429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magic_attack_player_3
+      name: Sword_Attack_Sprite_sheet_x64_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 318
         y: 0
-        width: 32
-        height: 29
+        width: 106
+        height: 74
       alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+      pivot: {x: 0.32, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82a5a9c884fb9d0d0800000000000000
-      internalID: -3397474125556852184
+      spriteID: a4179ba5dab3ffeb0800000000000000
+      internalID: -4683959471704542902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword_Attack_Sprite_sheet_x64_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 0
+        width: 106
+        height: 74
+      alignment: 9
+      pivot: {x: 0.32, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c876719fa6ae2b0800000000000000
+      internalID: -5554509572336022518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword_Attack_Sprite_sheet_x64_5
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 0
+        width: 106
+        height: 74
+      alignment: 9
+      pivot: {x: 0.32, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1e05cb30afd2cd0800000000000000
+      internalID: -2581132117462163003
       vertices: []
       indices: 
       edges: []
