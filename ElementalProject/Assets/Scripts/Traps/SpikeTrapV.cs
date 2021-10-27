@@ -73,7 +73,7 @@ public class SpikeTrapV : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(enemy.damage_medium);
         }
 

@@ -8,7 +8,7 @@ public class PlayerSwordCollision : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            Enemy enemy = other.gameObject.GetComponent<Enemy>();
+            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(enemy.damage_medium);
         }
     }
