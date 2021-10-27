@@ -16,7 +16,8 @@ public class Projectile : MonoBehaviour
     private bool direction = true;
     private bool destroy = false;
     public float projSpeed = 1f;
-    public float Bounce = .6f;
+    public float BounceRange = .6f;
+    public float BounceFreq = 0f;
     public float boomeRange = 2.5f;
     public bool fly_Right = true; // starts patrol in the right direction
     public bool fly_Up = true;    // starts patrol in the up direction
@@ -62,12 +63,12 @@ public class Projectile : MonoBehaviour
             if (direction == false) //left
             {
                 proj.AddForce(new Vector2(-projSpeed, 0f));
-                
-                
+                bounce();
             }
             else if (direction == true) //right
             {
                 proj.AddForce(new Vector2((projSpeed), 0f));
+                bounce();
             }
         }
         else if (projectileType == Projectile_Type.boomerang)
@@ -125,7 +126,20 @@ public class Projectile : MonoBehaviour
         }
         else { return false; }
     }
+    private void bounce()
+    {
+        if(proj.position.y >= startPos.y - BounceRange)
+        {
+           // print("GOING DOWN");
+            proj.AddForce(new Vector2(0, -projSpeed*BounceFreq));
+        }
+        else if(proj.position.y < startPos.y - BounceRange)
+        {
+            //print("SUPERMAN");
+            proj.AddForce(new Vector2(0, projSpeed *BounceFreq));
+        }
 
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
