@@ -23,23 +23,29 @@ public class PlayerController : MonoBehaviour
     public float attackRange = 0.5f;
     public int attackDamage = 40;
 
-    public float attackRate = 2f;
-    float nextAttackTime = 0f;
+    public float attackRate = 1f;
+    public bool isAttacking = false;
 
     public float invulRate = 1f;
     float invulTime = 0f;
 
+    private GameObject rightSwordHitBox;
+    private GameObject leftSwordHitBox;
+
+    private void Start()
+    {
+        rightSwordHitBox = this.gameObject.transform.GetChild(0).gameObject;
+        leftSwordHitBox = this.gameObject.transform.GetChild(1).gameObject;
+    }
+
     void Update()
     {
-        //update with attackRate and call Attack()
-        if (Time.time >= nextAttackTime)
+        if (Input.GetKey(KeyCode.Space))
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (!isAttacking)
             {
-                Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
+                StartCoroutine(SwordAttack());
             }
-
         }
     }
 
@@ -106,19 +112,28 @@ public class PlayerController : MonoBehaviour
             invulTime = Time.time + 1f / invulRate;
     }
 
-    void Attack()
+    IEnumerator SwordAttack()
     {
-        // Play an attack animation
+        isAttacking = true;
+
+        //play animation
         animator.SetTrigger("Attack");
 
-        // Detect enemies in range of attack
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
-        // Damage them
-        foreach (Collider2D enemy in hitEnemies)
+        //depending on facing, activate the sword hitbox
+        if (GetComponent<PlayerMovement>().facingRight)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            rightSwordHitBox.SetActive(true);
         }
+        else
+        {
+            leftSwordHitBox.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(attackRate);
+
+        rightSwordHitBox.SetActive(false);
+        leftSwordHitBox.SetActive(false);
+        isAttacking = false;
     }
 
     void AddMana(int num)
@@ -132,13 +147,6 @@ public class PlayerController : MonoBehaviour
     void AddCoins(int num)
     {
         coins += num;
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null)
-            return;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
 }

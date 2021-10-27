@@ -15,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 3f;
 
     public bool isAttacking = false;
+    public bool facingRight = true;
 
-    private bool facingRight = true;
     private float speed;
     private Vector2 moveUp;
     private Vector2 moveDown;
