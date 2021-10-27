@@ -187,12 +187,38 @@ public class Movement : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        DirectionChange();
+        if (moveType == Movement_Type.wander)
+        {
+            DirectionChange();
+        }
+        else if(moveType == Movement_Type.patrol)
+        {
+            if(move_Right == true)
+            {
+                move_Right = false;
+            }
+            else if(move_Right == false)
+            {
+                move_Right = true;
+            }
+            if(move_Up == true)
+            {
+                move_Up = false;
+            }
+            else if(move_Up)
+            {
+                move_Up = true;
+            }
+        }
+
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        DirectionChange();
+        if (moveType == Movement_Type.wander)
+        {
+            DirectionChange();
+        }
     }
 
     private void MarchRight()
