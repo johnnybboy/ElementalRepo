@@ -13,10 +13,14 @@ public class Enemy : MonoBehaviour
     public GameObject coin, heart, potion;
 
     //stats
-    public int maxHealth = 100;
+    public float maxHealth = 3f;
     public float despawnTime = 2f;
 
-    private int currentHealth;
+    public float damage_1 = .5f;
+    public float damage_2 = 1f;
+    public float damage_3 = 1.5f;
+
+    private float currentHealth;
 
     //animation fields
     private float timeOfDeath;
@@ -69,13 +73,16 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
 
         // Play hurt animation
         animator.SetTrigger("hurt");
         body.velocity = new Vector2(0, 0);
+
+        //TODO
+        //knockback away from player based on damage
 
         if(currentHealth <= 0)
         {

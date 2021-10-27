@@ -36545,6 +36545,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5537369015798756544, guid: 430519bb7f2473642b82ed1830049618, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559487228345687242, guid: 430519bb7f2473642b82ed1830049618, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6064321007748758609, guid: 430519bb7f2473642b82ed1830049618, type: 3}
       propertyPath: m_Name
       value: NewChanges
@@ -36563,7 +36571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8721109319338846529, guid: 430519bb7f2473642b82ed1830049618, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.75776
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8721109319338846529, guid: 430519bb7f2473642b82ed1830049618, type: 3}
       propertyPath: m_LocalRotation.w

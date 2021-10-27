@@ -12,9 +12,9 @@ public class PlayerController : MonoBehaviour
     public int maxMana = 3;
     public int coins = 00;
 
-    public float weakDamage = .5f;
-    public float medDamage = 1f;
-    public float bigDamage = 1.5f;
+    public float damage_1 = .5f;
+    public float damage_2 = 1f;
+    public float damage_3 = 1.5f;
 
     public Animator animator;
     public Transform attackPoint;
@@ -51,14 +51,15 @@ public class PlayerController : MonoBehaviour
             if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
             {
 
-                TakeDamage(weakDamage);
+                TakeDamage(damage_1);
                 
             }
 
-            if (collision.gameObject.tag == "Trap")
-            {
-                TakeDamage(medDamage);
-            }
+            // trap damage should be handled by the trap itself now.
+            //if (collision.gameObject.tag == "Trap")
+            //{
+            //    TakeDamage(damage_2);
+            //}
         }
 
         //item collisions

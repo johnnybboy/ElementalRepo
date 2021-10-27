@@ -69,5 +69,19 @@ public class SpikeTrapV : MonoBehaviour
         busy = false;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            enemy.TakeDamage(enemy.damage_2);
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+            player.TakeDamage(player.damage_2);
+        }
+    }
 
 }
