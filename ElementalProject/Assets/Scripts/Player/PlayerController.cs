@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -82,7 +83,15 @@ public class PlayerController : MonoBehaviour
             //remove the item
             Destroy(collision.gameObject);
         }
-        
+
+        // ends the level
+        if (collision.gameObject.tag == "End")
+        {
+
+            SceneManager.LoadScene("WinningScene");
+
+        }
+
     }
 
     void Die()

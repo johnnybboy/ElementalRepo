@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -49,7 +48,7 @@ public class UIManager : MonoBehaviour
             endText.enabled = true;
             endText.text = "<color=red><b>You Died!</b></color>";
         }
-        else if (playerController.health > 0 && player.transform.position.x <= 41.4)
+        else if (playerController.health > 0)
         {
             endText.enabled = false;
         }
