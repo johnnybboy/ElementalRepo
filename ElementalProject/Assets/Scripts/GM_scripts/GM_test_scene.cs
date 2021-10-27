@@ -6,7 +6,7 @@ public class GM_test_scene : MonoBehaviour
 {
     public int enemyCount = 0;
     public float combatArea = 25f;
-    public float spawnRange = 1.5f;
+    public float spawnRange = 4f;
 
     private Transform player;
     public LayerMask layer;
@@ -37,23 +37,16 @@ public class GM_test_scene : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Return))
         {
-            SpawnNearPlayer(enemy_slime, 1, spawnRange);
+            SpawnNearPlayer(enemy_slime, 1);
         }
 
         CountEnemies();
     }
 
-    //This version has a default offset of 1.5f
+    //This version has a default offset of spawnRange
     void ControlledSpawn(GameObject enemy, Vector2 position, int amount)
     {
-        float offset = 1.5f;
-        float x = position.x;
-        float y = position.y;
-        for (int i = 0; i < amount; i++)
-        {
-            Vector2 Location = new Vector2(x + Random.Range(-offset, offset), y + Random.Range(-offset, offset));
-            Instantiate(enemy, Location, player.rotation);
-        }
+        ControlledSpawn(enemy, position, amount, spawnRange);
     }
 
     //This version takes a float offset to manually set the offset values
@@ -69,6 +62,13 @@ public class GM_test_scene : MonoBehaviour
         }
     }
 
+    //default spawnRange spawn near player
+    void SpawnNearPlayer(GameObject enemy, int amount)
+    {
+        SpawnNearPlayer(enemy, amount, spawnRange);
+    }
+
+    //takes a float offsetVal
     void SpawnNearPlayer(GameObject enemy, int amount, float offsetVal)
     {
         float offset = offsetVal;
@@ -83,11 +83,11 @@ public class GM_test_scene : MonoBehaviour
 
     void CountEnemies()
     {
+        //get an array of all enemy colliders on the Enemy layer
         Collider2D[] enemies = Physics2D.OverlapCircleAll(player.position, combatArea, layer);
 
+        // count them
         int count = 0;
-
-        // Damage them
         foreach (Collider2D enemy in enemies)
         {
             count++;

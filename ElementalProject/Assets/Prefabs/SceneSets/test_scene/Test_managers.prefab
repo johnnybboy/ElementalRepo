@@ -43,6 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2f989b675c44b4aab3235113d8f64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyCount: 0
+  combatArea: 25
+  spawnRange: 4
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  enemy_slime: {fileID: 2862578941666616280, guid: 19a665a75c334884ca3ba0a3802da5b6, type: 3}
 --- !u!1 &1101693833860771717
 GameObject:
   m_ObjectHideFlags: 0
