@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    //public Components
+    public AudioClip hurtSound, swingSound;
 
     // Player Stats
     public float health = 5f;
@@ -13,28 +15,31 @@ public class PlayerController : MonoBehaviour
     public int maxMana = 3;
     public int coins = 00;
 
+    // Damage values
     public float damage_weak = .5f;
     public float damage_medium = 1f;
     public float damage_strong = 1.5f;
 
-    public Animator animator;
-    public Transform attackPoint;
-    public LayerMask enemyLayers;
-
+    //Player modifiers
     public float attackRange = 0.5f;
     public int attackDamage = 40;
 
-    public float attackRate = 1f;
+    public float attackRate = 0.5f;   //attacks per second
     public bool isAttacking = false;
 
-    public float invulRate = 1f;
-    float invulTime = 0f;
+    public float hurtTime = 0.75f;    //invulnerable per second
+    public bool isInvulnerable = false;
 
+    //private Components
+    private Animator animator;
+    private AudioSource sound;
     private GameObject rightSwordHitBox;
     private GameObject leftSwordHitBox;
 
     private void Start()
     {
+        sound = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
         rightSwordHitBox = this.gameObject.transform.GetChild(0).gameObject;
         leftSwordHitBox = this.gameObject.transform.GetChild(1).gameObject;
     }
@@ -53,20 +58,15 @@ public class PlayerController : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         //damage collisions, check if invulnerable
-        if (Time.time > invulTime)
+        if (!isInvulnerable)
         {
+            //collisions with enemies or projectiles deal damage_weak to player
             if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
             {
 
                 TakeDamage(damage_weak);
                 
             }
-
-            // trap damage should be handled by the trap itself now.
-            //if (collision.gameObject.tag == "Trap")
-            //{
-            //    TakeDamage(damage_2);
-            //}
         }
 
         //item collisions
@@ -94,9 +94,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void Die()
+    public void OnCollisionStay2D(Collision2D collision)
     {
-        gameObject.SetActive(false);
+        //if something is continuing to touch, check if vulnerable and apply damage
+        if (!isInvulnerable)
+        {
+            //collisions with enemies or projectiles deal damage_weak to player
+            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
+            {
+
+                TakeDamage(damage_weak);
+
+            }
+        }
     }
 
     void PickupHealth(float amount)
@@ -105,28 +115,54 @@ public class PlayerController : MonoBehaviour
         health = HealthBar.instance.currentHearts;
         //animator.SetTrigger("Heal");      //heal animation?
 
-        invulTime = Time.time + 1f / invulRate;     //temporary invul when pickup heart
+        StartCoroutine(Invulnerable(hurtTime));     //temporary invul when pickup heart
 
     }
 
     public void TakeDamage(float amount)
     {
-        HealthBar.instance.RemoveHearts(amount);
-        health = HealthBar.instance.currentHearts;
+        //adjust health based on the HealthBar if it exists
+        if (HealthBar.instance != null)
+        {
+            HealthBar.instance.RemoveHearts(amount);
+            health = HealthBar.instance.currentHearts;
+        }
+        else
+        {
+            //otherwise just keep track privately
+            health -= amount;
+        }
+
+        //play animation and sound
         animator.SetTrigger("Hurt");
+        if (hurtSound != null)  //make sure there's something to play
+        {
+            sound.clip = hurtSound;
+            sound.Play();
+        }
 
         if (health <= 0)
             Die();
         else
-            invulTime = Time.time + 1f / invulRate;
+            StartCoroutine(Invulnerable(hurtTime));    //make invulnerable for hurtTime
+    }
+
+    void Die()
+    {
+        gameObject.SetActive(false);
     }
 
     IEnumerator SwordAttack()
     {
         isAttacking = true;
 
-        //play animation
+        //play animation and sound
         animator.SetTrigger("Attack");
+        if (swingSound != null)  //make sure there's something to play
+        {
+            sound.clip = swingSound;
+            sound.Play();
+        }
 
         //depending on facing, activate the sword hitbox
         if (GetComponent<PlayerMovement>().facingRight)
@@ -143,6 +179,13 @@ public class PlayerController : MonoBehaviour
         rightSwordHitBox.SetActive(false);
         leftSwordHitBox.SetActive(false);
         isAttacking = false;
+    }
+
+    IEnumerator Invulnerable(float time)
+    {
+        isInvulnerable = true;
+        yield return new WaitForSeconds(time);
+        isInvulnerable = false;
     }
 
     void AddMana(int num)

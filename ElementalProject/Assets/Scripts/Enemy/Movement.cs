@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    Rigidbody2D rb;
-    public GameObject player;
+    //private Components
+    private Rigidbody2D rb;
+    private GameObject player;
     
     public int WanderSpeed = 3; // default speed it can wander
     public int PatrolSpeed_X = 3; //default speed it can patrol x-axis
@@ -34,7 +35,8 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
+        rb = GetComponent<Rigidbody2D>();
 
         if (WanderSpeed <= 0)    //WanderSpeed can't be 0, use Movement_Type "idle" instead
         {
@@ -44,7 +46,7 @@ public class Movement : MonoBehaviour
         {
             PatrolSpeed_X = 1;
         }
-        rb = GetComponent<Rigidbody2D>();
+        
         
         
         startPos = new Vector2(rb.position.x,rb.position.y);
@@ -69,7 +71,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DetectPlayer == true)
+        if (DetectPlayer == true && player != null) //added check to make sure player exists
         {
             detectPlayer();
         }
@@ -103,6 +105,13 @@ public class Movement : MonoBehaviour
         }
         else if(moveType == Movement_Type.attack_cqb)
         {
+            if (player.activeSelf == false) //added this check to avoid errors when player dies
+            {
+                moveType = Movement_Type.wander;
+                DirectionChange();
+                return;
+            }
+                
             float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
             if (seperation <= keepDistance) //added keepDistance, will do nothing on x-axis
             {

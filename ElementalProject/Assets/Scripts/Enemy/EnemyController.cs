@@ -5,9 +5,12 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     //Components
-    public Animator animator;
-    public Rigidbody2D body;
-    public SpriteRenderer sprite;
+    private Rigidbody2D body;
+    private SpriteRenderer sprite;
+    private Animator animator;
+    private AudioSource sound;
+
+    public AudioClip hurtSound, deathSound;
 
     //loot drops (MUST be assigned in Unity!)
     public GameObject coin, heart, potion;
@@ -36,6 +39,10 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        body = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        sound = GetComponent<AudioSource>();
         currentHealth = maxHealth;
     }
 
@@ -69,13 +76,19 @@ public class EnemyController : MonoBehaviour
     {
         currentHealth -= damage;
 
-        // Play hurt animation
+        // Play hurt animation and sound
         animator.SetTrigger("hurt");
+        if (hurtSound != null)  //make sure there's something to play
+        {
+            sound.clip = hurtSound;
+            sound.Play();
+        }
+        
+
+        // stop movement briefly
         body.velocity = new Vector2(0, 0);
 
-        //TODO
-        //knockback away from player based on damage
-
+        //check if dead, die
         if(currentHealth <= 0)
         {
             StartCoroutine(Die());
@@ -84,8 +97,13 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator Die()
     {
-        //die animation
+        //die animation and sound
         animator.SetBool("isDead", true);
+        if (deathSound != null)  //make sure there's something to play
+        { 
+            sound.clip = deathSound;
+            sound.Play();
+        }
 
         //disable enemy
         GetComponent<Collider2D>().enabled = false;

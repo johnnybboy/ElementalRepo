@@ -11,6 +11,8 @@ TagManager:
   - Item
   - Trap
   - Projectile
+  - End
+  - Bounds
   layers:
   - Default
   - TransparentFX
