@@ -118,7 +118,7 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void FlipFacing()
+    public void FlipFacing()
     {
         facingRight = !facingRight;
         sprite.flipX = !sprite.flipX;

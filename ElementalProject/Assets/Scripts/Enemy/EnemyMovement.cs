@@ -12,8 +12,9 @@ public class EnemyMovement : MonoBehaviour
 
     public float moveSpeed = 3; // default speed it can move
     public float chaseSpeed = 3; //default speed it chases the player
-    public float detectRange = 8f; //default distance it will detectPlayer()
-    public float keepDistance = 1f; //distance the movement will stop to avoid pushing the player
+    public float detectRange = 10f; //default distance it will detectPlayer()
+    public float meleeDistance = 1f;    //TODO this should be based on the size of the enemy
+    public float rangedDistance = 10f; //distance the movement will stop to avoid pushing the player
     public float smoothing = 1f; //This helps smooth out movement, keep around 1 for now
 
     public enum MOVE_TYPE { idle, patrol, sleep, wander, chase_melee, chase_ranged, fly }; //movement types 
@@ -23,23 +24,28 @@ public class EnemyMovement : MonoBehaviour
     Vector2 startPos; //starting position
     Vector2 newDirection;   //new direction for movement
 
-    public float patrolBoundsVertical; // how far vertical it can patrol
-    public float patrolBoundsHorizontal; // how far horizontal it can patrol
+    public float patrolBounds_X = 5f; // how far vertical it can patrol
+    public float patrolBounds_Y = 5f; // how far horizontal it can patrol
+    public bool patrol_X = false;
+    public bool patrol_Y = false;
 
     public bool isDetectingPlayer = true;    // will attempt to detect player by default
     public bool patrolsVertical = false; 
     public bool patrolsHorizontal = false;
     public bool isRangedEnemy = false;
 
-    private bool movingHome = false;
+    private bool movingTowardsTarget = false;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
+
+        //meleeDistance = transform.position.magnitude;   //TODO is magnitude good enough? 
         
         startPos = new Vector2(rb.position.x, rb.position.y);
+        previousType = movementType;
     }
     
     // Update is called once per frame
@@ -53,15 +59,15 @@ public class EnemyMovement : MonoBehaviour
 
         //then update movement based on MOVE_TYPE
         if (movementType == MOVE_TYPE.wander)
-            Wander();
+            Wander();   //TODO not working
         else if (movementType == MOVE_TYPE.patrol)
-            Patrol();   //TODO
+            Patrol();   //TODO not working
         else if (movementType == MOVE_TYPE.chase_melee)
             ChaseMelee();
         else if (movementType == MOVE_TYPE.chase_ranged)
-            ChaseRanged();  //currently exactly like ChaseMelee();
+            ChaseRanged();  
         else if (movementType == MOVE_TYPE.idle)
-            Idle();     //TODO
+            Idle();
     }
 
     public void Wander()
@@ -72,50 +78,44 @@ public class EnemyMovement : MonoBehaviour
 
     public void Patrol()
     {
-        //TODO
+        if (patrol_X)
+        {
+            if (rb.position.x >= startPos.x + patrolBounds_X)
+            {
+                //Move towards starting position - patrolBoundsVertical (march left)
+                StartCoroutine(MoveTowards(new Vector2(startPos.x - patrolBounds_X, startPos.y)));
+            }
+            else
+            {
+                //Move towards starting position + patrolBoundsVertical (march right)
+                StartCoroutine(MoveTowards(new Vector2(startPos.x + patrolBounds_X, startPos.y)));
+            }
+        }
+        
+        if (patrol_Y)
+        {
+            if (rb.position.y >= startPos.y + patrolBounds_Y)
+            {
+                //Move towards starting position - patrolBoundsVertical (march left)
+                StartCoroutine(MoveTowards(new Vector2(startPos.x, startPos.y - patrolBounds_Y)));
+            }
+            else
+            {
+                //Move towards starting position + patrolBoundsVertical (march right)
+                StartCoroutine(MoveTowards(new Vector2(startPos.x, startPos.y + patrolBounds_Y)));
+            }
+        }
 
-        //private void MarchRight()
-        //{
-        //    rb.AddForce(new Vector2(PatrolSpeed_X, 0));
-        //    if (rb.position.x >= startPos.x + partolRBounds)
-        //    {
-        //        move_Right = false;
-        //    }
-
-        //}
-        //private void MarchLeft()
-        //{
-        //    rb.AddForce(new Vector2(-PatrolSpeed_X, 0));
-        //    if (rb.position.x <= startPos.x - patrolLBounds)
-        //    {
-        //        move_Right = true;
-        //    }
-
-        //}
-        //private void MarchUp()
-        //{
-        //    rb.AddForce(new Vector2(0, PatrolSpeed_Y));
-        //    if (rb.position.y >= startPos.y + patrolUBounds)
-        //    {
-        //        move_Up = false;
-        //    }
-
-        //}
-        //private void MarchDown()
-        //{
-        //    rb.AddForce(new Vector2(0, -PatrolSpeed_Y));
-        //    if (rb.position.y <= startPos.y - partolDBounds)
-        //    {
-        //        move_Up = true;
-        //    }
-
-        //}
+        if(!patrol_X && !patrol_X)
+        {
+            Debug.Log("Patrol bools are false! Set X or Y to patrol.");
+        }
     }
 
-    public void ChaseMelee()
+    public void ChaseMelee()    //uses meleeDistance
     {
         float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
-        if (seperation <= keepDistance) //will only change y if within keepDistance
+        if (seperation <= meleeDistance) //will only change y if within keepDistance
         {
             if (player.transform.position.y > rb.position.y)
             {
@@ -147,10 +147,10 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public void ChaseRanged()       //TODO this is currently exactly like ChaseMelee() pretty much
+    public void ChaseRanged()    //uses rangedDistance
     {
         float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
-        if (seperation <= keepDistance) //will only change y if within keepDistance
+        if (seperation <= rangedDistance) //will only change y if within keepDistance
         {
             if (player.transform.position.y > rb.position.y)
             {
@@ -165,19 +165,30 @@ public class EnemyMovement : MonoBehaviour
 
     public void Idle()
     {
-        if (Vector2.Distance(transform.position, startPos) > keepDistance && !movingHome)
-            StartCoroutine(MoveHome());
+        if (Vector2.Distance(transform.position, startPos) > rangedDistance && !movingTowardsTarget)
+            StartCoroutine(MoveTowards(startPos));
     }
 
-    IEnumerator MoveHome()
+    IEnumerator MoveTowards(Vector2 target)
     {
-        movingHome = true;
-        while(Vector2.Distance(transform.position, startPos) > keepDistance)
+        movingTowardsTarget = true;
+        MOVE_TYPE startingType = movementType;
+
+        //begin movement loop
+        while(Vector2.Distance(transform.position, startPos) > meleeDistance)
         {
+            //check if something has changed the movementType to break the loop
+            if (movementType != startingType)
+            {
+                movingTowardsTarget = false;
+                yield break;
+            }
+            
+            //move towards target position every frame, with smoothing
             transform.position = Vector2.Lerp(transform.position, startPos, smoothing * Time.deltaTime);
             yield return null;
         }
-        movingHome = false;
+        movingTowardsTarget = false;
     }
 
     public void DirectionChange()
@@ -199,9 +210,9 @@ public class EnemyMovement : MonoBehaviour
     private void DetectPlayer()
     {
         //added check to avoid errors
-        if (player == null)
+        if (player == null || !player.activeSelf)
         {
-            Debug.Log("Cannot detectPlayer(), because player is null!");
+            Debug.Log("Cannot detectPlayer(), because player is null or inactive!");
             if (movementType == MOVE_TYPE.chase_melee || movementType == MOVE_TYPE.chase_ranged)
                 movementType = previousType;
             return;
