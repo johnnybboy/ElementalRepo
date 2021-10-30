@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1979774806187107697}
   - component: {fileID: 1979774806187107707}
   - component: {fileID: 1979774806187107701}
-  - component: {fileID: 8565257349741390680}
+  - component: {fileID: 1951951320789149496}
   - component: {fileID: 1979774806187107703}
   - component: {fileID: 1979774806187107696}
   - component: {fileID: 8552845654200159237}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 840645297
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8824108606510461801, guid: 067eefe00091c8449b373447b95fdf83, type: 3}
+  m_Sprite: {fileID: -1672102039270701677, guid: b17a06c6dd8762a4eb342737b9e1b336, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,7 +109,7 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8565257349741390680
+--- !u!114 &1951951320789149496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,24 +118,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1979774806187107698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e75cc14c3e119494a8e1c503bbe4ffae, type: 3}
+  m_Script: {fileID: 11500000, guid: 044c30ab11af362449c04007a76cbc1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WanderSpeed: 3
-  PatrolSpeed_X: 3
-  PatrolSpeed_Y: 3
-  ChaseSpeed: 3
-  detectRange: 4
-  keepDistance: 0.66
-  moveType: 4
-  patrolLBounds: 0
-  partolRBounds: 0
-  patrolUBounds: 0
-  partolDBounds: 0
-  DetectPlayer: 1
-  move_Right: 1
-  move_Up: 1
-  rangedAttack: 0
+  moveSpeed: 5
+  chaseSpeed: 5
+  detectRange: 8
+  keepDistance: 0.1
+  movementType: 3
+  patrolBounds_X: 0
+  patrolBounds_Y: 0
+  patrolDelay: 0
+  isDetectingPlayer: 1
 --- !u!114 &1979774806187107703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,8 +147,8 @@ MonoBehaviour:
   coin: {fileID: 6118982838337522031, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
   heart: {fileID: 283299682443938280, guid: bae5b5c8c36ae2546820484ec67c8d1b, type: 3}
   potion: {fileID: 1993606334950409096, guid: 678aefe2a6ce57348b84c5a0cd69d507, type: 3}
-  maxHealth: 3
-  despawnTime: 3
+  maxHealth: 1
+  despawnTime: 0
   damage_weak: 0.5
   damage_medium: 1
   damage_strong: 1.5
@@ -170,7 +164,7 @@ Animator:
   m_GameObject: {fileID: 1979774806187107698}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6aca2afb3a431e2419e65b25b687584f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 830d5d225b150ed42ae73adf50f90582, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -192,9 +186,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0028743744, y: -0.20839524}
+  m_Offset: {x: 0.0028743744, y: -0.013343155}
   serializedVersion: 2
-  m_Radius: 0.37496296
+  m_Radius: 0.2645846
 --- !u!82 &2573713898193229661
 AudioSource:
   m_ObjectHideFlags: 0
