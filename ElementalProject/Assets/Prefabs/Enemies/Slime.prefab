@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2862578941666616283}
   - component: {fileID: 2862578941666616273}
   - component: {fileID: 2862578941666616287}
-  - component: {fileID: -3882781282423132686}
+  - component: {fileID: 2503577693978976242}
   - component: {fileID: 2862578941666616285}
   - component: {fileID: 2862578941666616282}
   - component: {fileID: 5364263372119968431}
@@ -109,7 +109,7 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-3882781282423132686
+--- !u!114 &2503577693978976242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,25 +118,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2862578941666616280}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e75cc14c3e119494a8e1c503bbe4ffae, type: 3}
+  m_Script: {fileID: 11500000, guid: 044c30ab11af362449c04007a76cbc1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8584049686920173778, guid: 5667e02988b27cc44942125aa190e307, type: 3}
-  WanderSpeed: 3
-  PatrolSpeed_X: 3
-  PatrolSpeed_Y: 3
-  ChaseSpeed: 3
-  detectRange: 4
-  keepDistance: 0.66
-  moveType: 4
-  patrolLBounds: 0
-  partolRBounds: 0
-  patrolUBounds: 0
-  partolDBounds: 0
-  DetectPlayer: 1
-  move_Right: 1
-  move_Up: 1
-  rangedAttack: 0
+  moveSpeed: 3
+  chaseSpeed: 3
+  detectRange: 5
+  keepDistance: 0.5
+  movementType: 3
+  patrolBounds_X: 0
+  patrolBounds_Y: 0
+  patrolDelay: 0
+  isDetectingPlayer: 1
 --- !u!114 &2862578941666616285
 MonoBehaviour:
   m_ObjectHideFlags: 0

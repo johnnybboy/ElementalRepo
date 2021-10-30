@@ -129,14 +129,14 @@ public class EnemyController : MonoBehaviour
         sprite.flipX = !sprite.flipX;
     }
 
-    void SpawnLoot()
+    void SpawnLoot()    //added chance (at a roll of 7) for no item to drop
     {
         GameObject item = null;
         int loot = Random.Range(1, 7) + Random.Range(1, 7); //rolling 2d6 to increase odds of coins and hearts
 
         if (loot >= 3 && loot <= 6)
             item = coin;
-        if (loot >= 7 && loot <= 11)
+        if (loot >= 8 && loot <= 11)
             item = heart;
         if (loot == 2 || loot == 12)
             item = potion;

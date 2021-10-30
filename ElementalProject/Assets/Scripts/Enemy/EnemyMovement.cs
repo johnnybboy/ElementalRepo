@@ -35,6 +35,7 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        controller = GetComponent<EnemyController>();
         rb = GetComponent<Rigidbody2D>();
         
         //initialize variables
@@ -151,7 +152,7 @@ public class EnemyMovement : MonoBehaviour
         movingTowardsTarget = true;
         MOVE_TYPE startingType = currentType;
 
-        while (Vector2.Distance(transform.position, target) > .5f)
+        while (Vector2.Distance(transform.position, target) > .5f && controller.isAlive)
         {
             if (currentType != startingType)    //break loop if movementType changes
             {
@@ -190,7 +191,7 @@ public class EnemyMovement : MonoBehaviour
         isPatrolling = true;
         Vector2 target = first; //moves towards this target first
 
-        while (currentType == MOVE_TYPE.patrol) //break the loop if no longer patrolling
+        while (currentType == MOVE_TYPE.patrol && controller.isAlive) //break the loop if no longer patrolling
         {
             if (!movingTowardsTarget)
             {
@@ -221,7 +222,7 @@ public class EnemyMovement : MonoBehaviour
         movementType = MOVE_TYPE.idle;
         currentType = MOVE_TYPE.idle;
 
-        while (Vector2.Distance(transform.position, startPos) > .5f)
+        while (Vector2.Distance(transform.position, startPos) > .5f && controller.isAlive)
         {
             yield return null;
         }
