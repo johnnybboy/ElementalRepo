@@ -55,7 +55,7 @@ public class EnemyController : MonoBehaviour
             animator.SetFloat("speed", speed);
 
             //check and flip facing
-            if (body.velocity.x >= 0.1f)
+            if (body.velocity.x >= 0.3f)
             {
                 if (facingRight != true)
                 {
@@ -97,6 +97,8 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator Die()
     {
+        isAlive = false;
+
         //die animation and sound
         animator.SetBool("isDead", true);
         if (deathSound != null)  //make sure there's something to play
@@ -105,9 +107,12 @@ public class EnemyController : MonoBehaviour
             sound.Play();
         }
 
-        //disable enemy
+        //disable Components
         GetComponent<Collider2D>().enabled = false;
-        GetComponent<Movement>().enabled = false;
+        if (GetComponent<Movement>() != null)
+            GetComponent<Movement>().enabled = false;
+        if (GetComponent<EnemyMovement>() != null)
+            GetComponent<EnemyMovement>().enabled = false;
         
         //delete after some delay
         isAlive = false;

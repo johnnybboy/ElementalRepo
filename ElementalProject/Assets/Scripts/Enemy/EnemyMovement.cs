@@ -12,243 +12,247 @@ public class EnemyMovement : MonoBehaviour
 
     public float moveSpeed = 3; // default speed it can move
     public float chaseSpeed = 3; //default speed it chases the player
-    public float detectRange = 10f; //default distance it will detectPlayer()
-    public float meleeDistance = 1f;    //TODO this should be based on the size of the enemy
-    public float rangedDistance = 10f; //distance the movement will stop to avoid pushing the player
-    public float smoothing = 1f; //This helps smooth out movement, keep around 1 for now
+    public float detectRange = 5f; //default distance it will detectPlayer()
+    public float keepDistance = .5f;    //distance all X movement will stop to keep distance from the player
 
-    public enum MOVE_TYPE { idle, patrol, sleep, wander, chase_melee, chase_ranged, fly }; //movement types 
-    public MOVE_TYPE movementType;
-    private MOVE_TYPE previousType;
+    public enum MOVE_TYPE { idle, patrol, sleep, wander, chase, fly }; //movement types 
+    public MOVE_TYPE movementType = MOVE_TYPE.wander;
+    private MOVE_TYPE currentType;
 
-    Vector2 startPos; //starting position
-    Vector2 newDirection;   //new direction for movement
+    private Vector2 startPos; //starting position
+    private Vector2 wanDirection;   //new wander direction for Wander()
 
-    public float patrolBounds_X = 5f; // how far vertical it can patrol
-    public float patrolBounds_Y = 5f; // how far horizontal it can patrol
-    public bool patrol_X = false;
-    public bool patrol_Y = false;
+    public float patrolBounds_X = 0f; // how far vertical it can patrol
+    public float patrolBounds_Y = 0f; // how far horizontal it can patrol
+    public float patrolDelay = 0f;
 
     public bool isDetectingPlayer = true;    // will attempt to detect player by default
-    public bool patrolsVertical = false; 
-    public bool patrolsHorizontal = false;
-    public bool isRangedEnemy = false;
-
+    
     private bool movingTowardsTarget = false;
+    private bool isPatrolling = false;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
-
-        //meleeDistance = transform.position.magnitude;   //TODO is magnitude good enough? 
         
-        startPos = new Vector2(rb.position.x, rb.position.y);
-        previousType = movementType;
+        //initialize variables
+        startPos = rb.position;
+        wanDirection = RandomDirection(moveSpeed);
+        currentType = movementType;
     }
     
     // Update is called once per frame
     void Update()
     {
-        //first check if we are detecting the player
-        if (isDetectingPlayer == true)
+        //if detecting the player, chase them
+        if (isDetectingPlayer && PlayerDetected())
         {
-            DetectPlayer();
+            currentType = MOVE_TYPE.chase;
+        }
+        else
+        {
+            currentType = movementType;
         }
 
-        //then update movement based on MOVE_TYPE
-        if (movementType == MOVE_TYPE.wander)
-            Wander();   //TODO not working
-        else if (movementType == MOVE_TYPE.patrol)
-            Patrol();   //TODO not working
-        else if (movementType == MOVE_TYPE.chase_melee)
-            ChaseMelee();
-        else if (movementType == MOVE_TYPE.chase_ranged)
-            ChaseRanged();  
-        else if (movementType == MOVE_TYPE.idle)
+        //then update movement based on currentType's MOVE_TYPE
+        if (currentType == MOVE_TYPE.wander)
+            Wander();
+        else if (currentType == MOVE_TYPE.patrol)
+            Patrol();
+        else if (currentType == MOVE_TYPE.chase)
+            Chase();
+        else if (currentType == MOVE_TYPE.idle)
             Idle();
     }
 
-    public void Wander()
+    public void Wander()    //applies newDirection to the enemy's movement
     {
-        rb.AddForce(newDirection);
-        //this changes on collision
+        rb.AddForce(wanDirection);  
+        //this changes on collision only, methods below
     }
 
     public void Patrol()
     {
-        if (patrol_X)
+        if (!isPatrolling)
         {
-            if (rb.position.x >= startPos.x + patrolBounds_X)
-            {
-                //Move towards starting position - patrolBoundsVertical (march left)
-                StartCoroutine(MoveTowards(new Vector2(startPos.x - patrolBounds_X, startPos.y)));
-            }
-            else
-            {
-                //Move towards starting position + patrolBoundsVertical (march right)
-                StartCoroutine(MoveTowards(new Vector2(startPos.x + patrolBounds_X, startPos.y)));
-            }
-        }
-        
-        if (patrol_Y)
-        {
-            if (rb.position.y >= startPos.y + patrolBounds_Y)
-            {
-                //Move towards starting position - patrolBoundsVertical (march left)
-                StartCoroutine(MoveTowards(new Vector2(startPos.x, startPos.y - patrolBounds_Y)));
-            }
-            else
-            {
-                //Move towards starting position + patrolBoundsVertical (march right)
-                StartCoroutine(MoveTowards(new Vector2(startPos.x, startPos.y + patrolBounds_Y)));
-            }
-        }
-
-        if(!patrol_X && !patrol_X)
-        {
-            Debug.Log("Patrol bools are false! Set X or Y to patrol.");
+            //patrol path is based on two points, which use patrolBounds to create
+            Vector2 patrolPos1 = new Vector2(startPos.x - patrolBounds_X, startPos.y - patrolBounds_Y);
+            Vector2 patrolPos2 = new Vector2(startPos.x + patrolBounds_X, startPos.y + patrolBounds_Y);
+            StartCoroutine(PatrolBetween(patrolPos1, patrolPos2, patrolDelay));
         }
     }
 
-    public void ChaseMelee()    //uses meleeDistance
+    public void Chase()    //uses keepDistance
     {
+        //determine seperation distance between this and the player
         float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
-        if (seperation <= meleeDistance) //will only change y if within keepDistance
+
+        //check if within keepDistance
+        if (seperation <= keepDistance)
         {
+            //move along side the player's position on y only while within keepDistance
             if (player.transform.position.y > rb.position.y)
             {
-                rb.AddForce(new Vector2(0, moveSpeed));
+                rb.AddForce(new Vector2(0, chaseSpeed));
             }
             else if (player.transform.position.y < rb.position.y)
             {
-                rb.AddForce(new Vector2(0, -moveSpeed));
+                rb.AddForce(new Vector2(0, -chaseSpeed));
             }
         }
         else
         {
-            if (player.transform.position.x > rb.position.x)
-            {
-                rb.AddForce(new Vector2(moveSpeed, 0));
-            }
-            else if (player.transform.position.x < rb.position.x)
-            {
-                rb.AddForce(new Vector2(-moveSpeed, 0));
-            }
-            if (player.transform.position.y > rb.position.y)
-            {
-                rb.AddForce(new Vector2(0, moveSpeed));
-            }
-            else if (player.transform.position.y < rb.position.y)
-            {
-                rb.AddForce(new Vector2(0, -moveSpeed));
-            }
-        }
-    }
-
-    public void ChaseRanged()    //uses rangedDistance
-    {
-        float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
-        if (seperation <= rangedDistance) //will only change y if within keepDistance
-        {
-            if (player.transform.position.y > rb.position.y)
-            {
-                rb.AddForce(new Vector2(0, moveSpeed));
-            }
-            else if (player.transform.position.y < rb.position.y)
-            {
-                rb.AddForce(new Vector2(0, -moveSpeed));
-            }
+            //move towards the player's positon on x and y using AddForce()
+            if (!movingTowardsTarget)
+                StartCoroutine(MoveTowards(player.transform.position, chaseSpeed));
         }
     }
 
     public void Idle()
     {
-        if (Vector2.Distance(transform.position, startPos) > rangedDistance && !movingTowardsTarget)
-            StartCoroutine(MoveTowards(startPos));
+        //uses keepDistance for now as an area around startPos
+        if (Vector2.Distance(transform.position, startPos) > keepDistance && !movingTowardsTarget)
+            StartCoroutine(MoveTowards(startPos, moveSpeed));
     }
 
-    IEnumerator MoveTowards(Vector2 target)
-    {
-        movingTowardsTarget = true;
-        MOVE_TYPE startingType = movementType;
-
-        //begin movement loop
-        while(Vector2.Distance(transform.position, startPos) > meleeDistance)
-        {
-            //check if something has changed the movementType to break the loop
-            if (movementType != startingType)
-            {
-                movingTowardsTarget = false;
-                yield break;
-            }
-            
-            //move towards target position every frame, with smoothing
-            transform.position = Vector2.Lerp(transform.position, startPos, smoothing * Time.deltaTime);
-            yield return null;
-        }
-        movingTowardsTarget = false;
-    }
-
-    public void DirectionChange()
+    public Vector2 RandomDirection(float speed)
     {
         float x = 0;
         float y = 0;
         //makes sure the random value is at least half of the movespeed in x
-        while (x > -(moveSpeed) / 2f && x < (moveSpeed) / 2f)
+        while (x > -(speed) / 2f && x < (speed) / 2f)
         {
-            x = Random.Range(-moveSpeed, moveSpeed);
+            x = Random.Range(-speed, speed);
         }
         //y direction doesn't matter as much, can be any value between negative and positive moveSpeed
-        y = Random.Range(-moveSpeed, moveSpeed);
-
-        //previousType = movementType; //????
-        newDirection = new Vector2(x, y);
+        y = Random.Range(-speed, speed);
+        
+        return new Vector2(x, y);
     }
 
-    private void DetectPlayer()
+    private bool PlayerDetected()
     {
         //added check to avoid errors
         if (player == null || !player.activeSelf)
         {
             Debug.Log("Cannot detectPlayer(), because player is null or inactive!");
-            if (movementType == MOVE_TYPE.chase_melee || movementType == MOVE_TYPE.chase_ranged)
-                movementType = previousType;
-            return;
+            return false;
         }
 
         float seperation = Vector2.Distance(rb.transform.position, player.transform.position);
-        if (seperation <= detectRange)
+
+        return seperation <= detectRange;
+    }
+
+    IEnumerator MoveTowards(Vector2 target, float speed)
+    {
+        movingTowardsTarget = true;
+        MOVE_TYPE startingType = currentType;
+
+        while (Vector2.Distance(transform.position, target) > .5f)
         {
-            previousType = movementType;    //store previous type to return to it later
-            if (isRangedEnemy)
-                movementType = MOVE_TYPE.chase_ranged;  //is ranged so chase ranged
+            if (currentType != startingType)    //break loop if movementType changes
+            {
+                movingTowardsTarget = false;
+                yield break;
+            }
+
+
+            //move towards target position using AddForce()
+            if (target.x > rb.position.x)
+            {
+                rb.AddForce(new Vector2(speed, 0));
+            }
             else
-                movementType = MOVE_TYPE.chase_melee;   //otherwise chase melee
+            {
+                rb.AddForce(new Vector2(-speed, 0));
+            }
+
+            if (target.y > rb.position.y)
+            {
+                rb.AddForce(new Vector2(0, speed));
+            }
+            else
+            {
+                rb.AddForce(new Vector2(0, -speed));
+            }
+
+            yield return null;
         }
+
+        movingTowardsTarget = false;
+    }
+
+    IEnumerator PatrolBetween(Vector2 first, Vector2 second, float waitTime)
+    {
+        isPatrolling = true;
+        Vector2 target = first; //moves towards this target first
+
+        while (currentType == MOVE_TYPE.patrol) //break the loop if no longer patrolling
+        {
+            if (!movingTowardsTarget)
+            {
+                StartCoroutine(MoveTowards(target, moveSpeed));
+            }
+
+            //check if close enough to switch target
+            if (Vector2.Distance(transform.position, target) < 0.5f)
+            {
+                if (target != second)
+                    target = second;
+                else
+                    target = first;
+
+                yield return new WaitForSeconds(waitTime);
+            }
+            yield return null;
+        }
+
+        //end
+        isPatrolling = false;
+    }
+
+    IEnumerator ResetPosition()
+    {
+        //store previousType to return to after, set movement to idle to return to startPos
+        MOVE_TYPE previousType = movementType;
+        movementType = MOVE_TYPE.idle;
+        currentType = MOVE_TYPE.idle;
+
+        while (Vector2.Distance(transform.position, startPos) > .5f)
+        {
+            yield return null;
+        }
+        //once we have arrived at startPos, return to previousType
+        movementType = previousType;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (movementType == MOVE_TYPE.wander)
+        if (currentType == MOVE_TYPE.wander)
         {
-            DirectionChange();
+            wanDirection = RandomDirection(moveSpeed);
         }
 
-        if (movementType == MOVE_TYPE.patrol)
+        if (currentType == MOVE_TYPE.patrol)    //attempt to return to startPos
         {
-            //check if patroling vertical or horizontal
-            //reverse direction based on the vertical or horizontal patrol
+            StartCoroutine(ResetPosition());
         }
 
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (movementType == MOVE_TYPE.wander)
+        if (currentType == MOVE_TYPE.wander)
         {
-            DirectionChange();
+            wanDirection = RandomDirection(moveSpeed);
+        }
+
+        if (currentType == MOVE_TYPE.patrol)    //attempt to return to startPos
+        {
+            StartCoroutine(ResetPosition());
         }
     }
     

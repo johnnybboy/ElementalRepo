@@ -19,7 +19,7 @@ public class GM_Level1 : MonoBehaviour
     //for creating gameObjects
     public GameObject enemy_slime;
 
-    private int gameState = 1;
+    //private int gameState = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,7 @@ public class GM_Level1 : MonoBehaviour
         if (SpawnSpot1 != null)
         {
             ControlledSpawn(enemy_slime, SpawnSpot1.position, 3, 0);    //now spawns with spawn point
-            gameState = 1;
+            //gameState = 1;
         }
         
 
