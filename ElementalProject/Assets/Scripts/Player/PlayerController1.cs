@@ -36,6 +36,7 @@ public class PlayerController1 : MonoBehaviour
     public bool isBusy = false;    //catchall for character actions
     public bool isAlive = true;
     public bool isAttacking = false;
+    private bool isDodging = false;
 
     private bool canSwordAttack = true;
     private bool canRoll = true;
@@ -68,6 +69,9 @@ public class PlayerController1 : MonoBehaviour
 
     void Update()
     {
+        if (isInvulnerable)
+            canTakeDamage = false;
+
         if (isAlive)
         {
             if (Input.GetKey(KeyCode.J))
@@ -111,7 +115,7 @@ public class PlayerController1 : MonoBehaviour
 
     public IEnumerator TakeDamage(float amount)
     {
-        if (canTakeDamage && !isInvulnerable)  //check if canTakeDamage and isInvulnerable
+        if (canTakeDamage && !isDodging)  //check if canTakeDamage
         {
             canTakeDamage = false;
 
@@ -135,11 +139,11 @@ public class PlayerController1 : MonoBehaviour
             }
 
             if (health <= 0)
-                Die();      //won't restore canTakeDamage if player Dies!
-
+            {
+                StartCoroutine(Die());  //won't set canTakeDamage = true if player Dies!
+            }     
             else
             {
-                canTakeDamage = false;
                 yield return new WaitForSeconds(hurtTime);
                 canTakeDamage = true;
             }
@@ -229,7 +233,7 @@ public class PlayerController1 : MonoBehaviour
         if (canRoll)
         {
             isBusy = true;
-            canTakeDamage = false;
+            isDodging = true;
             canRoll = false;
 
             //play animation and sound
@@ -250,7 +254,7 @@ public class PlayerController1 : MonoBehaviour
 
             //end dodging
             isBusy = false;
-            canTakeDamage = true;
+            isDodging = false;
 
             sprite.color = new Color(1f, 1f, 1f, 1f);   //return to default transparency
             hitBox.enabled = true;
@@ -309,12 +313,11 @@ public class PlayerController1 : MonoBehaviour
     //COLLISIONS
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        //collisions with enemies or projectiles deal damage_weak to player
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
+        if (!isInvulnerable)
         {
-
-            TakeDamage(damage_weak);
-
+            //collisions with enemies or projectiles deal damage_weak to player
+            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
+                StartCoroutine(TakeDamage(damage_weak));
         }
 
         //item collisions
@@ -335,12 +338,11 @@ public class PlayerController1 : MonoBehaviour
 
     public void OnCollisionStay2D(Collision2D collision)
     {
-        //collisions with enemies or projectiles deal damage_weak to player
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
+        if (!isInvulnerable)
         {
-
-            TakeDamage(damage_weak);
-
+            //collisions with enemies or projectiles deal damage_weak to player
+            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
+                StartCoroutine(TakeDamage(damage_weak));
         }
     }
 

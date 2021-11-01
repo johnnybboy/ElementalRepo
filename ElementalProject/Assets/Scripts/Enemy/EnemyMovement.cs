@@ -106,8 +106,23 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             //move towards the player's positon on x and y using AddForce()
-            if (!movingTowardsTarget)
-                StartCoroutine(MoveTowards(player.transform.position, chaseSpeed));
+            if (player.transform.position.x > rb.position.x)
+            {
+                rb.AddForce(new Vector2(chaseSpeed, 0));
+            }
+            else
+            {
+                rb.AddForce(new Vector2(-chaseSpeed, 0));
+            }
+
+            if (player.transform.position.y > rb.position.y)
+            {
+                rb.AddForce(new Vector2(0, chaseSpeed));
+            }
+            else
+            {
+                rb.AddForce(new Vector2(0, -chaseSpeed));
+            }
         }
     }
 
