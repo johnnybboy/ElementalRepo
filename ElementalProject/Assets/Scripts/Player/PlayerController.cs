@@ -30,9 +30,9 @@ public class PlayerController : MonoBehaviour
     public float hurtTime = 0.75f;    //invulnerable per second
     public bool isInvulnerable = false;
 
-    public Transform player;
 
     //private Components
+    private Transform player;
     private Animator animator;
     private AudioSource sound;
     private GameObject rightSwordHitBox;
@@ -86,14 +86,6 @@ public class PlayerController : MonoBehaviour
             //remove the item
             Destroy(collision.gameObject);
         }
-
-        // ends the level
-        if (collision.gameObject.tag == "End")
-        {
-            player.transform.position = new Vector3(0, -2, 0);
-            SceneManager.LoadScene("WinningScene");
-        }
-
     }
 
     public void OnCollisionStay2D(Collision2D collision)
@@ -146,7 +138,8 @@ public class PlayerController : MonoBehaviour
         if (health <= 0)
             Die();
         else
-            StartCoroutine(Invulnerable(hurtTime));    //make invulnerable for hurtTime
+            if (!isInvulnerable)
+                StartCoroutine(Invulnerable(hurtTime));    //make invulnerable for hurtTime
     }
 
     void Die()

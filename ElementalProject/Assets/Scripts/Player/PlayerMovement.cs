@@ -5,51 +5,39 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //these references are public for editting in unity for ease
-    public Transform player;
-    public Transform attackPoint;
-    public Animator animator;
-    public Rigidbody2D playerPhysics;
-    public SpriteRenderer sprite;
-    public float APXOffset = 0.5f;
-    public float APYOffset = -0.1f;
+    private Animator animator;
+    private Rigidbody2D body;
+    private SpriteRenderer sprite;
+    private PlayerController controller;
+
+    //settings
     public float moveSpeed = 3f;
 
-    public bool isAttacking = false;
+    //conditions
     public bool facingRight = true;
-
-    private float speed;
-    private Vector2 moveUp;
-    private Vector2 moveDown;
-    private Vector2 moveRight;
-    private Vector2 moveLeft;
+    
 
     void Start()
     {
-        //set vectors to values based on moveSpeed
-        moveUp = new Vector2(0, moveSpeed);
-        moveDown = new Vector2(0, -moveSpeed);
-        moveRight = new Vector2(moveSpeed, 0);
-        moveLeft = new Vector2(-moveSpeed, 0);
-
-        DontDestroyOnLoad(player);
+        animator = GetComponent<Animator>();
+        body = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        controller = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //update isAttacking to lock movement during the attack
-        isAttacking = animator.GetBool("isAttacking");
-
-        if (!isAttacking)
+        if (!controller.isAttacking)
         {
             //input key commands and add force
             if (Input.GetKey(KeyCode.W))
             {
-                playerPhysics.AddForce(moveUp);
+                body.AddForce(new Vector2(0, moveSpeed));
             }
             if (Input.GetKey(KeyCode.S))
             {
-                playerPhysics.AddForce(moveDown);
+                body.AddForce(new Vector2(0, -moveSpeed));
             }
             if (Input.GetKey(KeyCode.D))
             {
@@ -57,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     flipSprite();
                 }
-                playerPhysics.AddForce(moveRight);
+                body.AddForce(new Vector2(moveSpeed, 0));
             }
             if (Input.GetKey(KeyCode.A))
             {
@@ -65,12 +53,12 @@ public class PlayerMovement : MonoBehaviour
                 {
                     flipSprite();
                 }
-                playerPhysics.AddForce(moveLeft);
+                body.AddForce(new Vector2(-moveSpeed, 0));
             }
         }
 
         //update speed for animator
-        speed = Mathf.Abs(playerPhysics.velocity.x) + Mathf.Abs(playerPhysics.velocity.y);
+        float speed = Mathf.Abs(body.velocity.x) + Mathf.Abs(body.velocity.y);
         animator.SetFloat("Speed", speed);
     }
 
@@ -78,17 +66,5 @@ public class PlayerMovement : MonoBehaviour
     {
         facingRight = !facingRight;
         sprite.flipX = !sprite.flipX;
-
-        //transform.Rotate(0f, 180f, 0f);
-
-        if (facingRight)
-        {
-            attackPoint.position = new Vector2(player.position.x + APXOffset, player.position.y + APYOffset);
-        }
-        else
-        {
-            attackPoint.position = new Vector2(player.position.x - APXOffset, player.position.y + APYOffset);
-        }
-
     }
 }
