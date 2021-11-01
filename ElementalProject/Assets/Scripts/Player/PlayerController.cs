@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    //public Components
-    public AudioClip hurtSound, swingSound;
-
     // Player Stats
     public float health = 5f;
     public int maxHearts = 5;
@@ -25,35 +22,58 @@ public class PlayerController : MonoBehaviour
     public int attackDamage = 40;
 
     public float attackRate = 0.5f;   //attacks per second
+    public float magicRate = 1f;    //magic per second
     public bool isAttacking = false;
 
     public float hurtTime = 0.75f;    //invulnerable per second
     public bool isInvulnerable = false;
 
+    public float dodgeRate = 1f;      //dodging per second
+    public float dodgeCooldown = .5f;   //wait between dodges
+    private bool isRolling = false;
+
 
     //private Components
-    private Transform player;
     private Animator animator;
-    private AudioSource sound;
-    private GameObject rightSwordHitBox;
-    private GameObject leftSwordHitBox;
+    private AudioSource hurtSound, swingSound, magicSound;
+    private GameObject rightSwordHitBox, leftSwordHitBox;
 
     private void Start()
     {
-        sound = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
-        rightSwordHitBox = this.gameObject.transform.GetChild(0).gameObject;
-        leftSwordHitBox = this.gameObject.transform.GetChild(1).gameObject;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        //Colliders are GetChild(0)
+        rightSwordHitBox = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
+        leftSwordHitBox = this.gameObject.transform.GetChild(0).GetChild(1).gameObject;
+
+        //AudioSources are GetChild(1)
+        hurtSound = this.gameObject.transform.GetChild(1).GetChild(0).GetComponent<AudioSource>();
+        swingSound = this.gameObject.transform.GetChild(1).GetChild(1).GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.J))
         {
             if (!isAttacking)
             {
                 StartCoroutine(SwordAttack());
+            }
+        }
+
+        if (Input.GetKey(KeyCode.K))
+        {
+            if (!isAttacking)
+            {
+                StartCoroutine(MagicAttack());
+            }
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (!isRolling)
+            {
+                StartCoroutine(DodgeRoll());
             }
         }
     }
@@ -131,8 +151,7 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("Hurt");
         if (hurtSound != null)  //make sure there's something to play
         {
-            sound.clip = hurtSound;
-            sound.Play();
+            hurtSound.Play();
         }
 
         if (health <= 0)
@@ -155,8 +174,7 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("Attack");
         if (swingSound != null)  //make sure there's something to play
         {
-            sound.clip = swingSound;
-            sound.Play();
+            swingSound.Play();
         }
 
         //depending on facing, activate the sword hitbox
@@ -174,6 +192,57 @@ public class PlayerController : MonoBehaviour
         rightSwordHitBox.SetActive(false);
         leftSwordHitBox.SetActive(false);
         isAttacking = false;
+    }
+
+    IEnumerator MagicAttack()
+    {
+        isAttacking = true;
+        //check if there's enough mana
+        //TODO
+
+        //play animation and sound
+        animator.SetTrigger("Magic");
+        if (magicSound != null)  //make sure there's something to play
+        {
+            magicSound.Play();
+        }
+
+        //depending on facing, activate the magic hitbox
+        //TODO add projectile shooting
+        if (GetComponent<PlayerMovement>().facingRight)
+        {
+            rightSwordHitBox.SetActive(true);
+        }
+        else
+        {
+            leftSwordHitBox.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(magicRate);
+
+        rightSwordHitBox.SetActive(false);
+        leftSwordHitBox.SetActive(false);
+        isAttacking = false;
+    }
+
+    IEnumerator DodgeRoll()
+    {
+        isRolling = true;
+        isInvulnerable = true;
+
+        //play animation and sound
+        //animator.SetTrigger("Roll");
+        //if (rollSound != null)  //make sure there's something to play
+        //{
+        //    rollSound.Play();
+        //}
+        
+        yield return new WaitForSeconds(dodgeRate); //dodge for dodgeRate
+
+        isInvulnerable = false;
+        yield return new WaitForSeconds(dodgeCooldown); //cooldown for dodgeCooldown
+
+        isRolling = false;
     }
 
     IEnumerator Invulnerable(float time)
