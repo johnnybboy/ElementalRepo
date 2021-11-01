@@ -130,7 +130,7 @@ MonoBehaviour:
   damage_weak: 0.5
   damage_medium: 1
   damage_strong: 1.5
-  facingRight: 0
+  facingRight: 1
   isAlive: 1
 --- !u!114 &5644784221542398298
 MonoBehaviour:
