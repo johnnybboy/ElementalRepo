@@ -9,12 +9,17 @@ public class EnemyController : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator animator;
     private AudioSource sound;
-
+    private EnemyMovement detect;
+    private Projectile projectile;
     public AudioClip hurtSound, deathSound;
 
     //loot drops (MUST be assigned in Unity!)
     public GameObject coin, heart, potion;
+    //public GameObject Projectile;
 
+    public enum enemyType {Melee, Ranged, Both, Boss};
+    public enemyType enemy_type;
+    
     //stats
     public float maxHealth = 3f;
     public float despawnTime = 2f;
@@ -44,6 +49,9 @@ public class EnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
         sound = GetComponent<AudioSource>();
         currentHealth = maxHealth;
+        detect = GetComponent<EnemyMovement>();
+
+        
     }
 
     private void Update()
@@ -69,6 +77,10 @@ public class EnemyController : MonoBehaviour
                     FlipFacing();
                 }
             }
+            /*if (enemy_type == enemyType.Ranged && detect.PlayerDetected() == true)
+            {
+                GameObject Projectile1 = Instantiate(Projectile, transform.position, transform.rotation);
+            }*/
         }
     }
 

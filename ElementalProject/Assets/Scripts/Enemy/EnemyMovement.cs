@@ -133,7 +133,7 @@ public class EnemyMovement : MonoBehaviour
         return new Vector2(x, y);
     }
 
-    private bool PlayerDetected()
+    public bool PlayerDetected()
     {
         //added check to avoid errors
         if (player == null || !player.activeSelf)

@@ -7,8 +7,9 @@ public class Projectile : MonoBehaviour
     Rigidbody2D proj;
     private GameObject player;
 
-    public enum Projectile_Type { straight, curve, bounce, boomerang, homing }
-    public Projectile_Type projectileType;
+    public enum Projectile_Path { straight, curve, bounce, boomerang, homing }
+    public Projectile_Path projectilePath;
+    
 
     Vector2 startPos; //starting position
 
@@ -37,7 +38,7 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         
-        if (projectileType == Projectile_Type.straight)
+        if (projectilePath == Projectile_Path.straight)
         {
             if (findDirection == true)
             {
@@ -53,7 +54,7 @@ public class Projectile : MonoBehaviour
                 proj.AddForce(new Vector2(projSpeed, 0f));
             }   
         }
-        else if(projectileType== Projectile_Type.bounce) //still working on it
+        else if(projectilePath== Projectile_Path.bounce) //still working on it
         {
             if (findDirection == true)
             {
@@ -71,7 +72,7 @@ public class Projectile : MonoBehaviour
                 bounce();
             }
         }
-        else if (projectileType == Projectile_Type.boomerang)
+        else if (projectilePath == Projectile_Path.boomerang)
         {
             if (findDirection == true)
             {
