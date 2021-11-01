@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Rigidbody2D body;
     private SpriteRenderer sprite;
-    private PlayerController controller;
+    private PlayerController1 controller;
 
     //settings
     public float moveSpeed = 3f;
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        controller = GetComponent<PlayerController>();
+        controller = GetComponent<PlayerController1>();
     }
 
     // Update is called once per frame

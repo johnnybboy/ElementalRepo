@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     private GameObject player;
-    private PlayerController playerController;
+    private PlayerController1 playerController;
     
     public Text enemyCountText;
     public Text endText;
@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        playerController = player.GetComponent<PlayerController>();
+        playerController = player.GetComponent<PlayerController1>();
     }
 
     // Update is called once per frame
