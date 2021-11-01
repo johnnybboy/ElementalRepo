@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
         moveDown = new Vector2(0, -moveSpeed);
         moveRight = new Vector2(moveSpeed, 0);
         moveLeft = new Vector2(-moveSpeed, 0);
+
+        DontDestroyOnLoad(player);
     }
 
     // Update is called once per frame

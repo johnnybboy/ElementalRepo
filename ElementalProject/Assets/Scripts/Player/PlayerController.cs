@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     public float hurtTime = 0.75f;    //invulnerable per second
     public bool isInvulnerable = false;
 
+    public Transform player;
+
     //private Components
     private Animator animator;
     private AudioSource sound;
@@ -42,6 +44,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         rightSwordHitBox = this.gameObject.transform.GetChild(0).gameObject;
         leftSwordHitBox = this.gameObject.transform.GetChild(1).gameObject;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
@@ -87,9 +90,8 @@ public class PlayerController : MonoBehaviour
         // ends the level
         if (collision.gameObject.tag == "End")
         {
-
+            player.transform.position = new Vector3(0, -2, 0);
             SceneManager.LoadScene("WinningScene");
-
         }
 
     }

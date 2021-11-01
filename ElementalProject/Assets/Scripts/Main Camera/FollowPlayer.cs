@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
-{   
+{
     //finds the game object with the Player tag and follows its transform
 
     private Transform player;
