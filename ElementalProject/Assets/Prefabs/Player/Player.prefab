@@ -536,8 +536,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d8836c80f5d1844aaaa4825e8a757b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hurtSound: {fileID: 8300000, guid: d078cf8e199c5294aa064aea16430adb, type: 3}
-  swingSound: {fileID: 8300000, guid: 59a4b2a5c84757644921162ea9ddfd28, type: 3}
   health: 5
   maxHearts: 10
   mana: 5
@@ -549,9 +547,15 @@ MonoBehaviour:
   attackRange: 0.6
   attackDamage: 40
   attackRate: 0.5
-  isAttacking: 0
+  magicRate: 1
   hurtTime: 1
+  dodgeRate: 1
+  dodgeCooldown: 0.5
+  despawnTime: 3
   isInvulnerable: 0
+  isBusy: 0
+  isAlive: 1
+  isAttacking: 0
 --- !u!61 &406264391
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -652,7 +656,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d078cf8e199c5294aa064aea16430adb, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
