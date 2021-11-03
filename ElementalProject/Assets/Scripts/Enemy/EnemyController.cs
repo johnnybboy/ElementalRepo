@@ -11,10 +11,12 @@ public class EnemyController : MonoBehaviour
     private AudioSource sound;
     private EnemyMovement detect;
     private Projectile projectile;
+    
     public AudioClip hurtSound, deathSound;
 
     //loot drops (MUST be assigned in Unity!)
     public GameObject coin, heart, potion;
+    public Transform FirePoint;
     //public GameObject Projectile;
 
     public enum enemyType {Melee, Ranged, Both, Boss};
@@ -77,13 +79,21 @@ public class EnemyController : MonoBehaviour
                     FlipFacing();
                 }
             }
-            /*if (enemy_type == enemyType.Ranged && detect.PlayerDetected() == true)
+            if (enemy_type == enemyType.Ranged && detect.PlayerDetected() == true)
             {
-                GameObject Projectile1 = Instantiate(Projectile, transform.position, transform.rotation);
-            }*/
+                
+                RangedAttack();
+                
+            }
         }
     }
 
+    private void RangedAttack()
+    {
+        print("Can Fire");
+        //GameObject Projectile1 = Instantiate(Projectile, transform.position, transform.rotation);
+        animator.SetTrigger("attack");
+    }
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
