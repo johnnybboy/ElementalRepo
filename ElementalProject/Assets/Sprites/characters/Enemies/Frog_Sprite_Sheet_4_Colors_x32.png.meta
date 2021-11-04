@@ -1,0 +1,2904 @@
+fileFormatVersion: 2
+guid: 849c0fb21de164141bd0bc6c0cd29000
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7852575784525587395
+    second: Frog_Sprite_Sheet_4_Colors_x32_0
+  - first:
+      213: -9107566707896639388
+    second: Frog_Sprite_Sheet_4_Colors_x32_1
+  - first:
+      213: 1412775210578456100
+    second: Frog_Sprite_Sheet_4_Colors_x32_2
+  - first:
+      213: 9219392772097187246
+    second: Frog_Sprite_Sheet_4_Colors_x32_3
+  - first:
+      213: 3517081125132332213
+    second: Frog_Sprite_Sheet_4_Colors_x32_4
+  - first:
+      213: 7616376820087486568
+    second: Frog_Sprite_Sheet_4_Colors_x32_5
+  - first:
+      213: -6778995418242102837
+    second: Frog_Sprite_Sheet_4_Colors_x32_6
+  - first:
+      213: 2573605642175409066
+    second: Frog_Sprite_Sheet_4_Colors_x32_7
+  - first:
+      213: -8096865174627134195
+    second: Frog_Sprite_Sheet_4_Colors_x32_8
+  - first:
+      213: 8881337823339848040
+    second: Frog_Sprite_Sheet_4_Colors_x32_9
+  - first:
+      213: 3218906059485437507
+    second: Frog_Sprite_Sheet_4_Colors_x32_10
+  - first:
+      213: 6248021182217876101
+    second: Frog_Sprite_Sheet_4_Colors_x32_11
+  - first:
+      213: -8558490368262542439
+    second: Frog_Sprite_Sheet_4_Colors_x32_12
+  - first:
+      213: -3219220582845120317
+    second: Frog_Sprite_Sheet_4_Colors_x32_13
+  - first:
+      213: -5699613902079771275
+    second: Frog_Sprite_Sheet_4_Colors_x32_14
+  - first:
+      213: 4986995331447530038
+    second: Frog_Sprite_Sheet_4_Colors_x32_15
+  - first:
+      213: -7426526199731213462
+    second: Frog_Sprite_Sheet_4_Colors_x32_16
+  - first:
+      213: -956663696155562913
+    second: Frog_Sprite_Sheet_4_Colors_x32_17
+  - first:
+      213: 6899066143007452091
+    second: Frog_Sprite_Sheet_4_Colors_x32_18
+  - first:
+      213: 8859959664383645053
+    second: Frog_Sprite_Sheet_4_Colors_x32_19
+  - first:
+      213: -7991590495560432411
+    second: Frog_Sprite_Sheet_4_Colors_x32_20
+  - first:
+      213: 4958971842000676497
+    second: Frog_Sprite_Sheet_4_Colors_x32_21
+  - first:
+      213: -8464609730846939768
+    second: Frog_Sprite_Sheet_4_Colors_x32_22
+  - first:
+      213: -2387629504789998619
+    second: Frog_Sprite_Sheet_4_Colors_x32_23
+  - first:
+      213: 9143697400259711381
+    second: Frog_Sprite_Sheet_4_Colors_x32_24
+  - first:
+      213: 9123557051103390864
+    second: Frog_Sprite_Sheet_4_Colors_x32_25
+  - first:
+      213: 1555383880858612413
+    second: Frog_Sprite_Sheet_4_Colors_x32_26
+  - first:
+      213: 186490150188588901
+    second: Frog_Sprite_Sheet_4_Colors_x32_27
+  - first:
+      213: -33455408835567858
+    second: Frog_Sprite_Sheet_4_Colors_x32_28
+  - first:
+      213: 8301073318607609971
+    second: Frog_Sprite_Sheet_4_Colors_x32_29
+  - first:
+      213: 3247714047089319296
+    second: Frog_Sprite_Sheet_4_Colors_x32_30
+  - first:
+      213: 1721977775893128022
+    second: Frog_Sprite_Sheet_4_Colors_x32_31
+  - first:
+      213: -4710645330587670839
+    second: Frog_Sprite_Sheet_4_Colors_x32_32
+  - first:
+      213: -6686062997169315800
+    second: Frog_Sprite_Sheet_4_Colors_x32_33
+  - first:
+      213: 4121130049622683242
+    second: Frog_Sprite_Sheet_4_Colors_x32_34
+  - first:
+      213: -1867387422688917645
+    second: Frog_Sprite_Sheet_4_Colors_x32_35
+  - first:
+      213: -3449412859961200369
+    second: Frog_Sprite_Sheet_4_Colors_x32_36
+  - first:
+      213: 4051255617681353936
+    second: Frog_Sprite_Sheet_4_Colors_x32_37
+  - first:
+      213: -286122259799213768
+    second: Frog_Sprite_Sheet_4_Colors_x32_38
+  - first:
+      213: 7758130694770687609
+    second: Frog_Sprite_Sheet_4_Colors_x32_39
+  - first:
+      213: -222395519131873763
+    second: Frog_Sprite_Sheet_4_Colors_x32_40
+  - first:
+      213: 401142412923702840
+    second: Frog_Sprite_Sheet_4_Colors_x32_41
+  - first:
+      213: 8302164534056686201
+    second: Frog_Sprite_Sheet_4_Colors_x32_42
+  - first:
+      213: 3131640547391037329
+    second: Frog_Sprite_Sheet_4_Colors_x32_43
+  - first:
+      213: -649439259533279074
+    second: Frog_Sprite_Sheet_4_Colors_x32_44
+  - first:
+      213: 8372859130601421184
+    second: Frog_Sprite_Sheet_4_Colors_x32_45
+  - first:
+      213: 6818560633473136010
+    second: Frog_Sprite_Sheet_4_Colors_x32_46
+  - first:
+      213: 4451224821968419131
+    second: Frog_Sprite_Sheet_4_Colors_x32_47
+  - first:
+      213: 5052412523420854761
+    second: Frog_Sprite_Sheet_4_Colors_x32_48
+  - first:
+      213: -7395158155810962795
+    second: Frog_Sprite_Sheet_4_Colors_x32_49
+  - first:
+      213: 6350178466191398430
+    second: Frog_Sprite_Sheet_4_Colors_x32_50
+  - first:
+      213: -9001616509886460611
+    second: Frog_Sprite_Sheet_4_Colors_x32_51
+  - first:
+      213: -7421309838124758345
+    second: Frog_Sprite_Sheet_4_Colors_x32_52
+  - first:
+      213: 6873921111114234703
+    second: Frog_Sprite_Sheet_4_Colors_x32_53
+  - first:
+      213: 8421356131157525720
+    second: Frog_Sprite_Sheet_4_Colors_x32_54
+  - first:
+      213: 5921314112126723375
+    second: Frog_Sprite_Sheet_4_Colors_x32_55
+  - first:
+      213: -1618446633810814649
+    second: Frog_Sprite_Sheet_4_Colors_x32_56
+  - first:
+      213: -4321855813330086734
+    second: Frog_Sprite_Sheet_4_Colors_x32_57
+  - first:
+      213: -2037809772080794234
+    second: Frog_Sprite_Sheet_4_Colors_x32_58
+  - first:
+      213: 5277415851231968667
+    second: Frog_Sprite_Sheet_4_Colors_x32_59
+  - first:
+      213: 4858805969555731279
+    second: Frog_Sprite_Sheet_4_Colors_x32_60
+  - first:
+      213: -8177163145512181817
+    second: Frog_Sprite_Sheet_4_Colors_x32_61
+  - first:
+      213: -649326251047132897
+    second: Frog_Sprite_Sheet_4_Colors_x32_62
+  - first:
+      213: 7638924877972013109
+    second: Frog_Sprite_Sheet_4_Colors_x32_63
+  - first:
+      213: -393988572710865093
+    second: Frog_Sprite_Sheet_4_Colors_x32_64
+  - first:
+      213: -3674628340707846197
+    second: Frog_Sprite_Sheet_4_Colors_x32_65
+  - first:
+      213: 6671162321434946263
+    second: Frog_Sprite_Sheet_4_Colors_x32_66
+  - first:
+      213: 5778306823432832199
+    second: Frog_Sprite_Sheet_4_Colors_x32_67
+  - first:
+      213: 4192310497040074447
+    second: Frog_Sprite_Sheet_4_Colors_x32_68
+  - first:
+      213: -1009802349842416403
+    second: Frog_Sprite_Sheet_4_Colors_x32_69
+  - first:
+      213: -369300186636252281
+    second: Frog_Sprite_Sheet_4_Colors_x32_70
+  - first:
+      213: -3596041453592252123
+    second: Frog_Sprite_Sheet_4_Colors_x32_71
+  - first:
+      213: -8104916127908631734
+    second: Frog_Sprite_Sheet_4_Colors_x32_72
+  - first:
+      213: 8718812041583361073
+    second: Frog_Sprite_Sheet_4_Colors_x32_73
+  - first:
+      213: -1642089294528103134
+    second: Frog_Sprite_Sheet_4_Colors_x32_74
+  - first:
+      213: -328824603908878589
+    second: Frog_Sprite_Sheet_4_Colors_x32_75
+  - first:
+      213: 1550272796023966403
+    second: Frog_Sprite_Sheet_4_Colors_x32_76
+  - first:
+      213: -3723743373540434588
+    second: Frog_Sprite_Sheet_4_Colors_x32_77
+  - first:
+      213: -5231575860904600751
+    second: Frog_Sprite_Sheet_4_Colors_x32_78
+  - first:
+      213: 1141761072235394002
+    second: Frog_Sprite_Sheet_4_Colors_x32_79
+  - first:
+      213: 727921034875696919
+    second: Frog_Sprite_Sheet_4_Colors_x32_80
+  - first:
+      213: 6223728319045547855
+    second: Frog_Sprite_Sheet_4_Colors_x32_81
+  - first:
+      213: -899515472045528805
+    second: Frog_Sprite_Sheet_4_Colors_x32_82
+  - first:
+      213: -2079552616334819663
+    second: Frog_Sprite_Sheet_4_Colors_x32_83
+  - first:
+      213: -4630203348857161119
+    second: Frog_Sprite_Sheet_4_Colors_x32_84
+  - first:
+      213: -9131367017990678746
+    second: Frog_Sprite_Sheet_4_Colors_x32_85
+  - first:
+      213: -3412059789420688709
+    second: Frog_Sprite_Sheet_4_Colors_x32_86
+  - first:
+      213: 2146246122766641290
+    second: Frog_Sprite_Sheet_4_Colors_x32_87
+  - first:
+      213: -7845705550000095203
+    second: Frog_Sprite_Sheet_4_Colors_x32_88
+  - first:
+      213: -2884827092727902165
+    second: Frog_Sprite_Sheet_4_Colors_x32_89
+  - first:
+      213: 4375910605218085465
+    second: Frog_Sprite_Sheet_4_Colors_x32_90
+  - first:
+      213: -7472852764055065322
+    second: Frog_Sprite_Sheet_4_Colors_x32_91
+  - first:
+      213: -4876604408966179600
+    second: Frog_Sprite_Sheet_4_Colors_x32_92
+  - first:
+      213: -7043699408061034477
+    second: Frog_Sprite_Sheet_4_Colors_x32_93
+  - first:
+      213: 7173128628101175555
+    second: Frog_Sprite_Sheet_4_Colors_x32_94
+  - first:
+      213: -8247768732821086562
+    second: Frog_Sprite_Sheet_4_Colors_x32_95
+  - first:
+      213: 4798889492424644842
+    second: Frog_Sprite_Sheet_4_Colors_x32_96
+  - first:
+      213: 8813468658951207898
+    second: Frog_Sprite_Sheet_4_Colors_x32_97
+  - first:
+      213: 8006027354129952222
+    second: Frog_Sprite_Sheet_4_Colors_x32_98
+  - first:
+      213: 7107377454093479435
+    second: Frog_Sprite_Sheet_4_Colors_x32_99
+  - first:
+      213: -5254576399179253935
+    second: Frog_Sprite_Sheet_4_Colors_x32_100
+  - first:
+      213: -8281391913770188264
+    second: Frog_Sprite_Sheet_4_Colors_x32_101
+  - first:
+      213: -4437587955514045227
+    second: Frog_Sprite_Sheet_4_Colors_x32_102
+  - first:
+      213: -6676620109088362540
+    second: Frog_Sprite_Sheet_4_Colors_x32_103
+  - first:
+      213: 2057440904715767569
+    second: Frog_Sprite_Sheet_4_Colors_x32_104
+  - first:
+      213: -7473311626481733717
+    second: Frog_Sprite_Sheet_4_Colors_x32_105
+  - first:
+      213: 4016106172962944275
+    second: Frog_Sprite_Sheet_4_Colors_x32_106
+  - first:
+      213: 4500846428281744686
+    second: Frog_Sprite_Sheet_4_Colors_x32_107
+  - first:
+      213: -3512768056686935337
+    second: Frog_Sprite_Sheet_4_Colors_x32_108
+  - first:
+      213: 5062026370418481895
+    second: Frog_Sprite_Sheet_4_Colors_x32_109
+  - first:
+      213: -9042413869224646934
+    second: Frog_Sprite_Sheet_4_Colors_x32_110
+  - first:
+      213: -7729722814008649899
+    second: Frog_Sprite_Sheet_4_Colors_x32_111
+  - first:
+      213: 5723360850742120631
+    second: Frog_Sprite_Sheet_4_Colors_x32_112
+  - first:
+      213: 5059348062998374585
+    second: Frog_Sprite_Sheet_4_Colors_x32_113
+  - first:
+      213: 5002126602840093366
+    second: Frog_Sprite_Sheet_4_Colors_x32_114
+  - first:
+      213: -4774079730403398504
+    second: Frog_Sprite_Sheet_4_Colors_x32_115
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 8636
+        width: 293
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c36b704214f9fc60800000000000000
+      internalID: 7852575784525587395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_1
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 8636
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460a5a7455c6b9180800000000000000
+      internalID: -9107566707896639388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_2
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 8636
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ea10e919f2b9310800000000000000
+      internalID: 1412775210578456100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_3
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 8636
+        width: 319
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead18a931ecd1ff70800000000000000
+      internalID: 9219392772097187246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_4
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 8636
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc6eb526ae2fc030800000000000000
+      internalID: 3517081125132332213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_5
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 8636
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86875d45d5ec2b960800000000000000
+      internalID: 7616376820087486568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 7998
+        width: 293
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9cda1759b2ce1a0800000000000000
+      internalID: -6778995418242102837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_7
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 7998
+        width: 297
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab6ecd22b847b320800000000000000
+      internalID: 2573605642175409066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_8
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 7678
+        width: 293
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d055e10d50822af80800000000000000
+      internalID: -8096865174627134195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_9
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 7678
+        width: 297
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861a96ae1b9d04b70800000000000000
+      internalID: 8881337823339848040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_10
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 7678
+        width: 298
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e5bf0b10adbac20800000000000000
+      internalID: 3218906059485437507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_11
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 7678
+        width: 298
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582763b692e65b650800000000000000
+      internalID: 6248021182217876101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_12
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 7678
+        width: 315
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99beb1ada522a3980800000000000000
+      internalID: -8558490368262542439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_13
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 7678
+        width: 936
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c004e1afe70353d0800000000000000
+      internalID: -3219220582845120317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_14
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 7678
+        width: 293
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d38a99a57e6e0b0800000000000000
+      internalID: -5699613902079771275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_15
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 6956
+        width: 355
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632267be4dd553540800000000000000
+      internalID: 4986995331447530038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_16
+      rect:
+        serializedVersion: 2
+        x: 3198
+        y: 7188
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ba3edc4cdafe890800000000000000
+      internalID: -7426526199731213462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_17
+      rect:
+        serializedVersion: 2
+        x: 3837
+        y: 7267
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ca22ddf6f39b2f0800000000000000
+      internalID: -956663696155562913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_18
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 7258
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb22efaa186ebf50800000000000000
+      internalID: 6899066143007452091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_19
+      rect:
+        serializedVersion: 2
+        x: 5119
+        y: 7315
+        width: 424
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7550e76f56e4fa70800000000000000
+      internalID: 8859959664383645053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_20
+      rect:
+        serializedVersion: 2
+        x: 5758
+        y: 7245
+        width: 424
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e48bb919ca281190800000000000000
+      internalID: -7991590495560432411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_21
+      rect:
+        serializedVersion: 2
+        x: 6396
+        y: 7105
+        width: 429
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1966d95dd9ec1d440800000000000000
+      internalID: 4958971842000676497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_22
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 6716
+        width: 293
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885ad861c4aa78a80800000000000000
+      internalID: -8464609730846939768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_23
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 6716
+        width: 297
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e310c79d9f6dded0800000000000000
+      internalID: -2387629504789998619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_24
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 6716
+        width: 298
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59194241750f4ee70800000000000000
+      internalID: 9143697400259711381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_25
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 6716
+        width: 298
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c270f9cc26d9e70800000000000000
+      internalID: 9123557051103390864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_26
+      rect:
+        serializedVersion: 2
+        x: 7035
+        y: 6895
+        width: 446
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db232fb1665d59510800000000000000
+      internalID: 1555383880858612413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_27
+      rect:
+        serializedVersion: 2
+        x: 7678
+        y: 6716
+        width: 306
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f9914bdcb869200800000000000000
+      internalID: 186490150188588901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_28
+      rect:
+        serializedVersion: 2
+        x: 8326
+        y: 6716
+        width: 297
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f5a80ab74298ff0800000000000000
+      internalID: -33455408835567858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_29
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 6396
+        width: 293
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370641ac336533370800000000000000
+      internalID: 8301073318607609971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_30
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 6396
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d1eccf7b2321d20800000000000000
+      internalID: 3247714047089319296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_31
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 6396
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6532a3be9a1b5e710800000000000000
+      internalID: 1721977775893128022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_32
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 6396
+        width: 319
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c62877a70d60aeb0800000000000000
+      internalID: -4710645330587670839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_33
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 6396
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820e6dbd0255633a0800000000000000
+      internalID: -6686062997169315800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_34
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 6396
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ea2f802f1313930800000000000000
+      internalID: 4121130049622683242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_35
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 5758
+        width: 293
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377489c6805b516e0800000000000000
+      internalID: -1867387422688917645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_36
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 5758
+        width: 297
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01395697493120d0800000000000000
+      internalID: -3449412859961200369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_37
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 5438
+        width: 293
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dce3321583f83830800000000000000
+      internalID: 4051255617681353936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_38
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 5438
+        width: 297
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839f556125d770cf0800000000000000
+      internalID: -286122259799213768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_39
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 5438
+        width: 298
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e7cd633ca6aab60800000000000000
+      internalID: 7758130694770687609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_40
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 5438
+        width: 298
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e81822474e9ecf0800000000000000
+      internalID: -222395519131873763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_41
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 5438
+        width: 315
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e09a236e4219500800000000000000
+      internalID: 401142412923702840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_42
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 5438
+        width: 936
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9729b4f28a6373370800000000000000
+      internalID: 8302164534056686201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_43
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 5438
+        width: 293
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fd3775c72d57b20800000000000000
+      internalID: 3131640547391037329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_44
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 4716
+        width: 355
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9083503f6abcf6f0800000000000000
+      internalID: -649439259533279074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_45
+      rect:
+        serializedVersion: 2
+        x: 3198
+        y: 4948
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08932e9940f523470800000000000000
+      internalID: 8372859130601421184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_46
+      rect:
+        serializedVersion: 2
+        x: 3837
+        y: 5027
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85f0a515c460ae50800000000000000
+      internalID: 6818560633473136010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_47
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 5018
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3934d8546de5cd30800000000000000
+      internalID: 4451224821968419131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_48
+      rect:
+        serializedVersion: 2
+        x: 5119
+        y: 5075
+        width: 424
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e92c35db66cd1640800000000000000
+      internalID: 5052412523420854761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_49
+      rect:
+        serializedVersion: 2
+        x: 5758
+        y: 5005
+        width: 424
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5920e09a6de1f5990800000000000000
+      internalID: -7395158155810962795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_50
+      rect:
+        serializedVersion: 2
+        x: 6396
+        y: 4865
+        width: 429
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e165ca99bad502850800000000000000
+      internalID: 6350178466191398430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_51
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 4476
+        width: 293
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d0de31a75d31380800000000000000
+      internalID: -9001616509886460611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_52
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 4476
+        width: 297
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba4672a506320990800000000000000
+      internalID: -7421309838124758345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_53
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 4476
+        width: 298
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4bb50ab4d2156f50800000000000000
+      internalID: 6873921111114234703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_54
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 4476
+        width: 298
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4c3b478caaed470800000000000000
+      internalID: 8421356131157525720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_55
+      rect:
+        serializedVersion: 2
+        x: 7035
+        y: 4655
+        width: 446
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2522d000dbbc2250800000000000000
+      internalID: 5921314112126723375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_56
+      rect:
+        serializedVersion: 2
+        x: 7678
+        y: 4476
+        width: 306
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74997c78c5f1a89e0800000000000000
+      internalID: -1618446633810814649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_57
+      rect:
+        serializedVersion: 2
+        x: 8326
+        y: 4476
+        width: 297
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4d004390fa504c0800000000000000
+      internalID: -4321855813330086734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_58
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 4156
+        width: 293
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685fd4f1fce38b3e0800000000000000
+      internalID: -2037809772080794234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_59
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 4156
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d72b871c52d3940800000000000000
+      internalID: 5277415851231968667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_60
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 4156
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43bae74942fd6340800000000000000
+      internalID: 4858805969555731279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_61
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 4156
+        width: 319
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf94519171e48e80800000000000000
+      internalID: -8177163145512181817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_62
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 4156
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11eff607312df6f0800000000000000
+      internalID: -649326251047132897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_63
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 4156
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5308a6924b9e20a60800000000000000
+      internalID: 7638924877972013109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_64
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 3518
+        width: 293
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3771060b75488af0800000000000000
+      internalID: -393988572710865093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_65
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 3518
+        width: 297
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7968e3ef8110dc0800000000000000
+      internalID: -3674628340707846197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_66
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 3198
+        width: 293
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7daa91839cab49c50800000000000000
+      internalID: 6671162321434946263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_67
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 3198
+        width: 297
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c40eede07ba03050800000000000000
+      internalID: 5778306823432832199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_68
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 3198
+        width: 298
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6073c6f241e2a30800000000000000
+      internalID: 4192310497040074447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_69
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 3198
+        width: 298
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decb94cec167cf1f0800000000000000
+      internalID: -1009802349842416403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_70
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 3198
+        width: 315
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b8f08df6bffdaf0800000000000000
+      internalID: -369300186636252281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_71
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 3198
+        width: 936
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521fd01c95b481ec0800000000000000
+      internalID: -3596041453592252123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_72
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 3198
+        width: 293
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bebad29bd858f80800000000000000
+      internalID: -8104916127908631734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_73
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 2476
+        width: 355
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c79f98b517ff870800000000000000
+      internalID: 8718812041583361073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_74
+      rect:
+        serializedVersion: 2
+        x: 3198
+        y: 2708
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d3e2e9c702639e0800000000000000
+      internalID: -1642089294528103134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_75
+      rect:
+        serializedVersion: 2
+        x: 3837
+        y: 2787
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f4a92d3c7cf6bf0800000000000000
+      internalID: -328824603908878589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_76
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 2778
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cac5ffe4eca38510800000000000000
+      internalID: 1550272796023966403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_77
+      rect:
+        serializedVersion: 2
+        x: 5119
+        y: 2835
+        width: 424
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d5869812b925cc0800000000000000
+      internalID: -3723743373540434588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_78
+      rect:
+        serializedVersion: 2
+        x: 5758
+        y: 2765
+        width: 424
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bd54bf875b567b0800000000000000
+      internalID: -5231575860904600751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_79
+      rect:
+        serializedVersion: 2
+        x: 6396
+        y: 2625
+        width: 429
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3b5f855a958df00800000000000000
+      internalID: 1141761072235394002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_80
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 2236
+        width: 293
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717fc4413581a1a00800000000000000
+      internalID: 727921034875696919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_81
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 2236
+        width: 297
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47bf337eef1f5650800000000000000
+      internalID: 6223728319045547855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_82
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 2236
+        width: 298
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1922caa1774483f0800000000000000
+      internalID: -899515472045528805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_83
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 2236
+        width: 298
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bef0a3d9e1f323e0800000000000000
+      internalID: -2079552616334819663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_84
+      rect:
+        serializedVersion: 2
+        x: 7035
+        y: 2415
+        width: 446
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a7b8906963ebfb0800000000000000
+      internalID: -4630203348857161119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_85
+      rect:
+        serializedVersion: 2
+        x: 7678
+        y: 2236
+        width: 306
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62792f2c31ed64180800000000000000
+      internalID: -9131367017990678746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_86
+      rect:
+        serializedVersion: 2
+        x: 8326
+        y: 2236
+        width: 297
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba8f2b03bde5a0d0800000000000000
+      internalID: -3412059789420688709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_87
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1916
+        width: 293
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88a0143a7ff8cd10800000000000000
+      internalID: 2146246122766641290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_88
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1916
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d100fefde547e1390800000000000000
+      internalID: -7845705550000095203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_89
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 1916
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20d78b2b0907f7d0800000000000000
+      internalID: -2884827092727902165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_90
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 1916
+        width: 319
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a73e8c28b5abc30800000000000000
+      internalID: 4375910605218085465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_91
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 1916
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61da3b301081b4890800000000000000
+      internalID: -7472852764055065322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_92
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 1916
+        width: 315
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4977d9022d25cb0800000000000000
+      internalID: -4876604408966179600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_93
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1278
+        width: 293
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31094ed15b0cf3e90800000000000000
+      internalID: -7043699408061034477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_94
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1278
+        width: 297
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 309d72e7b721c8360800000000000000
+      internalID: 7173128628101175555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_95
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 958
+        width: 293
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e10aa390a0a8d80800000000000000
+      internalID: -8247768732821086562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_96
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 958
+        width: 297
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae853585194199240800000000000000
+      internalID: 4798889492424644842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_97
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 958
+        width: 298
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb33dfac0bbf4a70800000000000000
+      internalID: 8813468658951207898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_98
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 958
+        width: 298
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edde9f8f57f1b1f60800000000000000
+      internalID: 8006027354129952222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_99
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 958
+        width: 315
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0eacd3532a72a260800000000000000
+      internalID: 7107377454093479435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_100
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 958
+        width: 936
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157f4c9da9ef317b0800000000000000
+      internalID: -5254576399179253935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_101
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 958
+        width: 293
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8128fed5ee5921d80800000000000000
+      internalID: -8281391913770188264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_102
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 236
+        width: 355
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc880c04458a62c0800000000000000
+      internalID: -4437587955514045227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_103
+      rect:
+        serializedVersion: 2
+        x: 3198
+        y: 468
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfee819261e753a0800000000000000
+      internalID: -6676620109088362540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_104
+      rect:
+        serializedVersion: 2
+        x: 3837
+        y: 547
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f01ff1a9f7d8c10800000000000000
+      internalID: 2057440904715767569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_105
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 538
+        width: 407
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf62c7cba6794890800000000000000
+      internalID: -7473311626481733717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_106
+      rect:
+        serializedVersion: 2
+        x: 5119
+        y: 595
+        width: 424
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315b5bb39431cb730800000000000000
+      internalID: 4016106172962944275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_107
+      rect:
+        serializedVersion: 2
+        x: 5758
+        y: 525
+        width: 424
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2da152eaf7367e30800000000000000
+      internalID: 4500846428281744686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_108
+      rect:
+        serializedVersion: 2
+        x: 6396
+        y: 385
+        width: 429
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d206da5014204fc0800000000000000
+      internalID: -3512768056686935337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_109
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 293
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea14740a2eef3640800000000000000
+      internalID: 5062026370418481895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_110
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 297
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6acc4ae74e28280800000000000000
+      internalID: -9042413869224646934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_111
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 0
+        width: 298
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55718c2fd028ab490800000000000000
+      internalID: -7729722814008649899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_112
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 0
+        width: 298
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b09cddbe567d6f40800000000000000
+      internalID: 5723360850742120631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_113
+      rect:
+        serializedVersion: 2
+        x: 7035
+        y: 175
+        width: 446
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8241af14a663640800000000000000
+      internalID: 5059348062998374585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_114
+      rect:
+        serializedVersion: 2
+        x: 7678
+        y: 0
+        width: 306
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2b0d394af1b6540800000000000000
+      internalID: 5002126602840093366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Sprite_Sheet_4_Colors_x32_115
+      rect:
+        serializedVersion: 2
+        x: 8326
+        y: 0
+        width: 297
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ca9e387cf0fbdb0800000000000000
+      internalID: -4774079730403398504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
