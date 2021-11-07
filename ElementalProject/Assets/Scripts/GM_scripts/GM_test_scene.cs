@@ -20,7 +20,7 @@ public class GM_test_scene : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
-        player = GameObject.Find("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         CountEnemies();
         gameState = 1;
     }
