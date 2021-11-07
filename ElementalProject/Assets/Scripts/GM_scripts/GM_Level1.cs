@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GM_Level1 : MonoBehaviour
 {
@@ -12,8 +13,13 @@ public class GM_Level1 : MonoBehaviour
     public LayerMask layer;
 
     // Level 1 References
-    public BoxCollider2D BarrierL, BarrierR;
-    public Camera Cam1, Cam2;
+    public BoxCollider2D BarrierL;
+    public BoxCollider2D BarrierR;
+    public BoxCollider2D BarrierL2;
+    public BoxCollider2D BarrierR2;
+    public Camera Cam1;
+    public Camera Cam2;
+    public Camera Cam3;
     public Transform SpawnSpot1;
 
     //for creating gameObjects
@@ -24,8 +30,8 @@ public class GM_Level1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
-        //player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         //we'll want to start implementing the Tag system so we could have multiple player objects potentially
         //      For character switching, down the road
 
@@ -40,16 +46,22 @@ public class GM_Level1 : MonoBehaviour
         
 
         Cam2.enabled = false;
+        Cam3.enabled = false;
         BarrierL = GameObject.Find("Left Barrier").GetComponent<BoxCollider2D>();
         BarrierR = GameObject.Find("Right Barrier").GetComponent<BoxCollider2D>();
+        BarrierL2 = GameObject.Find("Left Barrier 2").GetComponent<BoxCollider2D>();
+        BarrierR2 = GameObject.Find("Right Barrier 2").GetComponent<BoxCollider2D>();
         BarrierL.enabled = false;
         BarrierR.enabled = true;
+        BarrierL2.enabled = false;
+        BarrierR2.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.transform.position.x >= -12 && player.transform.position.x <= 5 && enemyCount > 0)
+        // First encounter
+        if (player.transform.position.x >= -4 && player.transform.position.x <= 16 && enemyCount > 0)
         {
             Cam2.enabled = true;
             Cam1.enabled = false;
@@ -63,22 +75,42 @@ public class GM_Level1 : MonoBehaviour
             Cam2.enabled = false;
             Cam1.enabled = true;
         }
+        
+        // Second encounter
+        if (player.transform.position.x >= 87 && player.transform.position.x <= 111 && enemyCount > 0)
+        {
+            Cam3.enabled = true;
+            Cam1.enabled = false;
+            BarrierL2.enabled = true;
+            BarrierR2.enabled = true;
+        }
+        else if (enemyCount <= 0)
+        {
+            BarrierL2.enabled = false;
+            BarrierR2.enabled = false;
+            Cam3.enabled = false;
+            Cam1.enabled = true;
+        }
 
-        //if (enemyCount <= 0 && gameState == 1)
-        //{
-        //    //end game
-        //    gameState = 0;
+        if (player.transform.position.x >= 150)
+        {
+            SceneManager.LoadScene("Level Two");
+        }
 
-        //}
+            //if (enemyCount <= 0 && gameState == 1)
+            //{
+            //    //end game
+            //    gameState = 0;
 
-        //if (player.transform.position.x >= 41.4)
-        //{
-        //    //endText.enabled = true;
-        //    //endText.text = "<color=white><b>You Win!</b></color>";
-        //    SceneManager.LoadScene("WinningScene");
-        //}
+            //}
+            //if (player.transform.position.x >= 41.4)
+            //{
+            //    //endText.enabled = true;
+            //    //endText.text = "<color=white><b>You Win!</b></color>";
+            //    SceneManager.LoadScene("WinningScene");
+            //}
 
-        if (Input.GetKey(KeyCode.Return))
+            if (Input.GetKey(KeyCode.Return))
         {
             SpawnNearPlayer(enemy_slime);
         }

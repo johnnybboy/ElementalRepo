@@ -1,0 +1,4035 @@
+fileFormatVersion: 2
+guid: 5a37a1b7c752dc0469a7b424117d8599
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2830349312480477103
+    second: New_Forest_Ground_Tiles_57
+  - first:
+      213: 3592651923582665962
+    second: New_Forest_Ground_Tiles_58
+  - first:
+      213: 9203508983558129627
+    second: New_Forest_Ground_Tiles_59
+  - first:
+      213: -1738079959053907834
+    second: New_Forest_Ground_Tiles_60
+  - first:
+      213: -898942566471780571
+    second: New_Forest_Ground_Tiles_61
+  - first:
+      213: 1137042168340567425
+    second: New_Forest_Ground_Tiles_62
+  - first:
+      213: -4107458068700422199
+    second: New_Forest_Ground_Tiles_63
+  - first:
+      213: 6240940907441082268
+    second: New_Forest_Ground_Tiles_64
+  - first:
+      213: -1353833476366261169
+    second: New_Forest_Ground_Tiles_65
+  - first:
+      213: -3260707135025336292
+    second: New_Forest_Ground_Tiles_66
+  - first:
+      213: -4065572757758942385
+    second: New_Forest_Ground_Tiles_89
+  - first:
+      213: 4769347684723302917
+    second: New_Forest_Ground_Tiles_90
+  - first:
+      213: 8336005566867421590
+    second: New_Forest_Ground_Tiles_91
+  - first:
+      213: -3719502761009002775
+    second: New_Forest_Ground_Tiles_92
+  - first:
+      213: 6527915965650299536
+    second: New_Forest_Ground_Tiles_93
+  - first:
+      213: -342828516991995215
+    second: New_Forest_Ground_Tiles_94
+  - first:
+      213: -498221863580463720
+    second: New_Forest_Ground_Tiles_95
+  - first:
+      213: 545771820470412941
+    second: New_Forest_Ground_Tiles_96
+  - first:
+      213: -5643976745085773214
+    second: New_Forest_Ground_Tiles_97
+  - first:
+      213: 1678932722510502967
+    second: New_Forest_Ground_Tiles_98
+  - first:
+      213: 86543136185795218
+    second: New_Forest_Ground_Tiles_99
+  - first:
+      213: -2905095672049850163
+    second: New_Forest_Ground_Tiles_100
+  - first:
+      213: -3962733971047468229
+    second: New_Forest_Ground_Tiles_101
+  - first:
+      213: -4071999143211846133
+    second: New_Forest_Ground_Tiles_102
+  - first:
+      213: -3301661787728442846
+    second: New_Forest_Ground_Tiles_103
+  - first:
+      213: -8365543466214450196
+    second: New_Forest_Ground_Tiles_104
+  - first:
+      213: 8186023080546619479
+    second: New_Forest_Ground_Tiles_105
+  - first:
+      213: -5468368978390885936
+    second: New_Forest_Ground_Tiles_106
+  - first:
+      213: -4262832250870490008
+    second: New_Forest_Ground_Tiles_107
+  - first:
+      213: 3304081420686793681
+    second: New_Forest_Ground_Tiles_108
+  - first:
+      213: 3074433423603083030
+    second: New_Forest_Ground_Tiles_109
+  - first:
+      213: -8876651481023903665
+    second: New_Forest_Ground_Tiles_110
+  - first:
+      213: -874605897119486388
+    second: New_Forest_Ground_Tiles_111
+  - first:
+      213: 2798265011776566039
+    second: New_Forest_Ground_Tiles_112
+  - first:
+      213: 10075450172645587
+    second: New_Forest_Ground_Tiles_113
+  - first:
+      213: 7215811285169874788
+    second: New_Forest_Ground_Tiles_114
+  - first:
+      213: -4165291401775490369
+    second: New_Forest_Ground_Tiles_115
+  - first:
+      213: -3983500192731809639
+    second: New_Forest_Ground_Tiles_116
+  - first:
+      213: 7265293087700383350
+    second: New_Forest_Ground_Tiles_117
+  - first:
+      213: 2225035540545436734
+    second: New_Forest_Ground_Tiles_118
+  - first:
+      213: 7808983493051243909
+    second: New_Forest_Ground_Tiles_119
+  - first:
+      213: -3703000733941360988
+    second: New_Forest_Ground_Tiles_120
+  - first:
+      213: -316980730417212321
+    second: New_Forest_Ground_Tiles_121
+  - first:
+      213: -3417475906746091168
+    second: New_Forest_Ground_Tiles_122
+  - first:
+      213: -918240109125305297
+    second: New_Forest_Ground_Tiles_123
+  - first:
+      213: 1786511107778128465
+    second: New_Forest_Ground_Tiles_124
+  - first:
+      213: 7903632564234240707
+    second: New_Forest_Ground_Tiles_125
+  - first:
+      213: -21404039408747696
+    second: New_Forest_Ground_Tiles_126
+  - first:
+      213: 2123671116530075887
+    second: New_Forest_Ground_Tiles_127
+  - first:
+      213: 519721909486609696
+    second: New_Forest_Ground_Tiles_128
+  - first:
+      213: -3092864086935284345
+    second: New_Forest_Ground_Tiles_129
+  - first:
+      213: 4699728717740020774
+    second: New_Forest_Ground_Tiles_130
+  - first:
+      213: 2337871795458372764
+    second: New_Forest_Ground_Tiles_131
+  - first:
+      213: -5457730472434188112
+    second: New_Forest_Ground_Tiles_132
+  - first:
+      213: -5863887199580610678
+    second: New_Forest_Ground_Tiles_133
+  - first:
+      213: 7436276581706526180
+    second: New_Forest_Ground_Tiles_134
+  - first:
+      213: -185267255530217383
+    second: New_Forest_Ground_Tiles_135
+  - first:
+      213: -934831166408172003
+    second: New_Forest_Ground_Tiles_136
+  - first:
+      213: -2102227669303625701
+    second: New_Forest_Ground_Tiles_137
+  - first:
+      213: -1411413387254638327
+    second: New_Forest_Ground_Tiles_138
+  - first:
+      213: -5227152674751365969
+    second: New_Forest_Ground_Tiles_139
+  - first:
+      213: -5885699979354468741
+    second: New_Forest_Ground_Tiles_140
+  - first:
+      213: -893597766625352079
+    second: New_Forest_Ground_Tiles_141
+  - first:
+      213: -7410918079679002738
+    second: New_Forest_Ground_Tiles_142
+  - first:
+      213: -6632977787186131573
+    second: New_Forest_Ground_Tiles_143
+  - first:
+      213: -7133850844020451520
+    second: New_Forest_Ground_Tiles_144
+  - first:
+      213: -7091371663702040733
+    second: New_Forest_Ground_Tiles_145
+  - first:
+      213: 8929522105124232402
+    second: New_Forest_Ground_Tiles_146
+  - first:
+      213: -5544131726400430967
+    second: New_Forest_Ground_Tiles_147
+  - first:
+      213: -2921661910672855716
+    second: New_Forest_Ground_Tiles_148
+  - first:
+      213: 4265180860807975958
+    second: New_Forest_Ground_Tiles_149
+  - first:
+      213: -2243208611886577678
+    second: New_Forest_Ground_Tiles_150
+  - first:
+      213: 8461012886926751779
+    second: New_Forest_Ground_Tiles_151
+  - first:
+      213: -1210440323440000806
+    second: New_Forest_Ground_Tiles_152
+  - first:
+      213: 5054513510113595371
+    second: New_Forest_Ground_Tiles_153
+  - first:
+      213: -7237098428158665941
+    second: New_Forest_Ground_Tiles_154
+  - first:
+      213: 5423453106848336964
+    second: New_Forest_Ground_Tiles_155
+  - first:
+      213: 4621740081815881687
+    second: New_Forest_Ground_Tiles_156
+  - first:
+      213: 4141540261014941057
+    second: New_Forest_Ground_Tiles_157
+  - first:
+      213: -3580927575199798883
+    second: New_Forest_Ground_Tiles_158
+  - first:
+      213: 227811547953230908
+    second: New_Forest_Ground_Tiles_159
+  - first:
+      213: 3300660580695901161
+    second: New_Forest_Ground_Tiles_160
+  - first:
+      213: -1331694688611621786
+    second: New_Forest_Ground_Tiles_161
+  - first:
+      213: -6995079557173491724
+    second: New_Forest_Ground_Tiles_162
+  - first:
+      213: 2327489427291616692
+    second: New_Forest_Ground_Tiles_163
+  - first:
+      213: 4462028438684183972
+    second: New_Forest_Ground_Tiles_164
+  - first:
+      213: -2278043488907317138
+    second: New_Forest_Ground_Tiles_165
+  - first:
+      213: 7892219934995510588
+    second: New_Forest_Ground_Tiles_166
+  - first:
+      213: -3710269928301046039
+    second: New_Forest_Ground_Tiles_167
+  - first:
+      213: -1916597554239743169
+    second: New_Forest_Ground_Tiles_168
+  - first:
+      213: 4568192373575029755
+    second: New_Forest_Ground_Tiles_169
+  - first:
+      213: -1942287440011221721
+    second: New_Forest_Ground_Tiles_170
+  - first:
+      213: -5800186505564929337
+    second: New_Forest_Ground_Tiles_171
+  - first:
+      213: -5398673969853196726
+    second: New_Forest_Ground_Tiles_172
+  - first:
+      213: -1804980589883312180
+    second: New_Forest_Ground_Tiles_173
+  - first:
+      213: 2601355605369688680
+    second: New_Forest_Ground_Tiles_174
+  - first:
+      213: 4601841730056396419
+    second: New_Forest_Ground_Tiles_175
+  - first:
+      213: 9106125981499440577
+    second: New_Forest_Ground_Tiles_176
+  - first:
+      213: 938278349680518822
+    second: New_Forest_Ground_Tiles_177
+  - first:
+      213: 4575737240241013084
+    second: New_Forest_Ground_Tiles_178
+  - first:
+      213: -5201283075810232200
+    second: New_Forest_Ground_Tiles_179
+  - first:
+      213: 1272782504027037678
+    second: New_Forest_Ground_Tiles_180
+  - first:
+      213: -5950138703003961113
+    second: New_Forest_Ground_Tiles_181
+  - first:
+      213: 2665882211224428573
+    second: New_Forest_Ground_Tiles_182
+  - first:
+      213: -4832572391475571287
+    second: New_Forest_Ground_Tiles_183
+  - first:
+      213: 5661548796827720392
+    second: New_Forest_Ground_Tiles_184
+  - first:
+      213: 8400066866322069280
+    second: New_Forest_Ground_Tiles_185
+  - first:
+      213: -8430043768211793369
+    second: New_Forest_Ground_Tiles_186
+  - first:
+      213: 6985227095883254619
+    second: New_Forest_Ground_Tiles_187
+  - first:
+      213: -1742559896266779602
+    second: New_Forest_Ground_Tiles_188
+  - first:
+      213: 6587082170912941667
+    second: New_Forest_Ground_Tiles_189
+  - first:
+      213: 6553725837053640870
+    second: New_Forest_Ground_Tiles_190
+  - first:
+      213: -2515874862927110876
+    second: New_Forest_Ground_Tiles_191
+  - first:
+      213: 3763840897942882957
+    second: New_Forest_Ground_Tiles_192
+  - first:
+      213: 6339899363243503453
+    second: New_Forest_Ground_Tiles_193
+  - first:
+      213: 6972155985106286379
+    second: New_Forest_Ground_Tiles_194
+  - first:
+      213: 5012221713988787858
+    second: New_Forest_Ground_Tiles_195
+  - first:
+      213: 8367625206487349850
+    second: New_Forest_Ground_Tiles_196
+  - first:
+      213: -3060493317562473755
+    second: New_Forest_Ground_Tiles_197
+  - first:
+      213: 2510076790543032918
+    second: New_Forest_Ground_Tiles_198
+  - first:
+      213: -1322634314395617850
+    second: New_Forest_Ground_Tiles_199
+  - first:
+      213: 996890834932178494
+    second: New_Forest_Ground_Tiles_200
+  - first:
+      213: 1755220645219801015
+    second: New_Forest_Ground_Tiles_201
+  - first:
+      213: 6839735191929327889
+    second: New_Forest_Ground_Tiles_202
+  - first:
+      213: -5348714577559701183
+    second: New_Forest_Ground_Tiles_203
+  - first:
+      213: 930069437379422313
+    second: New_Forest_Ground_Tiles_204
+  - first:
+      213: -27645344136845906
+    second: New_Forest_Ground_Tiles_205
+  - first:
+      213: 2067725734357046476
+    second: New_Forest_Ground_Tiles_206
+  - first:
+      213: -8038165369402721458
+    second: New_Forest_Ground_Tiles_207
+  - first:
+      213: 560624808756853031
+    second: New_Forest_Ground_Tiles_208
+  - first:
+      213: -3431373773743177433
+    second: New_Forest_Ground_Tiles_209
+  - first:
+      213: 3466211304164977445
+    second: New_Forest_Ground_Tiles_210
+  - first:
+      213: -1004729259322234255
+    second: New_Forest_Ground_Tiles_211
+  - first:
+      213: -142042986936281288
+    second: New_Forest_Ground_Tiles_212
+  - first:
+      213: 2776569447698977195
+    second: New_Forest_Ground_Tiles_213
+  - first:
+      213: -7196239215303582788
+    second: New_Forest_Ground_Tiles_214
+  - first:
+      213: -4323047283679813869
+    second: New_Forest_Ground_Tiles_215
+  - first:
+      213: -3463220432905543841
+    second: New_Forest_Ground_Tiles_216
+  - first:
+      213: 5486475739131446658
+    second: New_Forest_Ground_Tiles_217
+  - first:
+      213: 3870657711204619328
+    second: New_Forest_Ground_Tiles_218
+  - first:
+      213: -7887704631837208433
+    second: New_Forest_Ground_Tiles_219
+  - first:
+      213: 2475896022349676227
+    second: New_Forest_Ground_Tiles_220
+  - first:
+      213: 1081484468307089687
+    second: New_Forest_Ground_Tiles_221
+  - first:
+      213: -5358777659500558694
+    second: New_Forest_Ground_Tiles_222
+  - first:
+      213: 3193878514093271819
+    second: New_Forest_Ground_Tiles_223
+  - first:
+      213: -6633800418286802384
+    second: New_Forest_Ground_Tiles_224
+  - first:
+      213: -3965687076632320207
+    second: New_Forest_Ground_Tiles_225
+  - first:
+      213: 5881373344016915793
+    second: New_Forest_Ground_Tiles_226
+  - first:
+      213: -5016809219849524994
+    second: New_Forest_Ground_Tiles_227
+  - first:
+      213: 1803428349716694905
+    second: New_Forest_Ground_Tiles_228
+  - first:
+      213: 2343869261970526986
+    second: New_Forest_Ground_Tiles_229
+  - first:
+      213: 8073746739670010696
+    second: New_Forest_Ground_Tiles_230
+  - first:
+      213: -7745069795062606661
+    second: New_Forest_Ground_Tiles_231
+  - first:
+      213: 6174521371431754524
+    second: New_Forest_Ground_Tiles_232
+  - first:
+      213: 2789940169707866950
+    second: New_Forest_Ground_Tiles_233
+  - first:
+      213: -2987963561281754715
+    second: New_Forest_Ground_Tiles_234
+  - first:
+      213: 2362833310439761378
+    second: New_Forest_Ground_Tiles_235
+  - first:
+      213: 7379856535182227159
+    second: New_Forest_Ground_Tiles_236
+  - first:
+      213: 7947472345755511664
+    second: New_Forest_Ground_Tiles_237
+  - first:
+      213: 5032589317335110281
+    second: New_Forest_Ground_Tiles_238
+  - first:
+      213: -6892579188834333688
+    second: New_Forest_Ground_Tiles_239
+  - first:
+      213: -2033440507666918040
+    second: New_Forest_Ground_Tiles_240
+  - first:
+      213: 5325029978611896021
+    second: New_Forest_Ground_Tiles_242
+  - first:
+      213: -4552574491789803411
+    second: New_Forest_Ground_Tiles_243
+  - first:
+      213: -8995258485394494465
+    second: New_Forest_Ground_Tiles_244
+  - first:
+      213: 1096864557051927564
+    second: New_Forest_Ground_Tiles_245
+  - first:
+      213: -6373553019299077749
+    second: New_Forest_Ground_Tiles_246
+  - first:
+      213: 8434800264330527121
+    second: New_Forest_Ground_Tiles_247
+  - first:
+      213: 4364897806280900814
+    second: New_Forest_Ground_Tiles_248
+  - first:
+      213: -3147396787413664699
+    second: New_Forest_Ground_Tiles_249
+  - first:
+      213: -5298516244121823110
+    second: New_Forest_Ground_Tiles_250
+  - first:
+      213: 7284603972805682627
+    second: New_Forest_Ground_Tiles_251
+  - first:
+      213: 4690194602955189030
+    second: New_Forest_Ground_Tiles_252
+  - first:
+      213: -9164232897872688269
+    second: New_Forest_Ground_Tiles_253
+  - first:
+      213: 6439874541549811613
+    second: New_Forest_Ground_Tiles_254
+  - first:
+      213: 6767810926307376623
+    second: New_Forest_Ground_Tiles_255
+  - first:
+      213: -5280757446276541543
+    second: New_Forest_Ground_Tiles_256
+  - first:
+      213: 7280793723894640424
+    second: New_Forest_Ground_Tiles_257
+  - first:
+      213: 6321642906847399882
+    second: New_Forest_Ground_Tiles_258
+  - first:
+      213: 7651267788574545014
+    second: New_Forest_Ground_Tiles_259
+  - first:
+      213: 6687236059900941104
+    second: New_Forest_Ground_Tiles_260
+  - first:
+      213: -4380353474642493282
+    second: New_Forest_Ground_Tiles_261
+  - first:
+      213: 9088464367264074569
+    second: New_Forest_Ground_Tiles_262
+  - first:
+      213: -7790069676524251950
+    second: New_Forest_Ground_Tiles_263
+  - first:
+      213: 1619047888637971389
+    second: New_Forest_Ground_Tiles_264
+  - first:
+      213: -7560719106947541752
+    second: New_Forest_Ground_Tiles_265
+  - first:
+      213: 7073163444382411670
+    second: New_Forest_Ground_Tiles_266
+  - first:
+      213: 2262834364707574984
+    second: New_Forest_Ground_Tiles_267
+  - first:
+      213: -4018881501956603762
+    second: New_Forest_Ground_Tiles_268
+  - first:
+      213: 2051129347971964036
+    second: New_Forest_Ground_Tiles_269
+  - first:
+      213: 2578447225116724926
+    second: New_Forest_Ground_Tiles_270
+  - first:
+      213: -8636983246824737655
+    second: New_Forest_Ground_Tiles_271
+  - first:
+      213: -5553819554396638688
+    second: New_Forest_Ground_Tiles_272
+  - first:
+      213: 8312260755417183044
+    second: New_Forest_Ground_Tiles_273
+  - first:
+      213: 8990828280564235879
+    second: New_Forest_Ground_Tiles_274
+  - first:
+      213: 2497308003221863214
+    second: New_Forest_Ground_Tiles_275
+  - first:
+      213: 8158789594916428484
+    second: New_Forest_Ground_Tiles_276
+  - first:
+      213: -1220193974706432533
+    second: New_Forest_Ground_Tiles_277
+  - first:
+      213: -4878144772025130204
+    second: New_Forest_Ground_Tiles_278
+  - first:
+      213: -6108607887391149937
+    second: New_Forest_Ground_Tiles_279
+  - first:
+      213: -4050953181727355625
+    second: New_Forest_Ground_Tiles_280
+  - first:
+      213: -2858092571408037821
+    second: New_Forest_Ground_Tiles_281
+  - first:
+      213: -7388869902050707730
+    second: New_Forest_Ground_Tiles_282
+  - first:
+      213: 2100508230902248658
+    second: New_Forest_Ground_Tiles_283
+  - first:
+      213: 455532546309803324
+    second: New_Forest_Ground_Tiles_284
+  - first:
+      213: 360536680198231676
+    second: New_Forest_Ground_Tiles_285
+  - first:
+      213: 2122717386960439305
+    second: New_Forest_Ground_Tiles_286
+  - first:
+      213: -9115486815090094371
+    second: New_Forest_Ground_Tiles_287
+  - first:
+      213: -271754143986819802
+    second: New_Forest_Ground_Tiles_288
+  - first:
+      213: 9179707382027052865
+    second: New_Forest_Ground_Tiles_289
+  - first:
+      213: 4608454841190967908
+    second: New_Forest_Ground_Tiles_290
+  - first:
+      213: 1160741695707789215
+    second: New_Forest_Ground_Tiles_291
+  - first:
+      213: -8986852686808979588
+    second: New_Forest_Ground_Tiles_292
+  - first:
+      213: 7829501588655603950
+    second: New_Forest_Ground_Tiles_293
+  - first:
+      213: 8729878849831149046
+    second: New_Forest_Ground_Tiles_294
+  - first:
+      213: 5317129962260588839
+    second: New_Forest_Ground_Tiles_295
+  - first:
+      213: -7347119310250362389
+    second: New_Forest_Ground_Tiles_296
+  - first:
+      213: -8811081769868443409
+    second: New_Forest_Ground_Tiles_297
+  - first:
+      213: -7953732002169805067
+    second: New_Forest_Ground_Tiles_298
+  - first:
+      213: -2541584219129263786
+    second: New_Forest_Ground_Tiles_299
+  - first:
+      213: -4783070169871593035
+    second: New_Forest_Ground_Tiles_300
+  - first:
+      213: 4697243271424556556
+    second: New_Forest_Ground_Tiles_301
+  - first:
+      213: 1898801830863152870
+    second: New_Forest_Ground_Tiles_302
+  - first:
+      213: 7715654035980118290
+    second: New_Forest_Ground_Tiles_303
+  - first:
+      213: -6941995879764066548
+    second: New_Forest_Ground_Tiles_304
+  - first:
+      213: -4196127414676430090
+    second: New_Forest_Ground_Tiles_305
+  - first:
+      213: 5335843934949435103
+    second: New_Forest_Ground_Tiles_306
+  - first:
+      213: -2809664183790053201
+    second: New_Forest_Ground_Tiles_307
+  - first:
+      213: -1012530728803259853
+    second: New_Forest_Ground_Tiles_308
+  - first:
+      213: -3434347370098313934
+    second: New_Forest_Ground_Tiles_309
+  - first:
+      213: 5300516531547038560
+    second: New_Forest_Ground_Tiles_310
+  - first:
+      213: -5959441413242367929
+    second: New_Forest_Ground_Tiles_311
+  - first:
+      213: -4155836881888659457
+    second: New_Forest_Ground_Tiles_312
+  - first:
+      213: -2976225910169246883
+    second: New_Forest_Ground_Tiles_313
+  - first:
+      213: 4135589418233700846
+    second: New_Forest_Ground_Tiles_314
+  - first:
+      213: -7320466004371282223
+    second: New_Forest_Ground_Tiles_315
+  - first:
+      213: 1968622077072655940
+    second: New_Forest_Ground_Tiles_316
+  - first:
+      213: 2157243031603436276
+    second: New_Forest_Ground_Tiles_317
+  - first:
+      213: 3872191232539170420
+    second: New_Forest_Ground_Tiles_318
+  - first:
+      213: 4736879941300928265
+    second: New_Forest_Ground_Tiles_319
+  - first:
+      213: -5998802722565920617
+    second: New_Forest_Ground_Tiles_320
+  - first:
+      213: 6949714907935447640
+    second: New_Forest_Ground_Tiles_321
+  - first:
+      213: -4112988530628926991
+    second: New_Forest_Ground_Tiles_322
+  - first:
+      213: -8508802700214157617
+    second: New_Forest_Ground_Tiles_323
+  - first:
+      213: -6058439815647332138
+    second: New_Forest_Ground_Tiles_324
+  - first:
+      213: -3342239288847097688
+    second: New_Forest_Ground_Tiles_325
+  - first:
+      213: 5483803532689210722
+    second: New_Forest_Ground_Tiles_326
+  - first:
+      213: -4371743266000084600
+    second: New_Forest_Ground_Tiles_327
+  - first:
+      213: -739129828464033035
+    second: New_Forest_Ground_Tiles_328
+  - first:
+      213: 3734968255089997195
+    second: New_Forest_Ground_Tiles_329
+  - first:
+      213: 394645446441125731
+    second: New_Forest_Ground_Tiles_330
+  - first:
+      213: -2273694507062261364
+    second: New_Forest_Ground_Tiles_331
+  - first:
+      213: 2445567814445993108
+    second: New_Forest_Ground_Tiles_332
+  - first:
+      213: -1466231147331238783
+    second: New_Forest_Ground_Tiles_333
+  - first:
+      213: 4996014819977262343
+    second: New_Forest_Ground_Tiles_334
+  - first:
+      213: -2123093167000541527
+    second: New_Forest_Ground_Tiles_335
+  - first:
+      213: 5295233113287959920
+    second: New_Forest_Ground_Tiles_336
+  - first:
+      213: 1540997887271802483
+    second: New_Forest_Ground_Tiles_337
+  - first:
+      213: 4420257399978956642
+    second: New_Forest_Ground_Tiles_338
+  - first:
+      213: -9040786327127983667
+    second: New_Forest_Ground_Tiles_339
+  - first:
+      213: 3268947802674740273
+    second: New_Forest_Ground_Tiles_340
+  - first:
+      213: 6560020862712540842
+    second: New_Forest_Ground_Tiles_341
+  - first:
+      213: 8058465237396600283
+    second: New_Forest_Ground_Tiles_342
+  - first:
+      213: 3935197268880085123
+    second: New_Forest_Ground_Tiles_343
+  - first:
+      213: 3416727459684704246
+    second: New_Forest_Ground_Tiles_344
+  - first:
+      213: 7788969962605884355
+    second: New_Forest_Ground_Tiles_345
+  - first:
+      213: -4406154967342004108
+    second: New_Forest_Ground_Tiles_346
+  - first:
+      213: -1236010113913201658
+    second: New_Forest_Ground_Tiles_347
+  - first:
+      213: 9136192960975006066
+    second: New_Forest_Ground_Tiles_348
+  - first:
+      213: 3224679796760274472
+    second: New_Forest_Ground_Tiles_349
+  - first:
+      213: 6053714575659506954
+    second: New_Forest_Ground_Tiles_350
+  - first:
+      213: 3985972932357308357
+    second: New_Forest_Ground_Tiles_351
+  - first:
+      213: -8893204905723268135
+    second: New_Forest_Ground_Tiles_352
+  - first:
+      213: 5337341272148185505
+    second: New_Forest_Ground_Tiles_353
+  - first:
+      213: -3204226201109073268
+    second: New_Forest_Ground_Tiles_354
+  - first:
+      213: -8129693068541964481
+    second: New_Forest_Ground_Tiles_355
+  - first:
+      213: -5044586527207910088
+    second: New_Forest_Ground_Tiles_356
+  - first:
+      213: -8915837089910248158
+    second: New_Forest_Ground_Tiles_357
+  - first:
+      213: -7335133453624046137
+    second: New_Forest_Ground_Tiles_358
+  - first:
+      213: -5525660608685130601
+    second: New_Forest_Ground_Tiles_359
+  - first:
+      213: -8040396408583603654
+    second: New_Forest_Ground_Tiles_360
+  - first:
+      213: -3838860726597330308
+    second: New_Forest_Ground_Tiles_361
+  - first:
+      213: 8090273636061340366
+    second: New_Forest_Ground_Tiles_362
+  - first:
+      213: -6204180426091654941
+    second: New_Forest_Ground_Tiles_363
+  - first:
+      213: -6122142058332060643
+    second: New_Forest_Ground_Tiles_364
+  - first:
+      213: -7946475572380131760
+    second: New_Forest_Ground_Tiles_365
+  - first:
+      213: 5559324422937346619
+    second: New_Forest_Ground_Tiles_366
+  - first:
+      213: -2289723736043184434
+    second: New_Forest_Ground_Tiles_367
+  - first:
+      213: 7542125448115678103
+    second: New_Forest_Ground_Tiles_368
+  - first:
+      213: 3673332605817168430
+    second: New_Forest_Ground_Tiles_369
+  - first:
+      213: 3166618744322836258
+    second: New_Forest_Ground_Tiles_370
+  - first:
+      213: -5552232038228148113
+    second: New_Forest_Ground_Tiles_371
+  - first:
+      213: 1684799070676285231
+    second: New_Forest_Ground_Tiles_372
+  - first:
+      213: 3605538251940369419
+    second: New_Forest_Ground_Tiles_373
+  - first:
+      213: 2207534571899281807
+    second: New_Forest_Ground_Tiles_374
+  - first:
+      213: -798584964194924459
+    second: New_Forest_Ground_Tiles_375
+  - first:
+      213: -6736924179641281010
+    second: New_Forest_Ground_Tiles_376
+  - first:
+      213: 5501768060552502321
+    second: New_Forest_Ground_Tiles_377
+  - first:
+      213: 4930746364601207209
+    second: New_Forest_Ground_Tiles_378
+  - first:
+      213: 9198879383835539736
+    second: New_Forest_Ground_Tiles_379
+  - first:
+      213: -7519386652232930233
+    second: New_Forest_Ground_Tiles_380
+  - first:
+      213: 2038250554663016856
+    second: New_Forest_Ground_Tiles_381
+  - first:
+      213: 6333100525793313177
+    second: New_Forest_Ground_Tiles_382
+  - first:
+      213: 8669672522185156502
+    second: New_Forest_Ground_Tiles_383
+  - first:
+      213: -2957975939453057990
+    second: New_Forest_Ground_Tiles_384
+  - first:
+      213: 7329118026377072073
+    second: New_Forest_Ground_Tiles_385
+  - first:
+      213: 3939593552940668178
+    second: New_Forest_Ground_Tiles_386
+  - first:
+      213: -6881217425607347261
+    second: New_Forest_Ground_Tiles_387
+  - first:
+      213: 2218333812036100452
+    second: New_Forest_Ground_Tiles_388
+  - first:
+      213: -1527536758987457643
+    second: New_Forest_Ground_Tiles_389
+  - first:
+      213: -8264759762450511692
+    second: New_Forest_Ground_Tiles_390
+  - first:
+      213: 5281644694893918867
+    second: New_Forest_Ground_Tiles_391
+  - first:
+      213: -4916099757324658858
+    second: New_Forest_Ground_Tiles_392
+  - first:
+      213: -2019552674539760595
+    second: New_Forest_Ground_Tiles_393
+  - first:
+      213: -6308504170149441831
+    second: New_Forest_Ground_Tiles_394
+  - first:
+      213: -6032284277889639236
+    second: New_Forest_Ground_Tiles_395
+  - first:
+      213: 1248097297236394355
+    second: New_Forest_Ground_Tiles_396
+  - first:
+      213: -7486709897264574878
+    second: New_Forest_Ground_Tiles_397
+  - first:
+      213: 6286775097289928225
+    second: New_Forest_Ground_Tiles_398
+  - first:
+      213: -7768870459199930882
+    second: New_Forest_Ground_Tiles_399
+  - first:
+      213: -7326945877572908220
+    second: New_Forest_Ground_Tiles_400
+  - first:
+      213: -87592535359062911
+    second: New_Forest_Ground_Tiles_401
+  - first:
+      213: 8215563215325393645
+    second: New_Forest_Ground_Tiles_402
+  - first:
+      213: 590615695155789673
+    second: New_Forest_Ground_Tiles_403
+  - first:
+      213: 7049143630351163567
+    second: New_Forest_Ground_Tiles_404
+  - first:
+      213: 1302321506730509087
+    second: New_Forest_Ground_Tiles_405
+  - first:
+      213: 4630166499228700857
+    second: New_Forest_Ground_Tiles_406
+  - first:
+      213: 5972645695959913342
+    second: New_Forest_Ground_Tiles_407
+  - first:
+      213: 7962207687075743709
+    second: New_Forest_Ground_Tiles_408
+  - first:
+      213: -1082539786451950675
+    second: New_Forest_Ground_Tiles_409
+  - first:
+      213: -675306344477979419
+    second: New_Forest_Ground_Tiles_410
+  - first:
+      213: -8823571126301726931
+    second: New_Forest_Ground_Tiles_411
+  - first:
+      213: 4838166662535493156
+    second: New_Forest_Ground_Tiles_412
+  - first:
+      213: 2587544575784180715
+    second: New_Forest_Ground_Tiles_413
+  - first:
+      213: 7843294312435074810
+    second: New_Forest_Ground_Tiles_414
+  - first:
+      213: 1306631284352051693
+    second: New_Forest_Ground_Tiles_415
+  - first:
+      213: 8632573181951599218
+    second: New_Forest_Ground_Tiles_416
+  - first:
+      213: -8532235523420283463
+    second: New_Forest_Ground_Tiles_417
+  - first:
+      213: 7155566085677996345
+    second: New_Forest_Ground_Tiles_418
+  - first:
+      213: -3399917908790792603
+    second: New_Forest_Ground_Tiles_419
+  - first:
+      213: -4809084890545102243
+    second: New_Forest_Ground_Tiles_420
+  - first:
+      213: -6623843180093461334
+    second: New_Forest_Ground_Tiles_421
+  - first:
+      213: 4799581167725394376
+    second: New_Forest_Ground_Tiles_422
+  - first:
+      213: 2854941591830292937
+    second: New_Forest_Ground_Tiles_423
+  - first:
+      213: -7097785827879949307
+    second: New_Forest_Ground_Tiles_424
+  - first:
+      213: 4034581250273254239
+    second: New_Forest_Ground_Tiles_425
+  - first:
+      213: 3815009255758972283
+    second: New_Forest_Ground_Tiles_426
+  - first:
+      213: 8043547553783478448
+    second: New_Forest_Ground_Tiles_427
+  - first:
+      213: -141688033977857181
+    second: New_Forest_Ground_Tiles_428
+  - first:
+      213: -5262530920001368957
+    second: New_Forest_Ground_Tiles_429
+  - first:
+      213: 1565769954264253590
+    second: New_Forest_Ground_Tiles_430
+  - first:
+      213: 8943982057197262065
+    second: New_Forest_Ground_Tiles_431
+  - first:
+      213: -2233668428730264963
+    second: New_Forest_Ground_Tiles_432
+  - first:
+      213: 2343801490117641960
+    second: New_Forest_Ground_Tiles_433
+  - first:
+      213: 1501111639861983700
+    second: New_Forest_Ground_Tiles_434
+  - first:
+      213: 617294135323940612
+    second: New_Forest_Ground_Tiles_435
+  - first:
+      213: -3741603040600496141
+    second: New_Forest_Ground_Tiles_436
+  - first:
+      213: 3089538761784473227
+    second: New_Forest_Ground_Tiles_437
+  - first:
+      213: 6537404736163834635
+    second: New_Forest_Ground_Tiles_438
+  - first:
+      213: 472897804473180155
+    second: New_Forest_Ground_Tiles_439
+  - first:
+      213: 7074834877609569298
+    second: New_Forest_Ground_Tiles_440
+  - first:
+      213: -4379895524579733478
+    second: New_Forest_Ground_Tiles_441
+  - first:
+      213: 674804754569695204
+    second: New_Forest_Ground_Tiles_442
+  - first:
+      213: -4791172268077599483
+    second: New_Forest_Ground_Tiles_443
+  - first:
+      213: 2884233235179216071
+    second: New_Forest_Ground_Tiles_444
+  - first:
+      213: -1053460608327978334
+    second: New_Forest_Ground_Tiles_445
+  - first:
+      213: -4518233409866059333
+    second: New_Forest_Ground_Tiles_446
+  - first:
+      213: 2467287482722273308
+    second: New_Forest_Ground_Tiles_447
+  - first:
+      213: -1433810478353366327
+    second: New_Forest_Ground_Tiles_448
+  - first:
+      213: 6132449556700561010
+    second: New_Forest_Ground_Tiles_449
+  - first:
+      213: -1861518213377416838
+    second: New_Forest_Ground_Tiles_450
+  - first:
+      213: -4964282625892460129
+    second: New_Forest_Ground_Tiles_451
+  - first:
+      213: -4195443880080765542
+    second: New_Forest_Ground_Tiles_452
+  - first:
+      213: -7873007202890180573
+    second: New_Forest_Ground_Tiles_453
+  - first:
+      213: -3331829912490812154
+    second: New_Forest_Ground_Tiles_454
+  - first:
+      213: 1530542430467839804
+    second: New_Forest_Ground_Tiles_455
+  - first:
+      213: 7565705695668246283
+    second: New_Forest_Ground_Tiles_456
+  - first:
+      213: -4330755330388899313
+    second: New_Forest_Ground_Tiles_457
+  - first:
+      213: -3137434548203821952
+    second: New_Forest_Ground_Tiles_458
+  - first:
+      213: 1598205081365065562
+    second: New_Forest_Ground_Tiles_459
+  - first:
+      213: 1358985246308618657
+    second: New_Forest_Ground_Tiles_460
+  - first:
+      213: 7268313719676945678
+    second: New_Forest_Ground_Tiles_461
+  - first:
+      213: 5669038616193461245
+    second: New_Forest_Ground_Tiles_3
+  - first:
+      213: -5471972137990149481
+    second: New_Forest_Ground_Tiles_0
+  - first:
+      213: -2627705256972794498
+    second: New_Forest_Ground_Tiles_1
+  - first:
+      213: 1928107953575258953
+    second: New_Forest_Ground_Tiles_2
+  - first:
+      213: -9074309458849237799
+    second: New_Forest_Ground_Tiles_4
+  - first:
+      213: -1352926666085853111
+    second: New_Forest_Ground_Tiles_5
+  - first:
+      213: -399038805376533332
+    second: New_Forest_Ground_Tiles_6
+  - first:
+      213: -8400230462181635551
+    second: New_Forest_Ground_Tiles_7
+  - first:
+      213: 1578437581242496880
+    second: New_Forest_Ground_Tiles_8
+  - first:
+      213: -5849372140589155539
+    second: New_Forest_Ground_Tiles_9
+  - first:
+      213: 379460732206652352
+    second: New_Forest_Ground_Tiles_10
+  - first:
+      213: 2842489759477792540
+    second: New_Forest_Ground_Tiles_11
+  - first:
+      213: 2382615659833086952
+    second: New_Forest_Ground_Tiles_12
+  - first:
+      213: 2045620960292498388
+    second: New_Forest_Ground_Tiles_13
+  - first:
+      213: 8294247373864845298
+    second: New_Forest_Ground_Tiles_14
+  - first:
+      213: 6050670240013965476
+    second: New_Forest_Ground_Tiles_15
+  - first:
+      213: -4335284022362221368
+    second: New_Forest_Ground_Tiles_16
+  - first:
+      213: -7093544476887273504
+    second: New_Forest_Ground_Tiles_17
+  - first:
+      213: -5117549940789773352
+    second: New_Forest_Ground_Tiles_18
+  - first:
+      213: 2948133449610263777
+    second: New_Forest_Ground_Tiles_19
+  - first:
+      213: -5262670722019043428
+    second: New_Forest_Ground_Tiles_20
+  - first:
+      213: 4371925904661186633
+    second: New_Forest_Ground_Tiles_21
+  - first:
+      213: 3586813766294392055
+    second: New_Forest_Ground_Tiles_22
+  - first:
+      213: -5287576409034251969
+    second: New_Forest_Ground_Tiles_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_265
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80512e7d70ee21790800000000000000
+      internalID: -7560719106947541752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_266
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b21bc6dace82260800000000000000
+      internalID: 7073163444382411670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_267
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c411fd9dd3376f10800000000000000
+      internalID: 2262834364707574984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_268
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e800d7121901a38c0800000000000000
+      internalID: -4018881501956603762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_269
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c5f3e4643177c10800000000000000
+      internalID: 2051129347971964036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_270
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe8c2d071c78c320800000000000000
+      internalID: 2578447225116724926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_271
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984f20a6f75432880800000000000000
+      internalID: -8636983246824737655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_272
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022f1996a8edce2b0800000000000000
+      internalID: -5553819554396638688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_273
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443bf07ed151b5370800000000000000
+      internalID: 8312260755417183044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_274
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e319b8fa6d5cc70800000000000000
+      internalID: 8990828280564235879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_291
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97b5a02c68cb1010800000000000000
+      internalID: 1160741695707789215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_292
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c776cf18819484380800000000000000
+      internalID: -8986852686808979588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_293
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee08c20663af7ac60800000000000000
+      internalID: 7829501588655603950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_294
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd9160af82c62970800000000000000
+      internalID: 8729878849831149046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_295
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729e021878d3ac940800000000000000
+      internalID: 5317129962260588839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_296
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be93d1ef9e9c90a90800000000000000
+      internalID: -7347119310250362389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_297
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0421c30dfb8b580800000000000000
+      internalID: -8811081769868443409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_298
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6230c72eaae9190800000000000000
+      internalID: -7953732002169805067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_299
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659cf0c5e9a7abcd0800000000000000
+      internalID: -2541584219129263786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_300
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b15905b50f1f9db0800000000000000
+      internalID: -4783070169871593035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_301
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ebad84ed5ff2140800000000000000
+      internalID: 4697243271424556556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_318
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47611e50969ccb530800000000000000
+      internalID: 3872191232539170420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_319
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f3ae4a537ccb140800000000000000
+      internalID: 4736879941300928265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_320
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798efc3f4b8ffbca0800000000000000
+      internalID: -5998802722565920617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_321
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a9ab933e8527060800000000000000
+      internalID: 6949714907935447640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_322
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f16b9219babbe6c0800000000000000
+      internalID: -4112988530628926991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_323
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fceb9d59609aae980800000000000000
+      internalID: -8508802700214157617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_324
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8f14f26191ceba0800000000000000
+      internalID: -6058439815647332138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_325
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a02ae1231bfd91d0800000000000000
+      internalID: -3342239288847097688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_326
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26df8ff22426a1c40800000000000000
+      internalID: 5483803532689210722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_327
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881ebdc79a27453c0800000000000000
+      internalID: -4371743266000084600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_328
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2818b46551eb5f0800000000000000
+      internalID: -739129828464033035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_329
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85fffbd6d545d330800000000000000
+      internalID: 3734968255089997195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_346
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478c14ae6613ad2c0800000000000000
+      internalID: -4406154967342004108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_347
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60cd96d995fc8dee0800000000000000
+      internalID: -1236010113913201658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_348
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279e656a7174ace70800000000000000
+      internalID: 9136192960975006066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_349
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8266648a03d50cc20800000000000000
+      internalID: 3224679796760274472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_350
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d1ac5255d130450800000000000000
+      internalID: 6053714575659506954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_351
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cfba7d6345015730800000000000000
+      internalID: 3985972932357308357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_352
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d37a97a14df49480800000000000000
+      internalID: -8893204905723268135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_353
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a19c6bcb9b021a40800000000000000
+      internalID: 5337341272148185505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_354
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82f4ee2f3d4883d0800000000000000
+      internalID: -3204226201109073268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_355
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fc9942a378d2f80800000000000000
+      internalID: -8129693068541964481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_356
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8351d07e7470ef9b0800000000000000
+      internalID: -5044586527207910088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_357
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22da5a4a765944480800000000000000
+      internalID: -8915837089910248158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_374
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8163734ffcb2ae10800000000000000
+      internalID: 2207534571899281807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_375
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5588136c43bdae4f0800000000000000
+      internalID: -798584964194924459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_376
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06ddb10723a182a0800000000000000
+      internalID: -6736924179641281010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_377
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c52d5c6e43a5c40800000000000000
+      internalID: 5501768060552502321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_378
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a98a93c1b78d6440800000000000000
+      internalID: 4930746364601207209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_379
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8197e25df0cf8af70800000000000000
+      internalID: 9198879383835539736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_380
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ca7d0eda5c5a790800000000000000
+      internalID: -7519386652232930233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_381
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8999ee19412594c10800000000000000
+      internalID: 2038250554663016856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_382
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99100cebf51b3e750800000000000000
+      internalID: 6333100525793313177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_383
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697afcb993dd05870800000000000000
+      internalID: 8669672522185156502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_384
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a348fba1e8823f6d0800000000000000
+      internalID: -2957975939453057990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_385
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd0e1f730246b560800000000000000
+      internalID: 7329118026377072073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_402
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de27c37673b830270800000000000000
+      internalID: 8215563215325393645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_403
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ff78478d9423800800000000000000
+      internalID: 590615695155789673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_404
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0e9c9a8c693d160800000000000000
+      internalID: 7049143630351163567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_405
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f130608a286c21210800000000000000
+      internalID: 1302321506730509087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_406
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0d07d36e7a14040800000000000000
+      internalID: 4630166499228700857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_407
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73d4f4bd9913e250800000000000000
+      internalID: 5972645695959913342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_408
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7c800b4b17f7e60800000000000000
+      internalID: 7962207687075743709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_409
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3ed4dbccb0af0f0800000000000000
+      internalID: -1082539786451950675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_410
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec82d62574d0a6f0800000000000000
+      internalID: -675306344477979419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_411
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2764665fc06c8580800000000000000
+      internalID: -8823571126301726931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_412
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426b09422fe942340800000000000000
+      internalID: 4838166662535493156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_413
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebda10151ec8e320800000000000000
+      internalID: 2587544575784180715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_414
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6c8812f9af8dc60800000000000000
+      internalID: 7843294312435074810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_415
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de96734fa36122210800000000000000
+      internalID: 1306631284352051693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_416
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 272e9c7529f0dc770800000000000000
+      internalID: 8632573181951599218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_417
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd90964ff8679980800000000000000
+      internalID: -8532235523420283463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_418
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9395baf617dad4360800000000000000
+      internalID: 7155566085677996345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_419
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e290deca011d0d0800000000000000
+      internalID: -3399917908790792603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_420
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d526c5c85c2b24db0800000000000000
+      internalID: -4809084890545102243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_421
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaca2aae8b16314a0800000000000000
+      internalID: -6623843180093461334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_422
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c93dec84a98b9240800000000000000
+      internalID: 4799581167725394376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_423
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9688b604ace9720800000000000000
+      internalID: 2854941591830292937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_424
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ce96d25699f7d90800000000000000
+      internalID: -7097785827879949307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_425
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 140
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b1dff5546bdf730800000000000000
+      internalID: 4034581250273254239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_430
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69486e34a7bbab510800000000000000
+      internalID: 1565769954264253590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_431
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4d5b43b486f1c70800000000000000
+      internalID: 8943982057197262065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_432
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d721787066a6001e0800000000000000
+      internalID: -2233668428730264963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_433
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e64e7a890bd68020800000000000000
+      internalID: 2343801490117641960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_434
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d97d2e451505d410800000000000000
+      internalID: 1501111639861983700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_435
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4075ae9deb1119800800000000000000
+      internalID: 617294135323940612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_436
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f76c72cbd7231cc0800000000000000
+      internalID: -3741603040600496141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_437
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86b6ff722f30ea20800000000000000
+      internalID: 3089538761784473227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_438
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b600c88f689ba50800000000000000
+      internalID: 6537404736163834635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_439
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff9fa23c02109600800000000000000
+      internalID: 472897804473180155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_440
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c667c46dcde2260800000000000000
+      internalID: 7074834877609569298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_441
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a101a10e93c7733c0800000000000000
+      internalID: -4379895524579733478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_446
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1b1a007a20c41c0800000000000000
+      internalID: -4518233409866059333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_447
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18cd6ea4e09d3220800000000000000
+      internalID: 2467287482722273308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_448
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2c38277f41a1ce0800000000000000
+      internalID: -1433810478353366327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_449
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e73267166da1550800000000000000
+      internalID: 6132449556700561010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_450
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7128b43c0f8a26e0800000000000000
+      internalID: -1861518213377416838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_451
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99590fe0435b1bb0800000000000000
+      internalID: -4964282625892460129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_452
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d03bcf40ac6c5c0800000000000000
+      internalID: -4195443880080765542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_453
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32893a579a57db290800000000000000
+      internalID: -7873007202890180573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_454
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60dd6fde856f2c1d0800000000000000
+      internalID: -3331829912490812154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_455
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37d2b93b349d3510800000000000000
+      internalID: 1530542430467839804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_456
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b079471de39cef860800000000000000
+      internalID: 7565705695668246283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_457
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 76
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a4a0be8f016e3c0800000000000000
+      internalID: -4330755330388899313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_249
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cb0072c433254d0800000000000000
+      internalID: -3147396787413664699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_250
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a785b787c83e776b0800000000000000
+      internalID: -5298516244121823110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_251
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c56b70c7bc181560800000000000000
+      internalID: 7284603972805682627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_252
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 332
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b2994442be61140800000000000000
+      internalID: 4690194602955189030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_275
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b77cac56838a220800000000000000
+      internalID: 2497308003221863214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_276
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca9522d8e7d93170800000000000000
+      internalID: 8158789594916428484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_277
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be51d8c7b00011fe0800000000000000
+      internalID: -1220193974706432533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_278
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4236384ec295d4cb0800000000000000
+      internalID: -4878144772025130204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_302
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6a5737436e95a10800000000000000
+      internalID: 1898801830863152870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_303
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21967686772831b60800000000000000
+      internalID: 7715654035980118290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_304
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fff62178319af90800000000000000
+      internalID: -6941995879764066548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_305
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2eeef295c54c5c0800000000000000
+      internalID: -4196127414676430090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_330
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367495f41ff0a7500800000000000000
+      internalID: 394645446441125731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_331
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c890cc274e63270e0800000000000000
+      internalID: -2273694507062261364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_332
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c8e2658f660f120800000000000000
+      internalID: 2445567814445993108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_333
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 236
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18445b83a86e6abe0800000000000000
+      internalID: -1466231147331238783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_358
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd87a4bcfe543a90800000000000000
+      internalID: -7335133453624046137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_359
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c34fdd3f8e053b0800000000000000
+      internalID: -5525660608685130601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_360
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a3c05f016ca6090800000000000000
+      internalID: -8040396408583603654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_361
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 204
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ad7f02280a9bac0800000000000000
+      internalID: -3838860726597330308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_386
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215927aa67f3ca630800000000000000
+      internalID: 3939593552940668178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_387
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3327ca5310180a0800000000000000
+      internalID: -6881217425607347261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_388
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46166ab49da19ce10800000000000000
+      internalID: 2218333812036100452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Forest_Ground_Tiles_389
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b733339691dcae0800000000000000
+      internalID: -1527536758987457643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
