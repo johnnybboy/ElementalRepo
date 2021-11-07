@@ -12,7 +12,7 @@ public class GM_test_scene : MonoBehaviour
     public LayerMask layer;
 
     //for creating gameObjects
-    public GameObject enemy_slime;
+    public GameObject spawnEnemy;
 
     private int gameState = 1;
 
@@ -37,7 +37,7 @@ public class GM_test_scene : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Return))
         {
-            SpawnNearPlayer(enemy_slime, 1);
+            SpawnNearPlayer(spawnEnemy, 1);
         }
 
         CountEnemies();

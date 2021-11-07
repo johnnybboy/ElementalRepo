@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     private AudioSource sound;
     private EnemyMovement detect;
     private Projectile projectile;
+    private ParticleSystem particles;
     
     public AudioClip hurtSound, deathSound;
 
@@ -32,6 +33,7 @@ public class EnemyController : MonoBehaviour
 
     public bool facingRight = false;
     public bool isAlive = true;
+    public bool particleDeath = false;
 
     private float currentHealth;
 
@@ -52,8 +54,8 @@ public class EnemyController : MonoBehaviour
         sound = GetComponent<AudioSource>();
         currentHealth = maxHealth;
         detect = GetComponent<EnemyMovement>();
+        particles = GetComponent<ParticleSystem>();
 
-        
     }
 
     private void Update()
@@ -135,6 +137,14 @@ public class EnemyController : MonoBehaviour
             GetComponent<Movement>().enabled = false;
         if (GetComponent<EnemyMovement>() != null)
             GetComponent<EnemyMovement>().enabled = false;
+
+        //particle death!
+        if (particles != null && particleDeath)
+        {
+            particles.Play();
+            sprite.enabled = false;
+        }
+            
         
         //delete after some delay
         isAlive = false;

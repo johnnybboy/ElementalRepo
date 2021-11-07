@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 829961082672029584}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TravelPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84990416304532245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.928, y: 0, z: 0}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7744955812762877939}
@@ -40,9 +40,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3585610913280472002}
   - component: {fileID: 8050447398152469841}
+  - component: {fileID: 1623053196294487253}
   - component: {fileID: 9012587248578071037}
   - component: {fileID: 3844391454368118641}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Blade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2518414915814431118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.9196841}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7744955812762877939}
@@ -114,6 +115,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1623053196294487253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2518414915814431118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!60 &9012587248578071037
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -176,7 +189,7 @@ Animator:
   m_GameObject: {fileID: 2518414915814431118}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc4541600e40efb4ea4971455ad25729, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -194,7 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5893031225090220162}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TravelPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5777416186067843022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.468, y: 0, z: 0}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7744955812762877939}
@@ -225,8 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7744955812762877939}
   - component: {fileID: 1735011062317427266}
-  - component: {fileID: 2221894615408391662}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SawbladeTrap
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -241,7 +253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7744955812762877943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.73, y: -0.53, z: -0.9196841}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3585610913280472002}
@@ -265,22 +277,3 @@ MonoBehaviour:
   startDelay: 0
   stopTime: 2
   smoothing: 1
---- !u!95 &2221894615408391662
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7744955812762877943}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dc4541600e40efb4ea4971455ad25729, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

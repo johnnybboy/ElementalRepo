@@ -13,6 +13,7 @@ TagManager:
   - Projectile
   - End
   - Bounds
+  - WalkBox
   layers:
   - Default
   - TransparentFX
@@ -24,9 +25,9 @@ TagManager:
   - Player
   - Items
   - Bounds
-  - 
-  - 
-  - 
+  - Traps
+  - WalkBox
+  - HitBox
   - 
   - 
   - 

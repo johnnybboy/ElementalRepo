@@ -319,8 +319,21 @@ public class PlayerController1 : MonoBehaviour
             if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
                 StartCoroutine(TakeDamage(damage_weak));
         }
+    }
 
-        //item collisions
+    public void OnCollisionStay2D(Collision2D collision)
+    {
+        if (!isInvulnerable)
+        {
+            //collisions with enemies or projectiles deal damage_weak to player
+            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
+                StartCoroutine(TakeDamage(damage_weak));
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //item triggers
         if (collision.gameObject.layer == 8)    //Layer 8 is Items
         {
             string tag = collision.gameObject.tag;
@@ -333,16 +346,6 @@ public class PlayerController1 : MonoBehaviour
 
             //remove the item
             Destroy(collision.gameObject);
-        }
-    }
-
-    public void OnCollisionStay2D(Collision2D collision)
-    {
-        if (!isInvulnerable)
-        {
-            //collisions with enemies or projectiles deal damage_weak to player
-            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
-                StartCoroutine(TakeDamage(damage_weak));
         }
     }
 

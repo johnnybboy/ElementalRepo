@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6333675343680133723}
   - component: {fileID: 7026509071064977665}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WalkBox
-  m_TagString: Untagged
+  m_TagString: WalkBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 4613414081693507333}
   - component: {fileID: 4180072128160986818}
   - component: {fileID: 9201430164906789756}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: LeftSwordHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1783113786852716316}
   - component: {fileID: 2222601531090581243}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SwingSwound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 59a4b2a5c84757644921162ea9ddfd28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 8584049686918917744}
   - component: {fileID: 1786932232000817365}
   - component: {fileID: 2130703643084417473}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: RightSwordHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,7 +591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7590990480394136095}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: AudioSources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5634121592931627130}
   - component: {fileID: 6828825459310706699}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: HurtSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +657,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d078cf8e199c5294aa064aea16430adb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
