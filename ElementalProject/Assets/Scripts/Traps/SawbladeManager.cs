@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sawblade_Trap : MonoBehaviour
+public class SawbladeManager : MonoBehaviour
 {
     public float startDelay = 0f;
     public float stopTime = 2f;

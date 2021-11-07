@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7744955810950764886}
   - component: {fileID: 7744955810950764884}
+  - component: {fileID: 3435153097747433747}
   - component: {fileID: 7744955810950764887}
+  - component: {fileID: 949611248943066524}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Trap
@@ -70,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -701690719
-  m_SortingLayer: 6
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7641605694783809595, guid: 433e1cde41bd1d848b6dfbf4daf885ba, type: 3}
+  m_Sprite: {fileID: -1230323753325884258, guid: 9aa79f52f68d5c34d9ca04d1b358a5c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,6 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3435153097747433747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744955810950764889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7744955810950764887
 Animator:
   serializedVersion: 3
@@ -102,6 +116,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &949611248943066524
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744955810950764889}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015680984, y: -0.046990395}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.28125, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18248478, y: 0.927938}
+  m_EdgeRadius: 0
 --- !u!1 &7744955811538261564
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +152,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7744955811538261565}
   - component: {fileID: 7744955811538261563}
+  - component: {fileID: 5265662576868091159}
   - component: {fileID: 7744955811538261562}
+  - component: {fileID: 525534230016851795}
   m_Layer: 0
   m_Name: Spike (2)
   m_TagString: Trap
@@ -172,9 +214,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -701690719
-  m_SortingLayer: 6
+  m_SortingLayer: 3
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7641605694783809595, guid: 433e1cde41bd1d848b6dfbf4daf885ba, type: 3}
+  m_Sprite: {fileID: -1230323753325884258, guid: 9aa79f52f68d5c34d9ca04d1b358a5c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -185,6 +227,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5265662576868091159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744955811538261564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7744955811538261562
 Animator:
   serializedVersion: 3
@@ -204,6 +258,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &525534230016851795
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744955811538261564}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015680984, y: -0.046990395}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.28125, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18248478, y: 0.927938}
+  m_EdgeRadius: 0
 --- !u!1 &7744955811568307216
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +294,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7744955811568307217}
   - component: {fileID: 7744955811568307215}
+  - component: {fileID: 1801985706867939089}
   - component: {fileID: 7744955811568307214}
+  - component: {fileID: 136825995455785772}
   m_Layer: 0
   m_Name: Spike (3)
   m_TagString: Trap
@@ -274,9 +356,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -701690719
-  m_SortingLayer: 6
+  m_SortingLayer: 3
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7641605694783809595, guid: 433e1cde41bd1d848b6dfbf4daf885ba, type: 3}
+  m_Sprite: {fileID: -1230323753325884258, guid: 9aa79f52f68d5c34d9ca04d1b358a5c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -287,6 +369,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1801985706867939089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744955811568307216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7744955811568307214
 Animator:
   serializedVersion: 3
@@ -306,6 +400,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &136825995455785772
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744955811568307216}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015680984, y: -0.046990395}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.28125, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18248478, y: 0.927938}
+  m_EdgeRadius: 0
 --- !u!1 &7744955811980836962
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +436,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7744955811980836963}
   - component: {fileID: 7744955811980836961}
+  - component: {fileID: 730532029017127203}
   - component: {fileID: 7744955811980836960}
+  - component: {fileID: 7691115194552411947}
   m_Layer: 0
   m_Name: Spike (1)
   m_TagString: Trap
@@ -376,9 +498,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -701690719
-  m_SortingLayer: 6
+  m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7641605694783809595, guid: 433e1cde41bd1d848b6dfbf4daf885ba, type: 3}
+  m_Sprite: {fileID: -1230323753325884258, guid: 9aa79f52f68d5c34d9ca04d1b358a5c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -389,6 +511,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &730532029017127203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744955811980836962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7744955811980836960
 Animator:
   serializedVersion: 3
@@ -408,6 +542,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &7691115194552411947
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744955811980836962}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015680984, y: -0.046990395}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.28125, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18248478, y: 0.927938}
+  m_EdgeRadius: 0
 --- !u!1 &7744955812214201285
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +578,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7744955812214201282}
   - component: {fileID: 7744955812214201280}
+  - component: {fileID: 3373519911856479340}
   - component: {fileID: 7744955812214201283}
+  - component: {fileID: 5201231555868499515}
   m_Layer: 0
   m_Name: Spike (4)
   m_TagString: Trap
@@ -478,9 +640,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -701690719
-  m_SortingLayer: 6
+  m_SortingLayer: 3
   m_SortingOrder: 4
-  m_Sprite: {fileID: 7641605694783809595, guid: 433e1cde41bd1d848b6dfbf4daf885ba, type: 3}
+  m_Sprite: {fileID: -1230323753325884258, guid: 9aa79f52f68d5c34d9ca04d1b358a5c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -491,6 +653,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3373519911856479340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744955812214201285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7744955812214201283
 Animator:
   serializedVersion: 3
@@ -510,6 +684,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &5201231555868499515
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744955812214201285}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015680984, y: -0.046990395}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.28125, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18248478, y: 0.927938}
+  m_EdgeRadius: 0
 --- !u!1 &7744955812762877943
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,10 +720,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7744955812762877939}
   - component: {fileID: 7744955812762877938}
-  - component: {fileID: 7744955812762877941}
-  - component: {fileID: 7744955812762877940}
   m_Layer: 0
-  m_Name: SpikeTrap (Vertical)
+  m_Name: SpikeTrap_Wooden
   m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -537,7 +735,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7744955812762877943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.73, y: -0.53, z: -0.9196841}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7744955810950764886}
@@ -564,80 +762,3 @@ MonoBehaviour:
   safeTime: 2
   bufferTime: 1
   dangerTime: 2
---- !u!61 &7744955812762877941
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7744955812762877943}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.000000059604645, y: -0.0122798085}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28125, y: 0.90625}
-    newSize: {x: 0.28125, y: 0.90625}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.41055852, y: 2.596404}
-  m_EdgeRadius: 0
---- !u!212 &7744955812762877940
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7744955812762877943}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -701690719
-  m_SortingLayer: 6
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7641605694783809595, guid: 433e1cde41bd1d848b6dfbf4daf885ba, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.28125, y: 0.90625}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0

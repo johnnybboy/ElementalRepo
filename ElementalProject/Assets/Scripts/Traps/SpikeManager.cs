@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeTrapV : MonoBehaviour
+public class SpikeManager : MonoBehaviour
 {
     public float startDelay = 0f;
     public float safeTime = 2f;
     public float bufferTime = 1f;
     public float dangerTime = 2f;
 
-    private BoxCollider2D spikes;
+    private BoxCollider2D[] spikes;
     private Animator[] anim;
     private bool busy = false;
     private bool firstTrigger = true;
@@ -17,9 +17,16 @@ public class SpikeTrapV : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spikes = GetComponent<BoxCollider2D>();
-        spikes.enabled = false;
+        //get components in children
+        spikes = GetComponentsInChildren<BoxCollider2D>();
         anim = GetComponentsInChildren<Animator>();
+
+        //start spikes safe
+        foreach (BoxCollider2D spike in spikes)
+        {
+            spike.enabled = false;
+        }
+
         //start coroutine
         StartCoroutine(SpikeTrapTiming());
     }
@@ -57,7 +64,10 @@ public class SpikeTrapV : MonoBehaviour
         {
             spike.SetTrigger("extend");
         }
-        spikes.enabled = true;
+        foreach (BoxCollider2D spike in spikes)
+        {
+            spike.enabled = true;
+        }
         yield return new WaitForSeconds(dangerTime);
 
         //then retract all spikes and make hitbox safe
@@ -65,23 +75,10 @@ public class SpikeTrapV : MonoBehaviour
         {
             spike.SetTrigger("retract");
         }
-        spikes.enabled = false;
+        foreach (BoxCollider2D spike in spikes)
+        {
+            spike.enabled = false;
+        }
         busy = false;
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
-            enemy.TakeDamage(enemy.damage_medium);
-        }
-
-        if (collision.gameObject.tag == "Player")
-        {
-            PlayerController1 player = collision.gameObject.GetComponent<PlayerController1>();
-            player.TakeDamage(player.damage_medium);
-        }
-    }
-
 }
