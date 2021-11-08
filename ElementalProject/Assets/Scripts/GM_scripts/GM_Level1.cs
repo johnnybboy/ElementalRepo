@@ -14,7 +14,7 @@ public class GM_Level1 : MonoBehaviour
     // Level 1 References
     public LayerMask layer;
     public Transform FightArea1, FightArea2, BossFight;
-    private Transform testArea;
+    //private Transform testArea;
 
     private GameObject player;
 
@@ -29,7 +29,7 @@ public class GM_Level1 : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        testArea = GameObject.Find("TestArea").transform;
+        //testArea = GameObject.Find("TestArea").transform;
 
         Application.targetFrameRate = 60;   //important for game speed to be same across all computers
     }
@@ -40,7 +40,7 @@ public class GM_Level1 : MonoBehaviour
         // First encounter, FightArea1
         if (fight_index == 0)
         {
-            checkFightStatus(testArea, 10f);
+            checkFightStatus(FightArea1, 10f);
         }
 
         // Second encounter, FightArea2

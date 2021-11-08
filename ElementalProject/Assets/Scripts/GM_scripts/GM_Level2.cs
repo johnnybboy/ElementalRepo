@@ -52,8 +52,10 @@ public class GM_Level2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            // First encounter
-            if (player.transform.position.x >= 77 && player.transform.position.x <= 100 && enemyCount > 0)
+        Physics2D.IgnoreLayerCollision(13, 9);
+
+        // First encounter
+        if (player.transform.position.x >= 77 && player.transform.position.x <= 100 && enemyCount > 0)
         {
             Cam2.enabled = true;
             Cam1.enabled = false;
