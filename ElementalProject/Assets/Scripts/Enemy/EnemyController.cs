@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour
     public Transform FirePoint;
     //public GameObject Projectile;
 
+    private GameObject player;
     public enum enemyType {Melee, Ranged, Both, Boss};
     public enemyType enemy_type;
     
@@ -55,7 +56,7 @@ public class EnemyController : MonoBehaviour
         currentHealth = maxHealth;
         detect = GetComponent<EnemyMovement>();
         particles = GetComponent<ParticleSystem>();
-
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
@@ -81,12 +82,30 @@ public class EnemyController : MonoBehaviour
                     FlipFacing();
                 }
             }
-            if (enemy_type == enemyType.Ranged && detect.PlayerDetected() == true)
+            if(detect.PlayerDetected() == true)
             {
-                
-                RangedAttack();
-                
+                if (player.transform.position.x < body.position.x) // looks left
+                {
+                    if (facingRight)
+                    {
+                        FlipFacing();
+                    }
+                }
+                else if (player.transform.position.x > body.position.x) //looks right
+                {
+                    if (facingRight != true)
+                    {
+                        FlipFacing();
+                    }
+                    if (enemy_type == enemyType.Ranged)
+                    {
+
+                        RangedAttack();
+
+                    }
+                }
             }
+            
         }
     }
 
