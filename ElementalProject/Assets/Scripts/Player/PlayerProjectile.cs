@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class PlayerProjectile : MonoBehaviour
 {
     Rigidbody2D proj;
     private GameObject player;
     private SpriteRenderer sprite;
     public enum Projectile_Path { straight, curve, bounce, boomerang, homing }
     public Projectile_Path projectilePath;
-    
+
 
     Vector2 startPos; //starting position
 
@@ -27,10 +27,11 @@ public class Projectile : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
+
         //player = GameObject.FindGameObjectWithTag("Player");
         //we'll want to start implementing the Tag system so we could have multiple player objects potentially
         //      For character switching, down the road
-        
+
         proj = GetComponent<Rigidbody2D>();
         startPos = new Vector2(proj.position.x, proj.position.y);
     }
@@ -38,7 +39,7 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- 
+
         if (projectilePath == Projectile_Path.straight)
         {
             if (findDirection == true)
@@ -50,12 +51,12 @@ public class Projectile : MonoBehaviour
             {
                 proj.AddForce(new Vector2(-projSpeed, 0f));
             }
-            else if(direction == true) //right
+            else if (direction == true) //right
             {
                 proj.AddForce(new Vector2(projSpeed, 0f));
-            }   
+            }
         }
-        else if(projectilePath== Projectile_Path.bounce) //still working on it
+        else if (projectilePath == Projectile_Path.bounce) //still working on it
         {
             if (findDirection == true)
             {
@@ -82,11 +83,11 @@ public class Projectile : MonoBehaviour
             }
             if (direction == false) //left
             {
-                if(proj.position.x > startPos.x - boomeRange && destroy == false)
+                if (proj.position.x > startPos.x - boomeRange && destroy == false)
                 {
                     proj.AddForce(new Vector2(-projSpeed, 0f));
                 }
-                else if(proj.position.x <= startPos.x - boomeRange)
+                else if (proj.position.x <= startPos.x - boomeRange)
                 {
                     proj.AddForce(new Vector2(projSpeed, 0f));
                     destroy = true;
@@ -122,7 +123,7 @@ public class Projectile : MonoBehaviour
     }
     private bool PDirectX()
     {
-        if (player.transform.position.x < proj.position.x) // fires left
+        if (player) // fires left
         {
             return false;
         }
@@ -134,15 +135,15 @@ public class Projectile : MonoBehaviour
     }
     private void bounce()
     {
-        if(proj.position.y >= startPos.y - BounceRange)
+        if (proj.position.y >= startPos.y - BounceRange)
         {
-           // print("GOING DOWN");
-            proj.AddForce(new Vector2(0, -projSpeed*BounceFreq));
+            // print("GOING DOWN");
+            proj.AddForce(new Vector2(0, -projSpeed * BounceFreq));
         }
-        else if(proj.position.y < startPos.y - BounceRange)
+        else if (proj.position.y < startPos.y - BounceRange)
         {
             //print("SUPERMAN");
-            proj.AddForce(new Vector2(0, projSpeed *BounceFreq));
+            proj.AddForce(new Vector2(0, projSpeed * BounceFreq));
         }
 
     }

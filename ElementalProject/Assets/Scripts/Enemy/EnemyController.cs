@@ -145,7 +145,7 @@ public class EnemyController : MonoBehaviour
             
             animator.SetTrigger("attack");
             PreviousAttackTime = Time.time;
-            GameObject Projectile1 = Instantiate(projectile,FirePoint.position,transform.rotation);
+            GameObject Projectile1 = Instantiate(projectile,FirePoint.transform.position,FirePoint.rotation);
             
         }
 
@@ -212,7 +212,8 @@ public class EnemyController : MonoBehaviour
     public void FlipFacing()
     {
         facingRight = !facingRight;
-        sprite.flipX = !sprite.flipX;
+        //sprite.flipX = !sprite.flipX;
+        transform.Rotate(0f, 180f, 0f);
     }
 
     void SpawnLoot()    //added chance (at a roll of 7) for no item to drop

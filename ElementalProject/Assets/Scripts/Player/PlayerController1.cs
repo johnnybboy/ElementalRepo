@@ -204,6 +204,7 @@ public class PlayerController1 : MonoBehaviour
             if (magicSound != null)  //make sure there's something to play
             {
                 magicSound.Play();
+                 
             }
 
             //depending on facing, activate the magic hitbox/projectile
