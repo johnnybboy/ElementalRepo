@@ -23,7 +23,8 @@ public class EnemyController : MonoBehaviour
     private GameObject player;
     public enum enemyType {Melee, Ranged, Both, Boss};
     public enemyType enemy_type;
-    
+    public enum Projectile_Path { straight, curve, bounce, boomerang, homing }
+    public Projectile_Path projectilePath;
     //stats
     public float maxHealth = 3f;
     public float despawnTime = 2f;
@@ -33,12 +34,13 @@ public class EnemyController : MonoBehaviour
     public float damage_strong = 1.5f;
 
     public float MeleeRange = 1.0f;
+    public float RangeedRange = 6.0f;
     public float AttackDamageMelee = 1.0f;
     public float AttackDamageRanged = 1.0f;
     private float PreviousAttackTime;
     public float AttackDelayMelee = 1.0f;
     public float AttackDelayRanged = 1.0f;
-    public float RangeedRange = 6.0f;
+    
 
     public bool facingRight = false;
     public bool isAlive = true;
