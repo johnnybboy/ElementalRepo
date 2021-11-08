@@ -5,48 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class GM_Level2 : MonoBehaviour
 {
-    public int enemyCount = 0;
-    public float combatArea = 25f;
+    //variables for scripting
     public float spawnRange = 1.5f;
 
-    private GameObject player;
+    private bool inFight = false;
+    private int fight_index = 0; // 0 is FightArea1, 1 is FightArea2, 2 is BossFight
+
+    // Level 1 References
     public LayerMask layer;
+    public Transform FightArea1, BossFight;
+    //private Transform testArea;
 
-    // Level 2 References
-    public Transform SpawnSpot1;
-    public BoxCollider2D BarrierL;
-    public BoxCollider2D BarrierR;
-    public Camera Cam1;
-    public Camera Cam2;
+    private GameObject player;
 
-    //for creating gameObjects
-    public GameObject enemy_slime;
+    //for Instantiating enemies
+    public GameObject bat, slime, skullmage, boss;
+    public GameObject bounds;
+
+    //
 
     //private int gameState = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        Cam2.enabled = false;
-        BarrierL = GameObject.Find("Left Barrier").GetComponent<BoxCollider2D>();
-        BarrierR = GameObject.Find("Right Barrier").GetComponent<BoxCollider2D>();
-        BarrierL.enabled = false;
-        BarrierR.enabled = true;
-
-        //player = GameObject.Find("Player");
         player = GameObject.FindGameObjectWithTag("Player");
-        //we'll want to start implementing the Tag system so we could have multiple player objects potentially
-        //      For character switching, down the road
+        //testArea = GameObject.Find("TestArea").transform;
 
         Application.targetFrameRate = 60;   //important for game speed to be same across all computers
-        CountEnemies();
-
-        if (SpawnSpot1 != null)
-        {
-            ControlledSpawn(enemy_slime, SpawnSpot1.position, 3, 0);    //now spawns with spawn point
-            //gameState = 1;
-        }
-
     }
 
     // Update is called once per frame
@@ -54,46 +40,76 @@ public class GM_Level2 : MonoBehaviour
     {
         Physics2D.IgnoreLayerCollision(13, 9);
 
-        // First encounter
-        if (player.transform.position.x >= 77 && player.transform.position.x <= 100 && enemyCount > 0)
+        // First encounter, FightArea1
+        if (fight_index == 0)
         {
-            Cam2.enabled = true;
-            Cam1.enabled = false;
-            BarrierL.enabled = true;
-
-        }
-        else if (enemyCount <= 0)
-        {
-            BarrierL.enabled = false;
-            BarrierR.enabled = false;
-            Cam2.enabled = false;
-            Cam1.enabled = true;
+            checkFightStatus(FightArea1, 8f);
         }
 
-        if (player.transform.position.x >= 220)
+        // Boss fight, BossFight
+        if (fight_index == 1)
         {
-            Debug.Log("Winning Screen");
+            checkFightStatus(BossFight, 8f);
         }
 
-        //if (enemyCount <= 0 && gameState == 1)
+        // Temp Winning Condition...
+        //if (player.transform.position.x >= 150)
         //{
-        //    //end game
-        //    gameState = 0;
-
+        //    SceneManager.LoadScene("Level Two");
         //}
-        //if (player.transform.position.x >= 220)
-        //{
-        //    endText.enabled = true;
-        //    endText.text = "<color=white><b>You Win!</b></color>";
-        //}
-
-        if (Input.GetKey(KeyCode.Return))
-        {
-            SpawnNearPlayer(enemy_slime);
-        }
-
-        CountEnemies();
     }
+
+    void checkFightStatus(Transform fightArea, float areaRadius)
+    {
+        //move camera to the fight area if player is close enough to the fight area
+        if (!inFight && Vector2.Distance(player.transform.position, fightArea.position) <= areaRadius)
+        {
+
+            if (CameraFollow.instance == null)
+            {
+                Debug.Log("CameraFollow.instance is null.");
+                return;
+            }
+
+            CameraFollow.instance.SetTarget(fightArea);
+
+            inFight = true;
+            ControlledSpawn(bat, fightArea.position, 1);
+            //bounds = Instantiate(bounds, fightArea.position, Quaternion.identity);
+            bounds.transform.position = fightArea.position;
+
+            Debug.Log("In " + fightArea + ". Enemies to fight: " + CountEnemiesNear(fightArea.position, areaRadius));
+        }
+
+        //count the enemies in the fight area, end fight if none remain
+        if (inFight && CountEnemiesNear(fightArea.position, areaRadius) <= 0)
+        {
+            //return camera to player
+            //if (CameraFollow.instance != null)
+            //    CameraFollow.instance.SetTarget(player.transform);
+            CameraFollow.instance.SetTarget(player.transform);
+
+            //end fight, progress fight_index
+            inFight = false;
+            fight_index++;
+
+            Debug.Log("Enemies defeated! " + fightArea + " is complete.");
+            //if(bounds != null)
+            //Destroy(bounds);
+            bounds.transform.position = new Vector3(0, 20, 0);
+        }
+    }
+
+    int CountEnemiesNear(Vector2 position, float combatArea)
+    {
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(player.transform.position, combatArea, layer);
+        int count = 0;
+        foreach (Collider2D enemy in enemies)
+            count++;
+
+        return count;
+    }
+
 
     //ControlledSpawn(GameObject, Vector2);
     //This version has a default offset of 1f
@@ -146,15 +162,5 @@ public class GM_Level2 : MonoBehaviour
         }
     }
 
-    void CountEnemies()
-    {
-        Collider2D[] enemies = Physics2D.OverlapCircleAll(player.transform.position, combatArea, layer);
-        int count = 0;
-        foreach (Collider2D enemy in enemies)
-            count++;
-
-        if (count != enemyCount)
-            enemyCount = count;
-    }
 
 }

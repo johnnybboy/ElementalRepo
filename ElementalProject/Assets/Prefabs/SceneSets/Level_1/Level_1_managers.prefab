@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371517951137991139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.432372, y: -0.25096133, z: -0.74840677}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5936302771571907747}
@@ -82,10 +82,11 @@ MonoBehaviour:
   FightArea1: {fileID: 0}
   FightArea2: {fileID: 0}
   BossFight: {fileID: 0}
-  bat: {fileID: 0}
-  slime: {fileID: 0}
-  skullmage: {fileID: 0}
-  boss: {fileID: 0}
+  bat: {fileID: 1979774806187107698, guid: d0841fad0f6df854687fc3c8bab604de, type: 3}
+  slime: {fileID: 6683417288981823612, guid: dec0b3c5ad5e1bf498a02a5edce45fa9, type: 3}
+  skullmage: {fileID: 6173231515391244698, guid: 7cc2243b01733214b9598035718a241c, type: 3}
+  boss: {fileID: 6683417288981823612, guid: 7f836f48b9433b7448028f78aca1a578, type: 3}
+  bounds: {fileID: 0}
 --- !u!1001 &8111900304606183735
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class GM_Level1 : MonoBehaviour
 
     //for Instantiating enemies
     public GameObject bat, slime, skullmage, boss;
+    public GameObject bounds;
 
     //
 
@@ -40,19 +41,25 @@ public class GM_Level1 : MonoBehaviour
         // First encounter, FightArea1
         if (fight_index == 0)
         {
-            checkFightStatus(FightArea1, 10f);
+            checkFightStatus(FightArea1, 8f);
         }
 
         // Second encounter, FightArea2
         if (fight_index == 1)
         {
-            checkFightStatus(FightArea2, 10f);
+            checkFightStatus(FightArea2, 8f);
         }
 
         // Boss fight, BossFight
         if (fight_index == 2)
         {
-            checkFightStatus(BossFight, 10f);
+            checkFightStatus(BossFight, 8f);
+        }
+
+        // Temp Winning Condition...
+        if (player.transform.position.x >= 150)
+        {
+            SceneManager.LoadScene("Level Two");
         }
     }
 
@@ -72,6 +79,8 @@ public class GM_Level1 : MonoBehaviour
 
             inFight = true;
             ControlledSpawn(bat, fightArea.position, 3);
+            //bounds = Instantiate(bounds, fightArea.position, Quaternion.identity);
+            bounds.transform.position = fightArea.position;
 
             Debug.Log("In " + fightArea + ". Enemies to fight: " + CountEnemiesNear(fightArea.position, areaRadius));
         }
@@ -89,6 +98,9 @@ public class GM_Level1 : MonoBehaviour
             fight_index++;
 
             Debug.Log("Enemies defeated! " + fightArea + " is complete.");
+            //if(bounds != null)
+            //Destroy(bounds);
+            bounds.transform.position = new Vector3(0,20,0);
         }
     }
 
