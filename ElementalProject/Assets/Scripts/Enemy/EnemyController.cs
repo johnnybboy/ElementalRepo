@@ -33,7 +33,8 @@ public class EnemyController : MonoBehaviour
     public float damage_strong = 1.5f;
 
     public float MeleeRange = 1.0f;
-    public float AttackDamage = 1.0f;
+    public float AttackDamageMelee = 1.0f;
+    public float AttackDamageRanged = 1.0f;
     private float PreviousAttackTime;
     public float AttackDelayMelee = 1.0f;
     public float AttackDelayRanged = 1.0f;
@@ -127,7 +128,7 @@ public class EnemyController : MonoBehaviour
         if(seperation <= MeleeRange && Time.time >= PreviousAttackTime + AttackDelayMelee)
         {
             print("Hit em where the Sun don't shine!");
-            player.SendMessage("TakeDamage",AttackDamage); //does damage to player
+            player.SendMessage("TakeDamage",AttackDamageMelee); //does damage to player
 
             PreviousAttackTime = Time.time;
             animator.SetTrigger("attack");
