@@ -19,7 +19,7 @@ public class WaspQueenFight : MonoBehaviour
     public Transform start, enter;
     public float keepDistanceBoss = 3f;
     public float offScreenXOffset = 10f;
-    public float abovePlayerOffset = 5f;
+    public float abovePlayerOffset = 4f;
     public float stingSpeed = 10f;
     public float slamSpeed = 10f;
     // Health Bar???
@@ -190,7 +190,7 @@ public class WaspQueenFight : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         //slam attack down from abovePlayer and then pause there
-        Vector2 slamPosition = new Vector2(abovePlayer.x, player.transform.position.y - 3);
+        Vector2 slamPosition = new Vector2(abovePlayer.x, player.transform.position.y - 1);
         animator.SetTrigger("slam");
         while (Vector2.Distance(transform.position, slamPosition) >= keepDistanceBoss)
         {

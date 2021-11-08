@@ -725,6 +725,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 827584774518058179, guid: 09c3f561267b2f6429b69b98095b10e2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 827584774860440160, guid: 09c3f561267b2f6429b69b98095b10e2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 827584774860440160, guid: 09c3f561267b2f6429b69b98095b10e2, type: 3}
+      propertyPath: m_TagString
+      value: Bounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 827584774916776313, guid: 09c3f561267b2f6429b69b98095b10e2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6587969889389048986, guid: 09c3f561267b2f6429b69b98095b10e2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -768,6 +784,10 @@ PrefabInstance:
     - target: {fileID: 6587969889389048986, guid: 09c3f561267b2f6429b69b98095b10e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966312039818362244, guid: 09c3f561267b2f6429b69b98095b10e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8480643994863268022, guid: 09c3f561267b2f6429b69b98095b10e2, type: 3}
       propertyPath: m_Name

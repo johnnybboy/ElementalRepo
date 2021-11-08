@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8427036307438138721}
   - component: {fileID: 8427036307438138727}
   - component: {fileID: 8427036307438138720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 8427036308927379679}
   - component: {fileID: 8427036308927379677}
   - component: {fileID: 8427036308927379678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,9 +227,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8427036309273762752}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FightBounds
-  m_TagString: Untagged
+  m_TagString: Bounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
