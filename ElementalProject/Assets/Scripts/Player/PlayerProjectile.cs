@@ -123,11 +123,11 @@ public class PlayerProjectile : MonoBehaviour
     }
     private bool PDirectX()
     {
-        if (player) // fires left
+        if (!fly_Right) // fires left
         {
             return false;
         }
-        else if (player.transform.position.x > proj.position.x) //fires right
+        else if (fly_Right) //fires right
         {
             return true;
         }

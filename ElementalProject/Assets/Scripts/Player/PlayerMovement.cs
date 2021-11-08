@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     private void flipSprite()
     {
         facingRight = !facingRight;
-        sprite.flipX = !sprite.flipX;
-        
+        //sprite.flipX = !sprite.flipX;
+        transform.Rotate(0f, 180f, 0f);
     }
 }

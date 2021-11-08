@@ -43,7 +43,8 @@ public class PlayerController1 : MonoBehaviour
     private bool canMagicAttack = true;
     private bool canTakeDamage = true;
 
-
+    public Transform FirePoint;
+    public GameObject projectile;
 
     //private Components
     private Animator animator;
@@ -60,7 +61,7 @@ public class PlayerController1 : MonoBehaviour
 
         //Colliders are GetChild(0)
         rightSwordHitBox = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
-        leftSwordHitBox = this.gameObject.transform.GetChild(0).GetChild(1).gameObject;
+        //leftSwordHitBox = this.gameObject.transform.GetChild(0).GetChild(1).gameObject;
 
         //AudioSources are GetChild(1)
         hurtSound = this.gameObject.transform.GetChild(1).GetChild(0).GetComponent<AudioSource>();
@@ -167,20 +168,20 @@ public class PlayerController1 : MonoBehaviour
 
             //start attack
             //depending on facing, activate the sword hitbox
-            if (GetComponent<PlayerMovement>().facingRight)
+            /*if (GetComponent<PlayerMovement>().facingRight)
             {
                 rightSwordHitBox.SetActive(true);
             }
             else
             {
                 leftSwordHitBox.SetActive(true);
-            }
-
+            }*/
+            rightSwordHitBox.SetActive(true);
             yield return new WaitForSeconds(attackRate);
 
             //end attack
             rightSwordHitBox.SetActive(false);
-            leftSwordHitBox.SetActive(false);
+           // leftSwordHitBox.SetActive(false);
 
             isBusy = false;
             isAttacking = false;
@@ -206,10 +207,10 @@ public class PlayerController1 : MonoBehaviour
                 magicSound.Play();
                  
             }
-
+            GameObject Projectile1 = Instantiate(projectile, FirePoint.transform.position, FirePoint.rotation);
             //depending on facing, activate the magic hitbox/projectile
             //TODO add projectile shooting
-            if (GetComponent<PlayerMovement>().facingRight)
+            /*if (GetComponent<PlayerMovement>().facingRight)
             {
                 rightSwordHitBox.SetActive(true);
             }
@@ -217,12 +218,13 @@ public class PlayerController1 : MonoBehaviour
             {
                 leftSwordHitBox.SetActive(true);
             }
-
+            */
+            rightSwordHitBox.SetActive(true);
             yield return new WaitForSeconds(magicRate);
-
+            
             rightSwordHitBox.SetActive(false);
-            leftSwordHitBox.SetActive(false);
-
+            //leftSwordHitBox.SetActive(false);
+            
             isBusy = false;
             isAttacking = false;
             canMagicAttack = true;
