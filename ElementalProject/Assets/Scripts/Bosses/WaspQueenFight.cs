@@ -12,16 +12,18 @@ public class WaspQueenFight : MonoBehaviour
     private EnemyController controller;
     private ParticleSystem particles;
     private GameObject player;
+    private EnemyController Health;
 
     //public variables
     public Transform bossFightArea;
-
+    public GameObject Bat;
     public Transform start, enter;
     public float keepDistanceBoss = 3f;
     public float offScreenXOffset = 10f;
     public float abovePlayerOffset = 4f;
     public float stingSpeed = 10f;
     public float slamSpeed = 10f;
+    public float healthState = 5f;
     // Health Bar???
 
 
@@ -44,6 +46,7 @@ public class WaspQueenFight : MonoBehaviour
         movement = GetComponent<EnemyMovement>();
         particles = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag("Player");
+        Health = GetComponent<EnemyController>();
     }
 
     private void Update()
@@ -57,6 +60,14 @@ public class WaspQueenFight : MonoBehaviour
         if(fightEnded)
         {
             Debug.Log("You defeated the Queen Wasp!!");
+        }
+
+        if (Health.currentHealth == Health.maxHealth - healthState)
+        {
+            Instantiate(Bat, body.position, Quaternion.identity);
+            Instantiate(Bat, body.position, Quaternion.identity);
+            Instantiate(Bat, body.position, Quaternion.identity);
+            healthState *= 2;
         }
     }
 

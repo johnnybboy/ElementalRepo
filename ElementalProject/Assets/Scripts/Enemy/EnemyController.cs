@@ -46,7 +46,7 @@ public class EnemyController : MonoBehaviour
     public bool isAlive = true;
     public bool particleDeath = false;
 
-    private float currentHealth;
+    public float currentHealth;
 
     //animation fields
     private float speed;

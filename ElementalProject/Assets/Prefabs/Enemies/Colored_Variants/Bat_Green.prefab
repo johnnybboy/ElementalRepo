@@ -128,7 +128,7 @@ MonoBehaviour:
   chaseSpeed: 5
   detectRange: 8
   keepDistance: 0.1
-  movementType: 1
+  movementType: 4
   patrolBounds_X: 5
   patrolBounds_Y: 0
   patrolDelay: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   facingRight: 0
   isAlive: 1
   particleDeath: 1
+  currentHealth: 0
 --- !u!95 &1979774806187107696
 Animator:
   serializedVersion: 3
