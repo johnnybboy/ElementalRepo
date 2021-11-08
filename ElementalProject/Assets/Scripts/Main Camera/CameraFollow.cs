@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
     public static CameraFollow instance;
 
     public Transform cameraTarget;
-    public float smoothing = 1f;
+    public float smoothing = 4f;
 
     private Transform player;
     private Vector3 offset;

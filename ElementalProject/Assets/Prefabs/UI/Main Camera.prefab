@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f2df7d2045c1834ab93e3ab507c62da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTarget: {x: 0, y: 0, z: 0}
-  smoothing: 0
+  cameraTarget: {fileID: 0}
+  smoothing: 4
 --- !u!20 &8111900305236666822
 Camera:
   m_ObjectHideFlags: 0
