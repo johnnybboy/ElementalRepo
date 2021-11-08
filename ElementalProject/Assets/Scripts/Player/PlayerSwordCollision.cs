@@ -12,6 +12,11 @@ public class PlayerSwordCollision : MonoBehaviour
             enemy.TakeDamage(enemy.damage_medium);
             KnockBack(enemy.gameObject.GetComponent<Rigidbody2D>(), enemy.damage_medium);
         }
+        if (other.tag == "Boss")
+        {
+            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
+            enemy.TakeDamage(enemy.damage_medium);
+        }
     }
 
     void KnockBack(Rigidbody2D enemy, float distance)  //based on damage for now

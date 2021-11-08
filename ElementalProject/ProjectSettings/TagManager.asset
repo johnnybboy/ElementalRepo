@@ -14,6 +14,7 @@ TagManager:
   - End
   - Bounds
   - WalkBox
+  - Boss
   layers:
   - Default
   - TransparentFX
