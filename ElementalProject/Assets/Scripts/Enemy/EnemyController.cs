@@ -32,7 +32,7 @@ public class EnemyController : MonoBehaviour
     public float damage_medium = 1f;
     public float damage_strong = 1.5f;
 
-    public float MeleeRange = 5.0f;
+    public float MeleeRange = 1.0f;
     public float AttackDamage = 1.0f;
     private float PreviousAttackTime;
     public float AttackDelayMelee = 1.0f;
