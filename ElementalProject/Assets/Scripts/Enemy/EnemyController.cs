@@ -32,6 +32,13 @@ public class EnemyController : MonoBehaviour
     public float damage_medium = 1f;
     public float damage_strong = 1.5f;
 
+    public float MeleeRange = 5.0f;
+    public float AttackDamage = 1.0f;
+    private float PreviousAttackTime;
+    public float AttackDelayMelee = 1.0f;
+    public float AttackDelayRanged = 1.0f;
+    public float RangeedRange = 6.0f;
+
     public bool facingRight = false;
     public bool isAlive = true;
     public bool particleDeath = false;
@@ -82,38 +89,61 @@ public class EnemyController : MonoBehaviour
                     FlipFacing();
                 }
             }
-            if(detect.PlayerDetected() == true)
+            if(detect.PlayerDetected() == true) // If it detects the player
             {
-                if (player.transform.position.x < body.position.x) // looks left
+                if (player.transform.position.x < body.position.x) // looks left if player is left
                 {
                     if (facingRight)
                     {
                         FlipFacing();
                     }
                 }
-                else if (player.transform.position.x > body.position.x) //looks right
+                else if (player.transform.position.x > body.position.x) //looks right if player is right
                 {
                     if (facingRight != true)
                     {
                         FlipFacing();
                     }
-                    if (enemy_type == enemyType.Ranged)
-                    {
+                    
+                }
+                if (enemy_type == enemyType.Ranged)
+                {
+                    
+                    RangedAttack();
 
-                        RangedAttack();
-
-                    }
+                }
+                else if(enemy_type == enemyType.Melee)
+                {
+                    MeleeAttack();
                 }
             }
             
         }
     }
+    private void MeleeAttack()
+    {
+        
+        float seperation = Vector2.Distance(body.transform.position, player.transform.position);
+        if(seperation <= MeleeRange && Time.time >= PreviousAttackTime + AttackDelayMelee)
+        {
+            print("Hit em where the Sun don't shine!");
+            player.SendMessage("TakeDamage",AttackDamage); //does damage to player
 
+            PreviousAttackTime = Time.time;
+            animator.SetTrigger("attack");
+        }
+    }
     private void RangedAttack()
     {
-        print("Can Fire");
-        //GameObject Projectile1 = Instantiate(Projectile, transform.position, transform.rotation);
-        animator.SetTrigger("attack");
+        float seperation = Vector2.Distance(body.transform.position, player.transform.position);
+        if(seperation <= RangeedRange && Time.time >= PreviousAttackTime + AttackDelayRanged)
+        {
+            print("Don't fire untill you see the whites of their eyes!");
+            //GameObject Projectile1 = Instantiate(Projectile, transform.position, transform.rotation);
+            animator.SetTrigger("attack");
+            PreviousAttackTime = Time.time;
+        }
+        
     }
     public void TakeDamage(float damage)
     {
