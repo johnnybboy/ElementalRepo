@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     private Animator animator;
     private AudioSource sound;
     private EnemyMovement detect;
-    private Projectile projectile;
+    
     private ParticleSystem particles;
     
     public AudioClip hurtSound, deathSound;
@@ -18,13 +18,13 @@ public class EnemyController : MonoBehaviour
     //loot drops (MUST be assigned in Unity!)
     public GameObject coin, heart, potion;
     public Transform FirePoint;
-    //public GameObject Projectile;
+    public GameObject projectile;
 
     private GameObject player;
     public enum enemyType {Melee, Ranged, Both, Boss};
     public enemyType enemy_type;
-    public enum Projectile_Path { straight, curve, bounce, boomerang, homing }
-    public Projectile_Path projectilePath;
+    /*public enum Projectile_Path { straight, curve, bounce, boomerang, homing }
+    public Projectile_Path projectilePath;*/
     //stats
     public float maxHealth = 3f;
     public float despawnTime = 2f;
@@ -142,11 +142,13 @@ public class EnemyController : MonoBehaviour
         if(seperation <= RangeedRange && Time.time >= PreviousAttackTime + AttackDelayRanged)
         {
             print("Don't fire untill you see the whites of their eyes!");
-            //GameObject Projectile1 = Instantiate(Projectile, transform.position, transform.rotation);
+            
             animator.SetTrigger("attack");
             PreviousAttackTime = Time.time;
+            GameObject Projectile1 = Instantiate(projectile,FirePoint.position,transform.rotation);
+            
         }
-        
+
     }
     public void TakeDamage(float damage)
     {

@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     Rigidbody2D proj;
     private GameObject player;
-
+    private SpriteRenderer sprite;
     public enum Projectile_Path { straight, curve, bounce, boomerang, homing }
     public Projectile_Path projectilePath;
     
@@ -25,7 +25,8 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        sprite = GetComponent<SpriteRenderer>();
+        player = GameObject.FindGameObjectWithTag("Player");
         //player = GameObject.FindGameObjectWithTag("Player");
         //we'll want to start implementing the Tag system so we could have multiple player objects potentially
         //      For character switching, down the road
@@ -37,7 +38,20 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (proj.velocity.x >= 0.3f)
+        {
+            if (fly_Right == true)
+            {
+                FlipFacing();
+            }
+        }
+        else
+        {
+            if (fly_Right == false)
+            {
+                FlipFacing();
+            }
+        }
         if (projectilePath == Projectile_Path.straight)
         {
             if (findDirection == true)
@@ -114,7 +128,11 @@ public class Projectile : MonoBehaviour
         }
 
     }
-
+    public void FlipFacing()
+    {
+        fly_Right = !fly_Right;
+        sprite.flipX = !sprite.flipX;
+    }
     private bool PDirectX()
     {
         if (player.transform.position.x < proj.position.x) // fires left
