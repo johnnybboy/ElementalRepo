@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2573713898193229661}
   - component: {fileID: 3116302445479098301}
   - component: {fileID: 1906764448637890213}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Bat_Purple
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -151,12 +151,19 @@ MonoBehaviour:
   heart: {fileID: 283299682443938280, guid: bae5b5c8c36ae2546820484ec67c8d1b, type: 3}
   potion: {fileID: 1993606334950409096, guid: 678aefe2a6ce57348b84c5a0cd69d507, type: 3}
   FirePoint: {fileID: 0}
+  projectile: {fileID: 0}
   enemy_type: 0
   maxHealth: 1
   despawnTime: 1
   damage_weak: 0.5
   damage_medium: 1
   damage_strong: 1.5
+  MeleeRange: 1
+  RangeedRange: 6
+  AttackDamageMelee: 1
+  AttackDamageRanged: 1
+  AttackDelayMelee: 1
+  AttackDelayRanged: 1
   facingRight: 0
   isAlive: 1
   particleDeath: 1
@@ -5131,7 +5138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7379141540482213318}
   - component: {fileID: 3261996699474607857}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: DeathSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5257,7 +5264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2301024981041853149}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: AudioSources
   m_TagString: Untagged
   m_Icon: {fileID: 0}

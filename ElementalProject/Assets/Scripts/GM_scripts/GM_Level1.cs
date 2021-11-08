@@ -78,7 +78,8 @@ public class GM_Level1 : MonoBehaviour
             CameraFollow.instance.SetTarget(fightArea);
 
             inFight = true;
-            ControlledSpawn(bat, fightArea.position, 3);
+            Vector2 spawnArea = fightArea.position + new Vector3(0, 7f);
+            ControlledSpawn(bat, spawnArea, 3);
             //bounds = Instantiate(bounds, fightArea.position, Quaternion.identity);
             bounds.transform.position = fightArea.position;
 
