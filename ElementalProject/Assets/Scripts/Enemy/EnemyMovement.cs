@@ -15,7 +15,7 @@ public class EnemyMovement : MonoBehaviour
     public float detectRange = 5f; //default distance it will detectPlayer()
     public float keepDistance = .5f;    //distance all X movement will stop to keep distance from the player
 
-    public enum MOVE_TYPE { idle, patrol, sleep, wander, chase, fly }; //movement types 
+    public enum MOVE_TYPE { idle, patrol, sleep, wander, chase, boss }; //movement types 
     public MOVE_TYPE movementType = MOVE_TYPE.wander;
     private MOVE_TYPE currentType;
 
@@ -162,7 +162,7 @@ public class EnemyMovement : MonoBehaviour
         return seperation <= detectRange;
     }
 
-    IEnumerator MoveTowards(Vector2 target, float speed)
+    public IEnumerator MoveTowards(Vector2 target, float speed)
     {
         movingTowardsTarget = true;
         MOVE_TYPE startingType = currentType;
@@ -201,7 +201,7 @@ public class EnemyMovement : MonoBehaviour
         movingTowardsTarget = false;
     }
 
-    IEnumerator PatrolBetween(Vector2 first, Vector2 second, float waitTime)
+    public IEnumerator PatrolBetween(Vector2 first, Vector2 second, float waitTime)
     {
         isPatrolling = true;
         Vector2 target = first; //moves towards this target first
@@ -230,7 +230,7 @@ public class EnemyMovement : MonoBehaviour
         isPatrolling = false;
     }
 
-    IEnumerator ResetPosition()
+    public IEnumerator ResetPosition()
     {
         //store previousType to return to after, set movement to idle to return to startPos
         MOVE_TYPE previousType = movementType;
