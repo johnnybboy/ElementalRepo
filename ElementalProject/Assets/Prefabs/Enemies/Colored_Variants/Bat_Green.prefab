@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7894343979818208643}
   - component: {fileID: 7789060216140488087}
   - component: {fileID: 6065114322005270908}
-  m_Layer: 13
+  m_Layer: 6
   m_Name: Bat_Green
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -5139,7 +5139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7379141540482213318}
   - component: {fileID: 3261996699474607857}
-  m_Layer: 13
+  m_Layer: 6
   m_Name: DeathSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5265,7 +5265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2301024981041853149}
-  m_Layer: 13
+  m_Layer: 6
   m_Name: AudioSources
   m_TagString: Untagged
   m_Icon: {fileID: 0}

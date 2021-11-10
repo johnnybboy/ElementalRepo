@@ -29,9 +29,9 @@ TagManager:
   - Traps
   - WalkBox
   - HitBox
-  - FlyingEnemies
-  - Projectiles
-  - 
+  - PlayerProjectiles
+  - EnemyProjectiles
+  - Boss
   - 
   - 
   - 

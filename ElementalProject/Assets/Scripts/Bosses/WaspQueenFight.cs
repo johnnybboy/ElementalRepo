@@ -71,6 +71,12 @@ public class WaspQueenFight : MonoBehaviour
         }
     }
 
+    //added to make coding easier for this transform.position
+    float DistanceTo(Vector2 target)
+    {
+        return Vector2.Distance(transform.position, target);
+    }
+
     public bool startBattle()
     {
         //if you step near the boss zone,
@@ -89,7 +95,7 @@ public class WaspQueenFight : MonoBehaviour
         //move the queen to startPosition
         transform.position = start.position;
 
-        while (Vector2.Distance(transform.position, enter.position) >= keepDistanceBoss)
+        while (DistanceTo(enter.position) >= keepDistanceBoss)
         {
             StartCoroutine(MoveTowards(enter.position, movement.moveSpeed));
             yield return null;
@@ -138,18 +144,18 @@ public class WaspQueenFight : MonoBehaviour
         //set position and move off to starting position
         Vector3 offset = new Vector2(distanceX, abovePlayerOffset);
         Vector3 offScreenPosition = player.transform.position + offset;
-        while (Vector2.Distance(transform.position, offScreenPosition) >= keepDistanceBoss)
+        while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
         {
             StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
             yield return null;
         }
 
         //move towards player, and then do a stinger attack when close enough
-        while (Vector2.Distance(transform.position, player.transform.position) >= keepDistanceBoss)
+        while (DistanceTo(player.transform.position) >= keepDistanceBoss)
         {
             StartCoroutine(MoveTowards(player.transform.position, stingSpeed));
 
-            if (Vector2.Distance(transform.position, player.transform.position) <= keepDistanceBoss*2 && !stingAttempted)
+            if (DistanceTo(player.transform.position) <= keepDistanceBoss*2 && !stingAttempted)
             {
                 animator.SetTrigger("sting");
                 stingAttempted = true;
@@ -162,7 +168,7 @@ public class WaspQueenFight : MonoBehaviour
         //then fly off opposite side offScreenPosition
         offset = new Vector2(-distanceX, abovePlayerOffset);
         offScreenPosition = player.transform.position + offset;
-        while (Vector2.Distance(transform.position, offScreenPosition) >= keepDistanceBoss)
+        while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
         {
             StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
             yield return null;
@@ -184,7 +190,7 @@ public class WaspQueenFight : MonoBehaviour
         //set position and move to offScreenPosition
         Vector3 offset = new Vector2(distanceX, abovePlayerOffset);
         Vector3 offScreenPosition = player.transform.position + offset;
-        while (Vector2.Distance(transform.position, offScreenPosition) >= keepDistanceBoss)
+        while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
         {
             StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
             yield return null;
@@ -193,7 +199,7 @@ public class WaspQueenFight : MonoBehaviour
         //move to abovePlayer, wait 1 second
         Vector3 aboveOffset = new Vector2(0, abovePlayerOffset);
         Vector3 abovePlayer = player.transform.position + aboveOffset;
-        while (Vector2.Distance(transform.position, abovePlayer) >= keepDistanceBoss)
+        while (DistanceTo(abovePlayer) >= keepDistanceBoss)
         {
             StartCoroutine(MoveTowards(abovePlayer, movement.moveSpeed));
             yield return null;
@@ -203,7 +209,7 @@ public class WaspQueenFight : MonoBehaviour
         //slam attack down from abovePlayer and then pause there
         Vector2 slamPosition = new Vector2(abovePlayer.x, player.transform.position.y - 1);
         animator.SetTrigger("slam");
-        while (Vector2.Distance(transform.position, slamPosition) >= keepDistanceBoss)
+        while (DistanceTo(slamPosition) >= keepDistanceBoss)
         {
             StartCoroutine(MoveTowards(slamPosition, slamSpeed));
             yield return null;
@@ -213,7 +219,7 @@ public class WaspQueenFight : MonoBehaviour
         //then fly off opposite side offScreenPosition
         offset = new Vector2(-distanceX, abovePlayerOffset);
         offScreenPosition = player.transform.position + offset;
-        while (Vector2.Distance(transform.position, offScreenPosition) >= keepDistanceBoss)
+        while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
         {
             StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
             yield return null;

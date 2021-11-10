@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2573713898193229661}
   - component: {fileID: 4922943342936131506}
   - component: {fileID: 3787374051004115952}
-  m_Layer: 13
+  m_Layer: 6
   m_Name: Bat_Cyan
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -167,6 +167,7 @@ MonoBehaviour:
   facingRight: 0
   isAlive: 1
   particleDeath: 1
+  currentHealth: 0
 --- !u!95 &1979774806187107696
 Animator:
   serializedVersion: 3
@@ -5138,7 +5139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7379141540482213318}
   - component: {fileID: 3261996699474607857}
-  m_Layer: 13
+  m_Layer: 6
   m_Name: DeathSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5264,7 +5265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2301024981041853149}
-  m_Layer: 13
+  m_Layer: 6
   m_Name: AudioSources
   m_TagString: Untagged
   m_Icon: {fileID: 0}

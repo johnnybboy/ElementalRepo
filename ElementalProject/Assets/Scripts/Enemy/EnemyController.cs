@@ -23,8 +23,7 @@ public class EnemyController : MonoBehaviour
     private GameObject player;
     public enum enemyType {Melee, Ranged, Both, Boss};
     public enemyType enemy_type;
-    /*public enum Projectile_Path { straight, curve, bounce, boomerang, homing }
-    public Projectile_Path projectilePath;*/
+
     //stats
     public float maxHealth = 3f;
     public float despawnTime = 2f;
@@ -130,7 +129,7 @@ public class EnemyController : MonoBehaviour
         float seperation = Vector2.Distance(body.transform.position, player.transform.position);
         if(seperation <= MeleeRange && Time.time >= PreviousAttackTime + AttackDelayMelee)
         {
-            print("Hit em where the Sun don't shine!");
+            //print("Hit em where the Sun don't shine!");
             player.SendMessage("TakeDamage",AttackDamageMelee); //does damage to player
 
             PreviousAttackTime = Time.time;

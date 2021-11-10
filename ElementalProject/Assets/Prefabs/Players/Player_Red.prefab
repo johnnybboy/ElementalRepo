@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609912620}
   m_Layer: 7
-  m_Name: FirePoint
+  m_Name: 2 - FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2387901134904470797}
   m_Layer: 0
-  m_Name: Colliders
+  m_Name: 0 - Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 1786932232000817365}
   - component: {fileID: 2130703643084417473}
   m_Layer: 12
-  m_Name: RightSwordHitBox
+  m_Name: SwordHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,7 +550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7590990480394136095}
   m_Layer: 0
-  m_Name: AudioSources
+  m_Name: 1 - AudioSources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

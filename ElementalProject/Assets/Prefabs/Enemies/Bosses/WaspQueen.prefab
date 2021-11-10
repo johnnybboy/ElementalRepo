@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2725615553444001629}
   - component: {fileID: 8215010185813261420}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DeathSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7160489970078096857}
   - component: {fileID: 7450638963029341695}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: HurtSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 2417697178546559922}
   - component: {fileID: 8740675982255853861}
   - component: {fileID: 4340156107188355833}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: WaspQueen
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -380,6 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossFightArea: {fileID: 0}
+  Bat: {fileID: 0}
   start: {fileID: 0}
   enter: {fileID: 0}
   keepDistanceBoss: 3
@@ -387,6 +388,7 @@ MonoBehaviour:
   abovePlayerOffset: 5
   stingSpeed: 15
   slamSpeed: 15
+  healthState: 5
 --- !u!114 &5442617478966252508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,6 +428,7 @@ MonoBehaviour:
   heart: {fileID: 283299682443938280, guid: bae5b5c8c36ae2546820484ec67c8d1b, type: 3}
   potion: {fileID: 1993606334950409096, guid: 678aefe2a6ce57348b84c5a0cd69d507, type: 3}
   FirePoint: {fileID: 0}
+  projectile: {fileID: 0}
   enemy_type: 3
   maxHealth: 25
   despawnTime: 3
@@ -433,13 +436,15 @@ MonoBehaviour:
   damage_medium: 1
   damage_strong: 1.5
   MeleeRange: 1
-  AttackDamage: 1
+  RangeedRange: 6
+  AttackDamageMelee: 1
+  AttackDamageRanged: 1
   AttackDelayMelee: 1
   AttackDelayRanged: 1
-  RangeedRange: 6
   facingRight: 0
   isAlive: 1
   particleDeath: 1
+  currentHealth: 0
 --- !u!95 &282482654144052698
 Animator:
   serializedVersion: 3
@@ -5410,7 +5415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3597763566319771856}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: AudioSources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
