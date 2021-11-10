@@ -43,7 +43,7 @@ public class PlayerController1 : MonoBehaviour
     private bool canMagicAttack = true;
     private bool canTakeDamage = true;
 
-    public Transform FirePoint;
+    //public Transform FirePoint;
     public GameObject projectile;
 
     //private Components
@@ -51,7 +51,8 @@ public class PlayerController1 : MonoBehaviour
     private SpriteRenderer sprite;
     private Collider2D hitBox;
     private AudioSource hurtSound, swingSound, magicSound;
-    private GameObject rightSwordHitBox, leftSwordHitBox;
+    private GameObject rightSwordHitBox;
+    private GameObject FirePoint;
 
     private void Start()
     {
@@ -207,7 +208,7 @@ public class PlayerController1 : MonoBehaviour
                 magicSound.Play();
                  
             }
-            GameObject Projectile1 = Instantiate(projectile, FirePoint.transform.position, FirePoint.rotation);
+            GameObject Projectile1 = Instantiate(projectile, FirePoint.transform.position, FirePoint.transform.rotation);
             //depending on facing, activate the magic hitbox/projectile
             //TODO add projectile shooting
             /*if (GetComponent<PlayerMovement>().facingRight)

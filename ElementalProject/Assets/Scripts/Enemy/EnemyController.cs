@@ -17,9 +17,9 @@ public class EnemyController : MonoBehaviour
 
     //loot drops (MUST be assigned in Unity!)
     public GameObject coin, heart, potion;
-    public Transform FirePoint;
+    
     public GameObject projectile;
-
+    private GameObject FirePoint;
     private GameObject player;
     public enum enemyType {Melee, Ranged, Both, Boss};
     public enemyType enemy_type;
@@ -67,6 +67,7 @@ public class EnemyController : MonoBehaviour
         detect = GetComponent<EnemyMovement>();
         particles = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag("Player");
+        FirePoint = this.gameObject.transform.GetChild(0).gameObject;
     }
 
     private void Update()
@@ -145,7 +146,7 @@ public class EnemyController : MonoBehaviour
             
             animator.SetTrigger("attack");
             PreviousAttackTime = Time.time;
-            GameObject Projectile1 = Instantiate(projectile,FirePoint.transform.position,FirePoint.rotation);
+            GameObject Projectile1 = Instantiate(projectile,FirePoint.transform.position,FirePoint.transform.rotation);
             
         }
 
