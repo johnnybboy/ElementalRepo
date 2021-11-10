@@ -17,8 +17,8 @@ public class PlayerSwordCollision : MonoBehaviour
             EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(enemy.damage_medium);
         }
-        if (other.tag == "Projectile")
-            Destroy(other.gameObject);
+        //if (other.tag == "Projectile")
+        //    Destroy(other.gameObject);
     }
 
     void KnockBack(Rigidbody2D enemy, float distance)  //based on damage for now

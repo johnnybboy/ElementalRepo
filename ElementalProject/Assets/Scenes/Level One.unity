@@ -265,6 +265,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2121066740, guid: 1280825acb43ace46968a7a4b6580c63, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 189787986667671477, guid: 1280825acb43ace46968a7a4b6580c63, type: 3}
       propertyPath: m_Name
       value: Level_1_managers
@@ -533,6 +537,10 @@ PrefabInstance:
       propertyPath: bossFightArea
       value: 
       objectReference: {fileID: 9191551244697259550}
+    - target: {fileID: 3932204716491404930, guid: ecab604764046ab469adce05db23501d, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 620812082635363442, guid: 4e9a9297d420ba742ac10fc2307ef378, type: 3}
     - target: {fileID: 3932204716491404935, guid: ecab604764046ab469adce05db23501d, type: 3}
       propertyPath: m_IsActive
       value: 1
