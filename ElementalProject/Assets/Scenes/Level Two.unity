@@ -42370,10 +42370,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5dbeb265cc21ce49b1119ac0272496a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRange: 1.5
+  spawnRange: 3
   layer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   FightArea1: {fileID: 1238111336}
   BossFight: {fileID: 689965440}
   bat: {fileID: 1979774806187107698, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
@@ -42698,6 +42698,10 @@ PrefabInstance:
     - target: {fileID: 418014756647213536, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
       propertyPath: m_Name
       value: Slime_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 418014756647213536, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
       propertyPath: m_RootOrder
@@ -43480,6 +43484,7 @@ Transform:
   - {fileID: 2100721922}
   - {fileID: 418826886}
   - {fileID: 967425436}
+  - {fileID: 1570020092}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43610,6 +43615,18 @@ PrefabInstance:
     - target: {fileID: 1979774806187107698, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
       propertyPath: m_Name
       value: Bat_Red (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979774806187107703, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979774806187107703, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
+      propertyPath: heart
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979774806187107703, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
+      propertyPath: potion
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
@@ -44890,6 +44907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime_Red (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 418014756647213536, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -45786,7 +45807,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238111335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90, y: 2, z: 0}
+  m_LocalPosition: {x: 93, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 26863090}
@@ -46642,6 +46663,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6118982838337522028, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
   m_PrefabInstance: {fileID: 454323892}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1570020092 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+  m_PrefabInstance: {fileID: 1578326273}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1570586399
 GameObject:
   m_ObjectHideFlags: 0
@@ -46756,6 +46782,71 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8427036309273762753, guid: 206a112d212391642853ceca8ba10ec5, type: 3}
   m_PrefabInstance: {fileID: 1949355603}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1578326273
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 639149498}
+    m_Modifications:
+    - target: {fileID: 418014756647213536, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_Name
+      value: Slime_Red (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 418014756647213536, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 91
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248115279609953707, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7891441188361461683, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
+      propertyPath: movementType
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
 --- !u!1 &1583726866 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6417879848209077842, guid: 10d5b40b652d3484fa7e37d5090e4359, type: 3}
@@ -47801,14 +47892,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1123903}
     m_Modifications:
-    - target: {fileID: 1951951320789149496, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
-      propertyPath: movementType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1951951320789149496, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
-      propertyPath: patrolBounds_X
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 1979774806187107697, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -48016,11 +48099,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8427036307438138727, guid: 206a112d212391642853ceca8ba10ec5, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8427036308927379677, guid: 206a112d212391642853ceca8ba10ec5, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8427036309273762752, guid: 206a112d212391642853ceca8ba10ec5, type: 3}
       propertyPath: m_RootOrder
@@ -48519,6 +48602,18 @@ PrefabInstance:
     - target: {fileID: 1979774806187107698, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
       propertyPath: m_Name
       value: Bat_Red (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979774806187107703, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979774806187107703, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
+      propertyPath: heart
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979774806187107703, guid: 76152853c6c74324dab8ff4101529e98, type: 3}
+      propertyPath: potion
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76152853c6c74324dab8ff4101529e98, type: 3}

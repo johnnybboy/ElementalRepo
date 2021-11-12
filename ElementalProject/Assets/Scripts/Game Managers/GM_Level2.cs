@@ -38,25 +38,23 @@ public class GM_Level2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Physics2D.IgnoreLayerCollision(13, 9);
-
         // First encounter, FightArea1
         if (fight_index == 0)
         {
-            checkFightStatus(FightArea1, 8f);
+            checkFightStatus(FightArea1, 10f);
         }
 
         // Boss fight, BossFight
         if (fight_index == 1)
         {
-            checkFightStatus(BossFight, 8f);
+            checkFightStatus(BossFight, 10f);
         }
 
         // Temp Winning Condition...
-        //if (player.transform.position.x >= 150)
-        //{
-        //    SceneManager.LoadScene("Level Two");
-        //}
+        /*if (player.transform.position.x >= 150)
+        {
+            SceneManager.LoadScene("Level Two");
+        }*/
     }
 
     void checkFightStatus(Transform fightArea, float areaRadius)
@@ -74,7 +72,8 @@ public class GM_Level2 : MonoBehaviour
             CameraFollow.instance.SetTarget(fightArea);
 
             inFight = true;
-            ControlledSpawn(bat, fightArea.position, 1);
+            Vector2 spawnArea = fightArea.position + new Vector3(0, 7f);
+            ControlledSpawn(bat, spawnArea, 3);
             //bounds = Instantiate(bounds, fightArea.position, Quaternion.identity);
             bounds.transform.position = fightArea.position;
 
@@ -84,19 +83,38 @@ public class GM_Level2 : MonoBehaviour
         //count the enemies in the fight area, end fight if none remain
         if (inFight && CountEnemiesNear(fightArea.position, areaRadius) <= 0)
         {
-            //return camera to player
-            //if (CameraFollow.instance != null)
-            //    CameraFollow.instance.SetTarget(player.transform);
-            CameraFollow.instance.SetTarget(player.transform);
+            if (fight_index < 2)
+            {
+                //return camera to player
+                if (CameraFollow.instance != null)
+                    CameraFollow.instance.SetTarget(player.transform);
 
-            //end fight, progress fight_index
-            inFight = false;
-            fight_index++;
+                //end fight, progress fight_index
+                inFight = false;
+                fight_index++;
+                Debug.Log("Enemies defeated! " + fightArea + " is complete.");
 
-            Debug.Log("Enemies defeated! " + fightArea + " is complete.");
-            //if(bounds != null)
-            //Destroy(bounds);
-            bounds.transform.position = new Vector3(0, 20, 0);
+                //move bounds
+                bounds.transform.position = new Vector3(0, 20, 0);
+            }
+            else
+            {
+                GameObject levelBoss = GameObject.FindGameObjectWithTag("Boss");
+                if (levelBoss == null)
+                    return;
+
+                if (!levelBoss.GetComponent<EnemyController>().isAlive)
+                {
+                    //end the fight, move bounds
+                    if (CameraFollow.instance != null)
+                        CameraFollow.instance.SetTarget(player.transform);
+
+                    inFight = false;
+                    fight_index++;
+                    bounds.transform.position = new Vector3(0, 20, 0);
+                }
+
+            }
         }
     }
 

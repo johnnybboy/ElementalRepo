@@ -128,8 +128,8 @@ MonoBehaviour:
   chaseSpeed: 5
   detectRange: 8
   keepDistance: 0.1
-  movementType: 3
-  patrolBounds_X: 0
+  movementType: 1
+  patrolBounds_X: 10
   patrolBounds_Y: 0
   patrolDelay: 0
   isDetectingPlayer: 1
@@ -147,10 +147,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hurtSound: {fileID: 8300000, guid: 786e0c751b20ed342bef520b1f87ce95, type: 3}
   deathSound: {fileID: 8300000, guid: 04875611186e2d3499e3eacea05a134c, type: 3}
-  coin: {fileID: 6118982838337522031, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
-  heart: {fileID: 283299682443938280, guid: bae5b5c8c36ae2546820484ec67c8d1b, type: 3}
-  potion: {fileID: 1993606334950409096, guid: 678aefe2a6ce57348b84c5a0cd69d507, type: 3}
-  FirePoint: {fileID: 0}
+  coin: {fileID: 0}
+  heart: {fileID: 0}
+  potion: {fileID: 0}
   projectile: {fileID: 0}
   enemy_type: 0
   maxHealth: 1
