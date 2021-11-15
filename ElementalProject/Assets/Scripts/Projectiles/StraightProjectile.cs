@@ -16,10 +16,6 @@ public class StraightProjectile : MonoBehaviour
     public bool hasHitAnim = true;
     public bool isPlayerProj = false;   //set this to true if it should damage enemies
 
-    //private fields
-    private bool hit = false;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,12 +31,6 @@ public class StraightProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hit)
-        {
-            //stop projectile
-            body.velocity = new Vector2(0, 0);
-        }
-
         if (Vector2.Distance(transform.position, cam.position) > 50f)
         {
             //if the projectile is far away from the main camera, it is destroyed
@@ -52,14 +42,18 @@ public class StraightProjectile : MonoBehaviour
         if (isPlayerProj && collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.SendMessage("TakeDamage", damage);
+            StartCoroutine(Hit());
         }
-        StartCoroutine(Hit());
+        if (isPlayerProj && collision.gameObject.tag == "Projectile")
+        {
+            Destroy(collision.gameObject);
+        }
+
     }
 
     IEnumerator Hit()
     {
         //stop motion, disable collision
-        hit = true;
         body.velocity = new Vector2(0, 0);
         projCollider.enabled = false;
 
