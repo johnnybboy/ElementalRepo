@@ -320,6 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885ca3acc1068d54c8f15a6cf7dfac83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &8584049686920173778
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,8 +513,7 @@ MonoBehaviour:
   isBusy: 0
   isAlive: 1
   isAttacking: 0
-  FirePoint: {fileID: 0}
-  projectile: {fileID: 0}
+  magicProjectile: {fileID: 620812082635363442, guid: 1f1f42736fd1f51418c39437fd649dfa, type: 3}
 --- !u!61 &406264391
 BoxCollider2D:
   m_ObjectHideFlags: 0
