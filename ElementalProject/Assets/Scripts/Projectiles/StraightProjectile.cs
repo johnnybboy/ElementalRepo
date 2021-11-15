@@ -11,8 +11,10 @@ public class StraightProjectile : MonoBehaviour
     private Transform cam;
 
     //public fields
-    public float projSpeed = 2f;
+    public float damage = 1f;
+    public float projSpeed = 3f;
     public bool hasHitAnim = true;
+    public bool isPlayerProj = false;   //set this to true if it should damage enemies
 
     //private fields
     private bool hit = false;
@@ -25,15 +27,18 @@ public class StraightProjectile : MonoBehaviour
         animator = GetComponent<Animator>();
         projCollider = GetComponent<Collider2D>();
         cam = GameObject.Find("Main Camera").GetComponent<Transform>();
-        //player = GameObject.FindGameObjectWithTag("Player");
+
+        //give the projectile moving
+        body.velocity = transform.right * projSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!hit)
+        if (hit)
         {
-            body.AddForce(new Vector2(projSpeed, 0f));
+            //stop projectile
+            body.velocity = new Vector2(0, 0);
         }
 
         if (Vector2.Distance(transform.position, cam.position) > 50f)
@@ -44,6 +49,10 @@ public class StraightProjectile : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isPlayerProj && collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.SendMessage("TakeDamage", damage);
+        }
         StartCoroutine(Hit());
     }
 

@@ -512,8 +512,7 @@ MonoBehaviour:
   isBusy: 0
   isAlive: 1
   isAttacking: 0
-  FirePoint: {fileID: 609912620}
-  projectile: {fileID: 620812082635363442, guid: 5ffa2cdefb51f5b4baa0296319ffca13, type: 3}
+  magicProjectile: {fileID: 620812082635363442, guid: b22bc6f1b828a48449dd3248c9ed6eb6, type: 3}
 --- !u!61 &406264391
 BoxCollider2D:
   m_ObjectHideFlags: 0

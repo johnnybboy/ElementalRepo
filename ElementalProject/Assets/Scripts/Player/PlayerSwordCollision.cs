@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class PlayerSwordCollision : MonoBehaviour
 {
+    public float damage = 1f;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")
         {
+            other.gameObject.SendMessage("TakeDamage", damage);
             EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
-            enemy.TakeDamage(enemy.damage_medium);
             KnockBack(enemy.gameObject.GetComponent<Rigidbody2D>(), enemy.damage_medium);
         }
         if (other.tag == "Boss")
         {
-            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
-            enemy.TakeDamage(enemy.damage_medium);
+            other.gameObject.SendMessage("TakeDamage", damage);
         }
         //if (other.tag == "Projectile")
         //    Destroy(other.gameObject);

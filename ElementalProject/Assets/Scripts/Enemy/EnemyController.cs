@@ -32,15 +32,18 @@ public class EnemyController : MonoBehaviour
     public float damage_medium = 1f;
     public float damage_strong = 1.5f;
 
-    public float MeleeRange = 1.0f;
-    public float RangeedRange = 6.0f;
+    public float meleeAttackRange = 1.0f;
+    public float rangedAttackRange = 6.0f;
     public float AttackDamageMelee = 1.0f;
     public float AttackDamageRanged = 1.0f;
-    private float PreviousAttackTime;
+
     public float AttackDelayMelee = 1.0f;
     public float AttackDelayRanged = 1.0f;
-    
 
+    private bool canAttack = true;
+    private bool canTakeDamage = true;
+
+    //coding bools
     public bool facingRight = false;
     public bool isAlive = true;
     public bool particleDeath = false;
@@ -51,8 +54,8 @@ public class EnemyController : MonoBehaviour
     private float speed;
 
     //combat conditions
-    //TODO
-    //stunned, on fire, frozen, poisoned, vulnerable
+    private bool stunned = false;   //stuns enemies when taking damage for short time
+    public float stunTime = .5f;    //enemies cannot attack while stunned for this amount of time
 
 
     // Start is called before the first frame update
@@ -85,7 +88,7 @@ public class EnemyController : MonoBehaviour
                     FlipFacing();
                 }
             }
-            else
+            else if (body.velocity.x <= -0.3f)
             {
                 if (facingRight)
                 {
@@ -112,69 +115,89 @@ public class EnemyController : MonoBehaviour
                 if (enemy_type == enemyType.Ranged)
                 {
                     
-                    RangedAttack();
+                    StartCoroutine(RangedAttack());
 
                 }
                 else if(enemy_type == enemyType.Melee)
                 {
-                    MeleeAttack();
+                    StartCoroutine(MeleeAttack());
                 }
             }
             
         }
     }
-    private void MeleeAttack()
+    IEnumerator MeleeAttack()
     {
-        
-        float seperation = Vector2.Distance(body.transform.position, player.transform.position);
-        if(seperation <= MeleeRange && Time.time >= PreviousAttackTime + AttackDelayMelee)
+        if (canAttack && !stunned)
         {
-            //print("Hit em where the Sun don't shine!");
-            player.SendMessage("TakeDamage",AttackDamageMelee); //does damage to player
+            canAttack = false;
+            float seperation = Vector2.Distance(body.transform.position, player.transform.position);
+            if (seperation <= meleeAttackRange)
+            {
+                //attack if within range, call player's TakeDamage() method.
+                animator.SetTrigger("attack");
+                player.SendMessage("TakeDamage", AttackDamageMelee);
 
-            PreviousAttackTime = Time.time;
-            animator.SetTrigger("attack");
-        }
-    }
-    private void RangedAttack()
-    {
-        float seperation = Vector2.Distance(body.transform.position, player.transform.position);
-        if(seperation <= RangeedRange && Time.time >= PreviousAttackTime + AttackDelayRanged)
-        {
-            print("Don't fire untill you see the whites of their eyes!");
-            
-            animator.SetTrigger("attack");
-            PreviousAttackTime = Time.time;
-            GameObject Projectile1 = Instantiate(projectile,FirePoint.transform.position,FirePoint.transform.rotation);
-            
-        }
-
-    }
-    public void TakeDamage(float damage)
-    {
-        currentHealth -= damage;
-
-        // Play hurt animation and sound
-        animator.SetTrigger("hurt");
-        if (hurtSound != null)  //make sure there's something to play
-        {
-            sound.clip = hurtSound;
-            sound.Play();
+                //wait until attack delay ends, after allow attacking again
+                yield return new WaitForSeconds(AttackDelayMelee);
+            }
+            canAttack = true;
         }
         
+    }
 
-        // stop movement briefly
-        body.velocity = new Vector2(0, 0);
-
-        //check if dead, die
-        if(currentHealth <= 0)
+    IEnumerator RangedAttack()
+    {
+        if (canAttack && !stunned)
         {
-            StartCoroutine(Die());
+            canAttack = false;
+            float seperation = Vector2.Distance(body.transform.position, player.transform.position);
+            if (seperation <= rangedAttackRange)
+            {
+                //play animation, wait for animation to finish
+                animator.SetTrigger("attack");
+                yield return new WaitForSeconds(.3f);
+
+                //fire projectile, wait for attack delay, after allow attacking again
+                Instantiate(projectile, FirePoint.transform.position, transform.rotation);
+                yield return new WaitForSeconds(AttackDelayRanged);
+            }
+            canAttack = true;
+        }
+    }
+    public IEnumerator TakeDamage(float damage)
+    {
+        if (canTakeDamage && isAlive)
+        {
+            stunned = true;
+            currentHealth -= damage;
+
+            // Play hurt animation and sound
+            animator.SetTrigger("hurt");
+            if (hurtSound != null)  //make sure there's something to play
+            {
+                sound.clip = hurtSound;
+                sound.Play();
+            }
+
+
+            // stop movement briefly
+            body.velocity = new Vector2(0, 0);
+
+            //check if dead, die
+            if (currentHealth <= 0)
+            {
+                StartCoroutine(Die());
+            }
+
+            yield return new WaitForSeconds(stunTime);
+            stunned = false;
         }
     }
 
     IEnumerator Die()
     {
+        //die in code
         isAlive = false;
 
         //die animation and sound
@@ -201,7 +224,6 @@ public class EnemyController : MonoBehaviour
             
         
         //delete after some delay
-        isAlive = false;
         yield return new WaitForSeconds(despawnTime);
 
         //destroy this gameobject and spawn loot
@@ -213,7 +235,7 @@ public class EnemyController : MonoBehaviour
     {
         facingRight = !facingRight;
         //sprite.flipX = !sprite.flipX;
-        transform.Rotate(0f, 180f, 0f);
+        gameObject.transform.Rotate(0f, 180f, 0f);
     }
 
     void SpawnLoot()    //added chance (at a roll of 7) for no item to drop
