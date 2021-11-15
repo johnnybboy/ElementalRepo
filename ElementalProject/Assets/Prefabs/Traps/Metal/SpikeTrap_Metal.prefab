@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8256273426682118307}
   - component: {fileID: 6920686941331034561}
   - component: {fileID: 5731088864264957601}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spike (3)
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 7622926432940131210}
   - component: {fileID: 8193184912479192366}
   - component: {fileID: 226757780263223710}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spike (1)
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 3704886426877790133}
   - component: {fileID: 1394863563041731154}
   - component: {fileID: 5351290136913097617}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spike (2)
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -439,7 +439,7 @@ GameObject:
   - component: {fileID: 7744955810950764887}
   - component: {fileID: 5584445783240414240}
   - component: {fileID: 855277602692880024}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spike
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7744955812762877939}
   - component: {fileID: 7744955812762877938}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpikeTrap_Metal
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 5434716053709311692}
   - component: {fileID: 6648444542124872366}
   - component: {fileID: 6788448464036447501}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spike (4)
   m_TagString: Trap
   m_Icon: {fileID: 0}

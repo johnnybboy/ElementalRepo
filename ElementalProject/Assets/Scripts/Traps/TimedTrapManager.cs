@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeManager : MonoBehaviour
+public class TimedTrapManager : MonoBehaviour
 {
     public float startDelay = 0f;
     public float safeTime = 2f;
     public float bufferTime = 1f;
     public float dangerTime = 2f;
 
-    private BoxCollider2D[] spikes;
+    private BoxCollider2D[] traps;
     private Animator[] anim;
     private bool busy = false;
     private bool firstTrigger = true;
@@ -18,17 +18,17 @@ public class SpikeManager : MonoBehaviour
     void Start()
     {
         //get components in children
-        spikes = GetComponentsInChildren<BoxCollider2D>();
+        traps = GetComponentsInChildren<BoxCollider2D>();
         anim = GetComponentsInChildren<Animator>();
 
         //start spikes safe
-        foreach (BoxCollider2D spike in spikes)
+        foreach (BoxCollider2D trap in traps)
         {
-            spike.enabled = false;
+            trap.enabled = false;
         }
 
         //start coroutine
-        StartCoroutine(SpikeTrapTiming());
+        StartCoroutine(TrapTiming());
     }
 
     private void Update()
@@ -36,11 +36,11 @@ public class SpikeManager : MonoBehaviour
         //start coroutine if it isn't already started
         if (!busy)
         {
-            StartCoroutine(SpikeTrapTiming());
+            StartCoroutine(TrapTiming());
         }
     }
 
-    IEnumerator SpikeTrapTiming()
+    IEnumerator TrapTiming()
     {
         busy = true;
         if (firstTrigger)   //delays the start of the loop for staggering traps
@@ -53,31 +53,31 @@ public class SpikeManager : MonoBehaviour
         yield return new WaitForSeconds(safeTime);
 
         //then trigger all spikes (about to extend) and wait for bufferTime
-        foreach (Animator spike in anim)
+        foreach (Animator trap in anim)
         {
-            spike.SetTrigger("trigger");
+            trap.SetTrigger("trigger");
         }
         yield return new WaitForSeconds(bufferTime);
 
         //then extend all spikes and make hitbox dangerous, wait for dangerTime
-        foreach (Animator spike in anim)
+        foreach (Animator trap in anim)
         {
-            spike.SetTrigger("extend");
+            trap.SetTrigger("extend");
         }
-        foreach (BoxCollider2D spike in spikes)
+        foreach (BoxCollider2D trap in traps)
         {
-            spike.enabled = true;
+            trap.enabled = true;
         }
         yield return new WaitForSeconds(dangerTime);
 
         //then retract all spikes and make hitbox safe
-        foreach (Animator spike in anim)
+        foreach (Animator trap in anim)
         {
-            spike.SetTrigger("retract");
+            trap.SetTrigger("retract");
         }
-        foreach (BoxCollider2D spike in spikes)
+        foreach (BoxCollider2D trap in traps)
         {
-            spike.enabled = false;
+            trap.enabled = false;
         }
         busy = false;
     }
