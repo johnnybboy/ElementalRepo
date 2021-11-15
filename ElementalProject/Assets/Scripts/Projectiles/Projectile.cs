@@ -118,7 +118,7 @@ public class Projectile : MonoBehaviour
     public void FlipFacing()
     {
         fly_Right = !fly_Right;
-        transform.Rotate(0f, 180f, 0f);
+        transform.Rotate(0f, 0f, 0f);
     }
     private bool PDirectX()
     {
