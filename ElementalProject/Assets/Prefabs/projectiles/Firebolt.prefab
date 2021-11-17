@@ -117,8 +117,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee3d08081640c14893702db892af594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
   projSpeed: 2
+  explodeRadius: 0
+  explodeDamage: 0
+  explodeOnHit: 0
   hasHitAnim: 1
+  isPlayerProj: 0
 --- !u!50 &620812082635363447
 Rigidbody2D:
   serializedVersion: 4
@@ -150,7 +155,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.034312725, y: 0.005934924}

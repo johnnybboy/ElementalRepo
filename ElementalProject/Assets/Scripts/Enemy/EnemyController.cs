@@ -4,72 +4,72 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    //Components
-    private Rigidbody2D body;
-    private SpriteRenderer sprite;
-    private Animator animator;
-    private AudioSource sound;
-    private EnemyMovement detect;
-    
-    private ParticleSystem particles;
-    
-    public AudioClip hurtSound, deathSound;
-
-    //loot drops (MUST be assigned in Unity!)
-    public GameObject coin, heart, potion;
-    
-    public GameObject projectile;
-    private GameObject FirePoint;
-    private GameObject player;
     public enum enemyType {Melee, Ranged, Both, Boss};
-    public enemyType enemy_type;
+    public enemyType enemy_type = enemyType.Melee;  //defaults to Melee
 
-    //stats
+    //stats and mutators
     public float maxHealth = 3f;
+    public float currentHealth;
     public float despawnTime = 2f;
 
-    public float damage_weak = .5f;
-    public float damage_medium = 1f;
-    public float damage_strong = 1.5f;
+    public float damage = .5f;
 
     public float meleeAttackRange = 1.0f;
     public float rangedAttackRange = 6.0f;
-    public float AttackDamageMelee = 1.0f;
-    public float AttackDamageRanged = 1.0f;
 
     public float AttackDelayMelee = 1.0f;
     public float AttackDelayRanged = 1.0f;
-
-    private bool canAttack = true;
-    private bool canTakeDamage = true;
-
-    //coding bools
-    public bool facingRight = false;
-    public bool isAlive = true;
-    public bool particleDeath = false;
-
-    public float currentHealth;
 
     //animation fields
     private float speed;
 
     //combat conditions
-    private bool stunned = false;   //stuns enemies when taking damage for short time
     public float stunTime = .5f;    //enemies cannot attack while stunned for this amount of time
+    public bool facingRight = false;
+    public bool isAlive = true;
+    public bool particleDeath = false;
 
+
+    private bool stunned = false;   //stuns enemies when taking damage for short time
+    private bool canAttack = true;
+    private bool canTakeDamage = true;
+
+    //public components
+    public GameObject coin, heart, potion;  //loot drops
+    public GameObject projectile;   //projectile to make RangedAttacks with
+    
+    //private components
+    private Rigidbody2D body;
+    private SpriteRenderer sprite;
+    private Animator animator;
+    private AudioSource sound;
+    private EnemyMovement detect;
+    private ParticleSystem particles;
+    private AudioSource hurtSound, deathSound, magicSound;
+    private Transform firePoint;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        currentHealth = maxHealth;
         body = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         sound = GetComponent<AudioSource>();
-        currentHealth = maxHealth;
         detect = GetComponent<EnemyMovement>();
         particles = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag("Player");
-        FirePoint = this.gameObject.transform.GetChild(0).gameObject;
+
+        //AudioSources are GetChild(1), all prefabs should have these children objects
+        if (transform.childCount >= 2) {
+            hurtSound = this.gameObject.transform.GetChild(1).GetChild(0).GetComponent<AudioSource>();
+            deathSound = this.gameObject.transform.GetChild(1).GetChild(1).GetComponent<AudioSource>();
+        }
+
+        //FirePoint is GetChild(2)
+        if (transform.childCount >= 3) //make sure its not null
+            firePoint = this.gameObject.transform.GetChild(2).gameObject.transform;
     }
 
     private void Update()
@@ -136,7 +136,7 @@ public class EnemyController : MonoBehaviour
             {
                 //attack if within range, call player's TakeDamage() method.
                 animator.SetTrigger("attack");
-                player.SendMessage("TakeDamage", AttackDamageMelee);
+                player.SendMessage("TakeDamage", damage);
 
                 //wait until attack delay ends, after allow attacking again
                 yield return new WaitForSeconds(AttackDelayMelee);
@@ -159,7 +159,7 @@ public class EnemyController : MonoBehaviour
                 yield return new WaitForSeconds(.3f);
 
                 //fire projectile, wait for attack delay, after allow attacking again
-                Instantiate(projectile, FirePoint.transform.position, transform.rotation);
+                Instantiate(projectile, firePoint.position, transform.rotation);
                 yield return new WaitForSeconds(AttackDelayRanged);
             }
             canAttack = true;
@@ -176,8 +176,7 @@ public class EnemyController : MonoBehaviour
             animator.SetTrigger("hurt");
             if (hurtSound != null)  //make sure there's something to play
             {
-                sound.clip = hurtSound;
-                sound.Play();
+                hurtSound.Play();
             }
 
 
@@ -204,8 +203,7 @@ public class EnemyController : MonoBehaviour
         animator.SetBool("isDead", true);
         if (deathSound != null)  //make sure there's something to play
         { 
-            sound.clip = deathSound;
-            sound.Play();
+            deathSound.Play();
         }
 
         //disable Components

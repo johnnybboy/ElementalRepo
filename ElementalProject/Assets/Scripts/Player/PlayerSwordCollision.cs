@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerSwordCollision : MonoBehaviour
 {
     public float damage = 1f;
+    public float knockBackDist = 1f;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -12,7 +13,7 @@ public class PlayerSwordCollision : MonoBehaviour
         {
             other.gameObject.SendMessage("TakeDamage", damage);
             EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
-            KnockBack(enemy.gameObject.GetComponent<Rigidbody2D>(), enemy.damage_medium);
+            KnockBack(enemy.gameObject.GetComponent<Rigidbody2D>(), knockBackDist);
         }
         if (other.tag == "Boss")
         {
