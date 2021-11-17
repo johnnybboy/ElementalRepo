@@ -1,7 +1,139 @@
 fileFormatVersion: 2
 guid: 591ad2ce69dc7e341a5cf0930c218709
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5955544610720936958
+    second: SkullMage_4Colors_SpriteSheet_x64_0
+  - first:
+      213: 1402634665845289919
+    second: SkullMage_4Colors_SpriteSheet_x64_1
+  - first:
+      213: -8702820361018410650
+    second: SkullMage_4Colors_SpriteSheet_x64_2
+  - first:
+      213: 1084415441156302356
+    second: SkullMage_4Colors_SpriteSheet_x64_3
+  - first:
+      213: 4274360110315809724
+    second: SkullMage_4Colors_SpriteSheet_x64_4
+  - first:
+      213: 2094945300680310176
+    second: SkullMage_4Colors_SpriteSheet_x64_5
+  - first:
+      213: 3578695093630953154
+    second: SkullMage_4Colors_SpriteSheet_x64_6
+  - first:
+      213: -1022186120715330835
+    second: SkullMage_4Colors_SpriteSheet_x64_7
+  - first:
+      213: 4641342373235139273
+    second: SkullMage_4Colors_SpriteSheet_x64_8
+  - first:
+      213: -4361089785890425074
+    second: SkullMage_4Colors_SpriteSheet_x64_9
+  - first:
+      213: -4860125787700503052
+    second: SkullMage_4Colors_SpriteSheet_x64_10
+  - first:
+      213: -1172206438714594389
+    second: SkullMage_4Colors_SpriteSheet_x64_11
+  - first:
+      213: -1729337260620853067
+    second: SkullMage_4Colors_SpriteSheet_x64_12
+  - first:
+      213: 2882574340471966749
+    second: SkullMage_4Colors_SpriteSheet_x64_13
+  - first:
+      213: 2687364275821460728
+    second: SkullMage_4Colors_SpriteSheet_x64_14
+  - first:
+      213: -6091242496597911747
+    second: SkullMage_4Colors_SpriteSheet_x64_15
+  - first:
+      213: 6971630611662103853
+    second: SkullMage_4Colors_SpriteSheet_x64_16
+  - first:
+      213: -1265474662028080277
+    second: SkullMage_4Colors_SpriteSheet_x64_17
+  - first:
+      213: 4124121860646030728
+    second: SkullMage_4Colors_SpriteSheet_x64_18
+  - first:
+      213: 3574925495955764216
+    second: SkullMage_4Colors_SpriteSheet_x64_19
+  - first:
+      213: -626525990028323437
+    second: SkullMage_4Colors_SpriteSheet_x64_20
+  - first:
+      213: -3084601167607673631
+    second: SkullMage_4Colors_SpriteSheet_x64_21
+  - first:
+      213: 4537653726929427262
+    second: SkullMage_4Colors_SpriteSheet_x64_22
+  - first:
+      213: -2145080063396586223
+    second: SkullMage_4Colors_SpriteSheet_x64_23
+  - first:
+      213: 2314396989610837403
+    second: SkullMage_4Colors_SpriteSheet_x64_24
+  - first:
+      213: 8269921562902120455
+    second: SkullMage_4Colors_SpriteSheet_x64_25
+  - first:
+      213: 4911234561682801636
+    second: SkullMage_4Colors_SpriteSheet_x64_26
+  - first:
+      213: -7569153311051686088
+    second: SkullMage_4Colors_SpriteSheet_x64_27
+  - first:
+      213: 8639971210824368023
+    second: SkullMage_4Colors_SpriteSheet_x64_28
+  - first:
+      213: 8704518861735237868
+    second: SkullMage_4Colors_SpriteSheet_x64_29
+  - first:
+      213: 3571358485726422920
+    second: SkullMage_4Colors_SpriteSheet_x64_30
+  - first:
+      213: 8885001830329755725
+    second: SkullMage_4Colors_SpriteSheet_x64_31
+  - first:
+      213: 6750097526783214138
+    second: SkullMage_4Colors_SpriteSheet_x64_32
+  - first:
+      213: 6891651883129175327
+    second: SkullMage_4Colors_SpriteSheet_x64_33
+  - first:
+      213: -7941274998510183303
+    second: SkullMage_4Colors_SpriteSheet_x64_34
+  - first:
+      213: -3482591922962059180
+    second: SkullMage_4Colors_SpriteSheet_x64_35
+  - first:
+      213: -9223288525323187903
+    second: SkullMage_4Colors_SpriteSheet_x64_36
+  - first:
+      213: 9133372297342218805
+    second: SkullMage_4Colors_SpriteSheet_x64_37
+  - first:
+      213: 5186617302795541714
+    second: SkullMage_4Colors_SpriteSheet_x64_38
+  - first:
+      213: 659467014330120655
+    second: SkullMage_4Colors_SpriteSheet_x64_39
+  - first:
+      213: 2101337390239196725
+    second: SkullMage_4Colors_SpriteSheet_x64_40
+  - first:
+      213: -3747721983142345327
+    second: SkullMage_4Colors_SpriteSheet_x64_41
+  - first:
+      213: 8356726751050109898
+    second: SkullMage_4Colors_SpriteSheet_x64_42
+  - first:
+      213: -6076740023332246538
+    second: SkullMage_4Colors_SpriteSheet_x64_43
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +164,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +173,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +207,957 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef37306054856a250800000000000000
+      internalID: 5955544610720936958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb37b5f0cc8277310800000000000000
+      internalID: 1402634665845289919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669f57dbdfe593780800000000000000
+      internalID: -8702820361018410650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416e117291e9c0f00800000000000000
+      internalID: 1084415441156302356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 896
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb2971bfd3915b30800000000000000
+      internalID: 4274360110315809724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_5
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad7ce6c6adb21d10800000000000000
+      internalID: 2094945300680310176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c66e471a341aa130800000000000000
+      internalID: 3578695093630953154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea9d64932770d1f0800000000000000
+      internalID: -1022186120715330835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c226ad2c4c596040800000000000000
+      internalID: 4641342373235139273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07ba6e12fb4a73c0800000000000000
+      internalID: -4361089785890425074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd556c985d5d8cb0800000000000000
+      internalID: -4860125787700503052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: babadf0647c7bbfe0800000000000000
+      internalID: -1172206438714594389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0d8d38ce82008e0800000000000000
+      internalID: -1729337260620853067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ccc721716f00820800000000000000
+      internalID: 2882574340471966749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fcb962129f6b4520800000000000000
+      internalID: 2687364275821460728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_15
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 640
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37948dd83f877ba0800000000000000
+      internalID: -6091242496597911747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_16
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25eb51aa1530c060800000000000000
+      internalID: 6971630611662103853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b0f89ef71207ee0800000000000000
+      internalID: -1265474662028080277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88dca325bf2db3930800000000000000
+      internalID: 4124121860646030728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f33eec3ccfac9130800000000000000
+      internalID: 3574925495955764216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395dfc97ee12e47f0800000000000000
+      internalID: -626525990028323437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec4dfab49b4135d0800000000000000
+      internalID: -3084601167607673631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b1b5be50cf8fe30800000000000000
+      internalID: 4537653726929427262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d59762c052b32e0800000000000000
+      internalID: -2145080063396586223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95ccf2ccc36e1020800000000000000
+      internalID: 2314396989610837403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708cf1578d9a4c270800000000000000
+      internalID: 8269921562902120455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e389b120d5382440800000000000000
+      internalID: 4911234561682801636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_27
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83fda4caa27f4f690800000000000000
+      internalID: -7569153311051686088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fb9ca2a0857e770800000000000000
+      internalID: 8639971210824368023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_29
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce89a6649c9acc870800000000000000
+      internalID: 8704518861735237868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_30
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887ec43fe93009130800000000000000
+      internalID: 3571358485726422920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d482085071edd4b70800000000000000
+      internalID: 8885001830329755725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a320823efe92dad50800000000000000
+      internalID: 6750097526783214138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1df099cfd014af50800000000000000
+      internalID: 6891651883129175327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c1c1aa67ceac190800000000000000
+      internalID: -7941274998510183303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_35
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450b33ef8195bafc0800000000000000
+      internalID: -3482591922962059180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149cc2b04fb400080800000000000000
+      internalID: -9223288525323187903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532f978b6b140ce70800000000000000
+      internalID: 9133372297342218805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_38
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dcd50ff4f09af740800000000000000
+      internalID: 5186617302795541714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9fb3a61c5e62900800000000000000
+      internalID: 659467014330120655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_40
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536247a1933792d10800000000000000
+      internalID: 2101337390239196725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195c0ed66ba6dfbc0800000000000000
+      internalID: -3747721983142345327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3985944be09f370800000000000000
+      internalID: 8356726751050109898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullMage_4Colors_SpriteSheet_x64_43
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbe1ec05251baba0800000000000000
+      internalID: -6076740023332246538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

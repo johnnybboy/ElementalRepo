@@ -12,8 +12,7 @@ public class PlayerSwordCollision : MonoBehaviour
         if (other.tag == "Enemy")
         {
             other.gameObject.SendMessage("TakeDamage", damage);
-            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
-            KnockBack(enemy.gameObject.GetComponent<Rigidbody2D>(), knockBackDist);
+            KnockBack(other.gameObject, knockBackDist);
         }
         if (other.tag == "Boss")
         {
@@ -23,19 +22,19 @@ public class PlayerSwordCollision : MonoBehaviour
         //    Destroy(other.gameObject);
     }
 
-    void KnockBack(Rigidbody2D enemy, float distance)  //based on damage for now
+    void KnockBack(GameObject target, float distance)  //based on damage for now
     {
         Vector2 knockBackForce;
-        if (enemy.gameObject.transform.position.x >= transform.position.x)
+        if (target.transform.position.x >= transform.position.x)
         {
-            knockBackForce = new Vector2(distance, enemy.transform.position.y);
+            knockBackForce = new Vector2(distance, 0);
             
         }
         else
         {
-            knockBackForce = new Vector2(-distance, enemy.transform.position.y);
+            knockBackForce = new Vector2(-distance, 0);
         }
 
-        enemy.AddForce(knockBackForce, ForceMode2D.Impulse);
+        target.GetComponent<Rigidbody2D>().AddForce(knockBackForce, ForceMode2D.Impulse);
     }
 }

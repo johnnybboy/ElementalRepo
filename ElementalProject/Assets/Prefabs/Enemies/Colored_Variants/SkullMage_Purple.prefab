@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 6173231515391244696}
   - component: {fileID: 6173231515391244699}
   m_Layer: 6
-  m_Name: SkullMage_Green
+  m_Name: SkullMage_Purple
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 840645297
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5955544610720936958, guid: 591ad2ce69dc7e341a5cf0930c218709, type: 3}
+  m_Sprite: {fileID: 4537653726929427262, guid: 591ad2ce69dc7e341a5cf0930c218709, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -291,7 +291,7 @@ Animator:
   m_GameObject: {fileID: 6173231515391244698}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4b5ead093beda614d9a86ae3676c939a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 617a834e29ed6d84da04f0daa9626903, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 6173231515391244696}
   - component: {fileID: 6173231515391244699}
   m_Layer: 6
-  m_Name: SkullMage_Green
+  m_Name: SkullMage_Red
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 840645297
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5955544610720936958, guid: 591ad2ce69dc7e341a5cf0930c218709, type: 3}
+  m_Sprite: {fileID: 6891651883129175327, guid: 591ad2ce69dc7e341a5cf0930c218709, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
   coin: {fileID: 6118982838337522031, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
   heart: {fileID: 283299682443938280, guid: bae5b5c8c36ae2546820484ec67c8d1b, type: 3}
   potion: {fileID: 1993606334950409096, guid: 678aefe2a6ce57348b84c5a0cd69d507, type: 3}
-  projectile: {fileID: 620812082635363442, guid: 27135031285ef5f4fa01a229e360ce38, type: 3}
+  projectile: {fileID: 620812082635363442, guid: e3022e3be1ff8174284a7a070d89923c, type: 3}
 --- !u!114 &5644784221542398298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ Animator:
   m_GameObject: {fileID: 6173231515391244698}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4b5ead093beda614d9a86ae3676c939a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5af96c087641ac44c8bd221b708dd68a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
