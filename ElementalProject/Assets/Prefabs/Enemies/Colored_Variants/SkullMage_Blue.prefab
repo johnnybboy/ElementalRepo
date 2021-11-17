@@ -259,7 +259,7 @@ MonoBehaviour:
   coin: {fileID: 6118982838337522031, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
   heart: {fileID: 283299682443938280, guid: bae5b5c8c36ae2546820484ec67c8d1b, type: 3}
   potion: {fileID: 1993606334950409096, guid: 678aefe2a6ce57348b84c5a0cd69d507, type: 3}
-  projectile: {fileID: 620812082635363442, guid: 27135031285ef5f4fa01a229e360ce38, type: 3}
+  projectile: {fileID: 620812082635363442, guid: d419fa5b728b8ab43b7de34b41ed3786, type: 3}
 --- !u!114 &5644784221542398298
 MonoBehaviour:
   m_ObjectHideFlags: 0

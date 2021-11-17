@@ -20,9 +20,6 @@ public class EnemyController : MonoBehaviour
     public float AttackDelayMelee = 1.0f;
     public float AttackDelayRanged = 1.0f;
 
-    //animation fields
-    private float speed;
-
     //combat conditions
     public float stunTime = .5f;    //enemies cannot attack while stunned for this amount of time
     public bool facingRight = false;
@@ -76,9 +73,8 @@ public class EnemyController : MonoBehaviour
     {
         if (isAlive)
         {
-            //animation for moving
-            speed = Mathf.Abs(body.velocity.x) + Mathf.Abs(body.velocity.y);
-            animator.SetFloat("speed", speed);
+            //animate movement if moving
+            animator.SetFloat("speed", (Mathf.Abs(body.velocity.x) + Mathf.Abs(body.velocity.y)));
 
             //check and flip facing
             if (body.velocity.x >= 0.3f)
@@ -208,10 +204,7 @@ public class EnemyController : MonoBehaviour
 
         //disable Components
         GetComponent<Collider2D>().enabled = false;
-        if (GetComponent<Movement>() != null)
-            GetComponent<Movement>().enabled = false;
-        if (GetComponent<EnemyMovement>() != null)
-            GetComponent<EnemyMovement>().enabled = false;
+        GetComponent<EnemyMovement>().enabled = false;
 
         //particle death!
         if (particles != null && particleDeath)
