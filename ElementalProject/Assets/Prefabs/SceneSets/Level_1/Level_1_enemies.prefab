@@ -235,6 +235,10 @@ PrefabInstance:
       value: WaspQueen
       objectReference: {fileID: 0}
     - target: {fileID: 8184357189027593933, guid: 7f836f48b9433b7448028f78aca1a578, type: 3}
+      propertyPath: Bat
+      value: 
+      objectReference: {fileID: 1979774806187107698, guid: 99e0dfb38bf2bff4681ae8b84295b1f3, type: 3}
+    - target: {fileID: 8184357189027593933, guid: 7f836f48b9433b7448028f78aca1a578, type: 3}
       propertyPath: enter
       value: 
       objectReference: {fileID: 0}
@@ -274,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6173231515391244691, guid: 7cc2243b01733214b9598035718a241c, type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6173231515391244697, guid: 7cc2243b01733214b9598035718a241c, type: 3}
       propertyPath: m_RootOrder
@@ -282,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6173231515391244697, guid: 7cc2243b01733214b9598035718a241c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 107
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6173231515391244697, guid: 7cc2243b01733214b9598035718a241c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -328,6 +332,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6173231515391244703, guid: 7cc2243b01733214b9598035718a241c, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 620812082635363442, guid: 4e9a9297d420ba742ac10fc2307ef378, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc2243b01733214b9598035718a241c, type: 3}
 --- !u!4 &3932204716491404932 stripped
