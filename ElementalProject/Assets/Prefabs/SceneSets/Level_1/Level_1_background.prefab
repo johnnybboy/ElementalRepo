@@ -662,7 +662,6 @@ GameObject:
   m_Component:
   - component: {fileID: 165285013}
   - component: {fileID: 165285015}
-  - component: {fileID: 165285014}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -735,20 +734,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &165285014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 165285012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &177406844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,7 +1105,6 @@ GameObject:
   m_Component:
   - component: {fileID: 233572996}
   - component: {fileID: 233572998}
-  - component: {fileID: 233572997}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -1193,20 +1177,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &233572997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233572995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &237942520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,7 +1672,6 @@ GameObject:
   m_Component:
   - component: {fileID: 292059063}
   - component: {fileID: 292059065}
-  - component: {fileID: 292059064}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -1775,20 +1744,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &292059064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292059062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &325838170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,7 +1754,6 @@ GameObject:
   m_Component:
   - component: {fileID: 325838171}
   - component: {fileID: 325838173}
-  - component: {fileID: 325838172}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -1872,20 +1826,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &325838172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325838170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &328546493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,7 +2321,6 @@ GameObject:
   m_Component:
   - component: {fileID: 450296481}
   - component: {fileID: 450296483}
-  - component: {fileID: 450296482}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -2454,20 +2393,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &450296482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450296480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &460498773
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,7 +3249,6 @@ GameObject:
   m_Component:
   - component: {fileID: 684492292}
   - component: {fileID: 684492294}
-  - component: {fileID: 684492293}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -3397,20 +3321,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &684492293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684492291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &688364657
 GameObject:
   m_ObjectHideFlags: 0
@@ -3712,7 +3622,6 @@ GameObject:
   m_Component:
   - component: {fileID: 767254586}
   - component: {fileID: 767254588}
-  - component: {fileID: 767254587}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -3785,20 +3694,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &767254587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767254585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &767333263
 GameObject:
   m_ObjectHideFlags: 0
@@ -4558,7 +4453,6 @@ GameObject:
   m_Component:
   - component: {fileID: 966882512}
   - component: {fileID: 966882514}
-  - component: {fileID: 966882513}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -4631,20 +4525,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &966882513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966882511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &969252625
 GameObject:
   m_ObjectHideFlags: 0
@@ -5431,7 +5311,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1232697483}
   - component: {fileID: 1232697485}
-  - component: {fileID: 1232697484}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -5504,20 +5383,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1232697484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232697482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &1292718966
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,7 +5393,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1292718967}
   - component: {fileID: 1292718969}
-  - component: {fileID: 1292718968}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -5601,20 +5465,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1292718968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292718966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &1307945219
 GameObject:
   m_ObjectHideFlags: 0
@@ -5660,7 +5510,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1309251926}
   - component: {fileID: 1309251928}
-  - component: {fileID: 1309251927}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -5733,20 +5582,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1309251927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309251925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &1334656221
 GameObject:
   m_ObjectHideFlags: 0
@@ -5757,7 +5592,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1334656222}
   - component: {fileID: 1334656224}
-  - component: {fileID: 1334656223}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -5830,20 +5664,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1334656223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334656221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &1345329613
 GameObject:
   m_ObjectHideFlags: 0
@@ -5951,7 +5771,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1358946401}
   - component: {fileID: 1358946403}
-  - component: {fileID: 1358946402}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -6024,20 +5843,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1358946402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358946400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &1359485234
 GameObject:
   m_ObjectHideFlags: 0
@@ -6145,7 +5950,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1401027436}
   - component: {fileID: 1401027438}
-  - component: {fileID: 1401027437}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -6218,20 +6022,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1401027437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401027435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &1412548166
 GameObject:
   m_ObjectHideFlags: 0
@@ -6929,7 +6719,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1575609977}
   - component: {fileID: 1575609979}
-  - component: {fileID: 1575609978}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -7002,20 +6791,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1575609978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575609976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &1628367675
 GameObject:
   m_ObjectHideFlags: 0
@@ -7678,7 +7453,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1824420703}
   - component: {fileID: 1824420705}
-  - component: {fileID: 1824420704}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -7751,20 +7525,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1824420704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1824420702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &1828884389
 GameObject:
   m_ObjectHideFlags: 0
@@ -8268,7 +8028,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1986558348}
   - component: {fileID: 1986558350}
-  - component: {fileID: 1986558349}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -8341,20 +8100,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1986558349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986558347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &1994431908
 GameObject:
   m_ObjectHideFlags: 0
@@ -9696,7 +9441,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1279354842349673236}
   - component: {fileID: 8035557213257492051}
-  - component: {fileID: 909832710185189308}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -9769,20 +9513,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &909832710185189308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3446650787588279811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &3767232537453930890
 GameObject:
   m_ObjectHideFlags: 0
@@ -10364,7 +10094,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9179443974680756401}
   - component: {fileID: 6626495791213470307}
-  - component: {fileID: 6672325779025520667}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -10437,20 +10166,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6672325779025520667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6584359106919914713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &6876174356227357383
 GameObject:
   m_ObjectHideFlags: 0
@@ -10558,7 +10273,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7159109740935681652}
   - component: {fileID: 7386350519962431106}
-  - component: {fileID: 7037377693669970637}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -10631,20 +10345,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7037377693669970637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7012098364556995161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &7433816896083877517
 GameObject:
   m_ObjectHideFlags: 0
@@ -10690,7 +10390,6 @@ GameObject:
   m_Component:
   - component: {fileID: 610377823817097744}
   - component: {fileID: 1014759819892749000}
-  - component: {fileID: 5675422131962722801}
   m_Layer: 0
   m_Name: Tall_Forest_Parallax_Layer_A
   m_TagString: Untagged
@@ -10763,20 +10462,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5675422131962722801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7466931812868223220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf2669782a64c44da8453fba0bcbc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallexEffect: 0.315
 --- !u!1 &8603092120043329836
 GameObject:
   m_ObjectHideFlags: 0
