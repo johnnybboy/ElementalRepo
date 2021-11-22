@@ -89,7 +89,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -175,28 +175,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f8a8407b898d2458881006b161fa3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hurtSound: {fileID: 8300000, guid: 786e0c751b20ed342bef520b1f87ce95, type: 3}
-  deathSound: {fileID: 8300000, guid: 04875611186e2d3499e3eacea05a134c, type: 3}
-  coin: {fileID: 6118982838337522031, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
-  heart: {fileID: 283299682443938280, guid: bae5b5c8c36ae2546820484ec67c8d1b, type: 3}
-  potion: {fileID: 1993606334950409096, guid: 678aefe2a6ce57348b84c5a0cd69d507, type: 3}
-  FirePoint: {fileID: 0}
-  projectile: {fileID: 0}
   enemy_type: 0
   maxHealth: 3
+  currentHealth: 0
   despawnTime: 3
-  damage_weak: 0.5
-  damage_medium: 1
-  damage_strong: 1.5
-  MeleeRange: 1.5
-  RangeedRange: 6
-  AttackDamageMelee: 1
-  AttackDamageRanged: 1
+  damage: 0.5
+  meleeAttackRange: 1
+  rangedAttackRange: 6
   AttackDelayMelee: 1
   AttackDelayRanged: 1
+  stunTime: 0.5
   facingRight: 0
   isAlive: 1
   particleDeath: 0
+  coin: {fileID: 6118982838337522031, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
+  heart: {fileID: 283299682443938280, guid: bae5b5c8c36ae2546820484ec67c8d1b, type: 3}
+  potion: {fileID: 1993606334950409096, guid: 678aefe2a6ce57348b84c5a0cd69d507, type: 3}
+  projectile: {fileID: 0}
 --- !u!95 &2862578941666616282
 Animator:
   serializedVersion: 3
