@@ -19,9 +19,9 @@ public class PlayerController1 : MonoBehaviour
 
     //Player modifiers
     public float attackRange = 0.5f;
-    public int attackDamage = 40;
+    public float comboInterval = .33f;  //time between each hit of 3-hit swing combo
 
-    public float attackRate = 0.5f;   //attacks per second
+    public float attackRate = 0.66f;   //attacks per second
     public float magicRate = 1f;    //magic per second
     public float spellCost = 0.5f;
 
@@ -41,6 +41,7 @@ public class PlayerController1 : MonoBehaviour
     private bool canSwordAttack = true;
     private bool canRoll = true;
     private bool canMagicAttack = true;
+    private bool canHeavyAttack = true;
     private bool canTakeDamage = true;
 
     //public Components
@@ -86,6 +87,14 @@ public class PlayerController1 : MonoBehaviour
                 }
             }
 
+            if (Input.GetKey(KeyCode.L))
+            {
+                if (!isBusy && canHeavyAttack)
+                {
+                    StartCoroutine(HeavyAttack());
+                }
+            }
+
             if (Input.GetKey(KeyCode.K))
             {
                 if (!isBusy && canMagicAttack)
@@ -122,6 +131,12 @@ public class PlayerController1 : MonoBehaviour
         ManaBar.instance.AddMana(amount);
         mana = ManaBar.instance.currentMana;
         //animator.SetTrigger("ManaUp");       //ManaUp animation?
+    }
+
+    void PickupCoins(int num)
+    {
+        coins += num;
+        //coin animation?
     }
 
     public IEnumerator TakeDamage(float amount)
@@ -168,24 +183,56 @@ public class PlayerController1 : MonoBehaviour
             isBusy = true;
             canSwordAttack = false;
 
-            //play animation and sound
-            animator.SetTrigger("Attack");
-            if (swingSound != null)  //make sure there's something to play
+            //start attack for combo1, wait for comboInterval
+            StartCoroutine(ComboAttack("Attack", SwordHitBox)); //combo1
+            yield return new WaitForSeconds(comboInterval);
+            
+            //check for input to continue to combo2, otherwise end attack
+            if (Input.GetKey(KeyCode.J))
             {
-                swingSound.Play();
+                //show the combo is working, start attack for combo2
+                sprite.color = new Color(1f, .5f, .5f);
+                StartCoroutine(ComboAttack("Attack", SwordHitBox)); //combo2
+                yield return null;
+                sprite.color = new Color(1f, 1f, 1f);
+                yield return new WaitForSeconds(comboInterval);
+
+                //check for input to continue to combo3, otherwise end attack
+                if (Input.GetKey(KeyCode.J)) 
+                {
+                    //show the combo is working, start attack for combo3
+                    sprite.color = new Color(1f, .5f, .5f);
+                    StartCoroutine(ComboAttack("Attack", SwordHitBox)); //combo3
+                    yield return null;
+                    sprite.color = new Color(1f, 1f, 1f);
+                    yield return new WaitForSeconds(comboInterval);
+                }
             }
 
-            //start attack
-            SwordHitBox.SetActive(true);
+            //end attack and wait for attackRate to allow attacking again
+            SwordHitBox.SetActive(false);
+            isBusy = false;
             yield return new WaitForSeconds(attackRate);
 
-            //end attack
-            SwordHitBox.SetActive(false);
-
-            isBusy = false;
             canSwordAttack = true;
         }
     }
+
+    IEnumerator ComboAttack(string comboAnim, GameObject hitBox)
+    {
+        //play combo animation and sound
+        animator.SetTrigger(comboAnim);
+        if (swingSound != null)  //make sure there's something to play
+        {
+            swingSound.Play();
+        }
+
+        //set hitBox active, wait for comboInterval, then set it inActive
+        hitBox.SetActive(true);
+        yield return new WaitForSeconds(comboInterval);
+        hitBox.SetActive(false);
+    }
+
 
     IEnumerator MagicAttack()
     {
@@ -195,7 +242,7 @@ public class PlayerController1 : MonoBehaviour
             canMagicAttack = false;
 
             //first try to remove mana
-            if (ManaBar.instance.currentMana < 0.25f)
+            if (ManaBar.instance.currentMana == 0f)
             {
                 isBusy = false;
                 canMagicAttack = true;
@@ -236,6 +283,34 @@ public class PlayerController1 : MonoBehaviour
             yield return new WaitForSeconds(magicRate);
             isBusy = false;
             canMagicAttack = true;
+        }
+    }
+
+    IEnumerator HeavyAttack()
+    {
+        if (canHeavyAttack)
+        {
+            isBusy = true;
+            canHeavyAttack = false;
+
+            //play combo animation and sound
+            animator.SetTrigger("Attack");  //HeavyAttack TODO
+            if (swingSound != null)  //make sure there's something to play
+            {
+                swingSound.Play();  //heavySwingSound TODO
+            }
+
+            //set heavyHitBox active, wait for comboInterval, then set it inActive
+            SwordHitBox.SetActive(true);
+            sprite.color = new Color(2f, 0.75f, 0.75f, 1f);
+            yield return new WaitForSeconds(comboInterval);
+            SwordHitBox.SetActive(false);
+            sprite.color = new Color(1f, 1f, 1f, 1f);
+
+            //wait for attackRate to allow attacking again
+            yield return new WaitForSeconds(attackRate);
+            isBusy = false;
+            canHeavyAttack = true;
         }
     }
 
@@ -308,11 +383,6 @@ public class PlayerController1 : MonoBehaviour
 
     }
 
-    void AddCoins(int num)
-    {
-        coins += num;
-    }
-
     //COLLISIONS
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -349,7 +419,7 @@ public class PlayerController1 : MonoBehaviour
             if (tag == "Mana")
                 PickupMana(1f);
             if (tag == "Coin")
-                AddCoins(1);
+                PickupCoins(1);
 
             //remove the item
             Destroy(collision.gameObject);

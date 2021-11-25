@@ -13,9 +13,10 @@ public class StraightProjectile : MonoBehaviour
     //public fields
     public float damage = 1f;
     public float projSpeed = 3f;
+    public bool explodeOnHit = true;
     public float explodeRadius = 1f;
     public float explodeDamage = 0.5f;
-    public bool explodeOnHit = true;
+    public float despawnTime = 5f;
     public bool hasHitAnim = true;
     public bool isPlayerProj = false;   //set this to true if it should not damage player
 
@@ -32,17 +33,11 @@ public class StraightProjectile : MonoBehaviour
 
         //get the projectile moving
         body.velocity = transform.right * projSpeed;
+
+        //start the TimedDeath coroutine
+        StartCoroutine(TimedDeath());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Vector2.Distance(transform.position, cam.position) > 50f)
-        {
-            //if the projectile is far away from the main camera, it is destroyed
-            Destroy(this.gameObject);
-        }
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (isPlayerProj)
@@ -97,6 +92,12 @@ public class StraightProjectile : MonoBehaviour
 
         Destroy(this.gameObject);
         
+    }
+
+    IEnumerator TimedDeath()
+    {
+        yield return new WaitForSeconds(despawnTime);
+        Destroy(gameObject);
     }
 
     void Explode()
