@@ -48,8 +48,8 @@ MonoBehaviour:
   spawnRange: 4
   layer:
     serializedVersion: 2
-    m_Bits: 0
-  enemy_slime: {fileID: 2862578941666616280, guid: 19a665a75c334884ca3ba0a3802da5b6, type: 3}
+    m_Bits: 64
+  spawnEnemy: {fileID: 1979774806187107698, guid: 99e0dfb38bf2bff4681ae8b84295b1f3, type: 3}
 --- !u!1 &1101693833860771717
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,6 +84,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &200893881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2939973308152661922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &244130468814900556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -394,6 +426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a45b80db1542fa345b4c7916895059f0, type: 3}
+--- !u!1 &2939973308152661922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8111900305236666840, guid: a45b80db1542fa345b4c7916895059f0, type: 3}
+  m_PrefabInstance: {fileID: 6367984856765460090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2939973308152661951 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8111900305236666821, guid: a45b80db1542fa345b4c7916895059f0, type: 3}

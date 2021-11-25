@@ -205,7 +205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4161787556707397934
 Transform:
   m_ObjectHideFlags: 0
@@ -235,7 +235,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -463,21 +463,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy_type: 0
   maxHealth: 1
+  currentHealth: 0
   despawnTime: 1
-  damage_weak: 0.5
-  damage_medium: 1
-  damage_strong: 1.5
+  damage: 0.5
   meleeAttackRange: 1
   rangedAttackRange: 6
-  AttackDamageMelee: 1
-  AttackDamageRanged: 1
   AttackDelayMelee: 1
   AttackDelayRanged: 1
+  stunTime: 0.5
   facingRight: 0
   isAlive: 1
   particleDeath: 1
-  currentHealth: 0
-  stunTime: 0.5
   coin: {fileID: 6118982838337522031, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
   heart: {fileID: 283299682443938280, guid: bae5b5c8c36ae2546820484ec67c8d1b, type: 3}
   potion: {fileID: 1993606334950409096, guid: 678aefe2a6ce57348b84c5a0cd69d507, type: 3}

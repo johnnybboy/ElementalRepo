@@ -11,11 +11,6 @@ public class UIManager : MonoBehaviour
     public Text enemyCountText;
     public Text endText;
     public Text coinText;
-    public Sprite manaPotion;
-    public Image[] mana;
-
-    private int maxMana;
-    private int currentMana;
 
     public int enemyCount = 0;
     public float combatArea = 25f;

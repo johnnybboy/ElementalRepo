@@ -8,7 +8,7 @@ public class PlayerController1 : MonoBehaviour
     // Player Stats
     public float health = 5f;
     public int maxHearts = 5;
-    public int mana = 3;
+    public float mana = 3f;
     public int maxMana = 3;
     public int coins = 00;
 
@@ -23,6 +23,7 @@ public class PlayerController1 : MonoBehaviour
 
     public float attackRate = 0.5f;   //attacks per second
     public float magicRate = 1f;    //magic per second
+    public float spellCost = 0.5f;
 
     public float hurtTime = 0.75f;    //invulnerable per second
 
@@ -35,8 +36,7 @@ public class PlayerController1 : MonoBehaviour
     public bool isInvulnerable = false;   //public to allow for invulnerablity if needed
     public bool isBusy = false;    //catchall for character actions
     public bool isAlive = true;
-    public bool isAttacking = false;
-    private bool isDodging = false;
+    public bool isDodging = false;
 
     private bool canSwordAttack = true;
     private bool canRoll = true;
@@ -117,6 +117,13 @@ public class PlayerController1 : MonoBehaviour
 
     }
 
+    void PickupMana(float amount)
+    {
+        ManaBar.instance.AddMana(amount);
+        mana = ManaBar.instance.currentMana;
+        //animator.SetTrigger("ManaUp");       //ManaUp animation?
+    }
+
     public IEnumerator TakeDamage(float amount)
     {
         if (canTakeDamage && !isDodging)  //check if canTakeDamage
@@ -159,7 +166,6 @@ public class PlayerController1 : MonoBehaviour
         if (canSwordAttack)
         {
             isBusy = true;
-            isAttacking = true; //for movement stopping
             canSwordAttack = false;
 
             //play animation and sound
@@ -177,7 +183,6 @@ public class PlayerController1 : MonoBehaviour
             SwordHitBox.SetActive(false);
 
             isBusy = false;
-            isAttacking = false;
             canSwordAttack = true;
         }
     }
@@ -187,11 +192,32 @@ public class PlayerController1 : MonoBehaviour
         if (canMagicAttack && !isBusy)
         {
             isBusy = true;
-            isAttacking = true; //for stopping movement
             canMagicAttack = false;
 
-            //check if there's enough mana
-            //TODO
+            //first try to remove mana
+            if (ManaBar.instance.currentMana < 0.25f)
+            {
+                isBusy = false;
+                canMagicAttack = true;
+                Debug.Log("No mana!");
+                yield break;
+            }
+                
+            //remove mana from the ManaBar
+            if (ManaBar.instance != null)
+            {
+                ManaBar.instance.RemoveMana(spellCost);
+                mana = ManaBar.instance.currentMana;
+            }
+            else
+            {
+                //otherwise just keep track privately
+                mana -= spellCost;
+                if (mana < 0)
+                {
+                    mana = 0f;
+                }
+            }
 
             //play animation and sound
             animator.SetTrigger("Magic");
@@ -209,7 +235,6 @@ public class PlayerController1 : MonoBehaviour
             
             yield return new WaitForSeconds(magicRate);
             isBusy = false;
-            isAttacking = false;
             canMagicAttack = true;
         }
     }
@@ -218,8 +243,8 @@ public class PlayerController1 : MonoBehaviour
     {
         if (canRoll && !isBusy)
         {
-            isBusy = true;
             isDodging = true;
+            isBusy = true;
             canRoll = false;
 
             //play animation and sound
@@ -239,8 +264,8 @@ public class PlayerController1 : MonoBehaviour
             yield return new WaitForSeconds(dodgeRate); //dodge for dodgeRate
 
             //end dodging
-            isBusy = false;
             isDodging = false;
+            isBusy = false;
 
             sprite.color = new Color(1f, 1f, 1f, 1f);   //return to default transparency
             hitBox.enabled = true;
@@ -283,14 +308,6 @@ public class PlayerController1 : MonoBehaviour
 
     }
 
-    void AddMana(int num)
-    {
-        if (mana + num > maxMana)
-            mana = maxMana;
-        else
-            mana += num;
-    }
-
     void AddCoins(int num)
     {
         coins += num;
@@ -330,7 +347,7 @@ public class PlayerController1 : MonoBehaviour
             if (tag == "Heart")
                 PickupHealth(1f);
             if (tag == "Mana")
-                AddMana(1);
+                PickupMana(1f);
             if (tag == "Coin")
                 AddCoins(1);
 

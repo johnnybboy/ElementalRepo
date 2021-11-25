@@ -275,6 +275,10 @@ PrefabInstance:
       propertyPath: magicRate
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8305315245061716823, guid: 89e07f07da8f6564a83b01e56a5c1a47, type: 3}
+      propertyPath: spellCost
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 8584049686838370751, guid: 89e07f07da8f6564a83b01e56a5c1a47, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -325,43 +329,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89e07f07da8f6564a83b01e56a5c1a47, type: 3}
---- !u!1 &200893879 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2939973308152661922, guid: e1fd54caced57914584d0b5bd1f9629b, type: 3}
-  m_PrefabInstance: {fileID: 1101693833069888352}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &200893881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200893879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1001 &222941945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -830,18 +797,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1530604971, guid: e1fd54caced57914584d0b5bd1f9629b, type: 3}
-      propertyPath: spawnEnemy
-      value: 
-      objectReference: {fileID: 1979774806187107698, guid: 99e0dfb38bf2bff4681ae8b84295b1f3, type: 3}
-    - target: {fileID: 1530604971, guid: e1fd54caced57914584d0b5bd1f9629b, type: 3}
-      propertyPath: enemy_slime
-      value: 
-      objectReference: {fileID: 1979774806187107698, guid: cda3b7b705fe44740ba33fcf0e47b6e8, type: 3}
-    - target: {fileID: 1530604971, guid: e1fd54caced57914584d0b5bd1f9629b, type: 3}
-      propertyPath: layer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 1101693833860771717, guid: e1fd54caced57914584d0b5bd1f9629b, type: 3}
       propertyPath: m_Name
       value: Test_managers
@@ -890,11 +845,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2939973308152661945, guid: e1fd54caced57914584d0b5bd1f9629b, type: 3}
-      propertyPath: Mute
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939973308152661945, guid: e1fd54caced57914584d0b5bd1f9629b, type: 3}
+    - target: {fileID: 1101693833913970044, guid: e1fd54caced57914584d0b5bd1f9629b, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}

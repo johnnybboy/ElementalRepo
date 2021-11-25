@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!controller.isAttacking)
+        if (!controller.isBusy || controller.isDodging)
         {
             //input key commands and add force
             if (Input.GetKey(KeyCode.W))
