@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ac26481acc13488458fd18a382024692
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - FightArea1: {instanceID: 0}
+  - BossFight: {instanceID: 0}
+  - bat: {instanceID: 0}
+  - slime: {instanceID: 0}
+  - skullmage: {instanceID: 0}
+  - boss: {instanceID: 0}
+  - bounds: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

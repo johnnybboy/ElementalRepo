@@ -158,9 +158,9 @@ MonoBehaviour:
   facingRight: 0
   isAlive: 1
   particleDeath: 1
-  coin: {fileID: 6118982838337522031, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
-  heart: {fileID: 283299682443938280, guid: bae5b5c8c36ae2546820484ec67c8d1b, type: 3}
-  potion: {fileID: 1993606334950409096, guid: 678aefe2a6ce57348b84c5a0cd69d507, type: 3}
+  coin: {fileID: 0}
+  heart: {fileID: 0}
+  potion: {fileID: 0}
   projectile: {fileID: 0}
 --- !u!95 &1979774806187107696
 Animator:
