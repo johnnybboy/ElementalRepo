@@ -16,7 +16,7 @@ public class WaspQueenFight : MonoBehaviour
 
     //public variables
     public Transform bossFightArea;
-    public GameObject Bat;
+    public GameObject Bee;
     public Transform start, enter;
     public float keepDistanceBoss = 3f;
     public float offScreenXOffset = 10f;
@@ -64,9 +64,9 @@ public class WaspQueenFight : MonoBehaviour
 
         if (Health.currentHealth == Health.maxHealth - healthState)
         {
-            Instantiate(Bat, body.position, Quaternion.identity);
-            Instantiate(Bat, body.position, Quaternion.identity);
-            Instantiate(Bat, body.position, Quaternion.identity);
+            Instantiate(Bee, new Vector2(body.position.x + 1, body.position.y + 1), Quaternion.identity);
+            Instantiate(Bee, new Vector2(body.position.x - 1, body.position.y + 1), Quaternion.identity);
+            Instantiate(Bee, body.position, Quaternion.identity);
             healthState *= 2;
         }
     }
