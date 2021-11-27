@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!95 &32736758
 Animator:
   serializedVersion: 3
@@ -239,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!95 &311766083
 Animator:
   serializedVersion: 3
@@ -381,6 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!95 &334203124
 Animator:
   serializedVersion: 3
@@ -523,6 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!95 &805064069
 Animator:
   serializedVersion: 3
@@ -584,7 +588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &874488958
 Transform:
   m_ObjectHideFlags: 0
@@ -722,6 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!95 &1014638798
 Animator:
   serializedVersion: 3
@@ -864,6 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!95 &1182834003
 Animator:
   serializedVersion: 3
@@ -1006,6 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!95 &1450690889
 Animator:
   serializedVersion: 3
@@ -1148,6 +1155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!95 &1533470748
 Animator:
   serializedVersion: 3
@@ -1290,6 +1298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!95 &1791885034
 Animator:
   serializedVersion: 3
@@ -1432,6 +1441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3545ae1b213df3843a5ba23d9673c159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!95 &1966624777
 Animator:
   serializedVersion: 3

@@ -7,13 +7,13 @@ public class GM_Level3 : MonoBehaviour
 {
     //variables for scripting
     public float spawnRange = 1.5f;
-
+    
     private bool inFight = false;
     private int fight_index = 0; // 0 is FightArea1, 1 is FightArea2, 2 is BossFight
 
     // Level 1 References
     public LayerMask layer;
-    public Transform FightArea1, BossFight;
+    public Transform FightArea1, FightArea2, BossFight;
     //private Transform testArea;
 
     private GameObject player;
@@ -31,7 +31,6 @@ public class GM_Level3 : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         //testArea = GameObject.Find("TestArea").transform;
-
         Application.targetFrameRate = 60;   //important for game speed to be same across all computers
     }
 
@@ -44,17 +43,17 @@ public class GM_Level3 : MonoBehaviour
             checkFightStatus(FightArea1, 10f);
         }
 
-        // Boss fight, BossFight
         if (fight_index == 1)
+        {
+            checkFightStatus(FightArea2, 10f);
+        }
+
+        // Boss fight, BossFight
+        if (fight_index == 2)
         {
             checkFightStatus(BossFight, 10f);
         }
 
-        // Temp Winning Condition...
-        /*if (player.transform.position.x >= 150)
-        {
-            SceneManager.LoadScene("Level Two");
-        }*/
     }
 
     void checkFightStatus(Transform fightArea, float areaRadius)
