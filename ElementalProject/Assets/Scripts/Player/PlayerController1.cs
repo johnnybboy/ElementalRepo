@@ -27,7 +27,7 @@ public class PlayerController1 : MonoBehaviour
 
     public float hurtTime = 0.75f;    //invulnerable per second
 
-    public float dodgeRate = 1f;      //dodging per second
+    public float dodgeRate = .5f;      //dodging per second
     public float dodgeCooldown = .5f;   //wait between dodges
 
     public float despawnTime = 3f;
@@ -51,16 +51,18 @@ public class PlayerController1 : MonoBehaviour
     private Animator animator;
     private SpriteRenderer sprite;
     private Collider2D hitBox;
-    private AudioSource hurtSound, swingSound, magicSound;
+    private AudioSource hurtSound, swingSound, dodgeSound;
     private GameObject SwordHitBox;
     private Transform firePoint;
     private GameObject spell;
+    private PlayerMovement movement;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         hitBox = GetComponent<Collider2D>();
+        movement = GetComponent<PlayerMovement>();
 
         //Colliders are GetChild(0)
         SwordHitBox = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
@@ -68,6 +70,7 @@ public class PlayerController1 : MonoBehaviour
         //AudioSources are GetChild(1)
         hurtSound = this.gameObject.transform.GetChild(1).GetChild(0).GetComponent<AudioSource>();
         swingSound = this.gameObject.transform.GetChild(1).GetChild(1).GetComponent<AudioSource>();
+        dodgeSound = this.gameObject.transform.GetChild(1).GetChild(2).GetComponent<AudioSource>();
 
         //FirePoint is GetChild(2)
         firePoint = this.gameObject.transform.GetChild(2).gameObject.transform;
@@ -270,18 +273,15 @@ public class PlayerController1 : MonoBehaviour
                 }
             }
 
-            //play animation and sound
-            animator.SetTrigger("Magic");
-            if (magicSound != null)  //make sure there's something to play
+            //cast this player's spell if it exists
+            if (spell != null)
             {
-                magicSound.Play();
-                 
-            }
-
-            //fire magicProjectile if it exists and firePoint is set up properly
-            if (firePoint != null && magicProjectile != null)
-            {
+                animator.SetTrigger("Magic");
                 spell.SendMessage("CastSpell", firePoint);
+            }
+            else
+            {
+                Debug.LogError("Spell failed to cast!");
             }
             
             yield return new WaitForSeconds(magicRate);
@@ -327,22 +327,21 @@ public class PlayerController1 : MonoBehaviour
             canRoll = false;
 
             //play animation and sound
-            //animator.SetTrigger("Roll");
-            //if (rollSound != null)  //make sure there's something to play
-            //{
-            //    rollSound.Play();
-            //}
+            animator.SetTrigger("Dodge");
+            if (dodgeSound != null)  //make sure there's something to play
+            {
+                dodgeSound.Play();
+            }
 
             //start dodging
-            //make transparent to signify dodging
-            sprite.color = new Color(1f, 1f, 1f, .5f);
-
-            //turn off collision with enemys and traps
-            hitBox.enabled = false;
+            sprite.color = new Color(1f, 1f, 1f, .5f);  //make transparent to signify dodging
+            hitBox.enabled = false; //turn off collision with enemys and traps
+            movement.moveSpeed *= 2;
 
             yield return new WaitForSeconds(dodgeRate); //dodge for dodgeRate
 
             //end dodging
+            movement.moveSpeed /= 2;
             isDodging = false;
             isBusy = false;
 

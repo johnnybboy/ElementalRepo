@@ -20,8 +20,22 @@ public class Spell : MonoBehaviour
     public int numberOfProjectiles = 1;
     public float burstInterval = .1f;
 
+    private AudioSource magicSound;
+
+    private void Start()
+    {
+        //magicSound is GetChild(0)
+        magicSound = this.gameObject.transform.GetChild(0).GetComponent<AudioSource>();
+    }
+
     public IEnumerator CastSpell(Transform firePoint)
     {
+        //play sound
+        if (magicSound != null)  //make sure there's something to play
+        {
+            magicSound.Play();
+        }
+
         if (spellType == SPELL.straight)
         {
             Instantiate(magicProjectile, firePoint.position, transform.rotation);

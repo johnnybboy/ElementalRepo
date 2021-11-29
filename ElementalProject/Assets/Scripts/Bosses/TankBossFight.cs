@@ -15,7 +15,7 @@ public class TankBossFight : MonoBehaviour
 
     //public variables
     public Transform bossFightArea;
-    public GameObject Bee;
+    public GameObject bulletPrefab, flamePrefab;
     public Transform start, enter;
     public float keepDistanceBoss = 3f;
     public float offScreenXOffset = 10f;
