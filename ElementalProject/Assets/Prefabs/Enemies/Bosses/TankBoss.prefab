@@ -2017,7 +2017,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6683417288981823612}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2071,10 +2071,6 @@ MonoBehaviour:
   bossFightArea: {fileID: 0}
   bulletPrefab: {fileID: 620812082635363442, guid: b23fe956832b1734bbfe53daccc8f312, type: 3}
   flamePrefab: {fileID: 0}
-  start: {fileID: 0}
-  enter: {fileID: 0}
-  keepDistanceBoss: 3
-  offScreenXOffset: 10
   healthState: 5
   barrageInterval: 0.3
 --- !u!114 &5442617478966252508
@@ -7609,10 +7605,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f84b914f49e4e41429efcc9340596b54, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

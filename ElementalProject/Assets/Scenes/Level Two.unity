@@ -44556,6 +44556,10 @@ PrefabInstance:
       propertyPath: chaseSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5442617478966252508, guid: 8a5316afcdef21d449aa1ab1ff95d83c, type: 3}
+      propertyPath: isDetectingPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6683417288981823612, guid: 8a5316afcdef21d449aa1ab1ff95d83c, type: 3}
       propertyPath: m_Name
       value: TankBoss

@@ -66,7 +66,7 @@ public class TankBossFight : MonoBehaviour
     public bool startBattle()
     {
         //if you step near the boss zone,
-        if (Vector2.Distance(bossFightArea.position, player.transform.position) <= 5f)
+        if (Vector2.Distance(bossFightArea.position, player.transform.position) <= 10f)
         {
             return true;
         }
