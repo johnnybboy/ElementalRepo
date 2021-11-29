@@ -22,6 +22,7 @@ public class StraightProjectile : MonoBehaviour
 
     //private fields
     private LayerMask layerMask;
+    private bool isHit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +76,11 @@ public class StraightProjectile : MonoBehaviour
 
     IEnumerator Hit()
     {
+        if (isHit)
+            yield break;
+
+        isHit = true;
+
         //call Explode() if explodeOnHit
         if (explodeOnHit)
             Explode();
@@ -91,7 +97,6 @@ public class StraightProjectile : MonoBehaviour
         }
 
         Destroy(this.gameObject);
-        
     }
 
     IEnumerator TimedDeath()
@@ -102,6 +107,9 @@ public class StraightProjectile : MonoBehaviour
 
     void Explode()
     {
+        //scale it up for explosion
+        transform.localScale *= 2f;
+
         Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, explodeRadius);
         foreach (Collider2D target in targets)
         {

@@ -54,6 +54,7 @@ public class PlayerController1 : MonoBehaviour
     private AudioSource hurtSound, swingSound, magicSound;
     private GameObject SwordHitBox;
     private Transform firePoint;
+    private GameObject spell;
 
     private void Start()
     {
@@ -70,6 +71,9 @@ public class PlayerController1 : MonoBehaviour
 
         //FirePoint is GetChild(2)
         firePoint = this.gameObject.transform.GetChild(2).gameObject.transform;
+
+        //Spell is GetChild(3)
+        spell = this.gameObject.transform.GetChild(3).gameObject;
     }
 
     void Update()
@@ -277,7 +281,7 @@ public class PlayerController1 : MonoBehaviour
             //fire magicProjectile if it exists and firePoint is set up properly
             if (firePoint != null && magicProjectile != null)
             {
-                Instantiate(magicProjectile, firePoint.position, transform.rotation);
+                spell.SendMessage("CastSpell", firePoint);
             }
             
             yield return new WaitForSeconds(magicRate);

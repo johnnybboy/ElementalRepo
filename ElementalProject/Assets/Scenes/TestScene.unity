@@ -136,11 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8584049686838370751, guid: 465b5b55a52b31444bfb71ffdae280e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.254
+      value: 0.87
       objectReference: {fileID: 0}
     - target: {fileID: 8584049686838370751, guid: 465b5b55a52b31444bfb71ffdae280e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.077
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8584049686838370751, guid: 465b5b55a52b31444bfb71ffdae280e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8584049686920173778, guid: 465b5b55a52b31444bfb71ffdae280e2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8584049686920173789, guid: 465b5b55a52b31444bfb71ffdae280e2, type: 3}
       propertyPath: m_Sprite
@@ -331,6 +331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 8584049686920173778, guid: 89e07f07da8f6564a83b01e56a5c1a47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89e07f07da8f6564a83b01e56a5c1a47, type: 3}
 --- !u!1001 &222941945
@@ -387,6 +391,10 @@ PrefabInstance:
     - target: {fileID: 7230967096604590854, guid: d8252ea6082cd9c4b97d688153f6c255, type: 3}
       propertyPath: m_Name
       value: FlameTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230967096604590854, guid: d8252ea6082cd9c4b97d688153f6c255, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8252ea6082cd9c4b97d688153f6c255, type: 3}
@@ -485,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7744955812762877943, guid: 22d6ec44f769c8b4e974470d5051b40e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d6ec44f769c8b4e974470d5051b40e, type: 3}
@@ -625,6 +633,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2573341679817697157, guid: 78d9752d4ab4a0243a2df1a8780ec54b, type: 3}
   m_PrefabInstance: {fileID: 7322554597379178784}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1223852051 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3483330887439987046, guid: e1fd54caced57914584d0b5bd1f9629b, type: 3}
+  m_PrefabInstance: {fileID: 1101693833069888352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1336176661 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7744955812762877939, guid: 96ff1cd2f86a24946976e7904e0f50a2, type: 3}
@@ -777,6 +796,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkullMage_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 6173231515391244698, guid: 7b0f964a22161d448864cb3f9ff0d9ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6173231515391244703, guid: 7b0f964a22161d448864cb3f9ff0d9ea, type: 3}
       propertyPath: projectile
       value: 
@@ -801,6 +824,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 290281276176479999, guid: e1fd54caced57914584d0b5bd1f9629b, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 1223852051}
     - target: {fileID: 1101693833860771717, guid: e1fd54caced57914584d0b5bd1f9629b, type: 3}
       propertyPath: m_Name
       value: Test_managers
@@ -902,7 +929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2090893008414768244
 SpriteRenderer:
   m_ObjectHideFlags: 0

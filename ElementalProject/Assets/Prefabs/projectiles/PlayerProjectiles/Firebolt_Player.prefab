@@ -120,9 +120,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   projSpeed: 3
-  explodeRadius: 1
-  explodeDamage: 1
   explodeOnHit: 1
+  explodeRadius: 2
+  explodeDamage: 2
+  despawnTime: 5
   hasHitAnim: 1
   isPlayerProj: 1
 --- !u!50 &620812082635363447
