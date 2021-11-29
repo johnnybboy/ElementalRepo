@@ -35,7 +35,9 @@ public class TankBossFight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bossFightArea = this.transform;
+        if(bossFightArea == null)
+        { bossFightArea = this.transform; }
+        
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         controller = GetComponent<EnemyController>();
