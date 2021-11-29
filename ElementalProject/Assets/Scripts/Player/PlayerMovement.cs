@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     private SpriteRenderer sprite;
     private PlayerController1 controller;
-    public GameObject ScriptHolder;
+    private GameObject ScriptHolder;
 
     //settings
     public float moveSpeed = 3f;
@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         controller = GetComponent<PlayerController1>();
+        ScriptHolder = GameObject.Find("New Canvas");
     }
 
     // Update is called once per frame
