@@ -11,7 +11,6 @@ public class TankBossFight : MonoBehaviour
     private EnemyController controller;
     private ParticleSystem particles;
     private GameObject player;
-    private EnemyController Health;
 
     //public variables
     public Transform bossFightArea;
@@ -19,18 +18,14 @@ public class TankBossFight : MonoBehaviour
     public Transform start, enter;
     public float keepDistanceBoss = 3f;
     public float offScreenXOffset = 10f;
-    public float abovePlayerOffset = 4f;
-    public float stingSpeed = 10f;
-    public float slamSpeed = 10f;
     public float healthState = 5f;
     // Health Bar???
 
 
     //private variables for coding
     private bool fightStarted = false;
-    private bool stingAttempted = false;
-    private bool stingDone = false;
-    private bool slamDone = false;
+    private bool cannonDone = false;
+    private bool flameDone = false;
     private bool fightEnded = false;
     private bool movingTowardsTarget = false;
 
@@ -44,7 +39,6 @@ public class TankBossFight : MonoBehaviour
         movement = GetComponent<EnemyMovement>();
         particles = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag("Player");
-        Health = GetComponent<EnemyController>();
     }
 
     private void Update()
@@ -98,18 +92,23 @@ public class TankBossFight : MonoBehaviour
         //begin looping between sting and slam attacks
         while (controller.isAlive)
         {
+            //put up defenses
+
+
             //attempt a sting attack, wait for it to complete
-            stingDone = false;
-            StartCoroutine(StingAttack());
-            while (!stingDone)
+            cannonDone = false;
+            StartCoroutine(CannonAttack());
+            while (!cannonDone)
             {
                 yield return null;
             }
 
+            //drop defenses
+
             //attempt a slam attack, wait for completion
-            slamDone = false;
-            StartCoroutine(SlamAttack());
-            while (!slamDone)
+            flameDone = false;
+            StartCoroutine(FlameAttack());
+            while (!flameDone)
             {
                 yield return null;
             }
@@ -119,104 +118,25 @@ public class TankBossFight : MonoBehaviour
         fightEnded = true;
     }
 
-    IEnumerator StingAttack()
+    IEnumerator CannonAttack()
     {
-        stingAttempted = false; //reset sting
+        //launch a barrage of energy bullets at the player
 
-        //choose random direction to head towards
-        int choice = Random.Range(0, 2);
-        float distanceX;
-        if (choice == 0)
-            distanceX = -offScreenXOffset;
-        else
-            distanceX = offScreenXOffset;
 
-        //set position and move off to starting position
-        Vector3 offset = new Vector2(distanceX, abovePlayerOffset);
-        Vector3 offScreenPosition = player.transform.position + offset;
-        while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
-        {
-            StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
-            yield return null;
-        }
+        yield return null;
 
-        //move towards player, and then do a stinger attack when close enough
-        while (DistanceTo(player.transform.position) >= keepDistanceBoss)
-        {
-            StartCoroutine(MoveTowards(player.transform.position, stingSpeed));
-
-            if (DistanceTo(player.transform.position) <= keepDistanceBoss*2 && !stingAttempted)
-            {
-                animator.SetTrigger("sting");
-                stingAttempted = true;
-            }
-
-            yield return null;
-        }
-        
-
-        //then fly off opposite side offScreenPosition
-        offset = new Vector2(-distanceX, abovePlayerOffset);
-        offScreenPosition = player.transform.position + offset;
-        while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
-        {
-            StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
-            yield return null;
-        }
-
-        stingDone = true;
+        cannonDone = true;
     }
 
-    IEnumerator SlamAttack()
+    IEnumerator FlameAttack()
     {
-        //choose random direction to head towards
-        int choice = Random.Range(0, 2);
-        float distanceX;
-        if (choice == 0)
-            distanceX = -offScreenXOffset;
-        else
-            distanceX = offScreenXOffset;
+        //shoot flames for a few seconds
 
-        //set position and move to offScreenPosition
-        Vector3 offset = new Vector2(distanceX, abovePlayerOffset);
-        Vector3 offScreenPosition = player.transform.position + offset;
-        while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
-        {
-            StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
-            yield return null;
-        }
 
-        //move to abovePlayer, wait 1 second
-        Vector3 aboveOffset = new Vector2(0, abovePlayerOffset);
-        Vector3 abovePlayer = player.transform.position + aboveOffset;
-        while (DistanceTo(abovePlayer) >= keepDistanceBoss)
-        {
-            StartCoroutine(MoveTowards(abovePlayer, movement.moveSpeed));
-            yield return null;
-        }
-        yield return new WaitForSeconds(1);
-
-        //slam attack down from abovePlayer and then pause there
-        Vector2 slamPosition = new Vector2(abovePlayer.x, player.transform.position.y - 1);
-        animator.SetTrigger("slam");
-        while (DistanceTo(slamPosition) >= keepDistanceBoss)
-        {
-            StartCoroutine(MoveTowards(slamPosition, slamSpeed));
-            yield return null;
-        }
-        yield return new WaitForSeconds(2);
-
-        //then fly off opposite side offScreenPosition
-        offset = new Vector2(-distanceX, abovePlayerOffset);
-        offScreenPosition = player.transform.position + offset;
-        while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
-        {
-            StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
-            yield return null;
-        }
+        yield return null;
 
         //end
-        slamDone = true;
+        flameDone = true;
     }
 
 
