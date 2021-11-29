@@ -495,6 +495,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 363486611640447809, guid: 58f7b33e0699d2c47a3edb4f6650058d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 550
+      objectReference: {fileID: 0}
     - target: {fileID: 1388234396003265366, guid: 58f7b33e0699d2c47a3edb4f6650058d, type: 3}
       propertyPath: m_Name
       value: Level_1_players
@@ -542,6 +546,10 @@ PrefabInstance:
     - target: {fileID: 2079969333581162569, guid: 58f7b33e0699d2c47a3edb4f6650058d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219203528217522820, guid: 58f7b33e0699d2c47a3edb4f6650058d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7252670598357742366, guid: 58f7b33e0699d2c47a3edb4f6650058d, type: 3}
       propertyPath: dodgeRate
