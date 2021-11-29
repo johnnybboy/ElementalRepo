@@ -812,7 +812,7 @@ MonoBehaviour:
   magicRate: 1
   spellCost: 0.5
   hurtTime: 1
-  dodgeRate: 1
+  dodgeRate: 0.5
   dodgeCooldown: 0.5
   despawnTime: 3
   isInvulnerable: 0

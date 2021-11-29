@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StraightProjectile : MonoBehaviour
+public class LazyHomingProjectile : MonoBehaviour
 {
     //components
     private Rigidbody2D body;
     private Collider2D projCollider;
     private Animator animator;
+    private GameObject target;
 
     //public fields
     public float damage = 1f;
@@ -18,6 +19,7 @@ public class StraightProjectile : MonoBehaviour
     public float despawnTime = 5f;
     public bool hasHitAnim = true;
     public bool isPlayerProj = false;   //set this to true if it should not damage player
+    public bool isTargettingPlayer = false;
 
     //private fields
     private LayerMask layerMask;
@@ -29,12 +31,14 @@ public class StraightProjectile : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         projCollider = GetComponent<Collider2D>();
-
-        //get the projectile moving
-        body.velocity = transform.right * projSpeed;
+        if (isTargettingPlayer)
+            target = GameObject.FindGameObjectWithTag("Player");
 
         //start the TimedDeath coroutine
         StartCoroutine(TimedDeath());
+
+        //move towards target
+        StartCoroutine(HomeTowards(target.transform.position, projSpeed));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -68,8 +72,37 @@ public class StraightProjectile : MonoBehaviour
                 StartCoroutine(Hit());
             }
         }
-        
 
+
+    }
+
+    IEnumerator HomeTowards(Vector2 target, float speed)
+    {
+        while (Vector2.Distance(transform.position, target) > 0.2f)
+        {
+            //move towards target position using AddForce()
+            if (target.x > body.position.x)
+            {
+                body.AddForce(new Vector2(speed, 0));
+            }
+            else
+            {
+                body.AddForce(new Vector2(-speed, 0));
+            }
+
+            if (target.y > body.position.y)
+            {
+                body.AddForce(new Vector2(0, speed));
+            }
+            else
+            {
+                body.AddForce(new Vector2(0, -speed));
+            }
+
+            yield return null;
+        }
+
+        StartCoroutine(Hit());
     }
 
     IEnumerator Hit()

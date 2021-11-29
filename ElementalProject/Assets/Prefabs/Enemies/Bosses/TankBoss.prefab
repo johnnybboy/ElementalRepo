@@ -2069,13 +2069,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossFightArea: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 620812082635363442, guid: b23fe956832b1734bbfe53daccc8f312, type: 3}
   flamePrefab: {fileID: 0}
   start: {fileID: 0}
   enter: {fileID: 0}
   keepDistanceBoss: 3
   offScreenXOffset: 10
   healthState: 5
+  barrageInterval: 0.3
 --- !u!114 &5442617478966252508
 MonoBehaviour:
   m_ObjectHideFlags: 0

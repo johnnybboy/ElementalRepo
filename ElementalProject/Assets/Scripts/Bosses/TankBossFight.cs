@@ -7,18 +7,16 @@ public class TankBossFight : MonoBehaviour
     //private Components
     private Rigidbody2D body;
     private Animator animator;
-    private EnemyMovement movement;
     private EnemyController controller;
     private ParticleSystem particles;
     private GameObject player;
+    private Transform cannonPoint, flamePoint;
 
     //public variables
     public Transform bossFightArea;
     public GameObject bulletPrefab, flamePrefab;
-    public Transform start, enter;
-    public float keepDistanceBoss = 3f;
-    public float offScreenXOffset = 10f;
     public float healthState = 5f;
+    public float barrageInterval = .3f;
     // Health Bar???
 
 
@@ -27,18 +25,28 @@ public class TankBossFight : MonoBehaviour
     private bool cannonDone = false;
     private bool flameDone = false;
     private bool fightEnded = false;
-    private bool movingTowardsTarget = false;
+
+    private BoxCollider2D[] traps;
+    private Animator[] anim;
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        movement = GetComponent<EnemyMovement>();
         controller = GetComponent<EnemyController>();
-        movement = GetComponent<EnemyMovement>();
         particles = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag("Player");
+
+        //get components in traps (3) children
+        traps = transform.GetChild(3).GetComponentsInChildren<BoxCollider2D>();
+        anim = transform.GetChild(3).GetComponentsInChildren<Animator>();
+
+        //start spikes safe
+        foreach (BoxCollider2D trap in traps)
+        {
+            trap.enabled = false;
+        }
     }
 
     private void Update()
@@ -53,12 +61,6 @@ public class TankBossFight : MonoBehaviour
         {
             Debug.Log("You defeated the Tank Boss!!");
         }
-    }
-
-    //added to make coding easier for this transform.position
-    float DistanceTo(Vector2 target)
-    {
-        return Vector2.Distance(transform.position, target);
     }
 
     public bool startBattle()
@@ -76,26 +78,20 @@ public class TankBossFight : MonoBehaviour
     {
         fightEnded = false;
 
-        //move the tank to startPosition
-        transform.position = start.position;
-
-        while (DistanceTo(enter.position) >= keepDistanceBoss)
-        {
-            StartCoroutine(MoveTowards(enter.position, movement.moveSpeed));
-            yield return null;
-        }
-
-        //slam for fun, intimidation
-        animator.SetTrigger("slam");
-        yield return new WaitForSeconds(3);
-
-        //begin looping between sting and slam attacks
+        //begin looping between flame up, cannon, flame down, flamethrower
         while (controller.isAlive)
         {
             //put up defenses
+            foreach (Animator trap in anim)
+            {
+                trap.SetTrigger("extend");
+            }
+            foreach (BoxCollider2D trap in traps)
+            {
+                trap.enabled = true;
+            }
 
-
-            //attempt a sting attack, wait for it to complete
+            //shoot a barrage of energy bullets at the player
             cannonDone = false;
             StartCoroutine(CannonAttack());
             while (!cannonDone)
@@ -104,14 +100,29 @@ public class TankBossFight : MonoBehaviour
             }
 
             //drop defenses
+            foreach (Animator trap in anim)
+            {
+                trap.SetTrigger("retract");
+            }
+            foreach (BoxCollider2D trap in traps)
+            {
+                trap.enabled = false;
+            }
 
-            //attempt a slam attack, wait for completion
+            //shoot a jet of flame
             flameDone = false;
             StartCoroutine(FlameAttack());
             while (!flameDone)
             {
                 yield return null;
             }
+
+            //trigger defenses to warn player, wait for 2 seconds
+            foreach (Animator trap in anim)
+            {
+                trap.SetTrigger("trigger");
+            }
+            yield return new WaitForSeconds(2f);
         }
 
         //end
@@ -121,9 +132,14 @@ public class TankBossFight : MonoBehaviour
     IEnumerator CannonAttack()
     {
         //launch a barrage of energy bullets at the player
+        int randomNum = Random.Range(5, 10);
+        for (int i = 0; i < randomNum; i++)
+        {
+            Instantiate(bulletPrefab, cannonPoint.position, transform.rotation);
+            yield return new WaitForSeconds(barrageInterval);
+        }
 
-
-        yield return null;
+        yield return new WaitForSeconds(3f);
 
         cannonDone = true;
     }
@@ -131,47 +147,11 @@ public class TankBossFight : MonoBehaviour
     IEnumerator FlameAttack()
     {
         //shoot flames for a few seconds
-
+        //TODO
 
         yield return null;
 
         //end
         flameDone = true;
-    }
-
-
-    IEnumerator MoveTowards(Vector2 target, float speed)
-    {
-        if (!movingTowardsTarget)
-        {
-            movingTowardsTarget = true;
-
-            while (Vector2.Distance(transform.position, target) > keepDistanceBoss && controller.isAlive)
-            {
-                //move towards target position using AddForce()
-                if (target.x > body.position.x)
-                {
-                    body.AddForce(new Vector2(speed, 0));
-                }
-                else
-                {
-                    body.AddForce(new Vector2(-speed, 0));
-                }
-
-                if (target.y > body.position.y)
-                {
-                    body.AddForce(new Vector2(0, speed));
-                }
-                else
-                {
-                    body.AddForce(new Vector2(0, -speed));
-                }
-
-                yield return null;
-            }
-
-            movingTowardsTarget = false;
-        }
-        
     }
 }
