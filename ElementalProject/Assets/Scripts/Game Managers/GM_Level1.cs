@@ -55,12 +55,6 @@ public class GM_Level1 : MonoBehaviour
         {
             checkFightStatus(BossFight, 10f);
         }
-
-        // Temp Winning Condition...
-        if (player.transform.position.x >= 150)
-        {
-            SceneManager.LoadScene("Level Two");
-        }
     }
 
     void checkFightStatus(Transform fightArea, float areaRadius)

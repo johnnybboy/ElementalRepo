@@ -9,13 +9,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     private SpriteRenderer sprite;
     private PlayerController1 controller;
+    public GameObject ScriptHolder;
 
     //settings
     public float moveSpeed = 3f;
 
     //conditions
     public bool facingRight = true;
-    
 
     void Start()
     {
@@ -67,5 +67,14 @@ public class PlayerMovement : MonoBehaviour
         facingRight = !facingRight;
         //sprite.flipX = !sprite.flipX;
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "End")
+        {
+            PauseMenu PM = ScriptHolder.GetComponent<PauseMenu>();
+            PM.End();
+        }
     }
 }

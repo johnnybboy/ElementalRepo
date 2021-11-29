@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool Paused = false;
-    public GameObject PauseUI;
+    public bool Paused = false;
+    public bool Pausable = true;
+    public GameObject PauseUI, EndUI, DeathUI;
+    public GameObject Player;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && Pausable)
         {
             if (Paused)
             {
@@ -22,6 +24,25 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+
+        PlayerController1 PC = Player.GetComponent<PlayerController1>();
+        if (PC.isAlive == false)
+        {
+            DeathMenu();
+        }
+    }
+
+    public void End()
+    {
+        EndUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    void DeathMenu()
+    {
+        DeathUI.SetActive(true);
+        Pausable = false;
+        //Time.timeScale = 0f;
     }
 
     void Resume()
@@ -55,6 +76,12 @@ public class PauseMenu : MonoBehaviour
         PauseUI.SetActive(false);
         Time.timeScale = 1f;
         Paused = false;
+    }
+
+    public void SelectLevel()
+    {
+        SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f;
     }
 
 }
