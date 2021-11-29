@@ -581,11 +581,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: 2DBuiltInRenderer
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\leimern1978\Documents\GitHub\ElementalRepo\ElementalProject\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 001109d63004d901
   metroApplicationDescription: 2D_BuiltInRenderer
   wsaImages: {}
   metroTileShortName: PracticeProject

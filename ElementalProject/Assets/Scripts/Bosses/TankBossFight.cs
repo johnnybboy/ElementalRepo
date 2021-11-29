@@ -10,13 +10,16 @@ public class TankBossFight : MonoBehaviour
     private EnemyController controller;
     private ParticleSystem particles;
     private GameObject player;
-    private Transform cannonPoint, flamePoint;
-
+    private Transform cannonPoint, flamePoint_0, flamePoint_1, flamePoint_2;
+    
     //public variables
     public Transform bossFightArea;
     public GameObject bulletPrefab, flamePrefab;
     public float healthState = 5f;
     public float barrageInterval = .3f;
+    public float FlameDelay = 0.1f;
+    public float FlameAttackRange = 4.0f;
+    public GameObject Flame_projectile;
     // Health Bar???
 
 
@@ -32,12 +35,15 @@ public class TankBossFight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bossFightArea = this.transform;
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         controller = GetComponent<EnemyController>();
         particles = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag("Player");
 
+        flamePoint_0 = transform.GetChild(2).GetChild(1).gameObject.transform;
+        cannonPoint = transform.GetChild(2).GetChild(0).gameObject.transform;
         //get components in traps (3) children
         traps = transform.GetChild(3).GetComponentsInChildren<BoxCollider2D>();
         anim = transform.GetChild(3).GetComponentsInChildren<Animator>();
@@ -92,7 +98,7 @@ public class TankBossFight : MonoBehaviour
             }
 
             //shoot a barrage of energy bullets at the player
-            cannonDone = false;
+            cannonDone = false; //doesnt do anything? doesnt matter if ture or false
             StartCoroutine(CannonAttack());
             while (!cannonDone)
             {
@@ -149,9 +155,22 @@ public class TankBossFight : MonoBehaviour
         //shoot flames for a few seconds
         //TODO
 
-        yield return null;
 
+        
+        float seperation = Vector2.Distance(body.transform.position, player.transform.position);
+        
+        if (seperation <= FlameAttackRange)
+        {
+           //play animation, wait for animation to finish
+           //animator.SetTrigger("attack");
+            
+
+            //fire projectile, wait for attack delay, after allow attacking again
+            Instantiate(Flame_projectile, flamePoint_0.position, transform.rotation);
+            yield return new WaitForSeconds(FlameDelay);
+        }
         //end
-        flameDone = true;
+        //flameDone = true;
+        
     }
 }
