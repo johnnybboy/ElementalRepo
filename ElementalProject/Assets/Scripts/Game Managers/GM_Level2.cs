@@ -13,7 +13,7 @@ public class GM_Level2 : MonoBehaviour
 
     // Level 1 References
     public LayerMask layer;
-    public Transform FightArea1, BossFight;
+    public Transform FightArea1, FightArea2, BossFight;
     //private Transform testArea;
 
     private GameObject player;
@@ -44,8 +44,13 @@ public class GM_Level2 : MonoBehaviour
             checkFightStatus(FightArea1, 10f);
         }
 
-        // Boss fight, BossFight
         if (fight_index == 1)
+        {
+            checkFightStatus(FightArea1, 10f);
+        }
+
+        // Boss fight, BossFight
+        if (fight_index == 2)
         {
             checkFightStatus(BossFight, 10f);
         }
