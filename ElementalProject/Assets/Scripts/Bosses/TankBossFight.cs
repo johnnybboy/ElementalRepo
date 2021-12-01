@@ -19,7 +19,7 @@ public class TankBossFight : MonoBehaviour
     public float barrageInterval = .3f;
     public float FlameDelay = 0.1f;
     public float FlameAttackRange = 10.0f;
-    public float FlameAmount = 100f;
+    public float FlameAmount = 50f;
     // Health Bar???
 
 
@@ -173,11 +173,12 @@ public class TankBossFight : MonoBehaviour
                 //fire projectile, wait for attack delay, after allow attacking again
 
                 GameObject flame1 = Instantiate(Flame_projectile, flamePoint_0.position, transform.rotation);
-                flame1.GetComponent<Projectile>().BounceFreq = Random.Range(1, 3);
+                flame1.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 1.5f);
+                
                 GameObject flame2 = Instantiate(Flame_projectile, flamePoint_1.position, transform.rotation);
-                flame2.GetComponent<Projectile>().BounceFreq = Random.Range(1, 3);
+                flame2.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 1.5f);
                 GameObject flame3 = Instantiate(Flame_projectile, flamePoint_2.position, transform.rotation);
-                flame3.GetComponent<Projectile>().BounceFreq = Random.Range(1, 3);
+                flame3.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 1.5f);
                 print("FIRE");
                 yield return new WaitForSeconds(FlameDelay);
             }
