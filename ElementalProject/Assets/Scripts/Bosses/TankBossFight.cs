@@ -10,13 +10,15 @@ public class TankBossFight : MonoBehaviour
     private EnemyController controller;
     private ParticleSystem particles;
     private GameObject player;
-    private Transform cannonPoint, flamePoint;
+    private Transform cannonPoint, flamePoint_0, flamePoint_1, flamePoint_2;
 
     //public variables
     public Transform bossFightArea;
-    public GameObject bulletPrefab, flamePrefab;
+    public GameObject bulletPrefab, Flame_projectile;
     public float healthState = 5f;
     public float barrageInterval = .3f;
+    public float FlameDelay = 0.1f;
+    public float FlameAttackRange = 10.0f;
     // Health Bar???
 
 
@@ -32,6 +34,10 @@ public class TankBossFight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (bossFightArea == null)
+        {
+            bossFightArea = this.transform;
+        }
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         controller = GetComponent<EnemyController>();
@@ -41,6 +47,9 @@ public class TankBossFight : MonoBehaviour
         //get components in traps (3) children
         traps = transform.GetChild(3).GetComponentsInChildren<BoxCollider2D>();
         anim = transform.GetChild(3).GetComponentsInChildren<Animator>();
+
+        flamePoint_0 = transform.GetChild(2).GetChild(1).gameObject.transform;
+        cannonPoint = transform.GetChild(2).GetChild(0).gameObject.transform;
 
         //start spikes safe
         foreach (BoxCollider2D trap in traps)
@@ -149,8 +158,18 @@ public class TankBossFight : MonoBehaviour
         //shoot flames for a few seconds
         //TODO
 
-        yield return null;
+        float seperation = Vector2.Distance(body.transform.position, player.transform.position);
 
+        if (seperation <= FlameAttackRange)
+        {
+            //play animation, wait for animation to finish
+            //animator.SetTrigger("attack");
+
+
+            //fire projectile, wait for attack delay, after allow attacking again
+            Instantiate(Flame_projectile, flamePoint_0.position, transform.rotation);
+            yield return new WaitForSeconds(FlameDelay);
+        }
         //end
         flameDone = true;
     }
