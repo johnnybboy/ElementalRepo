@@ -94,6 +94,8 @@ public class BossFightArea : MonoBehaviour
         //return camera to player, resize
         if (CameraFollow.instance != null)
             CameraFollow.instance.SetTarget(player.transform);
+
+        //resize camera back to original size
         cam.orthographicSize /= camSizeValue;
 
         //disable bounds

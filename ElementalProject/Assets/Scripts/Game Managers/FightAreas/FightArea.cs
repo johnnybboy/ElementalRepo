@@ -7,16 +7,17 @@ public class FightArea : MonoBehaviour
     //public variables
     public float triggerDistance = 5f;  //how close to the center of the area to trigger the fight
     public float boundOffset = 10f;     //how far apart the bounds are
-    public float camSize;               //how large (zoomed out) the camera should be during the fight
+    public float camSizeValue = 1.5f;   //multiples camera size by this value
     public float spawnRandomRange = 3f; //random range for random spawning
     public int amountOfWaves = 1;       //how many times enemies will spawn
-    public int waveEnemyCount = 3;      //how many enemies will spawn per wave
-    public int waveEnemyIteration = 0;  //this changes the amount of enemies per wave (negative or positive)
+    public int waveSpawnCount = 3;      //how many enemies will spawn per wave
+    public int waveSpawnIteration = 0;  //this changes the amount of enemies per wave (negative or positive)
 
     public Transform spawnArea;         //should be a child under bounds, enemies will spawn here.
 
     //private variables
     private int currentWave = 0;
+    private int currentSpawnCount;
 
     private bool fightBegun = false;
     private bool fightComplete = false;
@@ -28,12 +29,14 @@ public class FightArea : MonoBehaviour
     //private references
     private GameObject player;
     private GameObject leftBound, rightBound;
+    private Camera cam;
 
     // Start is called before the first frame update
     void Start()
     {
         //get references
         player = GameObject.FindGameObjectWithTag("Player");
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         leftBound = transform.GetChild(0).gameObject;   //left should always be GetChild(0)
         rightBound = transform.GetChild(1).gameObject;   //right should always be GetChild(1)
 
@@ -76,14 +79,19 @@ public class FightArea : MonoBehaviour
         }
         CameraFollow.instance.SetTarget(transform);
 
+        //size camera for the fight
+        cam.orthographicSize *= camSizeValue;
+
         //enable bounds
         leftBound.SetActive(true);
         rightBound.SetActive(true);
 
         //start first wave
-        ControlledSpawn(enemyToSpawn, transform.position, waveEnemyCount, spawnRandomRange);
-
         Debug.Log("Entered FightArea.");
+        currentSpawnCount = waveSpawnCount;
+        if (enemyToSpawn != null)
+            ControlledSpawn(enemyToSpawn, transform.position, currentSpawnCount, spawnRandomRange);
+        else Debug.LogError("No enemy prefab assigned to spawn!");
     }
 
     void CheckFightStatus()
@@ -97,12 +105,16 @@ public class FightArea : MonoBehaviour
         //if all enemies are defeated, progress waveCount;
         if (count <= 0)
         {
+            //iterate the currentWave and currentSpawnCount
             currentWave++;
+            currentSpawnCount += waveSpawnIteration;
+            if (currentSpawnCount < 0)
+                currentSpawnCount = 0;
 
             //spawn next wave if there are more waves
             if (currentWave < amountOfWaves)
             {
-                ControlledSpawn(enemyToSpawn, transform.position, waveEnemyCount, spawnRandomRange);
+                ControlledSpawn(enemyToSpawn, transform.position, currentSpawnCount, spawnRandomRange);
             }
             else
             {
@@ -119,6 +131,9 @@ public class FightArea : MonoBehaviour
         //return camera to player
         if (CameraFollow.instance != null)
             CameraFollow.instance.SetTarget(player.transform);
+
+        //resize camera back to original size
+        cam.orthographicSize /= camSizeValue;
 
         //disable bounds
         leftBound.SetActive(false);
@@ -138,5 +153,12 @@ public class FightArea : MonoBehaviour
             Vector2 spawnLocation = new Vector2(x + Random.Range(-offset, offset), y + Random.Range(-offset, offset));
             Instantiate(enemy, spawnLocation, player.transform.rotation);
         }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        // Draw a yellow cube at the transform position
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(transform.position, new Vector3((boundOffset-1)*2f, 10f, 0));
     }
 }

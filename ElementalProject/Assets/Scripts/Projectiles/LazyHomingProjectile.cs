@@ -12,7 +12,7 @@ public class LazyHomingProjectile : MonoBehaviour
 
     //public fields
     public float damage = 1f;
-    public float projSpeed = 3f;
+    public float projSpeed = 1.5f;
     public bool explodeOnHit = true;
     public float explodeRadius = 1f;
     public float explodeDamage = 0.5f;
@@ -150,17 +150,20 @@ public class LazyHomingProjectile : MonoBehaviour
                 return;
             }
 
+            if (isPlayerProj)
+            {
+                //call TakeDamage on all enemies within explodeRadius
+                if (target.tag == "Enemy")
+                    target.gameObject.SendMessage("TakeDamage", explodeDamage);
+
+                //call TakeDamage on all projectiles within explodeRadius
+                else if (target.tag == "Projectile")
+                    target.gameObject.SendMessage("Hit");
+            }
             //call TakeDamage on all enemies within explodeRadius
-            if (isPlayerProj && target.tag == "Enemy")
+            else if (target.tag == "Player")
                 target.gameObject.SendMessage("TakeDamage", explodeDamage);
 
-            //call TakeDamage on all enemies within explodeRadius
-            else if (!isPlayerProj && target.tag == "Player")
-                target.gameObject.SendMessage("TakeDamage", explodeDamage);
-
-            //call TakeDamage on all enemies within explodeRadius
-            else if (target.tag == "Projectile")
-                target.gameObject.SendMessage("Hit");
         }
     }
 }
