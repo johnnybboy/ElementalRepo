@@ -22,6 +22,7 @@ public class Projectile : MonoBehaviour
     public float boomeRange = 2.5f;
     public bool fly_Right = true; // starts patrol in the right direction
     public bool fly_Up = true;    // starts patrol in the up direction
+    public float death_distance = 20;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,10 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- 
+        float seperation = Vector2.Distance(proj.transform.position, startPos);
+        if (seperation > death_distance)
+        {Destroy(gameObject);}
+
         if (projectilePath == Projectile_Path.straight)
         {
             if (findDirection == true)
@@ -118,7 +122,7 @@ public class Projectile : MonoBehaviour
     public void FlipFacing()
     {
         fly_Right = !fly_Right;
-        transform.Rotate(0f, 0f, 0f);
+        gameObject.transform.Rotate(0f, 180f, 0f);
     }
     private bool PDirectX()
     {

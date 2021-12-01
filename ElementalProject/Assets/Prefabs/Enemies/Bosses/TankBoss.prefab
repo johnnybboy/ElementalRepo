@@ -2198,8 +2198,8 @@ MonoBehaviour:
   Flame_projectile: {fileID: 620812082635363442, guid: 13babbfe00ee05447ad351628664e770, type: 3}
   healthState: 5
   barrageInterval: 0.3
-  FlameDelay: 1
-  FlameAttackRange: 10
+  FlameDelay: 0.0001
+  FlameAttackRange: 14
 --- !u!114 &5442617478966252508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2241,7 +2241,7 @@ MonoBehaviour:
   meleeAttackRange: 1
   rangedAttackRange: 6
   AttackDelayMelee: 1
-  AttackDelayRanged: 1
+  AttackDelayRanged: 0.0001
   stunTime: 0.5
   facingRight: 0
   isAlive: 1

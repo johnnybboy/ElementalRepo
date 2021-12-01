@@ -19,6 +19,7 @@ public class TankBossFight : MonoBehaviour
     public float barrageInterval = .3f;
     public float FlameDelay = 0.1f;
     public float FlameAttackRange = 10.0f;
+    public float FlameAmount = 100f;
     // Health Bar???
 
 
@@ -49,6 +50,8 @@ public class TankBossFight : MonoBehaviour
         anim = transform.GetChild(3).GetComponentsInChildren<Animator>();
 
         flamePoint_0 = transform.GetChild(2).GetChild(1).gameObject.transform;
+        flamePoint_1 = transform.GetChild(2).GetChild(2).gameObject.transform;
+        flamePoint_2 = transform.GetChild(2).GetChild(3).gameObject.transform;
         cannonPoint = transform.GetChild(2).GetChild(0).gameObject.transform;
 
         //start spikes safe
@@ -164,11 +167,22 @@ public class TankBossFight : MonoBehaviour
         {
             //play animation, wait for animation to finish
             //animator.SetTrigger("attack");
+            for (int i = 0; i < FlameAmount; i++)
+            {
+               // print(seperation + "of seperation and " + FlameAttackRange + "is FlameAttackRange");
+                //fire projectile, wait for attack delay, after allow attacking again
 
-
-            //fire projectile, wait for attack delay, after allow attacking again
-            Instantiate(Flame_projectile, flamePoint_0.position, transform.rotation);
-            yield return new WaitForSeconds(FlameDelay);
+                GameObject flame1 = Instantiate(Flame_projectile, flamePoint_0.position, transform.rotation);
+                flame1.GetComponent<Projectile>().BounceFreq = Random.Range(1, 3);
+                GameObject flame2 = Instantiate(Flame_projectile, flamePoint_1.position, transform.rotation);
+                flame2.GetComponent<Projectile>().BounceFreq = Random.Range(1, 3);
+                GameObject flame3 = Instantiate(Flame_projectile, flamePoint_2.position, transform.rotation);
+                flame3.GetComponent<Projectile>().BounceFreq = Random.Range(1, 3);
+                print("FIRE");
+                yield return new WaitForSeconds(FlameDelay);
+            }
+                
+            
         }
         //end
         flameDone = true;
