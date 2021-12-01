@@ -2080,6 +2080,7 @@ Transform:
   - {fileID: 3597763566319771856}
   - {fileID: 2318148696364538915}
   - {fileID: 5769334737599743852}
+  - {fileID: 9188130354625561975}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2193,13 +2194,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7aa891edec9fcc4ca24d7b32076d766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossFightArea: {fileID: 0}
+  bossFightArea: {fileID: 9188130354625561975}
   bulletPrefab: {fileID: 620812082635363442, guid: b23fe956832b1734bbfe53daccc8f312, type: 3}
   Flame_projectile: {fileID: 620812082635363442, guid: 13babbfe00ee05447ad351628664e770, type: 3}
   healthState: 5
   barrageInterval: 0.3
   FlameDelay: 0.0001
   FlameAttackRange: 14
+  FlameAmount: 50
 --- !u!114 &5442617478966252508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7847,3 +7849,65 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &824179895442874039
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 106004164454307145}
+    m_Modifications:
+    - target: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427036309273762753, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+      propertyPath: m_Name
+      value: BossFightArea
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+--- !u!4 &9188130354625561975 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8427036309273762752, guid: 37cf49654ebedad40aae9ea34ff97e61, type: 3}
+  m_PrefabInstance: {fileID: 824179895442874039}
+  m_PrefabAsset: {fileID: 0}
