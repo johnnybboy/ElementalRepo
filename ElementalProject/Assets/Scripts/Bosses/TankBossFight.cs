@@ -6,9 +6,7 @@ public class TankBossFight : MonoBehaviour
 {
     //private Components
     private Rigidbody2D body;
-    private Animator animator;
     private EnemyController controller;
-    private ParticleSystem particles;
     private GameObject player;
     private Transform cannonPoint, flamePoint_0, flamePoint_1, flamePoint_2;
 
@@ -20,6 +18,8 @@ public class TankBossFight : MonoBehaviour
     public float FlameDelay = 0.1f;
     public float FlameAttackRange = 10.0f;
     public float FlameAmount = 50f;
+    public float triggerDistance = 10f;
+
     // Health Bar???
 
 
@@ -40,19 +40,17 @@ public class TankBossFight : MonoBehaviour
             bossFightArea = this.transform;
         }
         body = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
         controller = GetComponent<EnemyController>();
-        particles = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag("Player");
 
         //get components in traps (3) children
         traps = transform.GetChild(3).GetComponentsInChildren<BoxCollider2D>();
         anim = transform.GetChild(3).GetComponentsInChildren<Animator>();
 
+        cannonPoint = transform.GetChild(2).GetChild(0).gameObject.transform;
         flamePoint_0 = transform.GetChild(2).GetChild(1).gameObject.transform;
         flamePoint_1 = transform.GetChild(2).GetChild(2).gameObject.transform;
         flamePoint_2 = transform.GetChild(2).GetChild(3).gameObject.transform;
-        cannonPoint = transform.GetChild(2).GetChild(0).gameObject.transform;
 
         //start spikes safe
         foreach (BoxCollider2D trap in traps)
@@ -78,7 +76,7 @@ public class TankBossFight : MonoBehaviour
     public bool startBattle()
     {
         //if you step near the boss zone,
-        if (Vector2.Distance(bossFightArea.position, player.transform.position) <= 10f)
+        if (Vector2.Distance(bossFightArea.position, player.transform.position) <= triggerDistance)
         {
             return true;
         }
@@ -102,6 +100,7 @@ public class TankBossFight : MonoBehaviour
             {
                 trap.enabled = true;
             }
+            yield return new WaitForSeconds(2f);
 
             //shoot a barrage of energy bullets at the player
             cannonDone = false;
@@ -120,6 +119,7 @@ public class TankBossFight : MonoBehaviour
             {
                 trap.enabled = false;
             }
+            yield return new WaitForSeconds(2f);
 
             //shoot a jet of flame
             flameDone = false;
@@ -159,32 +159,22 @@ public class TankBossFight : MonoBehaviour
     IEnumerator FlameAttack()
     {
         //shoot flames for a few seconds
-        //TODO
-
-        float seperation = Vector2.Distance(body.transform.position, player.transform.position);
-
-        if (seperation <= FlameAttackRange)
+        for (int i = 0; i < FlameAmount; i++)
         {
-            //play animation, wait for animation to finish
-            //animator.SetTrigger("attack");
-            for (int i = 0; i < FlameAmount; i++)
-            {
-               // print(seperation + "of seperation and " + FlameAttackRange + "is FlameAttackRange");
-                //fire projectile, wait for attack delay, after allow attacking again
+            // print(seperation + "of seperation and " + FlameAttackRange + "is FlameAttackRange");
+            //fire projectile, wait for attack delay, after allow attacking again
 
-                GameObject flame1 = Instantiate(Flame_projectile, flamePoint_0.position, transform.rotation);
-                flame1.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 1.5f);
-                
-                GameObject flame2 = Instantiate(Flame_projectile, flamePoint_1.position, transform.rotation);
-                flame2.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 1.5f);
-                GameObject flame3 = Instantiate(Flame_projectile, flamePoint_2.position, transform.rotation);
-                flame3.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 1.5f);
-                print("FIRE");
-                yield return new WaitForSeconds(FlameDelay);
-            }
-                
-            
+            GameObject flame1 = Instantiate(Flame_projectile, flamePoint_0.position, transform.rotation);
+            flame1.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 1.5f);
+
+            GameObject flame2 = Instantiate(Flame_projectile, flamePoint_1.position, transform.rotation);
+            flame2.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 1.5f);
+            GameObject flame3 = Instantiate(Flame_projectile, flamePoint_2.position, transform.rotation);
+            flame3.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 1.5f);
+            print("FIRE");
+            yield return new WaitForSeconds(FlameDelay);
         }
+
         //end
         flameDone = true;
     }

@@ -7,8 +7,7 @@ public class BossFightArea : MonoBehaviour
     //public variables
     public float triggerDistance = 5f;  //how close to the center of the area to trigger the fight
     public float boundOffset = 10f;     //how far apart the bounds are
-    public float camSizeValue = 1.5f;   //multiples camera size by this value
-    public float spawnRandomRange = 3f; //random range for random spawning
+    public float camSizeValue = 1.5f;   //multiplys camera size by this value
 
     //private variables
     private bool fightBegun = false;
@@ -106,5 +105,12 @@ public class BossFightArea : MonoBehaviour
 
         //destroy this FightArea, no longer needed
         Destroy(gameObject);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        // Draw a yellow cube at the transform position
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(transform.position, new Vector3((boundOffset - 1) * 2f, 10f, 0));
     }
 }
