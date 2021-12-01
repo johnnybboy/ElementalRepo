@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
     Rigidbody2D proj;
     private GameObject player;
     private SpriteRenderer sprite;
-    public enum Projectile_Path { straight, curve, bounce, boomerang, homing }
+    public enum Projectile_Path { straight, curve, bounce, boomerang, Wave, homing }
     public Projectile_Path projectilePath;
     
 
@@ -31,7 +31,7 @@ public class Projectile : MonoBehaviour
         //player = GameObject.FindGameObjectWithTag("Player");
         //we'll want to start implementing the Tag system so we could have multiple player objects potentially
         //      For character switching, down the road
-        
+        int UpDown = Random.Range(0, 1);
         proj = GetComponent<Rigidbody2D>();
         startPos = new Vector2(proj.position.x, proj.position.y);
     }
@@ -75,6 +75,24 @@ public class Projectile : MonoBehaviour
             {
                 proj.AddForce(new Vector2((projSpeed), 0f));
                 bounce();
+            }
+        }
+        else if (projectilePath == Projectile_Path.Wave) //still working on it
+        {
+            if (findDirection == true)
+            {
+                direction = PDirectX();
+                findDirection = false;
+            }
+            if (direction == false) //left
+            {
+                proj.AddForce(new Vector2(-projSpeed, 0f));
+                Wave();
+            }
+            else if (direction == true) //right
+            {
+                proj.AddForce(new Vector2((projSpeed), 0f));
+                Wave();
             }
         }
         else if (projectilePath == Projectile_Path.boomerang)
@@ -147,6 +165,20 @@ public class Projectile : MonoBehaviour
         {
             //print("SUPERMAN");
             proj.AddForce(new Vector2(0, projSpeed *BounceFreq));
+        }
+
+    }
+    private void Wave()
+    {
+        if (proj.position.y >= startPos.y - BounceRange)
+        {
+            // print("GOING DOWN");
+            proj.AddForce(new Vector2(0, -projSpeed * BounceFreq));
+        }
+        else if (proj.position.y < startPos.y - BounceRange)
+        {
+            //print("SUPERMAN");
+            proj.AddForce(new Vector2(0, projSpeed * BounceFreq));
         }
 
     }
