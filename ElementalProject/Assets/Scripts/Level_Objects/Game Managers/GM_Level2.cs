@@ -184,6 +184,4 @@ public class GM_Level2 : MonoBehaviour
             Instantiate(enemy, Location, player.transform.rotation);
         }
     }
-
-
 }
