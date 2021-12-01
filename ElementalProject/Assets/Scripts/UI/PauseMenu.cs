@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public bool Paused = false;
-    public bool Pausable = true;
+    private bool Paused = false;
+    private bool Pausable = true;
     public GameObject PauseUI, EndUI, DeathUI;
-    public GameObject Player;
+    private GameObject Player;
+
+    void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     // Update is called once per frame
     void Update()
