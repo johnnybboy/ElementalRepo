@@ -31,7 +31,7 @@ public class Projectile : MonoBehaviour
         //player = GameObject.FindGameObjectWithTag("Player");
         //we'll want to start implementing the Tag system so we could have multiple player objects potentially
         //      For character switching, down the road
-        int UpDown = Random.Range(0, 1);
+        
         proj = GetComponent<Rigidbody2D>();
         startPos = new Vector2(proj.position.x, proj.position.y);
     }
@@ -158,29 +158,31 @@ public class Projectile : MonoBehaviour
     {
         if(proj.position.y >= startPos.y - BounceRange)
         {
-           // print("GOING DOWN");
+            print("GOING DOWN");
             proj.AddForce(new Vector2(0, -projSpeed*BounceFreq));
         }
         else if(proj.position.y < startPos.y - BounceRange)
         {
-            //print("SUPERMAN");
+            print("SUPERMAN");
             proj.AddForce(new Vector2(0, projSpeed *BounceFreq));
         }
 
     }
     private void Wave()
     {
-        if (proj.position.y >= startPos.y - BounceRange)
-        {
-            // print("GOING DOWN");
-            proj.AddForce(new Vector2(0, -projSpeed * BounceFreq));
+        print("Smile And Wave Boys, Smile And Wave");
+        int UpDown = Random.Range(0, 1);
+        if(UpDown == 0)
+        { 
+            startPos.y = startPos.y + .65f;
+            projectilePath = Projectile_Path.bounce;
         }
-        else if (proj.position.y < startPos.y - BounceRange)
+        else if(UpDown == 1)
         {
-            //print("SUPERMAN");
-            proj.AddForce(new Vector2(0, projSpeed * BounceFreq));
+            
+            projectilePath = Projectile_Path.bounce;
         }
-
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

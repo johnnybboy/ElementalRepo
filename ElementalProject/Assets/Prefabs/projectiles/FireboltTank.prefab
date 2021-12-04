@@ -196,9 +196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d17c921a5abf4a4a83095f258a623d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePath: 2
+  projectilePath: 4
   projSpeed: 1
-  BounceRange: 0.6
+  BounceRange: 0.5
   BounceFreq: 3
   boomeRange: 2.5
   fly_Right: 1
