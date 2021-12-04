@@ -190,7 +190,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8111900305236666819, guid: a45b80db1542fa345b4c7916895059f0, type: 3}
       propertyPath: Mute
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8111900305236666821, guid: a45b80db1542fa345b4c7916895059f0, type: 3}
       propertyPath: m_RootOrder

@@ -129,11 +129,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f92e987274352c043bc41d332aa9ccce, type: 3}
---- !u!1 &1191420031712707579 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 155676987126124152, guid: f92e987274352c043bc41d332aa9ccce, type: 3}
-  m_PrefabInstance: {fileID: 1342588711121866115}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1191420031712707583 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 155676987126124156, guid: f92e987274352c043bc41d332aa9ccce, type: 3}
@@ -193,7 +188,7 @@ PrefabInstance:
     - target: {fileID: 8584049686920173777, guid: 465b5b55a52b31444bfb71ffdae280e2, type: 3}
       propertyPath: ScriptHolder
       value: 
-      objectReference: {fileID: 1191420031712707579}
+      objectReference: {fileID: 514059346999697035, guid: 58f7b33e0699d2c47a3edb4f6650058d, type: 3}
     - target: {fileID: 8584049686920173778, guid: 465b5b55a52b31444bfb71ffdae280e2, type: 3}
       propertyPath: m_Name
       value: Player_Blue

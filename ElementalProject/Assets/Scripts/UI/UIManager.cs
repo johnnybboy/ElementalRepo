@@ -8,7 +8,8 @@ public class UIManager : MonoBehaviour
     private GameObject player;
     private PlayerController1 playerController;
     
-    public Text enemyCountText;
+    // Currently not working properly
+    //public Text enemyCountText;
     public Text endText;
     public Text coinText;
 
@@ -33,8 +34,8 @@ public class UIManager : MonoBehaviour
 
     void UpdateText()
     {
-        enemyCountText.GetComponent<Text>().color = Color.white;
-        enemyCountText.text = "<color=white>Enemies Left : </color>" + enemyCount;
+        //enemyCountText.GetComponent<Text>().color = Color.white;
+        //enemyCountText.text = "<color=white>Enemies Left : </color>" + enemyCount;
         coinText.GetComponent<Text>().color = Color.white;
         coinText.text = "<color=white>x </color>" + playerController.coins;
         

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     private bool Pausable = true;
     public GameObject PauseUI, EndUI, DeathUI;
     private GameObject Player;
+    public Text winTime;
+    private float Timer;
 
     void Start()
     {
@@ -35,12 +38,16 @@ public class PauseMenu : MonoBehaviour
         {
             DeathMenu();
         }
+
+        Timer = Time.timeSinceLevelLoad / 60;
     }
 
     public void End()
     {
         EndUI.SetActive(true);
         Time.timeScale = 0f;
+        Timer = Mathf.Round(Timer * 100f) / 100f;
+        winTime.text = "<color=white>Time Taken: </color>" + Timer + "<color=white> min</color>";
     }
 
     void DeathMenu()

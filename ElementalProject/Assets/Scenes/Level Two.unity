@@ -43136,6 +43136,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 898033653}
+    - target: {fileID: 6999893965647222321, guid: f92e987274352c043bc41d332aa9ccce, type: 3}
+      propertyPath: getTimer
+      value: 
+      objectReference: {fileID: 190453022}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f92e987274352c043bc41d332aa9ccce, type: 3}
 --- !u!224 &1387387524 stripped
