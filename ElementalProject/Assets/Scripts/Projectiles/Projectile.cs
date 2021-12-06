@@ -16,6 +16,8 @@ public class Projectile : MonoBehaviour
     private bool findDirection = true;
     private bool direction = true;
     private bool destroy = false;
+    private bool waveUp = false;
+
     public float projSpeed = 1f;
     public float BounceRange = .6f;
     public float BounceFreq = 0f;
@@ -34,6 +36,16 @@ public class Projectile : MonoBehaviour
         
         proj = GetComponent<Rigidbody2D>();
         startPos = new Vector2(proj.position.x, proj.position.y);
+
+        if (Random.Range(0, 2) == 1)
+        {
+            waveUp = true;
+        }
+        else
+        {
+            waveUp = false;
+        }
+        Debug.Log("WaveUp: " + waveUp);
     }
 
     // Update is called once per frame
@@ -102,7 +114,7 @@ public class Projectile : MonoBehaviour
                 direction = PDirectX();
                 findDirection = false;
             }
-            if (direction == false) //left
+            if (PDirectX() == false) //left
             {
                 if(proj.position.x > startPos.x - boomeRange && destroy == false)
                 {
@@ -154,35 +166,53 @@ public class Projectile : MonoBehaviour
         }
         else { return false; }
     }
+    
     private void bounce()
     {
         if(proj.position.y >= startPos.y - BounceRange)
         {
-            print("GOING DOWN");
+            //print("GOING DOWN");
             proj.AddForce(new Vector2(0, -projSpeed*BounceFreq));
         }
         else if(proj.position.y < startPos.y - BounceRange)
         {
-            print("SUPERMAN");
+            //print("SUPERMAN");
             proj.AddForce(new Vector2(0, projSpeed *BounceFreq));
         }
 
     }
     private void Wave()
     {
-        print("Smile And Wave Boys, Smile And Wave");
-        int UpDown = Random.Range(0, 1);
-        if(UpDown == 0)
-        { 
-            startPos.y = startPos.y + .65f;
-            projectilePath = Projectile_Path.bounce;
-        }
-        else if(UpDown == 1)
+        //print("Smile And Wave Boys, Smile And Wave");
+        if(!waveUp)
         {
-            
-            projectilePath = Projectile_Path.bounce;
+            if (proj.position.y >= startPos.y - BounceRange)
+            {
+                //print("GOING DOWN");
+                proj.AddForce(new Vector2(0, -projSpeed * BounceFreq));
+            }
+            else if (proj.position.y < startPos.y - BounceRange)
+            {
+                //print("SUPERMAN");
+                proj.AddForce(new Vector2(0, projSpeed * BounceFreq));
+            }
         }
+        else
+        {
+            if (proj.position.y > startPos.y - BounceRange)
+            {
+                //print("GOING DOWN");
+                proj.AddForce(new Vector2(0, -projSpeed * BounceFreq));
+            }
+            else if (proj.position.y <= startPos.y - BounceRange)
+            {
+                //print("SUPERMAN");
+                proj.AddForce(new Vector2(0, projSpeed * BounceFreq));
+            }
+        }
+
         
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

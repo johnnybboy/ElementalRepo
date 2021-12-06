@@ -13,12 +13,13 @@ public class TankBossFight : MonoBehaviour
     //public variables
     public Transform bossFightArea;
     public GameObject bulletPrefab, Flame_projectile;
-    public float healthState = 5f;
+    public float triggerDistance = 10f;
     public float barrageInterval = .3f;
-    public float FlameDelay = 0.1f;
     public float FlameAttackRange = 10.0f;
     public float FlameAmount = 50f;
-    public float triggerDistance = 10f;
+    public float fireInterval = 0.1f;
+    public float fireWaveInterval = 1f;
+    public float fireSpreadValue = 6f;
 
     // Health Bar???
 
@@ -143,6 +144,9 @@ public class TankBossFight : MonoBehaviour
 
     IEnumerator CannonAttack()
     {
+        if (!controller.isAlive)    //dont do the attack if the tank is dead
+            yield break;
+
         //launch a barrage of energy bullets at the player
         int randomNum = Random.Range(5, 10);
         for (int i = 0; i < randomNum; i++)
@@ -158,22 +162,27 @@ public class TankBossFight : MonoBehaviour
 
     IEnumerator FlameAttack()
     {
-        //shoot flames for a few seconds
-        for (int i = 0; i < FlameAmount; i++)
+        if (!controller.isAlive)    //dont do the attack if the tank is dead
+            yield break;
+
+        //shoot 3 waves of fire
+        for (int i = 0; i < 3; i++)
         {
-            // print(seperation + "of seperation and " + FlameAttackRange + "is FlameAttackRange");
-            //fire projectile, wait for attack delay, after allow attacking again
+            for (int j = 0; j < FlameAmount; j++)
+            {
+                GameObject flame1 = Instantiate(Flame_projectile, flamePoint_0.position, transform.rotation);
+                flame1.GetComponent<Projectile>().BounceRange = Random.Range(-fireSpreadValue, fireSpreadValue);
+                GameObject flame2 = Instantiate(Flame_projectile, flamePoint_1.position, transform.rotation);
+                flame2.GetComponent<Projectile>().BounceRange = Random.Range(-fireSpreadValue, fireSpreadValue);
+                GameObject flame3 = Instantiate(Flame_projectile, flamePoint_2.position, transform.rotation);
+                flame3.GetComponent<Projectile>().BounceRange = Random.Range(-fireSpreadValue, fireSpreadValue);
 
-            GameObject flame1 = Instantiate(Flame_projectile, flamePoint_0.position, transform.rotation);
-            flame1.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 3.5f);
-
-            GameObject flame2 = Instantiate(Flame_projectile, flamePoint_1.position, transform.rotation);
-            flame2.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 3.5f);
-            GameObject flame3 = Instantiate(Flame_projectile, flamePoint_2.position, transform.rotation);
-            flame3.GetComponent<Projectile>().BounceFreq = Random.Range(.1f, 3.5f);
-            print("FIRE");
-            yield return new WaitForSeconds(FlameDelay);
+                yield return new WaitForSeconds(fireInterval);
+            }
+            yield return new WaitForSeconds(fireWaveInterval);
         }
+
+        yield return new WaitForSeconds(2f);
 
         //end
         flameDone = true;

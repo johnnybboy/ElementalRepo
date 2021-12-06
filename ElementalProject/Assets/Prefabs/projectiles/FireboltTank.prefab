@@ -199,7 +199,7 @@ MonoBehaviour:
   projectilePath: 4
   projSpeed: 1
   BounceRange: 0.5
-  BounceFreq: 3
+  BounceFreq: 1
   boomeRange: 2.5
   fly_Right: 1
   fly_Up: 1
