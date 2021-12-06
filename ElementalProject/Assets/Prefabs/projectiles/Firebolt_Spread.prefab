@@ -125,7 +125,7 @@ MonoBehaviour:
   damage: 1
   projSpeed: 3
   despawnTime: 5
-  spreadRange: 3
+  spreadRange: 1.5
   explodeDamage: 0.5
   explodeRadius: 1
 --- !u!50 &620812082635363447
