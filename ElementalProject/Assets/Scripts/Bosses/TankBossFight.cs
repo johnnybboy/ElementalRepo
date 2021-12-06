@@ -91,6 +91,13 @@ public class TankBossFight : MonoBehaviour
         //begin looping between flame up, cannon, flame down, flamethrower
         while (controller.isAlive)
         {
+            //trigger defenses to warn player, wait for 2 seconds
+            foreach (Animator trap in anim)
+            {
+                trap.SetTrigger("trigger");
+            }
+            yield return new WaitForSeconds(2f);
+
             //put up defenses
             foreach (Animator trap in anim)
             {
@@ -128,13 +135,6 @@ public class TankBossFight : MonoBehaviour
             {
                 yield return null;
             }
-
-            //trigger defenses to warn player, wait for 2 seconds
-            foreach (Animator trap in anim)
-            {
-                trap.SetTrigger("trigger");
-            }
-            yield return new WaitForSeconds(2f);
         }
 
         //end
