@@ -62,15 +62,18 @@ public class TankBossFight : MonoBehaviour
 
     private void Update()
     {
-        if (startBattle() && !fightStarted)
+        if (controller.isAlive)
         {
-            fightStarted = true;
-            StartCoroutine(BossBattle());
-        }
+            if (startBattle() && !fightStarted)
+            {
+                fightStarted = true;
+                StartCoroutine(BossBattle());
+            }
 
-        if(fightEnded)
-        {
-            Debug.Log("You defeated the Tank Boss!!");
+            if (fightEnded)
+            {
+                Debug.Log("You defeated the Tank Boss!!");
+            }
         }
     }
 
@@ -171,11 +174,11 @@ public class TankBossFight : MonoBehaviour
             for (int j = 0; j < FlameAmount; j++)
             {
                 GameObject flame1 = Instantiate(Flame_projectile, flamePoint_0.position, transform.rotation);
-                flame1.GetComponent<Projectile>().BounceRange = Random.Range(-fireSpreadValue, fireSpreadValue);
+                //flame1.GetComponent<Projectile>().BounceRange = Random.Range(-fireSpreadValue, fireSpreadValue);
                 GameObject flame2 = Instantiate(Flame_projectile, flamePoint_1.position, transform.rotation);
-                flame2.GetComponent<Projectile>().BounceRange = Random.Range(-fireSpreadValue, fireSpreadValue);
+                //flame2.GetComponent<Projectile>().BounceRange = Random.Range(-fireSpreadValue, fireSpreadValue);
                 GameObject flame3 = Instantiate(Flame_projectile, flamePoint_2.position, transform.rotation);
-                flame3.GetComponent<Projectile>().BounceRange = Random.Range(-fireSpreadValue, fireSpreadValue);
+                //flame3.GetComponent<Projectile>().BounceRange = Random.Range(-fireSpreadValue, fireSpreadValue);
 
                 yield return new WaitForSeconds(fireInterval);
             }

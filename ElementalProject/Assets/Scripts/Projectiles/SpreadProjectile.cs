@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StraightProjectile : MonoBehaviour
+public class SpreadProjectile : MonoBehaviour
 {
     //components
     private Rigidbody2D body;
@@ -13,11 +13,13 @@ public class StraightProjectile : MonoBehaviour
     public bool isPlayerProj = false;   //set this to true if it should not damage player
     public bool hasHitAnim = true;      //set to false if there is no hit animation
     public bool explodeOnHit = true;    //set to true if there should be splash damage
-    public bool shootLeft = false;      //set to true only if shooting the wrong way
+    public bool shootLeft = false;
 
     public float damage = 1f;
     public float projSpeed = 3f;
     public float despawnTime = 5f;
+
+    public float spreadRange = 3f;
 
     public float explodeDamage = 0.5f;
     public float explodeRadius = 1f;
@@ -33,11 +35,18 @@ public class StraightProjectile : MonoBehaviour
         animator = GetComponent<Animator>();
         projCollider = GetComponent<Collider2D>();
 
-        //get the projectile moving
+        //add a random y-value to the projectile, decide x direction
+        float spreadValue = Random.Range(-spreadRange, spreadRange);
         float xSpeed = projSpeed;
         if (shootLeft)  //will reverse the x value for movement
             xSpeed *= -1f;
-        body.velocity = (transform.right * xSpeed);
+        body.velocity = new Vector3(0, spreadValue, 0) + (transform.right * xSpeed);
+
+        //if shootLeft, flip the projectile
+        if (shootLeft)
+        {
+            transform.Rotate(0f, 180f, 0f);
+        }
 
         //start the TimedDeath coroutine
         StartCoroutine(TimedDeath());

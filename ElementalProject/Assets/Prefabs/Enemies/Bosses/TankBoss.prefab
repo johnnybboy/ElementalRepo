@@ -2177,7 +2177,7 @@ MonoBehaviour:
   FlameAttackRange: 14
   FlameAmount: 10
   fireInterval: 0.01
-  fireWaveInterval: 1
+  fireWaveInterval: 2
   fireSpreadValue: 0.66
 --- !u!114 &5442617478966252508
 MonoBehaviour:
