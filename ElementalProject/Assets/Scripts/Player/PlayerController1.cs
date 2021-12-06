@@ -392,7 +392,7 @@ public class PlayerController1 : MonoBehaviour
         if (!isInvulnerable)
         {
             //collisions with enemies or projectiles deal damage_weak to player
-            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
+            if (collision.gameObject.tag == "Enemy")
                 StartCoroutine(TakeDamage(damage_weak));
             if (collision.gameObject.tag == "Boss")
                 StartCoroutine(TakeDamage(damage_medium));
@@ -404,7 +404,7 @@ public class PlayerController1 : MonoBehaviour
         if (!isInvulnerable)
         {
             //collisions with enemies or projectiles deal damage_weak to player
-            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
+            if (collision.gameObject.tag == "Enemy")
                 StartCoroutine(TakeDamage(damage_weak));
             if (collision.gameObject.tag == "Boss")
                 StartCoroutine(TakeDamage(damage_weak));

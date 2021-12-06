@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 620812082635363444}
   - component: {fileID: -81993474257450344}
   - component: {fileID: -2545380496111999612}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: FireboltTank
   m_TagString: Projectile
   m_Icon: {fileID: 0}
