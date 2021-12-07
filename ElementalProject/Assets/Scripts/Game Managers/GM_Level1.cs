@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GM_Level1 : MonoBehaviour
 {
+    /*
     //variables for scripting
     public float spawnRange = 1.5f;
 
@@ -21,20 +22,19 @@ public class GM_Level1 : MonoBehaviour
     //for Instantiating enemies
     public GameObject bat, slime, skullmage, boss;
     public GameObject bounds;
-
-    //
+    */
 
     //private int gameState = 1;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
         //testArea = GameObject.Find("TestArea").transform;
 
-        Application.targetFrameRate = 60;   //important for game speed to be same across all computers
+        Application.targetFrameRate = 60;   // Consistent game speed across all computers
     }
 
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -78,6 +78,7 @@ public class GM_Level1 : MonoBehaviour
             bounds.transform.position = fightArea.position;
 
             Debug.Log("In " + fightArea + ". Enemies to fight: " + CountEnemiesNear(fightArea.position, areaRadius));
+        
         }
 
         //count the enemies in the fight area, end fight if none remain
@@ -179,6 +180,6 @@ public class GM_Level1 : MonoBehaviour
             Instantiate(enemy, Location, player.transform.rotation);
         }
     }
-
+    */
     
 }

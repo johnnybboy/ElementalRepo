@@ -7,7 +7,7 @@ public class FightArea : MonoBehaviour
     //public variables
     public float triggerDistance = 5f;  //how close to the center of the area to trigger the fight
     public float boundOffset = 10f;     //how far apart the bounds are
-    public float camSizeValue = 1.5f;   //multiples camera size by this value
+    public float camSizeValue = 1f;   //multiples camera size by this value
     public float spawnRandomRange = 3f; //random range for random spawning
     public int amountOfWaves = 1;       //how many times enemies will spawn
     public int waveSpawnCount = 3;      //how many enemies will spawn per wave
@@ -90,7 +90,7 @@ public class FightArea : MonoBehaviour
         Debug.Log("Entered FightArea.");
         currentSpawnCount = waveSpawnCount;
         if (enemyToSpawn != null)
-            ControlledSpawn(enemyToSpawn, transform.position, currentSpawnCount, spawnRandomRange);
+            ControlledSpawn(enemyToSpawn, spawnArea.position, currentSpawnCount, spawnRandomRange);
         else Debug.LogError("No enemy prefab assigned to spawn!");
     }
 
@@ -145,13 +145,14 @@ public class FightArea : MonoBehaviour
 
     void ControlledSpawn(GameObject enemy, Vector2 position, int amount, float offsetVal)
     {
-        float offset = offsetVal;
-        float x = position.x;
-        float y = position.y;
+        //float offset = offsetVal;
+        //float x = position.x;
+        //float y = position.y;
         for (int i = 0; i < amount; i++)
         {
-            Vector2 spawnLocation = new Vector2(x + Random.Range(-offset, offset), y + Random.Range(-offset, offset));
-            Instantiate(enemy, spawnLocation, player.transform.rotation);
+            Instantiate(enemy, position, player.transform.rotation);
+            //Vector2 spawnLocation = new Vector2(x + Random.Range(-offset, offset), y + Random.Range(-offset, offset));
+            //Instantiate(enemy, spawnLocation, player.transform.rotation);
         }
     }
 
