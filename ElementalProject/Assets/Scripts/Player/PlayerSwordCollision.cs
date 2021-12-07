@@ -18,8 +18,8 @@ public class PlayerSwordCollision : MonoBehaviour
         {
             other.gameObject.SendMessage("TakeDamage", damage);
         }
-        //if (other.tag == "Projectile")
-        //    Destroy(other.gameObject);
+        if (other.tag == "Projectile")
+            Destroy(other.gameObject);
     }
 
     void KnockBack(GameObject target, float force)

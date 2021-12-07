@@ -75,6 +75,8 @@ public class TankBossFight : MonoBehaviour
                 Debug.Log("You defeated the Tank Boss!!");
             }
         }
+
+        else this.enabled = false;  //should deactivate this script on death
     }
 
     public bool startBattle()
