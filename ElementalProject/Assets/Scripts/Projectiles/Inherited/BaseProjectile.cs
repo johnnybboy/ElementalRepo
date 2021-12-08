@@ -119,7 +119,7 @@ public class BaseProjectile : MonoBehaviour
     public IEnumerator TimedDeath()
     {
         yield return new WaitForSeconds(despawnTime);
-        Destroy(gameObject);
+        StartCoroutine(Hit());
     }
 
     public void Explode()
