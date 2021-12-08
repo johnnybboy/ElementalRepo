@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -81993474257450344}
   m_Layer: 14
   m_Name: Waterbolt
-  m_TagString: Projectile
+  m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,13 +118,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee3d08081640c14893702db892af594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerProj: 0
+  hasHitAnim: 1
+  explodeOnHit: 0
+  shootLeft: 0
   damage: 1
   projSpeed: 2
-  explodeRadius: 0
+  despawnTime: 5
   explodeDamage: 0
-  explodeOnHit: 0
-  hasHitAnim: 1
-  isPlayerProj: 0
+  explodeRadius: 0
 --- !u!50 &620812082635363447
 Rigidbody2D:
   serializedVersion: 4

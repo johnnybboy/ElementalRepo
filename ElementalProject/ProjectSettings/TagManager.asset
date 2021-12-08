@@ -10,11 +10,13 @@ TagManager:
   - Coin
   - Item
   - Trap
-  - Projectile
   - End
   - Bounds
   - WalkBox
   - Boss
+  - BossProjectile
+  - EnemyProjectile
+  - PlayerProjectile
   layers:
   - Default
   - TransparentFX

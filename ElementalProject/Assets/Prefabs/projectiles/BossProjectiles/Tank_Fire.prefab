@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 620812082635363449}
   - component: {fileID: 620812082635363446}
   - component: {fileID: 4210306294128620115}
-  - component: {fileID: 3469042811484363786}
+  - component: {fileID: 4795338063569877725}
   - component: {fileID: 620812082635363447}
   - component: {fileID: 620812082635363444}
   - component: {fileID: -81993474257450344}
-  m_Layer: 14
-  m_Name: Firebolt
-  m_TagString: Projectile
+  m_Layer: 15
+  m_Name: Tank_Fire
+  m_TagString: BossProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3469042811484363786
+--- !u!114 &4795338063569877725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,17 +115,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 620812082635363442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ee3d08081640c14893702db892af594, type: 3}
+  m_Script: {fileID: 11500000, guid: aac2506b884d094409737d7b51448d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  projSpeed: 2
-  explodeOnHit: 0
-  explodeRadius: 0
-  explodeDamage: 0
-  despawnTime: 5
   hasHitAnim: 1
-  isPlayerProj: 0
+  explodeOnHit: 0
+  sourceFacingLeft: 1
+  damage: 1
+  projSpeed: 3
+  despawnTime: 5
+  explodeDamage: 0.5
+  explodeRadius: 1
+  spreadRange: 1.5
 --- !u!50 &620812082635363447
 Rigidbody2D:
   serializedVersion: 4
@@ -181,7 +182,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.5971241, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000f9919a7b010badd3a10c2dd6f1e0512cb13a1b329bc739454dd11e5cbdfb4bb7
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0

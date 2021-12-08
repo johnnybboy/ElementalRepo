@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 620812082635363449}
   - component: {fileID: 620812082635363446}
   - component: {fileID: 4210306294128620115}
-  - component: {fileID: 3469042811484363786}
+  - component: {fileID: 3415528540358064712}
   - component: {fileID: 620812082635363447}
   - component: {fileID: 620812082635363444}
-  m_Layer: 13
-  m_Name: Waterbolt_Player
-  m_TagString: PlayerProjectile
+  - component: {fileID: -81993474257450344}
+  m_Layer: 15
+  m_Name: Tank_Cannon
+  m_TagString: BossProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 840645297
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2690736761975437581, guid: b880c9532a19b394a81c9d21a7f5608b, type: 3}
+  m_Sprite: {fileID: 5508013730162294021, guid: b880c9532a19b394a81c9d21a7f5608b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 620812082635363442}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6993fb663d6c48344a9a118f7f195811, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4347343066c97ee408c229871c6303d7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,7 +106,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3469042811484363786
+--- !u!114 &3415528540358064712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,18 +115,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 620812082635363442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ee3d08081640c14893702db892af594, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cae14e4b7de8c849a0fae598aac01e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerProj: 1
   hasHitAnim: 1
-  explodeOnHit: 0
-  shootLeft: 0
-  damage: 0.5
+  explodeOnHit: 1
+  sourceFacingLeft: 1
+  damage: 1
   projSpeed: 6
-  despawnTime: 5
-  explodeDamage: 0
-  explodeRadius: 0
+  despawnTime: 10
+  explodeDamage: 1
+  explodeRadius: 1
+  isTargettingPlayer: 1
 --- !u!50 &620812082635363447
 Rigidbody2D:
   serializedVersion: 4
@@ -160,6 +161,47 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.034312725, y: 0.005934924}
+  m_Offset: {x: 0.0041563213, y: 0.005934879}
   serializedVersion: 2
-  m_Radius: 0.1389257
+  m_Radius: 0.19359231
+--- !u!114 &-81993474257450344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620812082635363442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.8
+  m_Color: {r: 1, g: 0.5971241, b: 0, a: 1}
+  m_Intensity: 1
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}

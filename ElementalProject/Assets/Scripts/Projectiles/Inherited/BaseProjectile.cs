@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StraightProjectile : MonoBehaviour
+public class BaseProjectile : MonoBehaviour
 {
-    //components
-    private Rigidbody2D body;
-    private Collider2D projCollider;
-    private Animator animator;
+    //private components
+    protected Rigidbody2D body;
+    protected Collider2D projCollider;
+    protected Animator animator;
 
     //public fields
-    public bool isPlayerProj = false;   //set this to true if it should not damage player
+    [Header("Base Projectile Values:")]
     public bool hasHitAnim = true;      //set to false if there is no hit animation
     public bool explodeOnHit = true;    //set to true if there should be splash damage
-    public bool shootLeft = false;      //set to true only if shooting the wrong way
+    public bool sourceFacingLeft = false;      //only if source is not facingRight by default
 
     public float damage = 1f;
     public float projSpeed = 3f;
@@ -23,8 +23,8 @@ public class StraightProjectile : MonoBehaviour
     public float explodeRadius = 1f;
 
     //private fields
-    private LayerMask layerMask;
-    private bool isHit = false;
+    protected bool isPlayerProjectile = false;
+    protected bool isHit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,21 +33,36 @@ public class StraightProjectile : MonoBehaviour
         animator = GetComponent<Animator>();
         projCollider = GetComponent<Collider2D>();
 
-        //get the projectile moving
-        float xSpeed = projSpeed;
-        if (shootLeft)  //will reverse the x value for movement
-            xSpeed *= -1f;
-        body.velocity = (transform.right * xSpeed);
+        //determine if this projectile is a PlayerProjectile or not
+        if (gameObject.tag == "PlayerProjectile")
+            isPlayerProjectile = true;
+        else
+            isPlayerProjectile = false;
 
-        //start the TimedDeath coroutine
+        //start TimedDeath()
         StartCoroutine(TimedDeath());
+
+        //setup the movement or other needed values for this projectile
+        SetupProjectile();
+
+        //if sourceFacingLeft, flip the projectile
+        if (sourceFacingLeft)
+        {
+            transform.Rotate(0f, 180f, 0f);
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public virtual void SetupProjectile()
     {
-        if (isPlayerProj)
+        //this will be overridden by another projectile script
+        return;
+    }
+
+    protected void OnTriggerEnter2D(Collider2D other)
+    {
+        if (isPlayerProjectile)
         {
-            //call TakeDamage on enemies and Hit
+            //call TakeDamage on enemies and then Hit()
             if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Boss")
             {
                 other.gameObject.SendMessage("TakeDamage", damage);
@@ -62,23 +77,21 @@ public class StraightProjectile : MonoBehaviour
 
         else
         {
-            //call TakeDamage on player
+            //call TakeDamage on player then Hit()
             if (other.gameObject.tag == "Player")
             {
                 other.gameObject.SendMessage("TakeDamage", damage);
                 StartCoroutine(Hit());
             }
-            //call Hit if it is blocked by something
+            //Hit() if it is blocked by something else
             else
             {
                 StartCoroutine(Hit());
             }
         }
-        
-
     }
 
-    IEnumerator Hit()
+    public IEnumerator Hit()
     {
         if (isHit)
             yield break;
@@ -103,16 +116,17 @@ public class StraightProjectile : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    IEnumerator TimedDeath()
+    public IEnumerator TimedDeath()
     {
         yield return new WaitForSeconds(despawnTime);
         Destroy(gameObject);
     }
 
-    void Explode()
+    public void Explode()
     {
         //scale it up for explosion
-        transform.localScale *= 2f;
+        if (hasHitAnim)
+            transform.localScale *= 2f;
 
         Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, explodeRadius);
         foreach (Collider2D target in targets)
@@ -123,17 +137,19 @@ public class StraightProjectile : MonoBehaviour
                 return;
             }
 
-            //call TakeDamage on all enemies within explodeRadius
-            if (isPlayerProj && target.tag == "Enemy")
-                target.gameObject.SendMessage("TakeDamage", explodeDamage);
-
-            //call TakeDamage on all enemies within explodeRadius
-            else if (!isPlayerProj && target.tag == "Player")
-                target.gameObject.SendMessage("TakeDamage", explodeDamage);
-
-            //call TakeDamage on all enemies within explodeRadius
-            else if (target.tag == "Projectile")
-                target.gameObject.SendMessage("Hit");
+            //call TakeDamage or Hit depending on if this isPlayerProjectile or not
+            if (isPlayerProjectile)
+            {
+                if (target.tag == "Enemy")
+                    target.gameObject.SendMessage("TakeDamage", explodeDamage);
+                if (target.tag == "EnemyProjectile")
+                    target.gameObject.SendMessage("Hit");
+            }
+            else
+            {
+                if (target.tag == "Player")
+                    target.gameObject.SendMessage("TakeDamage", explodeDamage);
+            }
         }
     }
 }

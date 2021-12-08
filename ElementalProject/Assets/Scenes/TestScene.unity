@@ -582,6 +582,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5179428099903673895, guid: 8a5316afcdef21d449aa1ab1ff95d83c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179428099903673895, guid: 8a5316afcdef21d449aa1ab1ff95d83c, type: 3}
+      propertyPath: m_TagString
+      value: Bounds
+      objectReference: {fileID: 0}
     - target: {fileID: 6683417288981823612, guid: 8a5316afcdef21d449aa1ab1ff95d83c, type: 3}
       propertyPath: m_Name
       value: TankBoss

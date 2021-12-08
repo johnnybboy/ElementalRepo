@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 620812082635363447}
   - component: {fileID: 620812082635363444}
   - component: {fileID: -81993474257450344}
-  m_Layer: 15
+  m_Layer: 14
   m_Name: Firebolt_Spread
-  m_TagString: Projectile
+  m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

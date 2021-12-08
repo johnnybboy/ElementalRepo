@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3584626484481763241}
   m_Layer: 13
   m_Name: Firebolt_Player
-  m_TagString: Projectile
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,14 +118,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee3d08081640c14893702db892af594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerProj: 1
+  hasHitAnim: 1
+  explodeOnHit: 1
+  shootLeft: 0
   damage: 2
   projSpeed: 3
-  explodeOnHit: 1
-  explodeRadius: 2
-  explodeDamage: 2
   despawnTime: 5
-  hasHitAnim: 1
-  isPlayerProj: 1
+  explodeDamage: 2
+  explodeRadius: 2
 --- !u!50 &620812082635363447
 Rigidbody2D:
   serializedVersion: 4

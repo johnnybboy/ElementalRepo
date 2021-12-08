@@ -79,7 +79,7 @@ public class BossFightArea : MonoBehaviour
     void CheckBossStatus()
     {
         //if the boss is defeated, end the fight
-        if (boss.GetComponent<EnemyController>().isAlive == false)
+        if (boss.GetComponent<BossController>().Alive() == false)
         {
             fightComplete = true;
             EndFight();
@@ -101,7 +101,7 @@ public class BossFightArea : MonoBehaviour
         leftBound.SetActive(false);
         rightBound.SetActive(false);
 
-        Debug.Log(boss.GetComponent<EnemyController>().name + " has been defeated!");
+        Debug.Log(boss.GetComponent<BossController>().name + " has been defeated!");
 
         //destroy this FightArea, no longer needed
         Destroy(gameObject);
