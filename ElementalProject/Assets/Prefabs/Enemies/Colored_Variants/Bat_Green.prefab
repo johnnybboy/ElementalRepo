@@ -263,7 +263,7 @@ MonoBehaviour:
   moveSpeed: 3
   chaseSpeed: 6
   detectPlayer: 1
-  playerDetectRange: 12
+  playerDetectRange: 4
   keepDistance: 0.5
   movementType: 1
   patrolBounds_X: 5
