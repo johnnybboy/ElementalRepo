@@ -296,11 +296,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerDistance: 5
   boundOffset: 10
-  camSize: 0
+  camSizeValue: 1
   spawnRandomRange: 3
   amountOfWaves: 1
-  waveEnemyCount: 3
-  waveEnemyIteration: 0
+  waveSpawnCount: 3
+  waveSpawnIteration: 0
   spawnArea: {fileID: 8739577994146038388}
   layer:
     serializedVersion: 2

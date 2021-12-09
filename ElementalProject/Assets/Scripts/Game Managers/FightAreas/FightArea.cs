@@ -40,6 +40,12 @@ public class FightArea : MonoBehaviour
         leftBound = transform.GetChild(0).gameObject;   //left should always be GetChild(0)
         rightBound = transform.GetChild(1).gameObject;   //right should always be GetChild(1)
 
+        //disable sprite renderers
+        SpriteRenderer lb = leftBound.GetComponent<SpriteRenderer>();
+        SpriteRenderer rb = rightBound.GetComponent<SpriteRenderer>();
+        lb.enabled = false;
+        rb.enabled = false;
+
         //position left and right bounds, localPosition should be based on parent (this)
         leftBound.transform.localPosition = new Vector2(-boundOffset, transform.position.y);
         rightBound.transform.localPosition = new Vector2(boundOffset, transform.position.y);
@@ -114,7 +120,7 @@ public class FightArea : MonoBehaviour
             //spawn next wave if there are more waves
             if (currentWave < amountOfWaves)
             {
-                ControlledSpawn(enemyToSpawn, transform.position, currentSpawnCount, spawnRandomRange);
+                ControlledSpawn(enemyToSpawn, spawnArea.position, currentSpawnCount, spawnRandomRange);
             }
             else
             {
@@ -145,14 +151,11 @@ public class FightArea : MonoBehaviour
 
     void ControlledSpawn(GameObject enemy, Vector2 position, int amount, float offsetVal)
     {
-        //float offset = offsetVal;
-        //float x = position.x;
-        //float y = position.y;
         for (int i = 0; i < amount; i++)
         {
+            //Instantiate(enemy, new Vector2(position.x, position.y), player.transform.rotation);
+            //Vector2 spawnLocation = new Vector2(position.x + Random.Range(-offsetVal, offsetVal), position.y + Random.Range(-offsetVal, offsetVal));
             Instantiate(enemy, position, player.transform.rotation);
-            //Vector2 spawnLocation = new Vector2(x + Random.Range(-offset, offset), y + Random.Range(-offset, offset));
-            //Instantiate(enemy, spawnLocation, player.transform.rotation);
         }
     }
 
@@ -161,5 +164,10 @@ public class FightArea : MonoBehaviour
         // Draw a yellow cube at the transform position
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(transform.position, new Vector3((boundOffset-1)*2f, 10f, 0));
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSecondsRealtime(4);
     }
 }
