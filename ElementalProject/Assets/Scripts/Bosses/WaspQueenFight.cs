@@ -9,7 +9,7 @@ public class WaspQueenFight : MonoBehaviour
     private Animator animator;
     private GameObject player;
     private BossController controller;
-    private ParticleSystem particles;
+    private AudioSource stingSound, slamSound;
 
     //public variables
     public Transform bossFightArea;
@@ -18,7 +18,7 @@ public class WaspQueenFight : MonoBehaviour
     public float keepDistanceBoss = 3f;
     public float offScreenXOffset = 10f;
     public float abovePlayerOffset = 4f;
-    public float moveSpeed = 6f;
+    public float moveSpeed = 8f;
     public float stingSpeed = 10f;
     public float slamSpeed = 10f;
     public float healthState = 5f;
@@ -39,8 +39,13 @@ public class WaspQueenFight : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         controller = GetComponent<BossController>();
-        particles = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag("Player");
+
+        //AudioSources
+        if (transform.Find("AudioSources").Find("StingSound") != null)
+            stingSound = transform.Find("AudioSources").Find("StingSound").GetComponent<AudioSource>();
+        if (transform.Find("AudioSources").Find("SlamSound") != null)
+            slamSound = transform.Find("AudioSources").Find("SlamSound").GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -151,8 +156,12 @@ public class WaspQueenFight : MonoBehaviour
 
             if (DistanceTo(player.transform.position) <= keepDistanceBoss*2 && !stingAttempted)
             {
-
+                //play anim, wait for anim, play sound
                 animator.SetTrigger("sting");
+                yield return new WaitForSeconds(.33f);
+                if (stingSound != null)
+                    stingSound.Play();
+
                 stingAttempted = true;
             }
 
@@ -203,7 +212,13 @@ public class WaspQueenFight : MonoBehaviour
 
         //slam attack down from abovePlayer and then pause there
         Vector2 slamPosition = new Vector2(abovePlayer.x, player.transform.position.y - 1);
+        
+        //play anim, wait for anim, play sound
         animator.SetTrigger("slam");
+        yield return new WaitForSeconds(.33f);
+        if (slamSound != null)
+            slamSound.Play();
+
         while (DistanceTo(slamPosition) >= keepDistanceBoss)
         {
             StartCoroutine(MoveTowards(slamPosition, slamSpeed));

@@ -43,9 +43,11 @@ public class BossController : MonoBehaviour
         particles = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag("Player");
 
-        //AudioSources are GetChild(1)
-        hurtSound = transform.GetChild(1).Find("HurtSound").GetComponent<AudioSource>();
-        deathSound = transform.GetChild(1).Find("DeathSound").GetComponent<AudioSource>();
+        //AudioSources
+        if (transform.Find("AudioSources").Find("HurtSound") != null)
+            hurtSound = transform.Find("AudioSources").Find("HurtSound").GetComponent<AudioSource>();
+        if (transform.Find("AudioSources").Find("DeathSound") != null)
+            deathSound = transform.Find("AudioSources").Find("DeathSound").GetComponent<AudioSource>();
     }
 
     private void Update()
