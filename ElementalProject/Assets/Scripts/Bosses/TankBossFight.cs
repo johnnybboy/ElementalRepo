@@ -10,6 +10,7 @@ public class TankBossFight : MonoBehaviour
     private GameObject player;
     private Transform cannonPoint, flamePoint_0, flamePoint_1, flamePoint_2;
     private AudioSource cannonSound, flameSound, flameLaunchSound;
+    private Light Oran1, Oran2, Oran3, Oran4, Oran5, Oran6;
 
     //public variables
     public Transform bossFightArea;
@@ -186,6 +187,7 @@ public class TankBossFight : MonoBehaviour
 
         //play warning animation
         animator.SetTrigger("flame");
+        
         yield return new WaitForSeconds(3f / 8f);
 
         //shoot 3 waves of fire
