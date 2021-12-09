@@ -6,13 +6,10 @@ public class WaspQueenFight : MonoBehaviour
 {
     //private Components
     private Rigidbody2D body;
-    private SpriteRenderer sprite;
     private Animator animator;
-    private EnemyMovement movement;
-    private EnemyController controller;
-    private ParticleSystem particles;
     private GameObject player;
-    private EnemyController Health;
+    private BossController controller;
+    private ParticleSystem particles;
 
     //public variables
     public Transform bossFightArea;
@@ -21,6 +18,7 @@ public class WaspQueenFight : MonoBehaviour
     public float keepDistanceBoss = 3f;
     public float offScreenXOffset = 10f;
     public float abovePlayerOffset = 4f;
+    public float moveSpeed = 6f;
     public float stingSpeed = 10f;
     public float slamSpeed = 10f;
     public float healthState = 5f;
@@ -39,14 +37,10 @@ public class WaspQueenFight : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        movement = GetComponent<EnemyMovement>();
-        controller = GetComponent<EnemyController>();
-        movement = GetComponent<EnemyMovement>();
+        controller = GetComponent<BossController>();
         particles = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag("Player");
-        Health = GetComponent<EnemyController>();
     }
 
     private void Update()
@@ -62,11 +56,11 @@ public class WaspQueenFight : MonoBehaviour
             Debug.Log("You defeated the Queen Wasp!!");
         }
 
-        if (Health.currentHealth == Health.maxHealth - healthState)
+        if (controller.GetHealth() == controller.GetHealth() - healthState)
         {
-            Instantiate(Bee, new Vector2(body.position.x + 1, body.position.y + 1), Quaternion.identity);
-            Instantiate(Bee, new Vector2(body.position.x - 1, body.position.y + 1), Quaternion.identity);
-            Instantiate(Bee, body.position, Quaternion.identity);
+            Instantiate(Bee, new Vector2(body.position.x + 1, body.position.y + 1), transform.rotation);
+            Instantiate(Bee, new Vector2(body.position.x - 1, body.position.y + 1), transform.rotation);
+            Instantiate(Bee, body.position, transform.rotation);
             healthState *= 2;
         }
     }
@@ -97,7 +91,7 @@ public class WaspQueenFight : MonoBehaviour
 
         while (DistanceTo(enter.position) >= keepDistanceBoss)
         {
-            StartCoroutine(MoveTowards(enter.position, movement.moveSpeed));
+            StartCoroutine(MoveTowards(enter.position, moveSpeed));
             yield return null;
         }
 
@@ -106,7 +100,7 @@ public class WaspQueenFight : MonoBehaviour
         yield return new WaitForSeconds(3);
 
         //begin looping between sting and slam attacks
-        while (controller.isAlive)
+        while (controller.Alive())
         {
             //attempt a sting attack, wait for it to complete
             stingDone = false;
@@ -146,7 +140,7 @@ public class WaspQueenFight : MonoBehaviour
         Vector3 offScreenPosition = player.transform.position + offset;
         while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
         {
-            StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
+            StartCoroutine(MoveTowards(offScreenPosition, moveSpeed));
             yield return null;
         }
 
@@ -157,6 +151,7 @@ public class WaspQueenFight : MonoBehaviour
 
             if (DistanceTo(player.transform.position) <= keepDistanceBoss*2 && !stingAttempted)
             {
+
                 animator.SetTrigger("sting");
                 stingAttempted = true;
             }
@@ -170,7 +165,7 @@ public class WaspQueenFight : MonoBehaviour
         offScreenPosition = player.transform.position + offset;
         while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
         {
-            StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
+            StartCoroutine(MoveTowards(offScreenPosition, moveSpeed));
             yield return null;
         }
 
@@ -192,7 +187,7 @@ public class WaspQueenFight : MonoBehaviour
         Vector3 offScreenPosition = player.transform.position + offset;
         while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
         {
-            StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
+            StartCoroutine(MoveTowards(offScreenPosition, moveSpeed));
             yield return null;
         }
 
@@ -201,7 +196,7 @@ public class WaspQueenFight : MonoBehaviour
         Vector3 abovePlayer = player.transform.position + aboveOffset;
         while (DistanceTo(abovePlayer) >= keepDistanceBoss)
         {
-            StartCoroutine(MoveTowards(abovePlayer, movement.moveSpeed));
+            StartCoroutine(MoveTowards(abovePlayer, moveSpeed));
             yield return null;
         }
         yield return new WaitForSeconds(1);
@@ -221,7 +216,7 @@ public class WaspQueenFight : MonoBehaviour
         offScreenPosition = player.transform.position + offset;
         while (DistanceTo(offScreenPosition) >= keepDistanceBoss)
         {
-            StartCoroutine(MoveTowards(offScreenPosition, movement.moveSpeed));
+            StartCoroutine(MoveTowards(offScreenPosition, moveSpeed));
             yield return null;
         }
 
@@ -236,7 +231,7 @@ public class WaspQueenFight : MonoBehaviour
         {
             movingTowardsTarget = true;
 
-            while (Vector2.Distance(transform.position, target) > keepDistanceBoss && controller.isAlive)
+            while (Vector2.Distance(transform.position, target) > keepDistanceBoss && controller.Alive())
             {
                 //move towards target position using AddForce()
                 if (target.x > body.position.x)

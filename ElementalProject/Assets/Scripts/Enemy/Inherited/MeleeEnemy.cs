@@ -9,7 +9,7 @@ public class MeleeEnemy : BaseEnemy
     public float meleeAttackRange = 1f;
     public float meleeAttackDelay = 2f;
 
-    // Start is called before the first frame update
+    // Methods
     public override void SetupEnemy()
     {
         //no override here!

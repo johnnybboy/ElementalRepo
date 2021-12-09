@@ -20,12 +20,12 @@ public class BossController : MonoBehaviour
     public float stunTime = .5f;            //cannot attack while stunned for this amount of time
     public float playerDetectRange = 10f;   //distance to detect player
     public float despawnTime = 2f;          //how long death should last before deletion
-    public float deathParticleTime = 1f;    //how long sprite will be enabled during death
 
     public bool canMove = true;             //will this controller handle movement?
     public bool facingRight = false;
     public bool deathAnim = false;
     public bool particleDeath = false;      //if particles component exists, will play it at death
+    public float particleDeathTime = 1f;    //how long sprite will be enabled during death
 
     private float currentHealth;
     private bool isAlive = true;
@@ -145,7 +145,7 @@ public class BossController : MonoBehaviour
         if (particles != null && particleDeath)
         {
             particles.Play();
-            yield return new WaitForSeconds(deathParticleTime);
+            yield return new WaitForSeconds(particleDeathTime);
             sprite.enabled = false;
         }
         
