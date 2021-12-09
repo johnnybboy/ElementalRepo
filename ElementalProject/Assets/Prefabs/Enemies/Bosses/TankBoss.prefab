@@ -153,7 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2318148696364538915}
   m_Layer: 15
-  m_Name: 2 - FirePoints
+  m_Name: FirePoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -377,7 +377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5769334737599743852}
   m_Layer: 10
-  m_Name: 3 - FlameTraps
+  m_Name: FlameTraps
   m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1688,7 +1688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4696524241092793767}
   m_Layer: 15
-  m_Name: 0 - Colliders
+  m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2324,11 +2324,11 @@ MonoBehaviour:
   stunTime: 0.5
   playerDetectRange: 10
   despawnTime: 2
-  deathParticleTime: 1
   canMove: 0
   facingRight: 0
   deathAnim: 0
   particleDeath: 1
+  particleDeathTime: 1
 --- !u!95 &282482654144052698
 Animator:
   serializedVersion: 3
@@ -7188,7 +7188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3597763566319771856}
   m_Layer: 15
-  m_Name: 1 - AudioSources
+  m_Name: AudioSources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -83,11 +83,6 @@ public class BaseProjectile : MonoBehaviour
                 other.gameObject.SendMessage("TakeDamage", damage);
                 StartCoroutine(Hit());
             }
-            //Hit() if it is blocked by something else
-            else
-            {
-                StartCoroutine(Hit());
-            }
         }
     }
 
