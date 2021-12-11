@@ -10,8 +10,28 @@ public class PauseMenu : MonoBehaviour
     private bool Pausable = true;
     public GameObject PauseUI, EndUI, DeathUI;
     private GameObject Player;
+    public GameObject P1, P2;
     public Text winTime;
     private float Timer;
+    private Menu Selection;
+
+    void Awake()
+    {
+        Selection = GameObject.Find("New Canvas").GetComponent<Menu>();
+        if (Selection.getChosenPlayer() == 1)
+        {
+            P1.SetActive(true);
+        }
+        else if (Selection.getChosenPlayer() == 2)
+        {
+            P2.SetActive(true);
+        }
+        // Prevents errors from happening when skipping the main menu
+        else
+        {
+            P1.SetActive(true); // Defaults to P1
+        }
+    }
 
     void Start()
     {
@@ -94,6 +114,16 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
+    }
+
+    public void setUnpausable()
+    {
+        Pausable = false;
+    }
+
+    public void setPausable()
+    {
+        Pausable = true;
     }
 
 }

@@ -5,6 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    private int chosenLevel;
+    private static int chosenPlayer;
+
+    public void Water()
+    {
+        chosenPlayer = 1;
+    }
+
+    public void Fire()
+    {
+        chosenPlayer = 2;
+    }
+
+    public void Forest()
+    {
+        chosenLevel = 1;
+    }
+
+    public void Factory()
+    {
+        chosenLevel = 2;
+    }
+
+    public void Temple()
+    {
+        chosenLevel = 3;
+    }
+
+    public void Ready()
+    {
+        SceneManager.LoadScene(chosenLevel);
+    }
+
     public void Level1()
     {
         SceneManager.LoadScene("Level One");
@@ -27,5 +60,10 @@ public class Menu : MonoBehaviour
     {
         Debug.Log("Exit");
         Application.Quit();
+    }
+
+    public int getChosenPlayer()
+    {
+        return chosenPlayer;
     }
 }
