@@ -78,13 +78,16 @@ public class WaspQueenFight : MonoBehaviour
 
     public bool startBattle()
     {
-        //if you step near the boss zone,
-        if (Vector2.Distance(bossFightArea.position, player.transform.position) <= 5f)
+        if (player.activeSelf)
         {
-            return true;
+            //if you step near the boss zone,
+            if (Vector2.Distance(bossFightArea.position, player.transform.position) <= 5f)
+            {
+                return true;
+            }
+            else return false;
         }
-        else
-            return false;
+        else return false;
     }
 
     IEnumerator BossBattle()
