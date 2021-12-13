@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 620812082635363449}
   - component: {fileID: 620812082635363446}
   - component: {fileID: 4210306294128620115}
+  - component: {fileID: 4254288121678048655}
   - component: {fileID: 620812082635363447}
   - component: {fileID: -81993474257450344}
   - component: {fileID: 8655468020473793240}
@@ -106,6 +107,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4254288121678048655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620812082635363442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b31281c44eb464dacbe339e347290f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasHitAnim: 0
+  explodeOnHit: 0
+  sourceFacingLeft: 0
+  damage: 0.5
+  projSpeed: 0
+  despawnTime: 2
+  explodeDamage: 0
+  explodeRadius: 0
 --- !u!50 &620812082635363447
 Rigidbody2D:
   serializedVersion: 4
@@ -175,10 +196,10 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620812082635363442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -18,6 +18,7 @@ public class BossController : MonoBehaviour
     //stats and mutators
     public float maxHealth = 25f;
     public float stunTime = .5f;            //cannot attack while stunned for this amount of time
+    public bool facePlayer = true;
     public float playerDetectRange = 10f;   //distance to detect player
     public float despawnTime = 2f;          //how long death should last before deletion
 
@@ -52,7 +53,7 @@ public class BossController : MonoBehaviour
             idleSound = transform.Find("AudioSources").Find("IdleSound").GetComponent<AudioSource>();
     }
 
-    private void Update()
+    protected void Update()
     {
         if (isAlive)
         {
@@ -79,16 +80,16 @@ public class BossController : MonoBehaviour
             }
             
             //flip sprite to face player
-            if(PlayerDetected() && canMove)
+            if(PlayerDetected() && facePlayer)
             {
-                if (player.transform.position.x < body.position.x) // looks left if player is left
+                if (player.transform.position.x <= transform.position.x) // looks left if player is left
                 {
                     if (facingRight)
                     {
                         FlipFacing();
                     }
                 }
-                else if (player.transform.position.x > body.position.x) //looks right if player is right
+                else if (player.transform.position.x > transform.position.x) //looks right if player is right
                 {
                     if (facingRight != true)
                     {
@@ -191,10 +192,9 @@ public class BossController : MonoBehaviour
 
     public bool PlayerDetected()
     {
-        //added check to avoid errors
+        //check to avoid errors
         if (player == null || !player.activeSelf)
         {
-            Debug.Log("Cannot detectPlayer(), because player is null or inactive!");
             return false;
         }
 

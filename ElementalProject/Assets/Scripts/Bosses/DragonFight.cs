@@ -10,23 +10,29 @@ public class DragonFight : MonoBehaviour
     private GameObject player;
     private BossController controller;
     private AudioSource breathSound, attackSound, callSound;
+    private Transform breathPoint;
 
     //public variables
     public Transform bossFightArea;
     public Transform start, enter;
     public GameObject callLightningPrefab;
     public GameObject breathLightningPrefab;
-    public float meleeDistance = 3f;
-    public float lightningDistance = 6f;
-    public float boltCount = 10f;
-    public float breathTimeLength = 3f;
-    public float attackPatternInterval = 3f;
+    public float meleeDistance = 3f;        //how far the boss will be when MeleeAttack()
+    public float lungeForce = 10f;
+    public float lightningDistance = 6f;    //how far the boss will be when CallLightning()
+    public float boltCount = 10f;           //how many bolts will launch
+    public float boltOffset = 1f;           //distance between bolts
+    public float boltInterval = .2f;        //time interval between bolts
+    public float breathDistance = 5f;       //how far the boss will be when BreathAttack()
+    public float breathCount = 10f;
+    public float breathModLimit = 2f;
+    public float breathInterval = 3f;     //how long the breath will spawn lightning
+    public float attackPatternInterval = 3f;//time between each attack pattern type
 
     // Health Bar???
 
 
     //private variables for coding
-    private float currentTime = 0f;
     private bool fightStarted = false;
     private bool meleeAttackDone = false;
     private bool callLightningDone = false;
@@ -36,6 +42,12 @@ public class DragonFight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (bossFightArea == null)
+            bossFightArea = this.transform;
+        if (start == null)
+            start = this.transform;
+        if (enter == null)
+            enter = this.transform;
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         controller = GetComponent<BossController>();
@@ -48,6 +60,9 @@ public class DragonFight : MonoBehaviour
             attackSound = transform.Find("AudioSources").Find("AttackSound").GetComponent<AudioSource>();
         if (transform.Find("AudioSources").Find("CallSound") != null)
             callSound = transform.Find("AudioSources").Find("CallSound").GetComponent<AudioSource>();
+
+        //FirePoints
+        breathPoint = transform.Find("FirePoints").Find("BreathPoint");
     }
 
     private void Update()
@@ -62,14 +77,6 @@ public class DragonFight : MonoBehaviour
         {
             Debug.Log("You defeated the Lightning Dragon!!");
         }
-
-        //if (controller.GetHealth() == controller.GetHealth() - healthState)
-        //{
-        //    Instantiate(Bee, new Vector2(body.position.x + 1, body.position.y + 1), transform.rotation);
-        //    Instantiate(Bee, new Vector2(body.position.x - 1, body.position.y + 1), transform.rotation);
-        //    Instantiate(Bee, body.position, transform.rotation);
-        //    healthState *= 2;
-        //}
     }
 
     //added to make coding easier for this transform.position
@@ -78,11 +85,34 @@ public class DragonFight : MonoBehaviour
         return Vector2.Distance(transform.position, target);
     }
 
+    private void TeleportToPlayer(float offsetFromPlayer)
+    {
+        //choose randomly which side of player to TeleportTo()
+        int choice = Random.Range(0, 2);
+        float distanceX;
+        if (choice == 0)
+            distanceX = -offsetFromPlayer;
+        else
+            distanceX = offsetFromPlayer;
+
+        //TeleportTo() new location near player
+        Vector2 teleportTarget = player.transform.position;
+        Vector2 teleportOffset = new Vector2(distanceX, 0);
+        TeleportTo(teleportTarget + teleportOffset);
+    }
+
     private void TeleportTo(Vector2 target)
     {
         //teleport to target
         //TODO teleport effect
-        transform.position = start.position;
+        transform.position = target;
+    }
+
+    private void LungeTowardsPlayer(float force)
+    {
+        if (player.transform.position.x > transform.position.x)
+            body.AddForce(new Vector2(force, 0), ForceMode2D.Impulse);
+        else body.AddForce(new Vector2(-force, 0), ForceMode2D.Impulse);
     }
 
     public bool startBattle()
@@ -132,10 +162,12 @@ public class DragonFight : MonoBehaviour
             //attempt to breath attack, wait for completion
             breathAttackDone = false;
             StartCoroutine(BreathAttack());
-            while (!callLightningDone)
+            while (!breathAttackDone)
             {
                 yield return null;
             }
+
+            yield return null;
         }
 
         //end
@@ -147,37 +179,16 @@ public class DragonFight : MonoBehaviour
         if (!controller.Alive())
             yield break;
 
-        //choose randomly which side of player to TeleportTo()
-        int choice = Random.Range(0, 2);
-        float distanceX;
-        if (choice == 0)
-            distanceX = -meleeDistance;
-        else
-            distanceX = meleeDistance;
-
-        //TeleportTo() new location near player
-        Vector2 teleportTarget = player.transform.position;
-        Vector2 teleportOffset = new Vector2(distanceX, 0);
-        TeleportTo(teleportTarget + teleportOffset);
-
-        //make sure facing towards player
-        if (DistanceTo(player.transform.position) > 0)
-        {
-            if (!controller.facingRight)
-                controller.FlipFacing();
-        }
-        else
-        {
-            if (controller.facingRight)
-                controller.FlipFacing();
-        }
-
-        //wait for 1 second, then attack
+        //teleport within distance of the player, wait 1 second
+        TeleportToPlayer(meleeDistance);
         yield return new WaitForSeconds(1);
-        animator.SetTrigger("attack");
 
-        //wait for 2 seconds, end attack
+        //lunge and attack, wait for 2 seconds
+        LungeTowardsPlayer(lungeForce);
+        animator.SetTrigger("attack");
         yield return new WaitForSeconds(2);
+
+        //end
         meleeAttackDone = true;
     }
 
@@ -186,37 +197,53 @@ public class DragonFight : MonoBehaviour
         if (!controller.Alive())
             yield break;
 
-        //choose randomly which side of player to TeleportTo()
-        int choice = Random.Range(0, 2);
-        float distanceX;
-        if (choice == 0)
-            distanceX = -lightningDistance;
-        else
-            distanceX = lightningDistance;
-
-        //TeleportTo() new location away from player
-        Vector2 teleportTarget = player.transform.position;
-        Vector2 teleportOffset = new Vector2(distanceX, 0);
-        TeleportTo(teleportTarget + teleportOffset);
-
-        //wait for 1 second, then call lightning based on facing
+        //teleport within distance of player, wait 1 second
+        TeleportToPlayer(lightningDistance);
         yield return new WaitForSeconds(1);
-        if (controller.facingRight)
+
+        //call lightning based on boltCount, boltOffset, and current facing
+        float boltDistance = 0f;
+        for (int i = 0; i < boltCount; i++)
         {
-            for(int i = 0; i < boltCount; i++)
-            {
-                Instantiate(callLightningPrefab, transform);
-            }
+            GameObject lightningBolt = Instantiate(callLightningPrefab, transform);
+            lightningBolt.transform.position = lightningBolt.transform.position + new Vector3(boltDistance, 0, 0);
+            if (controller.facingRight) //if facing Right, the bolts will travel right
+                boltDistance += boltOffset;
+            else boltDistance -= boltOffset;    //else bolts will travel left
+
+            yield return new WaitForSeconds(boltInterval);
         }
 
         //wait for 2 seconds, end attack
         yield return new WaitForSeconds(2);
-        meleeAttackDone = true;
+        callLightningDone = true;
     }
 
     IEnumerator BreathAttack()
     {
-        yield return null;
+        if (!controller.Alive())
+            yield break;
+
+        //teleport within distance of the player, wait for 1 second
+        TeleportToPlayer(breathDistance);
+        yield return new WaitForSeconds(1f);
+
+        //breath attack, wait for animation
+        animator.SetTrigger("breath");
+        yield return new WaitForSeconds(1.5f);
+
+        //unleash the breathLightningPrefabs
+        for (int i = 0; i < breathCount; i++)
+        {
+            GameObject lightningBreath = Instantiate(breathLightningPrefab, breathPoint.position, transform.rotation);
+            //Randomly scale the projectile based on scale modifiers
+            //TODO breathModLimit float
+
+            yield return new WaitForSeconds(breathInterval);
+        }
+        yield return new WaitForSeconds(3f);
+
+        breathAttackDone = true;
     }
 
 

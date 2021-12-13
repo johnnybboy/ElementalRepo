@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 620812082635363449}
   - component: {fileID: 620812082635363446}
+  - component: {fileID: 864572250944298554}
   - component: {fileID: 4210306294128620115}
   - component: {fileID: 620812082635363447}
   - component: {fileID: -81993474257450344}
@@ -87,6 +88,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &864572250944298554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620812082635363442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b31281c44eb464dacbe339e347290f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasHitAnim: 0
+  explodeOnHit: 0
+  sourceFacingLeft: 0
+  damage: 0.5
+  projSpeed: 0
+  despawnTime: 2
+  explodeDamage: 0
+  explodeRadius: 0
 --- !u!95 &4210306294128620115
 Animator:
   serializedVersion: 3
@@ -181,7 +202,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: 0.03}
+  m_Offset: {x: 0.030000024, y: 0.10019593}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -192,7 +213,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.06}
+  m_Size: {x: 0.34528774, y: 0.20039186}
   m_EdgeRadius: 0
 --- !u!82 &6798495774347219815
 AudioSource:
