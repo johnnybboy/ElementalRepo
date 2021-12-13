@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     
     // Currently not working properly
     //public Text enemyCountText;
-    public Text endText;
+    //public Text endText;
     public Text coinText;
 
     public int enemyCount = 0;
@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
         coinText.GetComponent<Text>().color = Color.white;
         coinText.text = "<color=white>x </color>" + playerController.coins;
         
-        if (playerController.health <= 0)
+        /*if (playerController.health <= 0)
         {
             endText.enabled = true;
             endText.text = "<color=red><b>You Died!</b></color>";
@@ -47,7 +47,7 @@ public class UIManager : MonoBehaviour
         else if (playerController.health > 0)
         {
             endText.enabled = false;
-        }
+        }*/
     }
 
     void CountEnemies()
