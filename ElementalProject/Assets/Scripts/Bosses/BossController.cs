@@ -13,7 +13,7 @@ public class BossController : MonoBehaviour
     private Animator animator;
     private ParticleSystem particles;
     private GameObject player;
-    private AudioSource hurtSound, deathSound;
+    private AudioSource hurtSound, deathSound, idleSound;
 
     //stats and mutators
     public float maxHealth = 25f;
@@ -48,6 +48,8 @@ public class BossController : MonoBehaviour
             hurtSound = transform.Find("AudioSources").Find("HurtSound").GetComponent<AudioSource>();
         if (transform.Find("AudioSources").Find("DeathSound") != null)
             deathSound = transform.Find("AudioSources").Find("DeathSound").GetComponent<AudioSource>();
+        if (transform.Find("AudioSources").Find("IdleSound") != null)
+            idleSound = transform.Find("AudioSources").Find("IdleSound").GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -130,6 +132,8 @@ public class BossController : MonoBehaviour
 
         //disable Components
         GetComponent<Collider2D>().enabled = false;
+        if (idleSound != null)
+            idleSound.Stop();
 
         //play deathSound
         if (deathSound != null)  //make sure there's something to play

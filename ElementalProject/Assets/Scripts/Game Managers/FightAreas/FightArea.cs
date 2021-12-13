@@ -21,6 +21,7 @@ public class FightArea : MonoBehaviour
 
     private bool fightBegun = false;
     private bool fightComplete = false;
+    private bool checkingStatus = false;
 
     //public references
     public LayerMask layer;
@@ -67,7 +68,8 @@ public class FightArea : MonoBehaviour
         //if the fight is started but not complete, CheckFightStatus()
         if (fightBegun && !fightComplete)
         {
-            CheckFightStatus();
+            if (!checkingStatus)
+                StartCoroutine(CheckFightStatus());
         }
         
         //otherwise do nothing
@@ -100,8 +102,12 @@ public class FightArea : MonoBehaviour
         else Debug.LogError("No enemy prefab assigned to spawn!");
     }
 
-    void CheckFightStatus()
+    IEnumerator CheckFightStatus()
     {
+        if (checkingStatus)
+            yield break;
+
+        checkingStatus = true;
         //count the enemies in a radius of boundOffset from the center of the FightArea
         Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, boundOffset, layer);
         int count = 0;
@@ -128,6 +134,9 @@ public class FightArea : MonoBehaviour
                 EndFight();
             }
         }
+
+        yield return new WaitForSeconds(1f);
+        checkingStatus = false;
     }
 
     void EndFight()

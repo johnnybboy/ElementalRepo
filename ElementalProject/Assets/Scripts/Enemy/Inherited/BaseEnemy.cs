@@ -9,7 +9,7 @@ public class BaseEnemy : MonoBehaviour
     protected SpriteRenderer sprite;
     protected Animator animator;
     protected ParticleSystem particles;
-    protected AudioSource hurtSound, deathSound, attackSound;
+    protected AudioSource hurtSound, deathSound, attackSound, idleSound;
     protected GameObject player;
 
     //private variables
@@ -76,7 +76,8 @@ public class BaseEnemy : MonoBehaviour
             deathSound = transform.Find("AudioSources").Find("DeathSound").GetComponent<AudioSource>();
         if (transform.Find("AudioSources").Find("AttackSound") != null)
             attackSound = transform.Find("AudioSources").Find("AttackSound").GetComponent<AudioSource>();
-
+        if (transform.Find("AudioSources").Find("IdleSound") != null)
+            idleSound = transform.Find("AudioSources").Find("IdleSound").GetComponent<AudioSource>();
 
         //call SetupEnemy()
         SetupEnemy();
@@ -425,6 +426,9 @@ public class BaseEnemy : MonoBehaviour
 
         //die animation and sound
         animator.SetBool("isDead", true);
+        if (idleSound != null)
+            idleSound.Stop();
+
         if (deathSound != null)  //make sure there's something to play
         { 
             deathSound.Play();
