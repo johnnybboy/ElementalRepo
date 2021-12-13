@@ -36,6 +36,7 @@ public class Menu : MonoBehaviour
     public void Ready()
     {
         SceneManager.LoadScene(chosenLevel);
+        Time.timeScale = 1f;
     }
 
     public void Level1()
