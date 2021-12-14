@@ -15,7 +15,7 @@ public class DragonFight : MonoBehaviour
 
     //public variables
     public Transform bossFightArea;
-    public Transform start, enter;
+    public Transform start;
     public GameObject callLightningPrefab;
     public GameObject breathLightningPrefab;
     public float meleeDistance = 3f;        //how far the boss will be when MeleeAttack()
@@ -46,8 +46,6 @@ public class DragonFight : MonoBehaviour
             bossFightArea = this.transform;
         if (start == null)
             start = this.transform;
-        if (enter == null)
-            enter = this.transform;
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         controller = GetComponent<BossController>();
