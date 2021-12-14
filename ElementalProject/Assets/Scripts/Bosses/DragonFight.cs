@@ -9,7 +9,7 @@ public class DragonFight : MonoBehaviour
     private Animator animator;
     private GameObject player;
     private BossController controller;
-    private AudioSource breathSound, attackSound, callSound;
+    private AudioSource breathSound, roarSound, whipSound, teleportSound;
     private Transform breathPoint;
     private ParticleSystem afterImage;
 
@@ -54,10 +54,12 @@ public class DragonFight : MonoBehaviour
         //AudioSources
         if (transform.Find("AudioSources").Find("BreathSound") != null)
             breathSound = transform.Find("AudioSources").Find("BreathSound").GetComponent<AudioSource>();
-        if (transform.Find("AudioSources").Find("AttackSound") != null)
-            attackSound = transform.Find("AudioSources").Find("AttackSound").GetComponent<AudioSource>();
-        if (transform.Find("AudioSources").Find("CallSound") != null)
-            callSound = transform.Find("AudioSources").Find("CallSound").GetComponent<AudioSource>();
+        if (transform.Find("AudioSources").Find("RoarSound") != null)
+            roarSound = transform.Find("AudioSources").Find("RoarSound").GetComponent<AudioSource>();
+        if (transform.Find("AudioSources").Find("WhipSound") != null)
+            whipSound = transform.Find("AudioSources").Find("WhipSound").GetComponent<AudioSource>();
+        if (transform.Find("AudioSources").Find("TeleportSound") != null)
+            teleportSound = transform.Find("AudioSources").Find("TeleportSound").GetComponent<AudioSource>();
 
         //FirePoints
         breathPoint = transform.Find("FirePoints").Find("BreathPoint");
@@ -100,9 +102,11 @@ public class DragonFight : MonoBehaviour
 
     private void TeleportTo(Vector2 target)
     {
-        //teleport effect
+        //teleport effect and sound
         if (afterImage != null)
             afterImage.Play();
+        if (teleportSound != null)
+            teleportSound.Play();
 
         //move to target
         transform.position = target;
@@ -138,6 +142,13 @@ public class DragonFight : MonoBehaviour
 
         //breath attack "roar" for intimidation, introduction
         animator.SetTrigger("breath");
+        if (breathSound != null)
+            breathSound.Play();
+        yield return new WaitForSeconds(1f);
+        if (roarSound != null)
+            roarSound.Play();
+
+        //wait for 3 seconds
         yield return new WaitForSeconds(3);
 
         //begin looping between attack, call lighting, and breath attacks
@@ -183,9 +194,13 @@ public class DragonFight : MonoBehaviour
         TeleportToPlayer(meleeDistance);
         yield return new WaitForSeconds(1);
 
-        //lunge and attack, wait for 2 seconds
+        //lunge and attack, wait for anim, play sound
         LungeTowardsPlayer(lungeForce);
         animator.SetTrigger("attack");
+        yield return new WaitForSeconds(.5f);
+        if (whipSound != null)
+            whipSound.Play();
+
         yield return new WaitForSeconds(2);
 
         //end
@@ -228,11 +243,15 @@ public class DragonFight : MonoBehaviour
         TeleportToPlayer(breathDistance);
         yield return new WaitForSeconds(1f);
 
-        //breath attack, wait for animation
+        //start animation, play sound and wait for anim
         animator.SetTrigger("breath");
+        if (breathSound != null)
+            breathSound.Play();
         yield return new WaitForSeconds(1f); //this is exact windup animation length
 
         //unleash the breathLightningPrefabs, prepare for rotation
+        if (roarSound != null)
+            roarSound.Play();
         Quaternion origRotation = transform.rotation;
         for (int i = 0; i < breathCount; i++)
         {

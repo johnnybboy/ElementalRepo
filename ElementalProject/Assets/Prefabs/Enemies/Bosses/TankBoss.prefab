@@ -2321,7 +2321,7 @@ MonoBehaviour:
   coin: {fileID: 6118982838337522031, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
   heart: {fileID: 6118982838337522031, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
   potion: {fileID: 6118982838337522031, guid: 24ed5522a6c5ea54991a2796ed63c09f, type: 3}
-  maxHealth: 35
+  maxHealth: 45
   stunTime: 0.5
   facePlayer: 1
   playerDetectRange: 10
