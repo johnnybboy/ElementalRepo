@@ -105,9 +105,9 @@ public class BaseProjectile : MonoBehaviour
         {
             //play animation
             animator.SetTrigger("hit");
-            yield return new WaitForSeconds(0.5f);
         }
 
+        yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
     }
 

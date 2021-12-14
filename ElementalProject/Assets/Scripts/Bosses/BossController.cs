@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class BossController : MonoBehaviour
     private ParticleSystem particles;
     private GameObject player;
     private AudioSource hurtSound, deathSound, idleSound;
+    private Image healthFill;
 
     //stats and mutators
     public float maxHealth = 25f;
@@ -51,6 +53,10 @@ public class BossController : MonoBehaviour
             deathSound = transform.Find("AudioSources").Find("DeathSound").GetComponent<AudioSource>();
         if (transform.Find("AudioSources").Find("IdleSound") != null)
             idleSound = transform.Find("AudioSources").Find("IdleSound").GetComponent<AudioSource>();
+
+        //BossHealthbar
+        if (transform.Find("BossHealthbar") != null)
+            healthFill = transform.Find("BossHealthbar").Find("HealthbarFill").GetComponent<Image>();
     }
 
     protected void Update()
@@ -103,23 +109,33 @@ public class BossController : MonoBehaviour
     {
         if (canTakeDamage && isAlive)
         {
+            //reduce health, change healthbar
             currentHealth -= damage;
+            if (currentHealth < 0)
+                currentHealth = 0;
+            if (healthFill != null)
+                healthFill.fillAmount = currentHealth / maxHealth;
 
-            // Play hurt animation and sound
-            animator.SetTrigger("hurt");
+            //color red and play sound
+            sprite.color = Color.red;
             if (hurtSound != null)  //make sure there's something to play
             {
                 hurtSound.Play();
             }
-
+            
             // stop movement briefly
             body.velocity = new Vector2(0, 0);
 
             //check if dead, die
             if (currentHealth <= 0)
             {
+                sprite.color = new Color(1, 1, 1, 1);
                 StartCoroutine(Die());
             }
+
+            //recolor after a delay
+            yield return new WaitForSeconds(.1f);
+            sprite.color = new Color(1, 1, 1, 1);
 
             yield return new WaitForSeconds(stunTime);
         }
@@ -135,6 +151,8 @@ public class BossController : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         if (idleSound != null)
             idleSound.Stop();
+        if (healthFill != null)
+            transform.Find("BossHealthbar").gameObject.SetActive(false);
 
         //play deathSound
         if (deathSound != null)  //make sure there's something to play
@@ -167,7 +185,6 @@ public class BossController : MonoBehaviour
     public void FlipFacing()
     {
         facingRight = !facingRight;
-        //sprite.flipX = !sprite.flipX;
         gameObject.transform.Rotate(0f, 180f, 0f);
     }
 

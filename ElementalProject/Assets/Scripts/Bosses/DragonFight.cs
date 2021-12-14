@@ -11,6 +11,7 @@ public class DragonFight : MonoBehaviour
     private BossController controller;
     private AudioSource breathSound, attackSound, callSound;
     private Transform breathPoint;
+    private ParticleSystem afterImage;
 
     //public variables
     public Transform bossFightArea;
@@ -27,7 +28,6 @@ public class DragonFight : MonoBehaviour
     public float breathCount = 10f;
     public float breathModLimit = 2f;
     public float breathInterval = 3f;     //how long the breath will spawn lightning
-    public float attackPatternInterval = 3f;//time between each attack pattern type
 
     // Health Bar???
 
@@ -63,6 +63,11 @@ public class DragonFight : MonoBehaviour
 
         //FirePoints
         breathPoint = transform.Find("FirePoints").Find("BreathPoint");
+
+        //AfterImage
+        if (transform.Find("AfterImage") != null)
+            afterImage = transform.Find("AfterImage").GetComponent<ParticleSystem>();
+
     }
 
     private void Update()
@@ -79,12 +84,6 @@ public class DragonFight : MonoBehaviour
         }
     }
 
-    //added to make coding easier for this transform.position
-    private float DistanceTo(Vector2 target)
-    {
-        return Vector2.Distance(transform.position, target);
-    }
-
     private void TeleportToPlayer(float offsetFromPlayer)
     {
         //choose randomly which side of player to TeleportTo()
@@ -97,14 +96,17 @@ public class DragonFight : MonoBehaviour
 
         //TeleportTo() new location near player
         Vector2 teleportTarget = player.transform.position;
-        Vector2 teleportOffset = new Vector2(distanceX, 0);
+        Vector2 teleportOffset = new Vector2(distanceX, -1f);   //-1f in y to better line up
         TeleportTo(teleportTarget + teleportOffset);
     }
 
     private void TeleportTo(Vector2 target)
     {
-        //teleport to target
-        //TODO teleport effect
+        //teleport effect
+        if (afterImage != null)
+            afterImage.Play();
+
+        //move to target
         transform.position = target;
     }
 
@@ -136,7 +138,7 @@ public class DragonFight : MonoBehaviour
         //teleport to startPosition
         TeleportTo(start.position);
 
-        //breath attack "roar" for intimidation
+        //breath attack "roar" for intimidation, introduction
         animator.SetTrigger("breath");
         yield return new WaitForSeconds(3);
 
@@ -230,17 +232,27 @@ public class DragonFight : MonoBehaviour
 
         //breath attack, wait for animation
         animator.SetTrigger("breath");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f); //this is exact windup animation length
 
-        //unleash the breathLightningPrefabs
+        //unleash the breathLightningPrefabs, prepare for rotation
+        Quaternion origRotation = transform.rotation;
         for (int i = 0; i < breathCount; i++)
         {
             GameObject lightningBreath = Instantiate(breathLightningPrefab, breathPoint.position, transform.rotation);
-            //Randomly scale the projectile based on scale modifiers
-            //TODO breathModLimit float
+            //Randomly scale and rotate the projectile based on scale modifiers
+            float randScale = Random.Range(1f, breathModLimit);
+            float randDegree = Random.Range(-15f, 15f);
+            lightningBreath.transform.localScale *= randScale;
+            lightningBreath.transform.Rotate(0, 0, randDegree);
 
+            //randomly rotate the dragon slightly
+            int randDragonRot = Random.Range(-5, 5);
+            gameObject.transform.Rotate(0, 0, randDragonRot);
             yield return new WaitForSeconds(breathInterval);
         }
+
+        //reset rotation, wait for 3 seconds
+        gameObject.transform.rotation = origRotation;
         yield return new WaitForSeconds(3f);
 
         breathAttackDone = true;
