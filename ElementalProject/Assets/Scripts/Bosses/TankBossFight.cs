@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Experimental.Rendering.Universal;
 public class TankBossFight : MonoBehaviour
 {
     //private Components
@@ -10,8 +10,9 @@ public class TankBossFight : MonoBehaviour
     private GameObject player;
     private Transform cannonPoint, flamePoint_0, flamePoint_1, flamePoint_2;
     private AudioSource cannonSound, flameSound, flameLaunchSound;
-    private Light Oran1, Oran2, Oran3, Oran4, Oran5, Oran6;
-
+    private Light2D Oran1, Oran2, Oran3, Oran4, Oran5, Oran6;
+    private Light2D Lred1, Lred2, Lred3, Lred4, Lred5, Lred6;
+    private Light2D Dred1, Dred2, Dred3;
     //public variables
     public Transform bossFightArea;
     public GameObject bulletPrefab, Flame_projectile;
@@ -61,6 +62,43 @@ public class TankBossFight : MonoBehaviour
         traps = transform.GetChild(3).GetComponentsInChildren<BoxCollider2D>();
         anim = transform.GetChild(3).GetComponentsInChildren<Animator>();
 
+        //lights are GetChild(6)
+        //orange Lights
+        Oran1 = transform.GetChild(5).GetChild(0).GetChild(9).GetComponent<Light2D>();
+        Oran2 = transform.GetChild(5).GetChild(0).GetChild(10).GetComponent<Light2D>();
+        Oran3 = transform.GetChild(5).GetChild(0).GetChild(11).GetComponent<Light2D>();
+        Oran4 = transform.GetChild(5).GetChild(0).GetChild(12).GetComponent<Light2D>();
+        Oran5 = transform.GetChild(5).GetChild(0).GetChild(13).GetComponent<Light2D>();
+        Oran6 = transform.GetChild(5).GetChild(0).GetChild(14).GetComponent<Light2D>();
+        //Light Red Lights
+        Lred1 = transform.GetChild(5).GetChild(0).GetChild(3).GetComponent<Light2D>();
+        Lred2 = transform.GetChild(5).GetChild(0).GetChild(4).GetComponent<Light2D>();
+        Lred3 = transform.GetChild(5).GetChild(0).GetChild(5).GetComponent<Light2D>();
+        Lred4 = transform.GetChild(5).GetChild(0).GetChild(6).GetComponent<Light2D>();
+        Lred5 = transform.GetChild(5).GetChild(0).GetChild(7).GetComponent<Light2D>();
+        Lred6 = transform.GetChild(5).GetChild(0).GetChild(8).GetComponent<Light2D>();
+        //Dark Red Lights
+        Dred1 = transform.GetChild(5).GetChild(0).GetChild(0).GetComponent<Light2D>();
+        Dred2 = transform.GetChild(5).GetChild(0).GetChild(1).GetComponent<Light2D>();
+        Dred3 = transform.GetChild(5).GetChild(0).GetChild(2).GetComponent<Light2D>();
+        //
+        Oran1.intensity = 0f;
+        Oran2.intensity = 0f;
+        Oran3.intensity = 0f;
+        Oran4.intensity = 0f;
+        Oran5.intensity = 0f;
+        Oran6.intensity = 0f;
+
+        Lred1.intensity = 0f;
+        Lred2.intensity = 0f;
+        Lred3.intensity = 0f;
+        Lred4.intensity = 0f;
+        Lred5.intensity = 0f;
+        Lred6.intensity = 0f;
+
+        Dred1.intensity = 0f;
+        Dred2.intensity = 0f;
+        Dred3.intensity = 0f;
         //start spikes safe
         foreach (BoxCollider2D trap in traps)
         {
@@ -187,7 +225,23 @@ public class TankBossFight : MonoBehaviour
 
         //play warning animation
         animator.SetTrigger("flame");
-        
+        Oran1.intensity = 3.5f;
+        Oran2.intensity = 3.5f;
+        Oran3.intensity = 3.5f;
+        Oran4.intensity = 3.5f;
+        Oran5.intensity = 3.5f;
+        Oran6.intensity = 3.5f;
+        yield return new WaitForSeconds(.1f);
+        Lred1.intensity = 4f;
+        Lred2.intensity = 4f;
+        Lred3.intensity = 4f;
+        Lred4.intensity = 4f;
+        Lred5.intensity = 4f;
+        Lred6.intensity = 4f;
+        yield return new WaitForSeconds(.1f);
+        Dred1.intensity = 5.5f;
+        Dred2.intensity = 5.5f;
+        Dred3.intensity = 5.5f;
         yield return new WaitForSeconds(3f / 8f);
 
         //shoot 3 waves of fire
@@ -210,7 +264,23 @@ public class TankBossFight : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2f);
-
+        Oran1.intensity =0f;
+        Oran2.intensity = 0f;
+        Oran3.intensity = 0f;
+        Oran4.intensity = 0f;
+        Oran5.intensity = 0f;
+        Oran6.intensity = 0f;
+       
+        Lred1.intensity = 0f;
+        Lred2.intensity = 0f;
+        Lred3.intensity = 0f;
+        Lred4.intensity = 0f;
+        Lred5.intensity = 0f;
+        Lred6.intensity = 0f;
+        
+        Dred1.intensity = 0f;
+        Dred2.intensity = 0f;
+        Dred3.intensity = 0f;
         //end
         flameDone = true;
     }
