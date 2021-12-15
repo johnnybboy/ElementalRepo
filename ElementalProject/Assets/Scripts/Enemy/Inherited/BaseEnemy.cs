@@ -227,17 +227,45 @@ public class BaseEnemy : MonoBehaviour
         gameObject.transform.Rotate(0f, 180f, 0f);
     }
 
-    protected void SpawnLoot()    //added chance (at a roll of 7) for no item to drop
+    protected void SpawnLoot()
     {
-        GameObject item = null;
-        int loot = Random.Range(1, 7) + Random.Range(1, 7); //rolling 2d6 to increase odds of coins and hearts
+        // 2D6 Outcome Chances:
+        // 2: 2.78%
+        // 3: 5.56%
+        // 4: 8.33%
+        // 5: 11.11&
+        // 6: 13.89%
+        // 7: 16.67%
+        // 8: 13.89%
+        // 9: 11.11%
+        // 10: 8.33%
+        // 11: 5.56%
+        // 12: 2.78%
 
+        GameObject item = null;
+        // Loot Chances #1
+        /*
+        int loot = Random.Range(1, 7) + Random.Range(1, 7);
         if (loot >= 3 && loot <= 6)
             item = commonDrop1;
         if (loot >= 8 && loot <= 11)
             item = commonDrop2;
         if (loot == 2 || loot == 12)
             item = rareDrop;
+        */
+
+        // Loot Chances #2
+        int loot = Random.Range(1, 6) + Random.Range(1, 6);
+        // 27.78%
+        if (loot == 6 || loot == 8)
+            item = commonDrop1;
+        // 22.22%
+        if (loot == 5 || loot == 9)
+            item = commonDrop2;
+        // 16.67%
+        if (loot == 7)
+            item = rareDrop;
+        // 33.33% chance nothing drops
 
         //make sure item is not null, instantiate it at this enemy's position
         if (item != null)
