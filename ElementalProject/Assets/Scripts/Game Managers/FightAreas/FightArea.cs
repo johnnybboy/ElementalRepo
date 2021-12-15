@@ -8,7 +8,7 @@ public class FightArea : MonoBehaviour
     public float triggerDistance = 5f;  //how close to the center of the area to trigger the fight
     public float boundOffset = 10f;     //how far apart the bounds are
     public float camSizeValue = 1f;   //multiples camera size by this value
-    public float spawnRandomRange = 3f; //random range for random spawning
+    public float spawnRandomRange = 1f; //random range for random spawning
     public int amountOfWaves = 1;       //how many times enemies will spawn
     public int waveSpawnCount = 3;      //how many enemies will spawn per wave
     public int waveSpawnIteration = 0;  //this changes the amount of enemies per wave (negative or positive)
@@ -162,9 +162,9 @@ public class FightArea : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            //Instantiate(enemy, new Vector2(position.x, position.y), player.transform.rotation);
-            //Vector2 spawnLocation = new Vector2(position.x + Random.Range(-offsetVal, offsetVal), position.y + Random.Range(-offsetVal, offsetVal));
-            Instantiate(enemy, position, player.transform.rotation);
+            Vector2 spawnLocation = new Vector2(position.x + Random.Range(-offsetVal, offsetVal), position.y + Random.Range(-offsetVal, offsetVal));
+            Instantiate(enemy, spawnLocation, player.transform.rotation);
+            //Instantiate(enemy, position, player.transform.rotation);
         }
     }
 

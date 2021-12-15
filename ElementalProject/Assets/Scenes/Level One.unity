@@ -937,6 +937,14 @@ PrefabInstance:
       propertyPath: amountOfWaves
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: spawnRandomRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: waveSpawnIteration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8427036309273762752, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1726,8 +1734,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6173231515391244698, guid: 7b0f964a22161d448864cb3f9ff0d9ea, type: 3}
     - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: amountOfWaves
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: waveSpawnCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: spawnRandomRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: waveSpawnIteration
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8427036309273762752, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: m_RootOrder
@@ -1783,7 +1803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8739577994146038388, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}

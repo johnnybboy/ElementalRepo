@@ -43547,11 +43547,19 @@ PrefabInstance:
       objectReference: {fileID: 418014756647213536, guid: 53ab96f7ca928cb4ea4552057258bf09, type: 3}
     - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: amountOfWaves
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: waveSpawnCount
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: spawnRandomRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: waveSpawnIteration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8427036309273762752, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: m_RootOrder
@@ -43604,6 +43612,10 @@ PrefabInstance:
     - target: {fileID: 8739577994146038388, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8739577994146038388, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
@@ -44735,6 +44747,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: spawnRandomRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: waveSpawnIteration
       value: 1
       objectReference: {fileID: 0}
@@ -44789,6 +44805,10 @@ PrefabInstance:
     - target: {fileID: 8739577994146038388, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8739577994146038388, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
@@ -47264,6 +47284,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: spawnRandomRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570500226325549892, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: waveSpawnIteration
       value: 1
       objectReference: {fileID: 0}
@@ -47317,7 +47341,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8739577994146038388, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8739577994146038388, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7c9af4196fcae54c910e519cd028f24, type: 3}
