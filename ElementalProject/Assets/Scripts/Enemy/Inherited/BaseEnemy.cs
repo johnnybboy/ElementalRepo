@@ -259,13 +259,13 @@ public class BaseEnemy : MonoBehaviour
         // 27.78%
         if (loot == 6 || loot == 8)
             item = commonDrop1;
-        // 22.22%
-        if (loot == 5 || loot == 9)
+        // 27.78%
+        if (loot == 5 || loot == 7)
             item = commonDrop2;
-        // 16.67%
-        if (loot == 7)
+        // 8.34%
+        if (loot == 2 || loot == 3)
             item = rareDrop;
-        // 33.33% chance nothing drops
+        // 38.88% chance nothing drops
 
         //make sure item is not null, instantiate it at this enemy's position
         if (item != null)
